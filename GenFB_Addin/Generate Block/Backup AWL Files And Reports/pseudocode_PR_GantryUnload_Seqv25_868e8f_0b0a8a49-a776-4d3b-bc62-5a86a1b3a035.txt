@@ -1,0 +1,205 @@
+State Number: 44
+Description: Wait for reset release
+State Name: WaitResetRelease
+Action:
+Transitions:
+ - Condition: IF AutoRunning
+    - Goto State Number 45
+
+State Number: 45
+Description: Wait for Gantry Out Of Zone
+State Name: WaitGantryOutZone
+Action:
+Transitions:
+ - Condition: IF GantryOutofZone
+    - Goto State Number 46
+
+State Number: 46
+Description: Check Station Home
+State Name: ChkStationHome
+Action:
+Transitions:
+ - Condition1: IF GantryOutofZone&Centering SlideAtHome
+    - Goto State Number 47
+ - Condition2: IF !Centering SlideAtHome
+    - Goto State Number 67
+
+State Number: 47
+Description: Wait for Process Start From PZR
+State Name: WaitProcStartPZR
+Action:
+Transitions:
+ - Condition: IF ProcessStart
+    - Goto State Number 48
+
+State Number: 48
+Description: Check Recovery
+State Name: ChkRecovery
+Action:
+Transitions:
+ - Condition1: IF sRecoveryInt==0
+    - Goto State Number 49
+ - Condition2: IF sRecoveryInt==1
+    - Goto State Number 52
+ - Condition3: IF sRecoveryInt==2
+    - Goto State Number 53
+
+State Number: 49
+Description: Wait for Centering Slide Advance
+State Name: WaitCentSlideAdv
+Action: qCenteringSlideAdvance
+Transitions:
+ - Condition: IF CenteringSlideAtWork
+    - Goto State Number 50
+
+State Number: 50
+Description: Wait for Distance Sensor Feed Back
+State Name: WaitDistSensorFB
+Action: qCheckDistance
+Transitions:
+ - Condition: IF True
+    - Goto State Number 51
+
+State Number: 51
+Description: Wait for Centering Slide Retract
+State Name: WaitCentSlideRet
+Action: qCenteringSlideRetract
+Transitions:
+ - Condition: IF Centering SlideAtHome
+    - Goto State Number 52
+
+State Number: 52
+Description: Wait for Scan Over
+State Name: WaitScanOver
+Action: qScanCmd
+Transitions:
+ - Condition1: IF (ScanOver& ! ScanErr)||(ScannerBypass)||(DryCycleWithoutPal)
+    - Goto State Number 68
+ - Condition2: IF ScanErr
+    - Goto State Number 65
+
+State Number: 53
+Description: Check measured Distance ok Or Not with respect to PC data
+State Name: ChkMeasDistOkPC
+Action:
+Transitions:
+ - Condition1: IF (iDistSensorIP >=sDistanceLowLimit) || (iDistSensorIP <= sDistanceHighLimit)
+    - Goto State Number 54
+ - Condition2: IF (iDistSensorIP < sDistanceLowLimit) || (iDistSensorIP > sDistanceHighLimit)
+    - Goto State Number 61
+
+State Number: 54
+Description: Wait for Gantry at Unload Position.
+State Name: WaitGantryUnload
+Action: IF iCentering SlideAtHome THEN qGantryOkToUnload
+Transitions:
+ - Condition: IF !GantryOutofZone
+    - Goto State Number 55
+
+State Number: 55
+Description: Wait for Gantry Unload Over.
+State Name: WaitGantryUnldOvr
+Action: IF iCentering SlideAtHome THEN qGantryOkToUnload
+Transitions:
+ - Condition: IF GantryPickOver || DryCycleWithoutPal
+    - Goto State Number 56
+
+State Number: 56
+Description: Wait for Gantry Out Of zone after Unload.
+State Name: WaitGantryOutZone
+Action:
+Transitions:
+ - Condition: IF GantryOutofZone
+    - Goto State Number 57
+
+State Number: 57
+Description: Check Reel Absent at Conveyor.
+State Name: ChkReelAbsentConv
+Action: qProcessOver
+Transitions:
+ - Condition: IF !PalletPresent
+    - Goto State Number 58
+
+State Number: 58
+Description: Wait for Process Start Low
+State Name: WaitProcStartLow
+Action: qProcessOver
+Transitions:
+ - Condition: IF !ProcessStart
+    - Goto State Number 47
+
+State Number: 61
+Description: Check If Measured Diameter is in Tolerence
+State Name: ChkMeasDiamTol
+Action:
+Transitions:
+ - Condition1: IF (iDistSenLowLimit <= iDistSensorIP) || (iDistSensorIP <= iDistSenHighLimit)
+    - Goto State Number 62
+ - Condition2: IF (iDistSenLowLimit > iDistSensorIP) || (iDistSensorIP > iDistSenHighLimit)
+    - Goto State Number 64
+
+State Number: 62
+Description: Wait for PC Acknowledge Zero
+State Name: WaitPCAckZero
+Action:
+Transitions:
+ - Condition: IF PCAckZero || PCBypass || DryCycleWithoutPal
+    - Goto State Number 63
+
+State Number: 63
+Description: Wait for Data Write Over From PC
+State Name: WaitDataWritePC
+Action: qPCUploadCmd
+Transitions:
+ - Condition: IF PCDataWriteOver || PCBypass || DryCycleWithoutPal
+    - Goto State Number 68
+
+State Number: 64
+Description: Wait for Operator Intervention
+State Name: WaitOperIntervent
+Action: qMsg[2]
+Transitions:
+ - Condition: IF RetryPB
+    - Goto State Number 49
+
+State Number: 65
+Description: Check Scan Retry Count Over Or Not
+State Name: ChkScanRetryOver
+Action:
+Transitions:
+ - Condition1: IF sScanRetryCount < 3 & INC sScanRetryCount
+    - Goto State Number 52
+ - Condition2: IF sScanRetryCount >= 3
+    - Goto State Number 66
+
+State Number: 66
+Description: Wait for Operator desicion
+State Name: WaitOperDecision
+Action: qMsg[1]
+Transitions:
+ - Condition: IF RetryPB
+    - Goto State Number 52
+
+State Number: 67
+Description: Wait For Centering Slide Retract for Home
+State Name: WaitCentSlideRet
+Action: qCenteringSlideRetract
+Transitions:
+ - Condition: IF Centering SlideAtHome
+    - Goto State Number 46
+
+State Number: 68
+Description: Wait for PC Acknowledge Zero for Read
+State Name: WaitPCAckZeroRead
+Action:
+Transitions:
+ - Condition: IF PCAckZero || PCBypass || DryCycleWithoutPal
+    - Goto State Number 69
+
+State Number: 69
+Description: Wait for Data Read Over From PC
+State Name: WaitDataReadPC
+Action: qPCReadCmd
+Transitions:
+ - Condition: IF PCDataReadOver || PCBypass || DryCycleWithoutPal
+    - Goto State Number 53

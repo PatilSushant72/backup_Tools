@@ -1,0 +1,1021 @@
+TEST_SET "PR_CentreStand_Fix_Seq_V12_1026b5"
+
+PROPERTY
+
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+
+END_PROPERTY
+
+SEQUENCER
+
+//trayabsent
+"MemoryReset"();
+"PR_CentreStand_Fix_Seq_V1Updt_Trans0"();
+"PR_CentreStand_Fix_Seq_V1Updt_Trans138_T1"();
+"PR_CentreStand_Fix_Seq_V1Updt_Trans139"();
+"PR_CentreStand_Fix_Seq_V1Updt_Trans141"();
+"PR_CentreStand_Fix_Seq_V1Updt_Trans142"();
+"PR_CentreStand_Fix_Seq_V1Updt_Trans143"();
+"PR_CentreStand_Fix_Seq_V1Updt_Trans144"();
+"PR_CentreStand_Fix_Seq_V1Updt_Trans145"();
+"PR_CentreStand_Fix_Seq_V1Updt_Trans146"();
+"PR_CentreStand_Fix_Seq_V1Updt_Trans191"();
+"PR_CentreStand_Fix_Seq_V1Updt_Trans147"();
+"PR_CentreStand_Fix_Seq_V1Updt_Trans148"();
+"PR_CentreStand_Fix_Seq_V1Updt_Trans149"();
+//Tray present & R2 operation completed
+"MemoryReset"();
+"PR_CentreStand_Fix_Seq_V1Updt_Trans0"();
+"PR_CentreStand_Fix_Seq_V1Updt_Trans138_T2_R2OpComp"();
+"PR_CentreStand_Fix_Seq_V1Updt_Trans140_T2"();
+"PR_CentreStand_Fix_Seq_V1Updt_Trans147"();
+"PR_CentreStand_Fix_Seq_V1Updt_Trans148"();
+"PR_CentreStand_Fix_Seq_V1Updt_Trans149"();
+//Tray present & R2 operation not completed
+"MemoryReset"();
+"PR_CentreStand_Fix_Seq_V1Updt_Trans0"();
+"PR_CentreStand_Fix_Seq_V1Updt_Trans138_T2_R2OpNtComp"();
+"PR_CentreStand_Fix_Seq_V1Updt_Trans140_T1"();
+"PR_CentreStand_Fix_Seq_V1Updt_Trans145"();
+"PR_CentreStand_Fix_Seq_V1Updt_Trans146"();
+"PR_CentreStand_Fix_Seq_V1Updt_Trans191"();
+"PR_CentreStand_Fix_Seq_V1Updt_Trans147"();
+"PR_CentreStand_Fix_Seq_V1Updt_Trans148"();
+"PR_CentreStand_Fix_Seq_V1Updt_Trans149"();
+
+
+END_SEQUENCER
+
+END_TEST_SET
+
+TEST_CASE "MemoryReset"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+INIT
+
+
+PLC_MEMORY_RESET :=True;
+END_INIT
+
+
+
+VAR
+StateNo: PR_CentreStand_Fix_Seq_V12_1026b5_DB.StateNo;
+END_VAR
+
+STEP:"Cycle" 
+RUN (CYCLES :=1);
+ASSERT.Equal(StateNo,0);
+END_STEP
+
+
+
+END_TEST_CASE
+
+TEST_CASE "PR_CentreStand_Fix_Seq_V1Updt_Trans0"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstPB;
+iSstMode: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstMode;
+iAutoRunning: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning;
+iReset_fault: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iReset_fault;
+iRobotOutofZone: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone;
+iFixTrayPresent: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixTrayPresent;
+iFixEmpty: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixEmpty;
+iFixUnclamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp;
+iR1DropOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1DropOver;
+iFixClamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixClamp;
+iR2OperationOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2OperationOver;
+iR2ServiceActivated: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2ServiceActivated;
+iR1PickOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver;
+StateNo: PR_CentreStand_Fix_Seq_V12_1026b5_DB.StateNo;
+qFixUnclamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixUnclamp;
+qR1ReadytoDropTray: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoDropTray;
+qFixClamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixClamp;
+qR2OperationStart: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR2OperationStart;
+qR1ReadytoPickTray: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoPickTray;
+END_VAR
+
+STEP: "Wait for reset release, Transition 0"
+iAutoRunning:=True;
+
+iSstPB:=False;
+iSstMode:=False;
+iReset_fault:=False;
+iRobotOutofZone:=False;
+iFixTrayPresent:=False;
+iFixEmpty:=False;
+iFixUnclamp:=False;
+iR1DropOver:=False;
+iFixClamp:=False;
+iR2OperationOver:=False;
+iR2ServiceActivated:=False;
+iR1PickOver:=False;
+RUN(CYCLES:=1);
+ASSERT.Equal(StateNo,138);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_CentreStand_Fix_Seq_V1Updt_Trans138_T1"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstPB;
+iSstMode: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstMode;
+iAutoRunning: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning;
+iReset_fault: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iReset_fault;
+iRobotOutofZone: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone;
+iFixTrayPresent: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixTrayPresent;
+iFixEmpty: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixEmpty;
+iFixUnclamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp;
+iR1DropOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1DropOver;
+iFixClamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixClamp;
+iR2OperationOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2OperationOver;
+iR2ServiceActivated: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2ServiceActivated;
+iR1PickOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver;
+StateNo: PR_CentreStand_Fix_Seq_V12_1026b5_DB.StateNo;
+qFixUnclamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixUnclamp;
+qR1ReadytoDropTray: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoDropTray;
+qFixClamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixClamp;
+qR2OperationStart: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR2OperationStart;
+qR1ReadytoPickTray: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoPickTray;
+END_VAR
+
+STEP: "Wait for reset release, Transition 138"
+iRobotOutofZone:=True;
+iFixTrayPresent:=False;
+
+iSstPB:=False;
+iSstMode:=False;
+iReset_fault:=False;
+iFixEmpty:=False;
+iFixUnclamp:=False;
+iR1DropOver:=False;
+iFixClamp:=False;
+iR2OperationOver:=False;
+iR2ServiceActivated:=False;
+iR1PickOver:=False;
+
+RUN(CYCLES:=1);
+ASSERT.Equal(StateNo,139);
+END_STEP
+
+
+END_TEST_CASE
+
+TEST_CASE "PR_CentreStand_Fix_Seq_V1Updt_Trans139"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstPB;
+iSstMode: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstMode;
+iAutoRunning: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning;
+iReset_fault: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iReset_fault;
+iRobotOutofZone: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone;
+iFixTrayPresent: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixTrayPresent;
+iFixEmpty: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixEmpty;
+iFixUnclamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp;
+iR1DropOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1DropOver;
+iFixClamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixClamp;
+iR2OperationOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2OperationOver;
+iR2ServiceActivated: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2ServiceActivated;
+iR1PickOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver;
+StateNo: PR_CentreStand_Fix_Seq_V12_1026b5_DB.StateNo;
+qFixUnclamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixUnclamp;
+qR1ReadytoDropTray: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoDropTray;
+qFixClamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixClamp;
+qR2OperationStart: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR2OperationStart;
+qR1ReadytoPickTray: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoPickTray;
+END_VAR
+
+STEP: "Wait for reset release, Transition 139"
+iFixEmpty:=True;
+
+iSstPB:=False;
+iSstMode:=False;
+iReset_fault:=False;
+iRobotOutofZone:=False;
+iFixTrayPresent:=False;
+iFixUnclamp:=False;
+iR1DropOver:=False;
+iFixClamp:=False;
+iR2OperationOver:=False;
+iR2ServiceActivated:=False;
+iR1PickOver:=False;
+
+RUN(CYCLES:=1);
+ASSERT.Equal(StateNo,141);
+ASSERT.Equal(qFixUnclamp,True);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_CentreStand_Fix_Seq_V1Updt_Trans141"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstPB;
+iSstMode: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstMode;
+iAutoRunning: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning;
+iReset_fault: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iReset_fault;
+iRobotOutofZone: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone;
+iFixTrayPresent: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixTrayPresent;
+iFixEmpty: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixEmpty;
+iFixUnclamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp;
+iR1DropOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1DropOver;
+iFixClamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixClamp;
+iR2OperationOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2OperationOver;
+iR2ServiceActivated: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2ServiceActivated;
+iR1PickOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver;
+StateNo: PR_CentreStand_Fix_Seq_V12_1026b5_DB.StateNo;
+qFixUnclamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixUnclamp;
+qR1ReadytoDropTray: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoDropTray;
+qFixClamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixClamp;
+qR2OperationStart: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR2OperationStart;
+qR1ReadytoPickTray: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoPickTray;
+END_VAR
+
+STEP: "Wait for reset release, Transition 141"
+iFixUnclamp:=True;
+
+iSstPB:=False;
+iSstMode:=False;
+iReset_fault:=False;
+iRobotOutofZone:=False;
+iFixTrayPresent:=False;
+iFixEmpty:=False;
+iR1DropOver:=False;
+iFixClamp:=False;
+iR2OperationOver:=False;
+iR2ServiceActivated:=False;
+iR1PickOver:=False;
+
+RUN(CYCLES:=1);
+ASSERT.Equal(StateNo,142);
+ASSERT.Equal(qR1ReadytoDropTray,True);
+END_STEP
+
+
+END_TEST_CASE
+
+TEST_CASE "PR_CentreStand_Fix_Seq_V1Updt_Trans142"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstPB;
+iSstMode: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstMode;
+iAutoRunning: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning;
+iReset_fault: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iReset_fault;
+iRobotOutofZone: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone;
+iFixTrayPresent: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixTrayPresent;
+iFixEmpty: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixEmpty;
+iFixUnclamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp;
+iR1DropOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1DropOver;
+iFixClamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixClamp;
+iR2OperationOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2OperationOver;
+iR2ServiceActivated: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2ServiceActivated;
+iR1PickOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver;
+StateNo: PR_CentreStand_Fix_Seq_V12_1026b5_DB.StateNo;
+qFixUnclamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixUnclamp;
+qR1ReadytoDropTray: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoDropTray;
+qFixClamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixClamp;
+qR2OperationStart: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR2OperationStart;
+qR1ReadytoPickTray: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoPickTray;
+END_VAR
+
+STEP: "Wait for reset release, Transition 142"
+iR1DropOver:=True;
+
+iSstPB:=False;
+iSstMode:=False;
+iReset_fault:=False;
+iRobotOutofZone:=False;
+iFixTrayPresent:=False;
+iFixEmpty:=False;
+iFixUnclamp:=False;
+iFixClamp:=False;
+iR2OperationOver:=False;
+iR2ServiceActivated:=False;
+iR1PickOver:=False;
+
+RUN(CYCLES:=1);
+ASSERT.Equal(StateNo,143);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_CentreStand_Fix_Seq_V1Updt_Trans143"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstPB;
+iSstMode: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstMode;
+iAutoRunning: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning;
+iReset_fault: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iReset_fault;
+iRobotOutofZone: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone;
+iFixTrayPresent: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixTrayPresent;
+iFixEmpty: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixEmpty;
+iFixUnclamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp;
+iR1DropOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1DropOver;
+iFixClamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixClamp;
+iR2OperationOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2OperationOver;
+iR2ServiceActivated: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2ServiceActivated;
+iR1PickOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver;
+StateNo: PR_CentreStand_Fix_Seq_V12_1026b5_DB.StateNo;
+qFixUnclamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixUnclamp;
+qR1ReadytoDropTray: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoDropTray;
+qFixClamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixClamp;
+qR2OperationStart: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR2OperationStart;
+qR1ReadytoPickTray: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoPickTray;
+END_VAR
+
+STEP: "Wait for reset release, Transition 143"
+iFixTrayPresent:=True;
+
+iSstPB:=False;
+iSstMode:=False;
+iReset_fault:=False;
+iRobotOutofZone:=False;
+iFixEmpty:=False;
+iFixUnclamp:=False;
+iR1DropOver:=False;
+iFixClamp:=False;
+iR2OperationOver:=False;
+iR2ServiceActivated:=False;
+iR1PickOver:=False;
+
+RUN(CYCLES:=1);
+ASSERT.Equal(StateNo,144);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_CentreStand_Fix_Seq_V1Updt_Trans144"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstPB;
+iSstMode: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstMode;
+iAutoRunning: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning;
+iReset_fault: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iReset_fault;
+iRobotOutofZone: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone;
+iFixTrayPresent: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixTrayPresent;
+iFixEmpty: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixEmpty;
+iFixUnclamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp;
+iR1DropOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1DropOver;
+iFixClamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixClamp;
+iR2OperationOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2OperationOver;
+iR2ServiceActivated: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2ServiceActivated;
+iR1PickOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver;
+StateNo: PR_CentreStand_Fix_Seq_V12_1026b5_DB.StateNo;
+qFixUnclamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixUnclamp;
+qR1ReadytoDropTray: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoDropTray;
+qFixClamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixClamp;
+qR2OperationStart: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR2OperationStart;
+qR1ReadytoPickTray: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoPickTray;
+END_VAR
+
+STEP: "Wait for reset release, Transition 144"
+iRobotOutofZone:=True;
+
+iSstPB:=False;
+iSstMode:=False;
+iReset_fault:=False;
+iFixTrayPresent:=False;
+iFixEmpty:=False;
+iFixUnclamp:=False;
+iR1DropOver:=False;
+iFixClamp:=False;
+iR2OperationOver:=False;
+iR2ServiceActivated:=False;
+iR1PickOver:=False;
+
+RUN(CYCLES:=1);
+ASSERT.Equal(StateNo,145);
+ASSERT.Equal(qFixClamp,True);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_CentreStand_Fix_Seq_V1Updt_Trans145"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstPB;
+iSstMode: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstMode;
+iAutoRunning: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning;
+iReset_fault: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iReset_fault;
+iRobotOutofZone: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone;
+iFixTrayPresent: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixTrayPresent;
+iFixEmpty: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixEmpty;
+iFixUnclamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp;
+iR1DropOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1DropOver;
+iFixClamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixClamp;
+iR2OperationOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2OperationOver;
+iR2ServiceActivated: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2ServiceActivated;
+iR1PickOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver;
+StateNo: PR_CentreStand_Fix_Seq_V12_1026b5_DB.StateNo;
+qFixUnclamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixUnclamp;
+qR1ReadytoDropTray: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoDropTray;
+qFixClamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixClamp;
+qR2OperationStart: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR2OperationStart;
+qR1ReadytoPickTray: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoPickTray;
+END_VAR
+
+STEP: "Wait for reset release, Transition 145"
+iRobotOutofZone:=True;
+iFixClamp:=True;
+iR2ServiceActivated:=True;
+
+iSstPB:=False;
+iSstMode:=False;
+iReset_fault:=False;
+iFixTrayPresent:=False;
+iFixEmpty:=False;
+iFixUnclamp:=False;
+iR1DropOver:=False;
+iR2OperationOver:=False;
+iR1PickOver:=False;
+
+RUN(CYCLES:=1);
+ASSERT.Equal(StateNo,146);
+ASSERT.Equal(qR2OperationStart,True);
+
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_CentreStand_Fix_Seq_V1Updt_Trans146"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstPB;
+iSstMode: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstMode;
+iAutoRunning: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning;
+iReset_fault: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iReset_fault;
+iRobotOutofZone: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone;
+iFixTrayPresent: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixTrayPresent;
+iFixEmpty: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixEmpty;
+iFixUnclamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp;
+iR1DropOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1DropOver;
+iFixClamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixClamp;
+iR2OperationOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2OperationOver;
+iR2ServiceActivated: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2ServiceActivated;
+iR1PickOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver;
+StateNo: PR_CentreStand_Fix_Seq_V12_1026b5_DB.StateNo;
+qFixUnclamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixUnclamp;
+qR1ReadytoDropTray: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoDropTray;
+qFixClamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixClamp;
+qR2OperationStart: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR2OperationStart;
+qR1ReadytoPickTray: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoPickTray;
+END_VAR
+
+STEP: "Wait for reset release, Transition 146"
+iR2OperationOver:=True;
+
+iSstPB:=False;
+iSstMode:=False;
+iReset_fault:=False;
+iRobotOutofZone:=False;
+iFixTrayPresent:=False;
+iFixEmpty:=False;
+iFixUnclamp:=False;
+iR1DropOver:=False;
+iFixClamp:=False;
+iR2ServiceActivated:=False;
+iR1PickOver:=False;
+
+RUN(CYCLES:=1);
+ASSERT.Equal(StateNo,191);
+
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_CentreStand_Fix_Seq_V1Updt_Trans191"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstPB;
+iSstMode: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstMode;
+iAutoRunning: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning;
+iReset_fault: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iReset_fault;
+iRobotOutofZone: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone;
+iFixTrayPresent: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixTrayPresent;
+iFixEmpty: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixEmpty;
+iFixUnclamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp;
+iR1DropOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1DropOver;
+iFixClamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixClamp;
+iR2OperationOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2OperationOver;
+iR2ServiceActivated: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2ServiceActivated;
+iR1PickOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver;
+StateNo: PR_CentreStand_Fix_Seq_V12_1026b5_DB.StateNo;
+qFixUnclamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixUnclamp;
+qR1ReadytoDropTray: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoDropTray;
+qFixClamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixClamp;
+qR2OperationStart: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR2OperationStart;
+qR1ReadytoPickTray: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoPickTray;
+END_VAR
+
+STEP: "Wait for reset release, Transition 191"
+iRobotOutofZone:=True;
+
+iSstPB:=False;
+iSstMode:=False;
+iReset_fault:=False;
+iFixTrayPresent:=False;
+iFixEmpty:=False;
+iFixUnclamp:=False;
+iR1DropOver:=False;
+iFixClamp:=False;
+iR2OperationOver:=False;
+iR2ServiceActivated:=False;
+iR1PickOver:=False;
+
+RUN(CYCLES:=2);
+ASSERT.Equal(StateNo,147);
+ASSERT.Equal(qFixUnclamp,True);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_CentreStand_Fix_Seq_V1Updt_Trans147"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstPB;
+iSstMode: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstMode;
+iAutoRunning: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning;
+iReset_fault: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iReset_fault;
+iRobotOutofZone: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone;
+iFixTrayPresent: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixTrayPresent;
+iFixEmpty: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixEmpty;
+iFixUnclamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp;
+iR1DropOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1DropOver;
+iFixClamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixClamp;
+iR2OperationOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2OperationOver;
+iR2ServiceActivated: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2ServiceActivated;
+iR1PickOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver;
+StateNo: PR_CentreStand_Fix_Seq_V12_1026b5_DB.StateNo;
+qFixUnclamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixUnclamp;
+qR1ReadytoDropTray: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoDropTray;
+qFixClamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixClamp;
+qR2OperationStart: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR2OperationStart;
+qR1ReadytoPickTray: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoPickTray;
+END_VAR
+
+STEP: "Wait for reset release, Transition 147"
+iFixUnclamp:=True;
+
+iSstPB:=False;
+iSstMode:=False;
+iReset_fault:=False;
+iRobotOutofZone:=False;
+iFixTrayPresent:=False;
+iFixEmpty:=False;
+iR1DropOver:=False;
+iFixClamp:=False;
+iR2OperationOver:=False;
+iR2ServiceActivated:=False;
+iR1PickOver:=False;
+
+RUN(CYCLES:=1);
+ASSERT.Equal(StateNo,148);
+ASSERT.Equal(qR1ReadytoPickTray,True);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_CentreStand_Fix_Seq_V1Updt_Trans148"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstPB;
+iSstMode: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstMode;
+iAutoRunning: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning;
+iReset_fault: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iReset_fault;
+iRobotOutofZone: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone;
+iFixTrayPresent: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixTrayPresent;
+iFixEmpty: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixEmpty;
+iFixUnclamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp;
+iR1DropOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1DropOver;
+iFixClamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixClamp;
+iR2OperationOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2OperationOver;
+iR2ServiceActivated: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2ServiceActivated;
+iR1PickOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver;
+StateNo: PR_CentreStand_Fix_Seq_V12_1026b5_DB.StateNo;
+qFixUnclamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixUnclamp;
+qR1ReadytoDropTray: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoDropTray;
+qFixClamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixClamp;
+qR2OperationStart: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR2OperationStart;
+qR1ReadytoPickTray: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoPickTray;
+END_VAR
+
+STEP: "Wait for reset release, Transition 148"
+iR1PickOver:=True;
+
+iSstPB:=False;
+iSstMode:=False;
+iReset_fault:=False;
+iRobotOutofZone:=False;
+iFixTrayPresent:=False;
+iFixEmpty:=False;
+iFixUnclamp:=False;
+iR1DropOver:=False;
+iFixClamp:=False;
+iR2OperationOver:=False;
+iR2ServiceActivated:=False;
+
+RUN(CYCLES:=1);
+ASSERT.Equal(StateNo,149);
+
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_CentreStand_Fix_Seq_V1Updt_Trans149"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstPB;
+iSstMode: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstMode;
+iAutoRunning: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning;
+iReset_fault: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iReset_fault;
+iRobotOutofZone: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone;
+iFixTrayPresent: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixTrayPresent;
+iFixEmpty: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixEmpty;
+iFixUnclamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp;
+iR1DropOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1DropOver;
+iFixClamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixClamp;
+iR2OperationOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2OperationOver;
+iR2ServiceActivated: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2ServiceActivated;
+iR1PickOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver;
+StateNo: PR_CentreStand_Fix_Seq_V12_1026b5_DB.StateNo;
+qFixUnclamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixUnclamp;
+qR1ReadytoDropTray: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoDropTray;
+qFixClamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixClamp;
+qR2OperationStart: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR2OperationStart;
+qR1ReadytoPickTray: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoPickTray;
+END_VAR
+
+STEP: "Wait for reset release, Transition 149"
+iRobotOutofZone:=True;
+iFixEmpty:=True;
+
+iSstPB:=False;
+iSstMode:=False;
+iReset_fault:=False;
+iFixTrayPresent:=False;
+iFixUnclamp:=False;
+iR1DropOver:=False;
+iFixClamp:=False;
+iR2OperationOver:=False;
+iR2ServiceActivated:=False;
+iR1PickOver:=False;
+
+RUN(CYCLES:=3 ,StateNo = 138);
+ASSERT.Equal(StateNo,138);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_CentreStand_Fix_Seq_V1Updt_Trans138_T2_R2OpComp"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstPB;
+iSstMode: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstMode;
+iAutoRunning: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning;
+iReset_fault: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iReset_fault;
+iRobotOutofZone: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone;
+iFixTrayPresent: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixTrayPresent;
+iFixEmpty: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixEmpty;
+iFixUnclamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp;
+iR1DropOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1DropOver;
+iFixClamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixClamp;
+iR2OperationOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2OperationOver;
+iR2ServiceActivated: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2ServiceActivated;
+iR1PickOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver;
+StateNo: PR_CentreStand_Fix_Seq_V12_1026b5_DB.StateNo;
+qFixUnclamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixUnclamp;
+qR1ReadytoDropTray: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoDropTray;
+qFixClamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixClamp;
+qR2OperationStart: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR2OperationStart;
+qR1ReadytoPickTray: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoPickTray;
+END_VAR
+
+STEP: "Wait for reset release, Transition 138"
+iRobotOutofZone:=True;
+iFixTrayPresent:= True;
+
+
+iSstPB:=False;
+iSstMode:=False;
+iReset_fault:=False;
+iFixEmpty:=False;
+iFixUnclamp:=False;
+iR1DropOver:=False;
+iFixClamp:=False;
+iR2OperationOver:=False;
+iR2ServiceActivated:=False;
+iR1PickOver:=False;
+
+RUN(CYCLES:=1);
+ASSERT.Equal(StateNo,140);
+END_STEP
+
+
+END_TEST_CASE
+
+TEST_CASE "PR_CentreStand_Fix_Seq_V1Updt_Trans140_T2"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstPB;
+iSstMode: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstMode;
+iAutoRunning: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning;
+iReset_fault: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iReset_fault;
+iRobotOutofZone: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone;
+iFixTrayPresent: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixTrayPresent;
+iFixEmpty: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixEmpty;
+iFixUnclamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp;
+iR1DropOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1DropOver;
+iFixClamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixClamp;
+iR2OperationOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2OperationOver;
+iR2ServiceActivated: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2ServiceActivated;
+iR1PickOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver;
+StateNo: PR_CentreStand_Fix_Seq_V12_1026b5_DB.StateNo;
+qFixUnclamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixUnclamp;
+qR1ReadytoDropTray: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoDropTray;
+qFixClamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixClamp;
+qR2OperationStart: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR2OperationStart;
+qR1ReadytoPickTray: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoPickTray;
+END_VAR
+
+
+STEP: "Wait for reset release, Transition 140 T2"
+iRobotOutofZone:=True;
+iFixTrayPresent:=True;
+
+
+iSstPB:=False;
+iSstMode:=False;
+iReset_fault:=False;
+iFixEmpty:=False;
+iFixUnclamp:=False;
+iR1DropOver:=False;
+iFixClamp:=False;
+iR2OperationOver:=False;
+iR2ServiceActivated:=False;
+iR1PickOver:=False;
+
+RUN(CYCLES:=2);
+ASSERT.Equal(StateNo,147);
+ASSERT.Equal(qFixUnclamp,True);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_CentreStand_Fix_Seq_V1Updt_Trans138_T2_R2OpNtComp"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstPB;
+iSstMode: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstMode;
+iAutoRunning: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning;
+iReset_fault: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iReset_fault;
+iRobotOutofZone: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone;
+iFixTrayPresent: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixTrayPresent;
+iFixEmpty: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixEmpty;
+iFixUnclamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp;
+iR1DropOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1DropOver;
+iFixClamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixClamp;
+iR2OperationOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2OperationOver;
+iR2ServiceActivated: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2ServiceActivated;
+iR1PickOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver;
+StateNo: PR_CentreStand_Fix_Seq_V12_1026b5_DB.StateNo;
+qFixUnclamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixUnclamp;
+qR1ReadytoDropTray: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoDropTray;
+qFixClamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixClamp;
+qR2OperationStart: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR2OperationStart;
+qR1ReadytoPickTray: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoPickTray;
+END_VAR
+
+STEP: "Wait for reset release, Transition 138"
+iRobotOutofZone:=True;
+iFixTrayPresent:= True;
+
+
+iSstPB:=False;
+iSstMode:=False;
+iReset_fault:=False;
+iFixEmpty:=False;
+iFixUnclamp:=False;
+iR1DropOver:=False;
+iFixClamp:=False;
+iR2OperationOver:=False;
+iR2ServiceActivated:=False;
+iR1PickOver:=False;
+
+RUN(CYCLES:=1);
+ASSERT.Equal(StateNo,140);
+END_STEP
+
+
+END_TEST_CASE
+
+TEST_CASE "PR_CentreStand_Fix_Seq_V1Updt_Trans140_T1"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstPB;
+iSstMode: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstMode;
+iAutoRunning: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning;
+iReset_fault: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iReset_fault;
+iRobotOutofZone: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone;
+iFixTrayPresent: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixTrayPresent;
+iFixEmpty: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixEmpty;
+iFixUnclamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp;
+iR1DropOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1DropOver;
+iFixClamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixClamp;
+iR2OperationOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2OperationOver;
+iR2ServiceActivated: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2ServiceActivated;
+iR1PickOver: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver;
+StateNo: PR_CentreStand_Fix_Seq_V12_1026b5_DB.StateNo;
+qFixUnclamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixUnclamp;
+qR1ReadytoDropTray: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoDropTray;
+qFixClamp: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixClamp;
+qR2OperationStart: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR2OperationStart;
+qR1ReadytoPickTray: PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoPickTray;
+END_VAR
+
+STEP: "Wait for reset release, Transition 140"
+iRobotOutofZone:=True;
+iFixTrayPresent:=True;
+
+
+iSstPB:=False;
+iSstMode:=False;
+iReset_fault:=False;
+iFixEmpty:=False;
+iFixUnclamp:=False;
+iR1DropOver:=False;
+iFixClamp:=False;
+iR2OperationOver:=False;
+iR2ServiceActivated:=False;
+iR1PickOver:=False;
+
+RUN(CYCLES:=2);
+ASSERT.Equal(StateNo,145);
+END_STEP
+
+END_TEST_CASE
+

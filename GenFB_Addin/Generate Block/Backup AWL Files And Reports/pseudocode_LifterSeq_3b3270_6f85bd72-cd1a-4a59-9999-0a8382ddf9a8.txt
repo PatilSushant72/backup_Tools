@@ -1,0 +1,65 @@
+State Number: 10
+Description: Wait for Start
+State Name: WaitForStart
+Action:
+Transitions:
+ - Condition: IF I OTS from Prevous STN
+    - Goto State Number 11
+
+State Number: 11
+Description: Check Pallet present
+State Name: ChkPalletPrsnt
+Action:
+Transitions:
+ - Condition1: IF "Pallet Present"
+    - Goto State Number 12
+ - Condition2: IF NOT "Pallet Present"
+    - Goto State Number 10
+
+State Number: 12
+Description: Wait Area Cear
+State Name: WaitAreaClear
+Action:
+Transitions:
+ - Condition: IF NOT Area Clear
+    - Goto State Number 14
+
+State Number: 14
+Description: Wait Lifter Down
+State Name: WaitLifterDown
+Action: qLifter DOWN CMD
+Transitions:
+ - Condition: IF iLifter Down over
+    - Goto State Number 15
+
+State Number: 15
+Description: Wait Next Stn Ready
+State Name: WaitNextStnRdy
+Action:
+Transitions:
+ - Condition: IF I Next Stan RTR
+    - Goto State Number 16
+
+State Number: 16
+Description: Wait Pallet Absent
+State Name: WaitPalletAbsnt
+Action:
+Transitions:
+ - Condition: IF NOT "Pallet Present"
+    - Goto State Number 17
+
+State Number: 17
+Description: Wait Area Cear
+State Name: WaitAreaClear
+Action:
+Transitions:
+ - Condition: IF NOT Area Clear
+    - Goto State Number 18
+
+State Number: 18
+Description: Wait Lifter  Up
+State Name: WaitLifterUp
+Action: qLifter UP CMD
+Transitions:
+ - Condition: IF iLifter Up over
+    - Goto State Number 11

@@ -1,0 +1,639 @@
+State: Error
+Warning Count: 2
+Error Count: 16
+	Path: Application test
+	DateTime: 24-07-2025 09:33:12
+	State: Error
+	Description: 
+	Warning Count: 2
+	Error Count: 16
+		Path: PR_CentreStand_Fix_Seq_V12
+		DateTime: 24-07-2025 09:33:13
+		State: Error
+		Description: Test cases executed : 31 ; Passed : 19 ; Failed : 11 ; Inconclusive : 1
+		Warning Count: 2
+		Error Count: 16
+			Path: MemoryReset
+			DateTime: 24-07-2025 09:33:13
+			State: Success
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Cycle"
+				DateTime: 24-07-2025 09:33:25
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_CentreStand_Fix_Seq_V12_DB.StateNo
+					DateTime: 24-07-2025 09:33:25
+					State: Success
+					Description: Actual: 0, Expected: 0, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans0
+			DateTime: 24-07-2025 09:33:25
+			State: Success
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for reset release, Transition 0"
+				DateTime: 24-07-2025 09:33:25
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_CentreStand_Fix_Seq_V12_DB.StateNo
+					DateTime: 24-07-2025 09:33:25
+					State: Success
+					Description: Actual: 138, Expected: 138, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans138_T1
+			DateTime: 24-07-2025 09:33:25
+			State: Success
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for reset release, Transition 138"
+				DateTime: 24-07-2025 09:33:25
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_CentreStand_Fix_Seq_V12_DB.StateNo
+					DateTime: 24-07-2025 09:33:25
+					State: Success
+					Description: Actual: 139, Expected: 139, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans139
+			DateTime: 24-07-2025 09:33:25
+			State: Success
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for reset release, Transition 139"
+				DateTime: 24-07-2025 09:33:25
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_CentreStand_Fix_Seq_V12_DB.StateNo
+					DateTime: 24-07-2025 09:33:25
+					State: Success
+					Description: Actual: 141, Expected: 141, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+					Path: PR_CentreStand_Fix_Seq_V12_DB.qFixUnclamp
+					DateTime: 24-07-2025 09:33:25
+					State: Success
+					Description: Actual: True, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans141
+			DateTime: 24-07-2025 09:33:25
+			State: Success
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for reset release, Transition 141"
+				DateTime: 24-07-2025 09:33:25
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_CentreStand_Fix_Seq_V12_DB.StateNo
+					DateTime: 24-07-2025 09:33:25
+					State: Success
+					Description: Actual: 142, Expected: 142, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+					Path: PR_CentreStand_Fix_Seq_V12_DB.qR1ReadytoDropTray
+					DateTime: 24-07-2025 09:33:26
+					State: Success
+					Description: Actual: True, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans142
+			DateTime: 24-07-2025 09:33:26
+			State: Success
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for reset release, Transition 142"
+				DateTime: 24-07-2025 09:33:26
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_CentreStand_Fix_Seq_V12_DB.StateNo
+					DateTime: 24-07-2025 09:33:26
+					State: Success
+					Description: Actual: 143, Expected: 143, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans143
+			DateTime: 24-07-2025 09:33:26
+			State: Success
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for reset release, Transition 143"
+				DateTime: 24-07-2025 09:33:26
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_CentreStand_Fix_Seq_V12_DB.StateNo
+					DateTime: 24-07-2025 09:33:26
+					State: Success
+					Description: Actual: 144, Expected: 144, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans144
+			DateTime: 24-07-2025 09:33:26
+			State: Success
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for reset release, Transition 144"
+				DateTime: 24-07-2025 09:33:26
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_CentreStand_Fix_Seq_V12_DB.StateNo
+					DateTime: 24-07-2025 09:33:26
+					State: Success
+					Description: Actual: 145, Expected: 145, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+					Path: PR_CentreStand_Fix_Seq_V12_DB.qFixClamp
+					DateTime: 24-07-2025 09:33:26
+					State: Success
+					Description: Actual: True, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans145
+			DateTime: 24-07-2025 09:33:26
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 145"
+				DateTime: 24-07-2025 09:33:26
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_DB.StateNo
+					DateTime: 24-07-2025 09:33:27
+					State: Success
+					Description: Actual: 146, Expected: 146, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+					Path: PR_CentreStand_Fix_Seq_V12_DB.qR2OperationStart
+					DateTime: 24-07-2025 09:33:27
+					State: Error
+					Description: Actual: False, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans146
+			DateTime: 24-07-2025 09:33:27
+			State: Success
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for reset release, Transition 146"
+				DateTime: 24-07-2025 09:33:27
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_CentreStand_Fix_Seq_V12_DB.StateNo
+					DateTime: 24-07-2025 09:33:27
+					State: Success
+					Description: Actual: 191, Expected: 191, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans191
+			DateTime: 24-07-2025 09:33:27
+			State: Success
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for reset release, Transition 191"
+				DateTime: 24-07-2025 09:33:27
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_CentreStand_Fix_Seq_V12_DB.StateNo
+					DateTime: 24-07-2025 09:33:27
+					State: Success
+					Description: Actual: 147, Expected: 147, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+					Path: PR_CentreStand_Fix_Seq_V12_DB.qFixUnclamp
+					DateTime: 24-07-2025 09:33:28
+					State: Success
+					Description: Actual: True, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans147
+			DateTime: 24-07-2025 09:33:28
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 147"
+				DateTime: 24-07-2025 09:33:28
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_DB.StateNo
+					DateTime: 24-07-2025 09:33:28
+					State: Success
+					Description: Actual: 148, Expected: 148, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+					Path: PR_CentreStand_Fix_Seq_V12_DB.qR1ReadytoPickTray
+					DateTime: 24-07-2025 09:33:28
+					State: Error
+					Description: Actual: False, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans148
+			DateTime: 24-07-2025 09:33:28
+			State: Success
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for reset release, Transition 148"
+				DateTime: 24-07-2025 09:33:28
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_CentreStand_Fix_Seq_V12_DB.StateNo
+					DateTime: 24-07-2025 09:33:28
+					State: Success
+					Description: Actual: 149, Expected: 149, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans149
+			DateTime: 24-07-2025 09:33:28
+			State: Success
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for reset release, Transition 149"
+				DateTime: 24-07-2025 09:33:29
+				State: Success
+				Description: Pass [Run with condition satisfied]
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_CentreStand_Fix_Seq_V12_DB.StateNo
+					DateTime: 24-07-2025 09:33:29
+					State: Success
+					Description: Actual: 138, Expected: 138, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: MemoryReset
+			DateTime: 24-07-2025 09:33:29
+			State: Success
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Cycle"
+				DateTime: 24-07-2025 09:33:35
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_CentreStand_Fix_Seq_V12_DB.StateNo
+					DateTime: 24-07-2025 09:33:35
+					State: Success
+					Description: Actual: 0, Expected: 0, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans0
+			DateTime: 24-07-2025 09:33:36
+			State: Success
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for reset release, Transition 0"
+				DateTime: 24-07-2025 09:33:36
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_CentreStand_Fix_Seq_V12_DB.StateNo
+					DateTime: 24-07-2025 09:33:36
+					State: Success
+					Description: Actual: 138, Expected: 138, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans138_T2_R2OpComp
+			DateTime: 24-07-2025 09:33:36
+			State: Success
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for reset release, Transition 138"
+				DateTime: 24-07-2025 09:33:36
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_CentreStand_Fix_Seq_V12_DB.StateNo
+					DateTime: 24-07-2025 09:33:36
+					State: Success
+					Description: Actual: 140, Expected: 140, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans140_T2
+			DateTime: 24-07-2025 09:33:36
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 2
+				Path: "Wait for reset release, Transition 140 T2"
+				DateTime: 24-07-2025 09:33:36
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 2
+					Path: PR_CentreStand_Fix_Seq_V12_DB.StateNo
+					DateTime: 24-07-2025 09:33:36
+					State: Error
+					Description: Actual: 145, Expected: 147, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_DB.qFixUnclamp
+					DateTime: 24-07-2025 09:33:36
+					State: Error
+					Description: Actual: False, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans147
+			DateTime: 24-07-2025 09:33:36
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 2
+				Path: "Wait for reset release, Transition 147"
+				DateTime: 24-07-2025 09:33:36
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 2
+					Path: PR_CentreStand_Fix_Seq_V12_DB.StateNo
+					DateTime: 24-07-2025 09:33:37
+					State: Error
+					Description: Actual: 145, Expected: 148, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_DB.qR1ReadytoPickTray
+					DateTime: 24-07-2025 09:33:37
+					State: Error
+					Description: Actual: False, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans148
+			DateTime: 24-07-2025 09:33:37
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 148"
+				DateTime: 24-07-2025 09:33:37
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_DB.StateNo
+					DateTime: 24-07-2025 09:33:37
+					State: Error
+					Description: Actual: 145, Expected: 149, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans149
+			DateTime: 24-07-2025 09:33:37
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 1
+			Error Count: 1
+				Path: "Wait for reset release, Transition 149"
+				DateTime: 24-07-2025 09:33:37
+				State: Error
+				Description: Fail [Run with condition not satisfied as "PR_CentreStand_Fix_Seq_V12_DB.StateNo" = 145]
+				Warning Count: 1
+				Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_DB.StateNo
+					DateTime: 24-07-2025 09:33:37
+					State: Error
+					Description: Actual: 145, Expected: 138, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: MemoryReset
+			DateTime: 24-07-2025 09:33:37
+			State: Success
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Cycle"
+				DateTime: 24-07-2025 09:33:43
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_CentreStand_Fix_Seq_V12_DB.StateNo
+					DateTime: 24-07-2025 09:33:43
+					State: Success
+					Description: Actual: 0, Expected: 0, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans0
+			DateTime: 24-07-2025 09:33:43
+			State: Success
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for reset release, Transition 0"
+				DateTime: 24-07-2025 09:33:43
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_CentreStand_Fix_Seq_V12_DB.StateNo
+					DateTime: 24-07-2025 09:33:43
+					State: Success
+					Description: Actual: 138, Expected: 138, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans138_T2_R2OpNtComp
+			DateTime: 24-07-2025 09:33:43
+			State: Success
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for reset release, Transition 138"
+				DateTime: 24-07-2025 09:33:43
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_CentreStand_Fix_Seq_V12_DB.StateNo
+					DateTime: 24-07-2025 09:33:43
+					State: Success
+					Description: Actual: 140, Expected: 140, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans140_T1
+			DateTime: 24-07-2025 09:33:44
+			State: Success
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for reset release, Transition 140"
+				DateTime: 24-07-2025 09:33:44
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_CentreStand_Fix_Seq_V12_DB.StateNo
+					DateTime: 24-07-2025 09:33:44
+					State: Success
+					Description: Actual: 145, Expected: 145, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans145
+			DateTime: 24-07-2025 09:33:44
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 145"
+				DateTime: 24-07-2025 09:33:44
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_DB.StateNo
+					DateTime: 24-07-2025 09:33:44
+					State: Success
+					Description: Actual: 146, Expected: 146, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+					Path: PR_CentreStand_Fix_Seq_V12_DB.qR2OperationStart
+					DateTime: 24-07-2025 09:33:44
+					State: Error
+					Description: Actual: False, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans146
+			DateTime: 24-07-2025 09:33:44
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 24-07-2025 09:33:44
+				State: Error
+				Description: Failed to continue the test case execution. Error Code : Exception of type 'Siemens.Simatic.Testsuite.ApplicationTest.Runtime.Exceptions.PLCStateChangeException' was thrown.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans191
+			DateTime: 24-07-2025 09:33:44
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 2
+				Path: "Wait for reset release, Transition 191"
+				DateTime: 24-07-2025 09:33:44
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 2
+					Path: PR_CentreStand_Fix_Seq_V12_DB.StateNo
+					DateTime: 24-07-2025 09:33:44
+					State: Error
+					Description: Actual: 146, Expected: 147, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_DB.qFixUnclamp
+					DateTime: 24-07-2025 09:33:45
+					State: Error
+					Description: Actual: False, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans147
+			DateTime: 24-07-2025 09:33:45
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 2
+				Path: "Wait for reset release, Transition 147"
+				DateTime: 24-07-2025 09:33:45
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 2
+					Path: PR_CentreStand_Fix_Seq_V12_DB.StateNo
+					DateTime: 24-07-2025 09:33:45
+					State: Error
+					Description: Actual: 146, Expected: 148, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_DB.qR1ReadytoPickTray
+					DateTime: 24-07-2025 09:33:45
+					State: Error
+					Description: Actual: False, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans148
+			DateTime: 24-07-2025 09:33:45
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 148"
+				DateTime: 24-07-2025 09:33:45
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_DB.StateNo
+					DateTime: 24-07-2025 09:33:45
+					State: Error
+					Description: Actual: 146, Expected: 149, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans149
+			DateTime: 24-07-2025 09:33:45
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 1
+			Error Count: 1
+				Path: "Wait for reset release, Transition 149"
+				DateTime: 24-07-2025 09:33:45
+				State: Error
+				Description: Fail [Run with condition not satisfied as "PR_CentreStand_Fix_Seq_V12_DB.StateNo" = 146]
+				Warning Count: 1
+				Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_DB.StateNo
+					DateTime: 24-07-2025 09:33:45
+					State: Error
+					Description: Actual: 146, Expected: 138, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+	Path: 
+	DateTime: 24-07-2025 09:33:46
+	State: Information
+	Description: Test case(s) execution completed with errors.
+	Warning Count: 0
+	Error Count: 0

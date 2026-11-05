@@ -1,0 +1,5 @@
+=== SPREADSHEET NAME ===
+LifterSeq_79bef3_b4b7cedc-bca3-4b41-92b8-a42f7a0dd8bc.xlsx
+=== DESCRIPTION ===
+All state networks have atleast one connection from a transition variable
+------------------------------------------------------------

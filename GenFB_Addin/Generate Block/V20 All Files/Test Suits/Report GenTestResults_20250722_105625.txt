@@ -1,0 +1,105 @@
+State: Error
+Warning Count: 0
+Error Count: 7
+	Path: Application test
+	DateTime: 22/07/2025 5:26:22 AM
+	State: Error
+	Description: 
+	Warning Count: 0
+	Error Count: 7
+		Path: PR_CentreStand_Fix_Seq_V12_1026b5
+		DateTime: 22/07/2025 5:26:22 AM
+		State: Error
+		Description: 
+		Warning Count: 0
+		Error Count: 7
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans145
+			DateTime: 22/07/2025 5:26:22 AM
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 1
+				Path: Line: 43
+				DateTime: 22/07/2025 5:26:23 AM
+				State: Error
+				Description: Tag "iqR2ServiceActive" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans146
+			DateTime: 22/07/2025 5:26:23 AM
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 1
+				Path: Line: 42
+				DateTime: 22/07/2025 5:26:23 AM
+				State: Error
+				Description: Tag "iqR2ServiceCompleted" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans148
+			DateTime: 22/07/2025 5:26:23 AM
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 1
+				Path: Line: 42
+				DateTime: 22/07/2025 5:26:23 AM
+				State: Error
+				Description: Tag "iqR2ServiceCompleted" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans138_T2_R2OpComp
+			DateTime: 22/07/2025 5:26:23 AM
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 1
+				Path: Line: 28
+				DateTime: 22/07/2025 5:26:23 AM
+				State: Error
+				Description: Tag "iqR2ServiceCompleted" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans140_T2
+			DateTime: 22/07/2025 5:26:23 AM
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 1
+				Path: Line: 29
+				DateTime: 22/07/2025 5:26:23 AM
+				State: Error
+				Description: Tag "iqR2ServiceCompleted" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans138_T2_R2OpNtComp
+			DateTime: 22/07/2025 5:26:23 AM
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 1
+				Path: Line: 28
+				DateTime: 22/07/2025 5:26:23 AM
+				State: Error
+				Description: Tag "iqR2ServiceCompleted" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans140_T1
+			DateTime: 22/07/2025 5:26:23 AM
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 1
+				Path: Line: 28
+				DateTime: 22/07/2025 5:26:23 AM
+				State: Error
+				Description: Tag "iqR2ServiceCompleted" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+	Path: 
+	DateTime: 22/07/2025 5:26:23 AM
+	State: Error
+	Description: Test case execution pre-condition not met.
+	Warning Count: 0
+	Error Count: 1

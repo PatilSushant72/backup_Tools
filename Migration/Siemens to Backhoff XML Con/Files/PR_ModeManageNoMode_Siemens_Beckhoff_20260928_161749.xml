@@ -1,0 +1,2040 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://www.plcopen.org/xml/tc6_0200">
+  <fileHeader companyName="SiemensToBackhoff" productName="Siemens TIA Portal to Beckhoff TwinCAT PLCopen Converter" productVersion="2.0" creationDateTime="2026-09-28T10:47:49.957897" />
+  <contentHeader name="PR_ModeManageNoMode_PLC" modificationDateTime="2026-09-28T10:47:49.957897">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="1" y="1" />
+      </fbd>
+      <ld>
+        <scaling x="1" y="1" />
+      </ld>
+      <sfc>
+        <scaling x="1" y="1" />
+      </sfc>
+    </coordinateInfo>
+    <addData>
+      <data name="http://www.3s-software.com/plcopenxml/projectinformation" handleUnknown="implementation">
+        <ProjectInformation />
+      </data>
+    </addData>
+  </contentHeader>
+  <types>
+    <dataTypes />
+    <pous>
+      <pou name="PR_ModeManageNoMode" pouType="functionBlock">
+        <interface>
+          <inputVars>
+            <variable name="iFirstscan">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">PLC First Scan Bit</xhtml>
+              </documentation>
+            </variable>
+            <variable name="iControlOn">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Machine All Safety Relay Healthy</xhtml>
+              </documentation>
+            </variable>
+            <variable name="iAutoModeEnable">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">If conditions are OK to start automode make this bit high</xhtml>
+              </documentation>
+            </variable>
+            <variable name="iManModeEnable">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">If conditions are OK to sart manual mode  make this bit high</xhtml>
+              </documentation>
+            </variable>
+            <variable name="iAutoMode">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Auto Mode Input PB/SW</xhtml>
+              </documentation>
+            </variable>
+            <variable name="iManMode">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Man Mode Input PB/SW</xhtml>
+              </documentation>
+            </variable>
+            <variable name="iCycleStart">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Cycle Start Input PB</xhtml>
+              </documentation>
+            </variable>
+            <variable name="iCycleStop">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Cycle Stop Input PB (NC Type)</xhtml>
+              </documentation>
+            </variable>
+            <variable name="iHomePB">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Home Input PB</xhtml>
+              </documentation>
+            </variable>
+            <variable name="iEndOfCycle">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">If Cycle Completed  make this bit high</xhtml>
+              </documentation>
+            </variable>
+            <variable name="iDrainCycle">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">If conditions are OK to start drain cycle  make this bit high</xhtml>
+              </documentation>
+            </variable>
+            <variable name="iDryCycle">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">If conditions are OK to start dry cycle  make this bit high</xhtml>
+              </documentation>
+            </variable>
+            <variable name="iDrainCompleted">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">If Drain Completed  make this bit high</xhtml>
+              </documentation>
+            </variable>
+            <variable name="iHomeCompleted">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">If Home Completed  make this bit high</xhtml>
+              </documentation>
+            </variable>
+            <variable name="iImmediateStop">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">To abort autocycle or to select manual while running in auto  make this bit 1</xhtml>
+              </documentation>
+            </variable>
+            <variable name="iCycleStartDelay">
+              <type>
+                <TIME />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Cycle Start PB Press Delay Eg. If 2Sec T#2S</xhtml>
+              </documentation>
+            </variable>
+            <variable name="iBypassHomeOption">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Make sure that autocycle can initiate without home condition = 1</xhtml>
+              </documentation>
+            </variable>
+          </inputVars>
+          <outputVars>
+            <variable name="qManModeActive">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Man Mode Active</xhtml>
+              </documentation>
+            </variable>
+            <variable name="qWaitForCStart">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Waiting For Cycle Start</xhtml>
+              </documentation>
+            </variable>
+            <variable name="qAutoRunningActive">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">AutoRunning Active</xhtml>
+              </documentation>
+            </variable>
+            <variable name="qHomeRunningActive">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Home Running Active</xhtml>
+              </documentation>
+            </variable>
+            <variable name="qDrainActive">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Drain Active</xhtml>
+              </documentation>
+            </variable>
+            <variable name="qCycleStopActive">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Cycle Stop Active</xhtml>
+              </documentation>
+            </variable>
+            <variable name="qDryCycleActive">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Dry Cycle Active</xhtml>
+              </documentation>
+            </variable>
+            <variable name="qModuleReset">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">1 If No Mode Selected</xhtml>
+              </documentation>
+            </variable>
+            <variable name="qMsgCStartandNoHome">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Cycle Start PB Pressed but MC Not at Home</xhtml>
+              </documentation>
+            </variable>
+            <variable name="qMsgManModeinAutoRunning">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Manual Mode selected during Auto Running</xhtml>
+              </documentation>
+            </variable>
+          </outputVars>
+          <localVars>
+            <variable name="sPowerOnReset">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Power ON reset Bit during initial power ON</xhtml>
+              </documentation>
+            </variable>
+            <variable name="sControlOnPulse">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Control ON pulse</xhtml>
+              </documentation>
+            </variable>
+            <variable name="sControlOnEdge">
+              <type>
+                <derived name="R_TRIG" />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Control ON Input Positive Edge</xhtml>
+              </documentation>
+            </variable>
+            <variable name="sManModeActivePulse">
+              <type>
+                <derived name="R_TRIG" />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Man Mode Active Positive Edge Pulse</xhtml>
+              </documentation>
+            </variable>
+            <variable name="sCycleStartDelay">
+              <type>
+                <TIME />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Cycle Start Delay</xhtml>
+              </documentation>
+            </variable>
+            <variable name="CycleStartOnDelayTimer">
+              <type>
+                <derived name="TON" />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">ON Delay Timer SFB4</xhtml>
+              </documentation>
+            </variable>
+            <variable name="sAutoRunningActive">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Auto Running Active</xhtml>
+              </documentation>
+            </variable>
+            <variable name="sManModeActive">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Man Mode Active</xhtml>
+              </documentation>
+            </variable>
+            <variable name="sHomeRunningActive">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Home Running Active</xhtml>
+              </documentation>
+            </variable>
+            <variable name="sWaitForCStart">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Waiting For Cycle Start</xhtml>
+              </documentation>
+            </variable>
+            <variable name="sDrainActive">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Drain Active</xhtml>
+              </documentation>
+            </variable>
+            <variable name="sDryCycleActive">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Dry Cycle Active</xhtml>
+              </documentation>
+            </variable>
+            <variable name="sCycleStopActive">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Cycle Stop Active</xhtml>
+              </documentation>
+            </variable>
+            <variable name="sModuleReset">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Module Reset</xhtml>
+              </documentation>
+            </variable>
+            <variable name="sMsgCStartandNoHome">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Cycle Start PB Pressed but MC Not at Home</xhtml>
+              </documentation>
+            </variable>
+            <variable name="sMsgManModeinAutoRunning">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Manual Mode selected during Auto Running</xhtml>
+              </documentation>
+            </variable>
+          </localVars>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK PR_ModeManageNoMode
+VAR_INPUT
+	iFirstscan : BOOL;  // PLC First Scan Bit
+	iControlOn : BOOL;  // Machine All Safety Relay Healthy
+	iAutoModeEnable : BOOL;  // If conditions are OK to start automode make this bit high
+	iManModeEnable : BOOL;  // If conditions are OK to sart manual mode make this bit high
+	iAutoMode : BOOL;  // Auto Mode Input PB/SW
+	iManMode : BOOL;  // Man Mode Input PB/SW
+	iCycleStart : BOOL;  // Cycle Start Input PB
+	iCycleStop : BOOL;  // Cycle Stop Input PB (NC Type)
+	iHomePB : BOOL;  // Home Input PB
+	iEndOfCycle : BOOL;  // If Cycle Completed make this bit high
+	iDrainCycle : BOOL;  // If conditions are OK to start drain cycle make this bit high
+	iDryCycle : BOOL;  // If conditions are OK to start dry cycle make this bit high
+	iDrainCompleted : BOOL;  // If Drain Completed make this bit high
+	iHomeCompleted : BOOL;  // If Home Completed make this bit high
+	iImmediateStop : BOOL;  // To abort autocycle or to select manual while running in auto make this bit 1
+	iCycleStartDelay : TIME;  // Cycle Start PB Press Delay Eg. If 2Sec T#2S
+	iBypassHomeOption : BOOL;  // Make sure that autocycle can initiate without home condition = 1
+END_VAR
+VAR_OUTPUT
+	qManModeActive : BOOL;  // Man Mode Active
+	qWaitForCStart : BOOL;  // Waiting For Cycle Start
+	qAutoRunningActive : BOOL;  // AutoRunning Active
+	qHomeRunningActive : BOOL;  // Home Running Active
+	qDrainActive : BOOL;  // Drain Active
+	qCycleStopActive : BOOL;  // Cycle Stop Active
+	qDryCycleActive : BOOL;  // Dry Cycle Active
+	qModuleReset : BOOL;  // 1 If No Mode Selected
+	qMsgCStartandNoHome : BOOL;  // Cycle Start PB Pressed but MC Not at Home
+	qMsgManModeinAutoRunning : BOOL;  // Manual Mode selected during Auto Running
+END_VAR
+VAR
+	sPowerOnReset : BOOL;  // Power ON reset Bit during initial power ON
+	sControlOnPulse : BOOL;  // Control ON pulse
+	sControlOnEdge : R_TRIG;  // Control ON Input Positive Edge
+	sManModeActivePulse : R_TRIG;  // Man Mode Active Positive Edge Pulse
+	sCycleStartDelay : TIME;  // Cycle Start Delay
+	CycleStartOnDelayTimer : TON;  // ON Delay Timer SFB4
+	sAutoRunningActive : BOOL;  // Auto Running Active
+	sManModeActive : BOOL;  // Man Mode Active
+	sHomeRunningActive : BOOL;  // Home Running Active
+	sWaitForCStart : BOOL;  // Waiting For Cycle Start
+	sDrainActive : BOOL;  // Drain Active
+	sDryCycleActive : BOOL;  // Dry Cycle Active
+	sCycleStopActive : BOOL;  // Cycle Stop Active
+	sModuleReset : BOOL;  // Module Reset
+	sMsgCStartandNoHome : BOOL;  // Cycle Start PB Pressed but MC Not at Home
+	sMsgManModeinAutoRunning : BOOL;  // Manual Mode selected during Auto Running
+END_VAR
+</xhtml>
+              </InterfaceAsPlainText>
+            </data>
+          </addData>
+        </interface>
+        <body>
+          <LD>
+            <leftPowerRail localId="0">
+              <position x="0" y="0" />
+              <connectionPointOut formalParameter="none" />
+            </leftPowerRail>
+            <comment localId="1" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">==============================================================================
+ Company: Precision Automation &amp; Robotics India Ltd. 
+------------------------------------------------------------------------------
+ Item Code: S11002022002
+ Author/Created by: PARI
+ Reviewed/Checked by: Atul P
+ First Release on: 14-Aug-2015
+ Latest update on: 14-Aug-2015
+------------------------------------------------------------------------------
+ Tested with: CPU firmware, model or simulator testing
+ Engineering/Editor: TIA Portal V15.1
+------------------------------------------------------------------------------
+ Restrictions: No
+ Dependencies/Requirements:
+------------------------------------------------------------------------------
+ Change Log:
+ Ver.	Date		Changed by		Details of changes
+ 1.0       14-Aug-2015                           A.D	                                     First release version
+------------------------------------------------------------------------------
+Functionality:
+This block is used Control Mode Of System.After Power On or End Of Cycle It 
+will go to No Mode State if mode 
+Selection is not present
+
+ Inputs
+iFirstscan	Bool
+iContolOn	Bool
+iAutoModeEnable	Bool
+iManModeEnable	Bool
+iAutoMode	Bool
+iManMode	Bool
+iCycleStart	Bool
+iCycleStop	Bool
+iHomePB	Bool
+iEndOfCycle	Bool
+iDrainCycle	Bool
+iDryCycle	Bool
+iDrainCompleted	Bool
+iHomeCompleted	Bool
+iImmediateStop	Bool
+iCycleStartDelay	Time
+iBypassHomeOption	Bool
+
+
+ Outputs
+qManModeActive	Bool
+qWaitForCStart	Bool
+qAutoRunningActive	Bool
+qHomeRunningActive	Bool
+qDrainActive	Bool
+qCycleStopActive	Bool
+qDryCycleActive	Bool
+qModuleReset	Bool
+
+
+In-outs
+Nill
+
+------------------------------------------------------------------------------
+Errors reported:
+Nill
+
+Messages:
+qMsgCStartandNoHome	Bool
+qMsgManModeinAutoRunning	Bool
+
+==============================================================================</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="2">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <comment localId="3" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Cycle Start delay validation</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="4">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="5" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>TRUE</variable>
+            </contact>
+            <inVariable localId="6">
+              <position x="0" y="0" />
+              <connectionPointOut />
+              <expression>iCycleStartDelay</expression>
+            </inVariable>
+            <inVariable localId="7">
+              <position x="0" y="0" />
+              <connectionPointOut />
+              <expression>T#10S</expression>
+            </inVariable>
+            <block localId="8" typeName="GT">
+              <position x="0" y="0" />
+              <inputVariables>
+                <variable formalParameter="EN">
+                  <connectionPointIn>
+                    <connection refLocalId="5" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="In2">
+                  <connectionPointIn>
+                    <connection refLocalId="6" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="In3">
+                  <connectionPointIn>
+                    <connection refLocalId="7" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="Out1">
+                  <connectionPointOut />
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">operator</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <inVariable localId="9">
+              <position x="0" y="0" />
+              <connectionPointOut />
+              <expression>iCycleStartDelay</expression>
+            </inVariable>
+            <inVariable localId="10">
+              <position x="0" y="0" />
+              <connectionPointOut />
+              <expression>T#0S</expression>
+            </inVariable>
+            <block localId="11" typeName="LT">
+              <position x="0" y="0" />
+              <inputVariables>
+                <variable formalParameter="EN">
+                  <connectionPointIn>
+                    <connection refLocalId="5" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="In2">
+                  <connectionPointIn>
+                    <connection refLocalId="9" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="In3">
+                  <connectionPointIn>
+                    <connection refLocalId="10" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="Out1">
+                  <connectionPointOut />
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">operator</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <vendorElement localId="12">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">ParallelBranch</xhtml>
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/ldparallelbranch" handleUnknown="implementation">
+                  <ParallelBranch mode="sce" xmlns="">
+                    <BranchInput>
+                      <connectionPointIn>
+                        <connection refLocalId="5" />
+                      </connectionPointIn>
+                    </BranchInput>
+                    <BranchTrees>
+                      <Tree>
+                        <connectionPointIn>
+                          <connection refLocalId="11" formalParameter="Out1" />
+                        </connectionPointIn>
+                      </Tree>
+                      <Tree>
+                        <connectionPointIn>
+                          <connection refLocalId="8" formalParameter="Out1" />
+                        </connectionPointIn>
+                      </Tree>
+                    </BranchTrees>
+                  </ParallelBranch>
+                </data>
+              </addData>
+            </vendorElement>
+            <block localId="13" typeName="NOT">
+              <position x="0" y="0" />
+              <inputVariables>
+                <variable formalParameter="In1">
+                  <connectionPointIn>
+                    <connection refLocalId="11" formalParameter="Out1" />
+                    <connection refLocalId="8" formalParameter="Out1" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="Out1">
+                  <connectionPointOut />
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">operator</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <inVariable localId="14">
+              <position x="0" y="0" />
+              <connectionPointOut />
+              <expression>T#3S</expression>
+            </inVariable>
+            <block localId="15" typeName="MOVE">
+              <position x="0" y="0" />
+              <inputVariables>
+                <variable formalParameter="EN">
+                  <connectionPointIn>
+                    <connection refLocalId="11" formalParameter="Out1" />
+                    <connection refLocalId="8" formalParameter="Out1" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="In2">
+                  <connectionPointIn>
+                    <connection refLocalId="14" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="ENO">
+                  <connectionPointOut />
+                </variable>
+                <variable formalParameter="Out2">
+                  <connectionPointOut>
+                    <expression>sCycleStartDelay</expression>
+                  </connectionPointOut>
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">operator</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <inVariable localId="16">
+              <position x="0" y="0" />
+              <connectionPointOut />
+              <expression>iCycleStartDelay</expression>
+            </inVariable>
+            <block localId="17" typeName="MOVE">
+              <position x="0" y="0" />
+              <inputVariables>
+                <variable formalParameter="EN">
+                  <connectionPointIn>
+                    <connection refLocalId="13" formalParameter="Out1" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="In2">
+                  <connectionPointIn>
+                    <connection refLocalId="16" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="ENO">
+                  <connectionPointOut />
+                </variable>
+                <variable formalParameter="Out2">
+                  <connectionPointOut>
+                    <expression>sCycleStartDelay</expression>
+                  </connectionPointOut>
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">operator</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <comment localId="18" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Power ON reset Bit during initial power ON
+Reset Active</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="19">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="20" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iControlOn</variable>
+            </contact>
+            <contact localId="21" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iFirstscan</variable>
+            </contact>
+            <coil localId="22" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="20" />
+                <connection refLocalId="21" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sPowerOnReset</variable>
+            </coil>
+            <comment localId="23" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Control On pulse
+#sControlOnPulse</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="24">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="25" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iControlOn</variable>
+            </contact>
+            <contact localId="26" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iFirstscan</variable>
+            </contact>
+            <block localId="27" typeName="R_TRIG" instanceName="sControlOnEdge">
+              <position x="0" y="0" />
+              <inputVariables>
+                <variable formalParameter="CLK">
+                  <connectionPointIn>
+                    <connection refLocalId="25" />
+                    <connection refLocalId="26" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="Q">
+                  <connectionPointOut />
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">functionblock</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <coil localId="28" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="27" formalParameter="Q" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sControlOnPulse</variable>
+            </coil>
+            <comment localId="29" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Manual mode active
+Man Mode</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="30">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="31" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iManMode</variable>
+            </contact>
+            <contact localId="32" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sManModeActive</variable>
+            </contact>
+            <contact localId="33" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="31" />
+                <connection refLocalId="32" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iAutoMode</variable>
+            </contact>
+            <contact localId="34" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="33" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sAutoRunningActive</variable>
+            </contact>
+            <contact localId="35" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="34" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sHomeRunningActive</variable>
+            </contact>
+            <contact localId="36" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="35" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iManModeEnable</variable>
+            </contact>
+            <contact localId="37" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="36" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sPowerOnReset</variable>
+            </contact>
+            <coil localId="38" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="37" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sManModeActive</variable>
+            </coil>
+            <comment localId="39" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Waiting for cycle to start
+Auto Mode</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="40">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="41" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iAutoMode</variable>
+            </contact>
+            <contact localId="42" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sWaitForCStart</variable>
+            </contact>
+            <contact localId="43" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="41" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iManMode</variable>
+            </contact>
+            <contact localId="44" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="43" />
+                <connection refLocalId="42" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iImmediateStop</variable>
+            </contact>
+            <contact localId="45" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="44" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sManModeActive</variable>
+            </contact>
+            <contact localId="46" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="45" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sAutoRunningActive</variable>
+            </contact>
+            <contact localId="47" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="46" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iAutoModeEnable</variable>
+            </contact>
+            <contact localId="48" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="47" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sPowerOnReset</variable>
+            </contact>
+            <coil localId="49" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="48" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sWaitForCStart</variable>
+            </coil>
+            <comment localId="50" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">CycleStartDelayTimer</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="51">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="52" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iCycleStart</variable>
+            </contact>
+            <contact localId="53" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="52" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sWaitForCStart</variable>
+            </contact>
+            <contact localId="54" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="53" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iHomeCompleted</variable>
+            </contact>
+            <contact localId="55" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="53" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iBypassHomeOption</variable>
+            </contact>
+            <contact localId="56" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="54" />
+                <connection refLocalId="55" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iCycleStop</variable>
+            </contact>
+            <inVariable localId="57">
+              <position x="0" y="0" />
+              <connectionPointOut />
+              <expression>sCycleStartDelay</expression>
+            </inVariable>
+            <block localId="58" typeName="TON" instanceName="CycleStartOnDelayTimer">
+              <position x="0" y="0" />
+              <inputVariables>
+                <variable formalParameter="IN">
+                  <connectionPointIn>
+                    <connection refLocalId="56" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="PT">
+                  <connectionPointIn>
+                    <connection refLocalId="57" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="Q">
+                  <connectionPointOut />
+                </variable>
+                <variable formalParameter="ET">
+                  <connectionPointOut>
+                    <expression />
+                  </connectionPointOut>
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">functionblock</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL TIME</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <comment localId="59" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Drain,Dry,Cycle Stop Active</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="60">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="61" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>TRUE</variable>
+            </contact>
+            <contact localId="62" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="61" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iDrainCycle</variable>
+            </contact>
+            <contact localId="63" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="61" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDrainActive</variable>
+            </contact>
+            <contact localId="64" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="61" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iDryCycle</variable>
+            </contact>
+            <contact localId="65" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="61" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDryCycleActive</variable>
+            </contact>
+            <contact localId="66" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="61" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iCycleStop</variable>
+            </contact>
+            <contact localId="67" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="61" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sAutoRunningActive</variable>
+            </contact>
+            <contact localId="68" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="61" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sCycleStopActive</variable>
+            </contact>
+            <contact localId="69" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="62" />
+                <connection refLocalId="63" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sAutoRunningActive</variable>
+            </contact>
+            <contact localId="70" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="69" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sPowerOnReset</variable>
+            </contact>
+            <contact localId="71" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="70" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iDryCycle</variable>
+            </contact>
+            <contact localId="72" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="71" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDryCycleActive</variable>
+            </contact>
+            <coil localId="73" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="72" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDrainActive</variable>
+            </coil>
+            <contact localId="74" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="64" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sWaitForCStart</variable>
+            </contact>
+            <contact localId="75" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="74" />
+                <connection refLocalId="65" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sManModeActive</variable>
+            </contact>
+            <contact localId="76" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="75" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iAutoModeEnable</variable>
+            </contact>
+            <contact localId="77" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="76" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sPowerOnReset</variable>
+            </contact>
+            <contact localId="78" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="77" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iDrainCycle</variable>
+            </contact>
+            <contact localId="79" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="78" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDrainActive</variable>
+            </contact>
+            <coil localId="80" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="79" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDryCycleActive</variable>
+            </coil>
+            <contact localId="81" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="67" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iManMode</variable>
+            </contact>
+            <contact localId="82" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="66" />
+                <connection refLocalId="81" />
+                <connection refLocalId="68" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sAutoRunningActive</variable>
+            </contact>
+            <contact localId="83" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="82" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sPowerOnReset</variable>
+            </contact>
+            <coil localId="84" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="83" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sCycleStopActive</variable>
+            </coil>
+            <comment localId="85" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Auto running active
+Auto Running</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="86">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="87" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sWaitForCStart</variable>
+            </contact>
+            <contact localId="88" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sAutoRunningActive</variable>
+            </contact>
+            <contact localId="89" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="87" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>CycleStartOnDelayTimer.Q</variable>
+            </contact>
+            <contact localId="90" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="88" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iImmediateStop</variable>
+            </contact>
+            <contact localId="91" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="89" />
+                <connection refLocalId="90" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sManModeActive</variable>
+            </contact>
+            <contact localId="92" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="91" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iEndOfCycle</variable>
+            </contact>
+            <contact localId="93" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="91" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sCycleStopActive</variable>
+            </contact>
+            <contact localId="94" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="92" />
+                <connection refLocalId="93" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iDrainCompleted</variable>
+            </contact>
+            <contact localId="95" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="92" />
+                <connection refLocalId="93" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDrainActive</variable>
+            </contact>
+            <contact localId="96" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="94" />
+                <connection refLocalId="95" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iAutoModeEnable</variable>
+            </contact>
+            <contact localId="97" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="96" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sPowerOnReset</variable>
+            </contact>
+            <coil localId="98" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="97" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sAutoRunningActive</variable>
+            </coil>
+            <comment localId="99" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Home running active</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="100">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="101" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iHomePB</variable>
+            </contact>
+            <contact localId="102" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sHomeRunningActive</variable>
+            </contact>
+            <contact localId="103" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="101" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qManModeActive</variable>
+            </contact>
+            <contact localId="104" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="103" />
+                <connection refLocalId="102" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iAutoMode</variable>
+            </contact>
+            <contact localId="105" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="104" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iHomeCompleted</variable>
+            </contact>
+            <contact localId="106" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="105" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sPowerOnReset</variable>
+            </contact>
+            <contact localId="107" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="106" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iManModeEnable</variable>
+            </contact>
+            <contact localId="108" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="107" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iImmediateStop</variable>
+            </contact>
+            <coil localId="109" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="108" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sHomeRunningActive</variable>
+            </coil>
+            <comment localId="110" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Resetting module to initial state
+Module Reset</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="111">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="112" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sManModeActive</variable>
+            </contact>
+            <contact localId="113" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sManModeActive</variable>
+            </contact>
+            <contact localId="114" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="112" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sAutoRunningActive</variable>
+            </contact>
+            <contact localId="115" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="114" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sHomeRunningActive</variable>
+            </contact>
+            <block localId="116" typeName="R_TRIG" instanceName="sManModeActivePulse">
+              <position x="0" y="0" />
+              <inputVariables>
+                <variable formalParameter="CLK">
+                  <connectionPointIn>
+                    <connection refLocalId="113" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="Q">
+                  <connectionPointOut />
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">functionblock</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <vendorElement localId="117">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">ParallelBranch</xhtml>
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/ldparallelbranch" handleUnknown="implementation">
+                  <ParallelBranch mode="sce" xmlns="">
+                    <BranchInput>
+                      <connectionPointIn>
+                        <connection refLocalId="0" />
+                      </connectionPointIn>
+                    </BranchInput>
+                    <BranchTrees>
+                      <Tree>
+                        <connectionPointIn>
+                          <connection refLocalId="115" />
+                        </connectionPointIn>
+                      </Tree>
+                      <Tree>
+                        <connectionPointIn>
+                          <connection refLocalId="116" formalParameter="Q" />
+                        </connectionPointIn>
+                      </Tree>
+                    </BranchTrees>
+                  </ParallelBranch>
+                </data>
+              </addData>
+            </vendorElement>
+            <coil localId="118" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="115" />
+                <connection refLocalId="116" formalParameter="Q" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sModuleReset</variable>
+            </coil>
+            <comment localId="119" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Message if machine is started without home conditions OK
+Machine Not At Home if C Start Press</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="120">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="121" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iCycleStart</variable>
+            </contact>
+            <contact localId="122" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="121" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sWaitForCStart</variable>
+            </contact>
+            <contact localId="123" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="122" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iHomeCompleted</variable>
+            </contact>
+            <contact localId="124" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="123" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iBypassHomeOption</variable>
+            </contact>
+            <coil localId="125" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="124" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sMsgCStartandNoHome</variable>
+            </coil>
+            <comment localId="126" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Message if manual mode selected during auto running
+MsgManModeinAutoRunning</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="127">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="128" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sAutoRunningActive</variable>
+            </contact>
+            <contact localId="129" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="128" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iManMode</variable>
+            </contact>
+            <coil localId="130" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="129" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sMsgManModeinAutoRunning</variable>
+            </coil>
+            <comment localId="131" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Outputs</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="132">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="133" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sManModeActive</variable>
+            </contact>
+            <contact localId="134" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sWaitForCStart</variable>
+            </contact>
+            <contact localId="135" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDrainActive</variable>
+            </contact>
+            <contact localId="136" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDryCycleActive</variable>
+            </contact>
+            <contact localId="137" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sCycleStopActive</variable>
+            </contact>
+            <contact localId="138" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sAutoRunningActive</variable>
+            </contact>
+            <contact localId="139" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sHomeRunningActive</variable>
+            </contact>
+            <contact localId="140" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sModuleReset</variable>
+            </contact>
+            <contact localId="141" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sMsgManModeinAutoRunning</variable>
+            </contact>
+            <contact localId="142" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sMsgCStartandNoHome</variable>
+            </contact>
+            <coil localId="143" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="133" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qManModeActive</variable>
+            </coil>
+            <coil localId="144" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="134" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qWaitForCStart</variable>
+            </coil>
+            <coil localId="145" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="135" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qDrainActive</variable>
+            </coil>
+            <coil localId="146" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="136" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qDryCycleActive</variable>
+            </coil>
+            <coil localId="147" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="137" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qCycleStopActive</variable>
+            </coil>
+            <coil localId="148" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="138" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qAutoRunningActive</variable>
+            </coil>
+            <coil localId="149" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="139" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qHomeRunningActive</variable>
+            </coil>
+            <coil localId="150" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="140" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qModuleReset</variable>
+            </coil>
+            <coil localId="151" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="141" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qMsgManModeinAutoRunning</variable>
+            </coil>
+            <coil localId="152" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="142" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qMsgCStartandNoHome</variable>
+            </coil>
+            <rightPowerRail localId="2147483646">
+              <position x="0" y="0" />
+              <connectionPointIn />
+            </rightPowerRail>
+          </LD>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK PR_ModeManageNoMode
+VAR_INPUT
+	iFirstscan : BOOL;  // PLC First Scan Bit
+	iControlOn : BOOL;  // Machine All Safety Relay Healthy
+	iAutoModeEnable : BOOL;  // If conditions are OK to start automode make this bit high
+	iManModeEnable : BOOL;  // If conditions are OK to sart manual mode make this bit high
+	iAutoMode : BOOL;  // Auto Mode Input PB/SW
+	iManMode : BOOL;  // Man Mode Input PB/SW
+	iCycleStart : BOOL;  // Cycle Start Input PB
+	iCycleStop : BOOL;  // Cycle Stop Input PB (NC Type)
+	iHomePB : BOOL;  // Home Input PB
+	iEndOfCycle : BOOL;  // If Cycle Completed make this bit high
+	iDrainCycle : BOOL;  // If conditions are OK to start drain cycle make this bit high
+	iDryCycle : BOOL;  // If conditions are OK to start dry cycle make this bit high
+	iDrainCompleted : BOOL;  // If Drain Completed make this bit high
+	iHomeCompleted : BOOL;  // If Home Completed make this bit high
+	iImmediateStop : BOOL;  // To abort autocycle or to select manual while running in auto make this bit 1
+	iCycleStartDelay : TIME;  // Cycle Start PB Press Delay Eg. If 2Sec T#2S
+	iBypassHomeOption : BOOL;  // Make sure that autocycle can initiate without home condition = 1
+END_VAR
+VAR_OUTPUT
+	qManModeActive : BOOL;  // Man Mode Active
+	qWaitForCStart : BOOL;  // Waiting For Cycle Start
+	qAutoRunningActive : BOOL;  // AutoRunning Active
+	qHomeRunningActive : BOOL;  // Home Running Active
+	qDrainActive : BOOL;  // Drain Active
+	qCycleStopActive : BOOL;  // Cycle Stop Active
+	qDryCycleActive : BOOL;  // Dry Cycle Active
+	qModuleReset : BOOL;  // 1 If No Mode Selected
+	qMsgCStartandNoHome : BOOL;  // Cycle Start PB Pressed but MC Not at Home
+	qMsgManModeinAutoRunning : BOOL;  // Manual Mode selected during Auto Running
+END_VAR
+VAR
+	sPowerOnReset : BOOL;  // Power ON reset Bit during initial power ON
+	sControlOnPulse : BOOL;  // Control ON pulse
+	sControlOnEdge : R_TRIG;  // Control ON Input Positive Edge
+	sManModeActivePulse : R_TRIG;  // Man Mode Active Positive Edge Pulse
+	sCycleStartDelay : TIME;  // Cycle Start Delay
+	CycleStartOnDelayTimer : TON;  // ON Delay Timer SFB4
+	sAutoRunningActive : BOOL;  // Auto Running Active
+	sManModeActive : BOOL;  // Man Mode Active
+	sHomeRunningActive : BOOL;  // Home Running Active
+	sWaitForCStart : BOOL;  // Waiting For Cycle Start
+	sDrainActive : BOOL;  // Drain Active
+	sDryCycleActive : BOOL;  // Dry Cycle Active
+	sCycleStopActive : BOOL;  // Cycle Stop Active
+	sModuleReset : BOOL;  // Module Reset
+	sMsgCStartandNoHome : BOOL;  // Cycle Start PB Pressed but MC Not at Home
+	sMsgManModeinAutoRunning : BOOL;  // Manual Mode selected during Auto Running
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>e69eab4b-78b4-4522-8185-839688c07404</ObjectId>
+          </data>
+        </addData>
+      </pou>
+    </pous>
+  </types>
+  <instances>
+    <configurations />
+  </instances>
+  <addData>
+    <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
+      <ProjectStructure>
+        <Object Name="PR_ModeManageNoMode" ObjectId="e69eab4b-78b4-4522-8185-839688c07404" />
+      </ProjectStructure>
+    </data>
+  </addData>
+</project>

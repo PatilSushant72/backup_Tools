@@ -1,0 +1,134 @@
+﻿<PackageConfiguration xmlns="http://www.siemens.com/automation/Openness/AddIn/Publisher/V17">
+  <Author>&lt;Company name - Department&gt;</Author>
+  <AddInVersion>V17</AddInVersion>
+  <Description>This is an example TIA Add-In for TIA Portal V17</Description>
+  <DisplayInMultiuser />
+  
+  <Product>
+    <Name>LockUnlockBlock</Name>
+    <Id>LockUnlockBlock</Id>
+    <Version>1.0.0</Version>
+  </Product>
+
+  <FeatureAssembly>
+    <AssemblyInfo>
+      <Assembly>LockUnlockBlock.dll</Assembly>
+    </AssemblyInfo>
+  </FeatureAssembly>
+
+  <!--<AdditionalAssemblies>
+    <AssemblyInfo>
+      <Assembly>...dll</Assembly>
+    </AssemblyInfo>
+    <AssemblyInfo>
+      <Assembly>...dll</Assembly>
+    </AssemblyInfo>
+  </AdditionalAssemblies>-->
+
+  <!--<Certificates>
+    <SigningCertificate>...</SigningCertificate>
+    <AdditionalCertificates>
+      <Certificate>...</Certificate>
+    </AdditionalCertificates>
+  </Certificates>-->
+
+  <!--Please check required permissions-->
+  <RequiredPermissions>
+    <TIAPermissions>
+      <TIA.ReadOnly/> <!-- - Add-in only reads data from TIA portal -->
+      <!-- <TIA.ReadWrite/> - Allows reading and writing of objects inside TIA Portal-->
+    </TIAPermissions>
+    <SecurityPermissions>
+      <System.Security.Permissions.FileIOPermission/>
+      <System.Security.Permissions.UIPermission/>
+      <System.Security.Permissions.EnvironmentPermission/>
+      <Siemens.Engineering.AddIn.Permissions.ProcessStartPermission/>
+      <System.Security.Permissions.SecurityPermission.UnmanagedCode/>
+
+      <!--<System.Net.WebPermission/>
+      <System.Security.Permissions.MediaPermission/>
+      <System.Security.Permissions.KeyContainerPermission/>
+      <System.Security.Permissions.WebBrowserPermission/>
+      <System.Net.SocketPermission/>
+      <System.Data.Odbc.OdbcPermission/>
+      <System.Net.NetworkInformation.NetworkInformationPermission/>
+      <System.Security.Permissions.StorePermission/>
+      <System.Configuration.ConfigurationPermission/>
+      <System.Diagnostics.EventLogPermission/>
+      <System.Drawing.Printing.PrintingPermission/>
+      <System.Security.Permissions.IsolatedStorageFilePermission/>
+      <System.Data.OleDb.OleDbPermission/>
+      <System.Security.Permissions.RegistryPermission/>
+      <System.Data.SqlClient.SqlClientPermission/>
+      <System.Net.Mail.SmtpPermission/>
+      <System.Security.Permissions.FileDialogPermission/>-->
+      
+      <!--
+      ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+      ┃                                             TABLE OF ALL POSSIBLE SECURITY PERMISSION OPTIONS                                             ┃
+      ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫
+      ┃                           Permission                               |                              Description                             ┃
+      ┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+      │ <System.Security.Permissions.SecurityPermission.UnmanagedCode/>    - Controls rights to call native functions/use code that is directly   │
+      │                                                                      executed by operating system. Needed for eg. Debugger.Launch()       │
+      │                                                                      method. Effort should be made to minimize the need of this           │
+      │                                                                      permission as it allows to potentially bypass other permissions.     │
+      ├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+      │ <Siemens.Engineering.AddIn.Permissions.ProcessStartPermission/>    - Controls the ability to start another process/application from       │
+      │                                                                      within the Add-In process.                                           │
+      ├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+      │ <System.Net.WebPermission/>                                        - Controls rights to access HTTP internet resources.                   │
+      ├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+      │ <System.Security.Permissions.MediaPermission/>                     - Controls the ability for audio, image and video media to work in     │
+      │                                                                      partial-trust WPF application.                                       │
+      ├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+      │ <System.Security.Permissions.KeyContainerPermission/>              - Controls the ability to access key containers (Used for storing      │
+      │                                                                      cryptic data such as private keys).                                  │
+      ├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+      │ <System.Security.Permissions.WebBrowserPermission/>                - Controls the ability to create the WebBrowser control (WPF).         │
+      ├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+      │ <System.Net.SocketPermission/>                                     - Controls the rights to make or accept Socket connections.            │
+      ├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+      │ <System.Data.Odbc.OdbcPermission/>                                 - Enables the .NET Framework Data Provider for ODBC to help make sure  │
+      │                                                                      that user has a security level sufficient to access an ODBC data     │
+      │                                                                      source.                                                              │
+      ├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+      │ <System.Net.NetworkInformation.NetworkInformationPermission/>      - Controls access to network information and traffic statistics for    │
+      │                                                                      the local computer.                                                  │
+      ├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+      │ <System.Security.Permissions.StorePermission/>                     - Controls access to stores containing X.509 certificates.             │
+      ├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+      │ <System.Configuration.ConfigurationPermission/>                    - Controls access to configuration files.                              │
+      ├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+      │ <System.Security.Permissions.FileIOPermission/>                    - Controls the ability to access and manipulate files and folders.     │
+      ├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+      │ <System.Diagnostics.EventLogPermission/>                           - Controls code access permissions for event logging.                  │
+      ├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+      │ <System.Drawing.Printing.PrintingPermission/>                      - Controls access to printers.                                         │
+      ├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+      │ <System.Security.Permissions.IsolatedStorageFilePermission/>       - Controls the ability to use Isolated storage.                        │
+      ├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+      │ <System.Data.OleDb.OleDbPermission/>                               - Enables the .NET Framework Data Provider for OLE DB to help make     │
+      │                                                                      sure that a user has a security level sufficient to access an OLE DB │
+      │                                                                      data source.                                                         │
+      ├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+      │ <System.Security.Permissions.RegistryPermission/>                  - Controls the ability to access registry variables.                   │
+      ├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+      │ <System.Data.SqlClient.SqlClientPermission/>                       - Enables the .NET Framework Data Provider for SQL Server to help make │
+      │                                                                      sure that a user has a security level sufficient to access a SQL     │
+      │                                                                      data source.                                                         │
+      ├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+      │ <System.Security.Permissions.EnvironmentPermission/>               - Controls access to system and user environment variables.            │
+      ├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+      │ <System.Net.Mail.SmtpPermission/>                                  - Controls access to Simple Mail Transport Protocol (SMTP) servers.    │
+      ├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+      │ <System.Security.Permissions.FileDialogPermission/>                - Controls the ability to access files or folders through a File       │
+      │                                                                      dialog box.                                                          │
+      ├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+      │ <System.Security.Permissions.UIPermission/>                        - Controls the permissions related to user interfaces and the          │
+      │                                                                      Clipboard.                                                           │
+      └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+	  -->
+    </SecurityPermissions>
+  </RequiredPermissions>
+</PackageConfiguration>

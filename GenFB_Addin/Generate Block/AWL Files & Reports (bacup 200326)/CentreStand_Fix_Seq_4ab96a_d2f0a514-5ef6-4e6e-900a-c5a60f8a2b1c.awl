@@ -1,0 +1,484 @@
+FUNCTION_BLOCK "FB_CentreStand_Fix_Seq"
+{ S7_Optimized_Access := 'FALSE' }
+VERSION : 0.1
+      VAR_INPUT
+      iAutoRunning : BOOL;
+      iFixClamp : BOOL;
+      iFixEmpty : BOOL;
+      iFixTrayPresent : BOOL;
+      iFixUnclamp : BOOL;
+      iR1DropOver : BOOL;
+      iR1PickOver : BOOL;
+      iR2OperationOver : BOOL;
+      iR2ServiceActivated : BOOL;
+      iR2ServiceCompleted : Bool;
+      iReset_fault : Bool;
+      iRobotOutofZone : BOOL;
+      iSstMode : BOOL;
+      iSstPB : BOOL;
+   END_VAR
+
+   VAR_OUTPUT
+      qFixClamp : Bool;
+      qFixUnclamp : Bool;
+      qR1ReadytoDropTray : Bool;
+      qR1ReadytoPickTray : Bool;
+      qR2OperationStart : Bool;
+   END_VAR
+
+   VAR_IN_OUT
+      iqR2ServiceActive : BOOL;
+      iqR2ServiceCompleted : BOOL;
+   END_VAR
+
+   VAR
+      StateNo : INT;
+      s138_WaitBothRbtOutAl : BOOL;
+      s138_WaitBothRbtOutAl_T1 : BOOL;
+      s138_WaitBothRbtOutAl_T2 : BOOL;
+      s139_FixEmpty : BOOL;
+      s139_FixEmpty_T1 : BOOL;
+      s140_FixTrayPrsntRec : BOOL;
+      s140_FixTrayPrsntRec_T1 : BOOL;
+      s140_FixTrayPrsntRec_T2 : BOOL;
+      s141_FixUnclampCmd : BOOL;
+      s141_FixUnclampCmd_T1 : BOOL;
+      s142_TrayRdyDropFix : BOOL;
+      s142_TrayRdyDropFix_T1 : BOOL;
+      s143_RbtDropFixChkTr : BOOL;
+      s143_RbtDropFixChkTr_T1 : BOOL;
+      s144_RbtOutAreaDrop : BOOL;
+      s144_RbtOutAreaDrop_T1 : BOOL;
+      s145_FixClamp : BOOL;
+      s145_FixClamp_T1 : BOOL;
+      s146_Rbt2AlloyOpOver : BOOL;
+      s146_Rbt2AlloyOpOver_T1 : BOOL;
+      s147_FixUnclmpCmdOvr : BOOL;
+      s147_FixUnclmpCmdOvr_T1 : BOOL;
+      s148_RdyPickTrayWait : BOOL;
+      s148_RdyPickTrayWait_T1 : BOOL;
+      s149_RbtPickTrayChkEm : BOOL;
+      s149_RbtPickTrayChkEm_T1 : BOOL;
+      s191_WaitRbt2OutArea : BOOL;
+      s191_WaitRbt2OutArea_T1 : BOOL;
+      sSst : BOOL;
+      sSstPulse : BOOL;
+      sSstRise : Bool;
+      sStWtResetRel : BOOL;
+      sStWtResetRel_T1 : BOOL;
+   END_VAR
+
+   VAR_TEMP
+      tOne : BOOL;
+   END_VAR
+
+BEGIN
+NETWORK
+TITLE = 
+      O #tOne;
+      ON #tOne;
+      = #tOne;
+NETWORK
+TITLE = Create Single Step Pulse bit
+      A #iSstPB;
+      FP #sSstRise;
+      = #sSstPulse;
+NETWORK
+TITLE = Create Single Step bit
+      A #iSstMode;
+      A #sSstPulse;
+      ON #iSstMode;
+      = #sSst;
+NETWORK
+TITLE = Transition for STATE Num:0 Reset Released
+      A #sStWtResetRel;
+      A #iAutoRunning;
+      = #sStWtResetRel_T1;
+NETWORK
+TITLE = STATE Num:0 Reset Released
+      A(;
+      O #sStWtResetRel;
+      ON #iAutoRunning;
+      );
+      AN #sStWtResetRel_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #sStWtResetRel;
+      A %L1.0;
+      JNB Label_0;
+      L 0;
+      T #StateNo;
+Label_0:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand
+      A #s138_WaitBothRbtOutAl;
+      AN #sStWtResetRel;
+      A #sSst;
+      = %L1.0;
+      A %L1.0;
+      A #iRobotOutofZone;
+      AN #iFixTrayPresent;
+      = #s138_WaitBothRbtOutAl_T1;
+      A %L1.0;
+      AN #s138_WaitBothRbtOutAl_T1;
+      A #iRobotOutofZone;
+      A #iFixTrayPresent;
+      = #s138_WaitBothRbtOutAl_T2;
+NETWORK
+TITLE = STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand
+      A(;
+      O #s138_WaitBothRbtOutAl;
+      O #s149_RbtPickTrayChkEm_T1;
+      O #sStWtResetRel_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s138_WaitBothRbtOutAl_T1;
+      AN #s138_WaitBothRbtOutAl_T2;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s138_WaitBothRbtOutAl;
+      A %L1.0;
+      JNB Label_138;
+      L 138;
+      T #StateNo;
+Label_138:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:139 Fix Empty
+      A #s139_FixEmpty;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iFixEmpty;
+      = #s139_FixEmpty_T1;
+NETWORK
+TITLE = STATE Num:139 Fix Empty
+      A(;
+      O #s139_FixEmpty;
+      O #s138_WaitBothRbtOutAl_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s139_FixEmpty_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s139_FixEmpty;
+      A %L1.0;
+      JNB Label_139;
+      L 139;
+      T #StateNo;
+Label_139:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:140 Fix Tray Present_Rec Operation pending
+      A #s140_FixTrayPrsntRec;
+      AN #sStWtResetRel;
+      A #sSst;
+      = %L1.0;
+      A %L1.0;
+      A #iFixTrayPresent;
+      A #iRobotOutofZone;
+      AN #iqR2ServiceCompleted;
+      = #s140_FixTrayPrsntRec_T1;
+      A %L1.0;
+      AN #s140_FixTrayPrsntRec_T1;
+      A #iFixTrayPresent;
+      A #iRobotOutofZone;
+      A #iqR2ServiceCompleted;
+      = #s140_FixTrayPrsntRec_T2;
+NETWORK
+TITLE = STATE Num:140 Fix Tray Present_Rec Operation pending
+      A(;
+      O #s140_FixTrayPrsntRec;
+      O #s138_WaitBothRbtOutAl_T2;
+      );
+      AN #sStWtResetRel;
+      AN #s140_FixTrayPrsntRec_T1;
+      AN #s140_FixTrayPrsntRec_T2;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s140_FixTrayPrsntRec;
+      A %L1.0;
+      JNB Label_140;
+      L 140;
+      T #StateNo;
+Label_140:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:141 Fix Unclamp Cmd
+      A #s141_FixUnclampCmd;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iFixUnclamp;
+      = #s141_FixUnclampCmd_T1;
+NETWORK
+TITLE = STATE Num:141 Fix Unclamp Cmd
+      A(;
+      O #s141_FixUnclampCmd;
+      O #s139_FixEmpty_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s141_FixUnclampCmd_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s141_FixUnclampCmd;
+      A %L1.0;
+      JNB Label_141;
+      L 141;
+      T #StateNo;
+Label_141:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:141 Fix Unclamp Cmd
+      A #s141_FixUnclampCmd;
+      = #qFixUnclamp;
+NETWORK
+TITLE = Transition for STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request
+      A #s142_TrayRdyDropFix;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iR1DropOver;
+      = #s142_TrayRdyDropFix_T1;
+NETWORK
+TITLE = STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request
+      A(;
+      O #s142_TrayRdyDropFix;
+      O #s141_FixUnclampCmd_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s142_TrayRdyDropFix_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s142_TrayRdyDropFix;
+      A %L1.0;
+      JNB Label_142;
+      L 142;
+      T #StateNo;
+Label_142:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request
+      A #s142_TrayRdyDropFix;
+      = #qR1ReadytoDropTray;
+NETWORK
+TITLE = Transition for STATE Num:143 Robot Drop Fix and Check Tray Present
+      A #s143_RbtDropFixChkTr;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iFixTrayPresent;
+      = #s143_RbtDropFixChkTr_T1;
+NETWORK
+TITLE = STATE Num:143 Robot Drop Fix and Check Tray Present
+      A(;
+      O #s143_RbtDropFixChkTr;
+      O #s142_TrayRdyDropFix_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s143_RbtDropFixChkTr_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s143_RbtDropFixChkTr;
+      A %L1.0;
+      JNB Label_143;
+      L 143;
+      T #StateNo;
+Label_143:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:144 Rbt Out of Area After Drop
+      A #s144_RbtOutAreaDrop;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iRobotOutofZone;
+      = #s144_RbtOutAreaDrop_T1;
+NETWORK
+TITLE = STATE Num:144 Rbt Out of Area After Drop
+      A(;
+      O #s144_RbtOutAreaDrop;
+      O #s143_RbtDropFixChkTr_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s144_RbtOutAreaDrop_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s144_RbtOutAreaDrop;
+      A %L1.0;
+      JNB Label_144;
+      L 144;
+      T #StateNo;
+Label_144:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:145 Fix Clamp
+      A #s145_FixClamp;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iRobotOutofZone;
+      A #iFixClamp;
+      = #s145_FixClamp_T1;
+NETWORK
+TITLE = STATE Num:145 Fix Clamp
+      A(;
+      O #s145_FixClamp;
+      O #s140_FixTrayPrsntRec_T1;
+      O #s144_RbtOutAreaDrop_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s145_FixClamp_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s145_FixClamp;
+      A %L1.0;
+      JNB Label_145;
+      L 145;
+      T #StateNo;
+Label_145:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:145 Fix Clamp
+      A #s145_FixClamp;
+      = #qFixClamp;
+NETWORK
+TITLE = Transition for STATE Num:146 Robot-2 All Alloys Pick Or Drop Operation over
+      A #s146_Rbt2AlloyOpOver;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iR2OperationOver;
+      = #s146_Rbt2AlloyOpOver_T1;
+NETWORK
+TITLE = STATE Num:146 Robot-2 All Alloys Pick Or Drop Operation over
+      A(;
+      O #s146_Rbt2AlloyOpOver;
+      O #s145_FixClamp_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s146_Rbt2AlloyOpOver_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s146_Rbt2AlloyOpOver;
+      A %L1.0;
+      JNB Label_146;
+      L 146;
+      T #StateNo;
+Label_146:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:146 Robot-2 All Alloys Pick Or Drop Operation over
+      A #s146_Rbt2AlloyOpOver;
+      = #qR2OperationStart;
+      A #iR2ServiceActivated;
+      S #iqR2ServiceActive;
+      A #iR2OperationOver;
+      A #iqR2ServiceActive;
+      R #iqR2ServiceActive;
+NETWORK
+TITLE = Transition for STATE Num:147 Fix Unclamp Cmd After Opern over
+      A #s147_FixUnclmpCmdOvr;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iFixUnclamp;
+      = #s147_FixUnclmpCmdOvr_T1;
+NETWORK
+TITLE = STATE Num:147 Fix Unclamp Cmd After Opern over
+      A(;
+      O #s147_FixUnclmpCmdOvr;
+      O #s140_FixTrayPrsntRec_T2;
+      O #s191_WaitRbt2OutArea_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s147_FixUnclmpCmdOvr_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s147_FixUnclmpCmdOvr;
+      A %L1.0;
+      JNB Label_147;
+      L 147;
+      T #StateNo;
+Label_147:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:147 Fix Unclamp Cmd After Opern over
+      A #s147_FixUnclmpCmdOvr;
+      = #qFixUnclamp;
+NETWORK
+TITLE = Transition for STATE Num:148 Rdy to Pick Tray After Oprn Over- Wait for Robot Accept Request
+      A #s148_RdyPickTrayWait;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iR1PickOver;
+      = #s148_RdyPickTrayWait_T1;
+NETWORK
+TITLE = STATE Num:148 Rdy to Pick Tray After Oprn Over- Wait for Robot Accept Request
+      A(;
+      O #s148_RdyPickTrayWait;
+      O #s147_FixUnclmpCmdOvr_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s148_RdyPickTrayWait_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s148_RdyPickTrayWait;
+      A %L1.0;
+      JNB Label_148;
+      L 148;
+      T #StateNo;
+Label_148:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:148 Rdy to Pick Tray After Oprn Over- Wait for Robot Accept Request
+      A #s148_RdyPickTrayWait;
+      = #qR1ReadytoPickTray;
+      A #iR1PickOver;
+      R #iqR2ServiceCompleted;
+NETWORK
+TITLE = Transition for STATE Num:149 Robot Picked Tray and Check Tray Loc Empty
+      A #s149_RbtPickTrayChkEm;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iFixEmpty;
+      = #s149_RbtPickTrayChkEm_T1;
+NETWORK
+TITLE = STATE Num:149 Robot Picked Tray and Check Tray Loc Empty
+      A(;
+      O #s149_RbtPickTrayChkEm;
+      O #s148_RdyPickTrayWait_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s149_RbtPickTrayChkEm_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s149_RbtPickTrayChkEm;
+      A %L1.0;
+      JNB Label_149;
+      L 149;
+      T #StateNo;
+Label_149:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:149 Robot Picked Tray and Check Tray Loc Empty
+      A #s149_RbtPickTrayChkEm;
+      R #iqR2ServiceCompleted;
+NETWORK
+TITLE = Transition for STATE Num:191 Wait For Robot-2 Out Of Area
+      A #s191_WaitRbt2OutArea;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iRobotOutofZone;
+      = #s191_WaitRbt2OutArea_T1;
+NETWORK
+TITLE = STATE Num:191 Wait For Robot-2 Out Of Area
+      A(;
+      O #s191_WaitRbt2OutArea;
+      O #s146_Rbt2AlloyOpOver_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s191_WaitRbt2OutArea_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s191_WaitRbt2OutArea;
+      A %L1.0;
+      JNB Label_191;
+      L 191;
+      T #StateNo;
+Label_191:      NOP 0;
+END_FUNCTION_BLOCK

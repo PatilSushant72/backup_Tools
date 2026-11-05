@@ -1,0 +1,1785 @@
+State: Error
+Warning Count: 0
+Error Count: 52
+	Path: Application test
+	DateTime: 30/07/2025 10:07:53 AM
+	State: Error
+	Description: 
+	Warning Count: 0
+	Error Count: 52
+		Path: PR_GantryUnload_Seqv25_51b799
+		DateTime: 30/07/2025 10:07:54 AM
+		State: Error
+		Description: Test cases executed : 92 ; Passed : 53 ; Failed : 39 ; Inconclusive : 0
+		Warning Count: 0
+		Error Count: 52
+			Path: MemoryReset
+			DateTime: 30/07/2025 10:07:54 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Cycle"
+				DateTime: 30/07/2025 10:08:01 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans0
+			DateTime: 30/07/2025 10:08:01 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Initialize, Transition 0"
+				DateTime: 30/07/2025 10:08:01 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:01 AM
+					State: Success
+					Description: Actual: 44, Expected: 44, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans44
+			DateTime: 30/07/2025 10:08:01 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for reset release, Transition 44"
+				DateTime: 30/07/2025 10:08:01 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:01 AM
+					State: Success
+					Description: Actual: 45, Expected: 45, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans45
+			DateTime: 30/07/2025 10:08:02 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for Gantry Out Of Zone, Transition 45"
+				DateTime: 30/07/2025 10:08:02 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:02 AM
+					State: Success
+					Description: Actual: 46, Expected: 46, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans46_T1
+			DateTime: 30/07/2025 10:08:02 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check Station Home, Transition 46 - Path 1"
+				DateTime: 30/07/2025 10:08:02 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:02 AM
+					State: Error
+					Description: Actual: 67, Expected: 47, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans47
+			DateTime: 30/07/2025 10:08:02 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for Process Start From PZR, Transition 47"
+				DateTime: 30/07/2025 10:08:02 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:02 AM
+					State: Success
+					Description: Actual: 48, Expected: 48, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans48_T1
+			DateTime: 30/07/2025 10:08:02 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Check Recovery, Transition 48 - Path 1"
+				DateTime: 30/07/2025 10:08:02 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:02 AM
+					State: Success
+					Description: Actual: 49, Expected: 49, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.qCenteringSlideAdvance
+					DateTime: 30/07/2025 10:08:02 AM
+					State: Success
+					Description: Actual: True, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans49
+			DateTime: 30/07/2025 10:08:02 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for Centering Slide Advance, Transition 49"
+				DateTime: 30/07/2025 10:08:02 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:02 AM
+					State: Success
+					Description: Actual: 50, Expected: 50, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.qCheckDistance
+					DateTime: 30/07/2025 10:08:02 AM
+					State: Success
+					Description: Actual: True, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans50
+			DateTime: 30/07/2025 10:08:02 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Distance Sensor Feed Back, Transition 50"
+				DateTime: 30/07/2025 10:08:02 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:02 AM
+					State: Success
+					Description: Actual: 51, Expected: 51, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.qCenteringSlideRetract
+					DateTime: 30/07/2025 10:08:02 AM
+					State: Error
+					Description: Actual: False, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans51
+			DateTime: 30/07/2025 10:08:03 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for Centering Slide Retract, Transition 51"
+				DateTime: 30/07/2025 10:08:03 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:03 AM
+					State: Success
+					Description: Actual: 52, Expected: 52, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.qScanCmd
+					DateTime: 30/07/2025 10:08:03 AM
+					State: Success
+					Description: Actual: True, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans52_T1
+			DateTime: 30/07/2025 10:08:03 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for Scan Over, Transition 52 - Path 1"
+				DateTime: 30/07/2025 10:08:03 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:03 AM
+					State: Success
+					Description: Actual: 68, Expected: 68, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans53_T1
+			DateTime: 30/07/2025 10:08:03 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check measured Distance ok Or Not with respect to PC data, Transition 53 - Path 1"
+				DateTime: 30/07/2025 10:08:03 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:03 AM
+					State: Error
+					Description: Actual: 68, Expected: 54, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans54
+			DateTime: 30/07/2025 10:08:03 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 2
+				Path: "Wait for Gantry at Unload Position, Transition 54"
+				DateTime: 30/07/2025 10:08:03 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 2
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:03 AM
+					State: Error
+					Description: Actual: 68, Expected: 55, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.qGantryOkToUnload
+					DateTime: 30/07/2025 10:08:03 AM
+					State: Error
+					Description: Actual: False, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans55
+			DateTime: 30/07/2025 10:08:03 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Gantry Unload Over, Transition 55"
+				DateTime: 30/07/2025 10:08:03 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:03 AM
+					State: Error
+					Description: Actual: 68, Expected: 56, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans56
+			DateTime: 30/07/2025 10:08:04 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Gantry Out Of zone after Unload, Transition 56"
+				DateTime: 30/07/2025 10:08:04 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:04 AM
+					State: Error
+					Description: Actual: 68, Expected: 57, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans57
+			DateTime: 30/07/2025 10:08:04 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 2
+				Path: "Check Reel Absent at Conveyor, Transition 57"
+				DateTime: 30/07/2025 10:08:04 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 2
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:04 AM
+					State: Error
+					Description: Actual: 68, Expected: 58, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.qProcessOver
+					DateTime: 30/07/2025 10:08:04 AM
+					State: Error
+					Description: Actual: False, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans58
+			DateTime: 30/07/2025 10:08:04 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 2
+				Path: "Wait for Process Start Low, Transition 58"
+				DateTime: 30/07/2025 10:08:04 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 2
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:04 AM
+					State: Error
+					Description: Actual: 68, Expected: 47, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.qProcessOver
+					DateTime: 30/07/2025 10:08:04 AM
+					State: Error
+					Description: Actual: False, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: MemoryReset
+			DateTime: 30/07/2025 10:08:04 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Cycle"
+				DateTime: 30/07/2025 10:08:10 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans0
+			DateTime: 30/07/2025 10:08:10 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Initialize, Transition 0"
+				DateTime: 30/07/2025 10:08:11 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:11 AM
+					State: Success
+					Description: Actual: 44, Expected: 44, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans44
+			DateTime: 30/07/2025 10:08:11 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for reset release, Transition 44"
+				DateTime: 30/07/2025 10:08:11 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:11 AM
+					State: Success
+					Description: Actual: 45, Expected: 45, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans45
+			DateTime: 30/07/2025 10:08:11 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for Gantry Out Of Zone, Transition 45"
+				DateTime: 30/07/2025 10:08:11 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:11 AM
+					State: Success
+					Description: Actual: 46, Expected: 46, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans46_T1
+			DateTime: 30/07/2025 10:08:12 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check Station Home, Transition 46 - Path 1"
+				DateTime: 30/07/2025 10:08:12 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:12 AM
+					State: Error
+					Description: Actual: 67, Expected: 47, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans47
+			DateTime: 30/07/2025 10:08:12 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for Process Start From PZR, Transition 47"
+				DateTime: 30/07/2025 10:08:12 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:12 AM
+					State: Success
+					Description: Actual: 48, Expected: 48, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans48_T2
+			DateTime: 30/07/2025 10:08:12 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 2
+				Path: "Check Recovery, Transition 48 - Path 2"
+				DateTime: 30/07/2025 10:08:12 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 2
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:12 AM
+					State: Error
+					Description: Actual: 49, Expected: 52, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.qScanCmd
+					DateTime: 30/07/2025 10:08:12 AM
+					State: Error
+					Description: Actual: False, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans52_T1
+			DateTime: 30/07/2025 10:08:12 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Scan Over, Transition 52 - Path 1"
+				DateTime: 30/07/2025 10:08:12 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:12 AM
+					State: Error
+					Description: Actual: 49, Expected: 68, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans68
+			DateTime: 30/07/2025 10:08:12 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 2
+				Path: "Wait for PC Acknowledge Zero for Read, Transition 68"
+				DateTime: 30/07/2025 10:08:12 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 2
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:12 AM
+					State: Error
+					Description: Actual: 49, Expected: 69, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.qPCReadCmd
+					DateTime: 30/07/2025 10:08:12 AM
+					State: Error
+					Description: Actual: False, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans69
+			DateTime: 30/07/2025 10:08:13 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Data Read Over From PC, Transition 69"
+				DateTime: 30/07/2025 10:08:13 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:13 AM
+					State: Error
+					Description: Actual: 49, Expected: 53, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans53_T1
+			DateTime: 30/07/2025 10:08:13 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check measured Distance ok Or Not with respect to PC data, Transition 53 - Path 1"
+				DateTime: 30/07/2025 10:08:13 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:13 AM
+					State: Error
+					Description: Actual: 49, Expected: 54, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: MemoryReset
+			DateTime: 30/07/2025 10:08:13 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Cycle"
+				DateTime: 30/07/2025 10:08:19 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans0
+			DateTime: 30/07/2025 10:08:19 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Initialize, Transition 0"
+				DateTime: 30/07/2025 10:08:20 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:20 AM
+					State: Success
+					Description: Actual: 44, Expected: 44, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans44
+			DateTime: 30/07/2025 10:08:20 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for reset release, Transition 44"
+				DateTime: 30/07/2025 10:08:20 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:20 AM
+					State: Success
+					Description: Actual: 45, Expected: 45, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans45
+			DateTime: 30/07/2025 10:08:20 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for Gantry Out Of Zone, Transition 45"
+				DateTime: 30/07/2025 10:08:20 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:20 AM
+					State: Success
+					Description: Actual: 46, Expected: 46, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans46_T1
+			DateTime: 30/07/2025 10:08:20 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check Station Home, Transition 46 - Path 1"
+				DateTime: 30/07/2025 10:08:20 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:21 AM
+					State: Error
+					Description: Actual: 67, Expected: 47, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans47
+			DateTime: 30/07/2025 10:08:21 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for Process Start From PZR, Transition 47"
+				DateTime: 30/07/2025 10:08:21 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:21 AM
+					State: Success
+					Description: Actual: 48, Expected: 48, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans48_T3
+			DateTime: 30/07/2025 10:08:21 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check Recovery, Transition 48 - Path 3"
+				DateTime: 30/07/2025 10:08:21 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:21 AM
+					State: Error
+					Description: Actual: 49, Expected: 53, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans53_T1
+			DateTime: 30/07/2025 10:08:21 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check measured Distance ok Or Not with respect to PC data, Transition 53 - Path 1"
+				DateTime: 30/07/2025 10:08:21 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:21 AM
+					State: Error
+					Description: Actual: 49, Expected: 54, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: MemoryReset
+			DateTime: 30/07/2025 10:08:21 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Cycle"
+				DateTime: 30/07/2025 10:08:27 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans0
+			DateTime: 30/07/2025 10:08:27 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Initialize, Transition 0"
+				DateTime: 30/07/2025 10:08:28 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:28 AM
+					State: Success
+					Description: Actual: 44, Expected: 44, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans44
+			DateTime: 30/07/2025 10:08:28 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for reset release, Transition 44"
+				DateTime: 30/07/2025 10:08:28 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:28 AM
+					State: Success
+					Description: Actual: 45, Expected: 45, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans45
+			DateTime: 30/07/2025 10:08:28 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for Gantry Out Of Zone, Transition 45"
+				DateTime: 30/07/2025 10:08:28 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:28 AM
+					State: Success
+					Description: Actual: 46, Expected: 46, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans46_T1
+			DateTime: 30/07/2025 10:08:29 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check Station Home, Transition 46 - Path 1"
+				DateTime: 30/07/2025 10:08:29 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:29 AM
+					State: Error
+					Description: Actual: 67, Expected: 47, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans47
+			DateTime: 30/07/2025 10:08:29 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for Process Start From PZR, Transition 47"
+				DateTime: 30/07/2025 10:08:29 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:29 AM
+					State: Success
+					Description: Actual: 48, Expected: 48, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans48_T1
+			DateTime: 30/07/2025 10:08:29 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Check Recovery, Transition 48 - Path 1"
+				DateTime: 30/07/2025 10:08:29 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:29 AM
+					State: Success
+					Description: Actual: 49, Expected: 49, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.qCenteringSlideAdvance
+					DateTime: 30/07/2025 10:08:29 AM
+					State: Success
+					Description: Actual: True, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans49
+			DateTime: 30/07/2025 10:08:29 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for Centering Slide Advance, Transition 49"
+				DateTime: 30/07/2025 10:08:29 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:29 AM
+					State: Success
+					Description: Actual: 50, Expected: 50, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.qCheckDistance
+					DateTime: 30/07/2025 10:08:29 AM
+					State: Success
+					Description: Actual: True, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans50
+			DateTime: 30/07/2025 10:08:29 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Distance Sensor Feed Back, Transition 50"
+				DateTime: 30/07/2025 10:08:29 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:29 AM
+					State: Success
+					Description: Actual: 51, Expected: 51, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.qCenteringSlideRetract
+					DateTime: 30/07/2025 10:08:30 AM
+					State: Error
+					Description: Actual: False, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans51
+			DateTime: 30/07/2025 10:08:30 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for Centering Slide Retract, Transition 51"
+				DateTime: 30/07/2025 10:08:30 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:30 AM
+					State: Success
+					Description: Actual: 52, Expected: 52, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.qScanCmd
+					DateTime: 30/07/2025 10:08:30 AM
+					State: Success
+					Description: Actual: True, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans52_T1
+			DateTime: 30/07/2025 10:08:30 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for Scan Over, Transition 52 - Path 1"
+				DateTime: 30/07/2025 10:08:30 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:30 AM
+					State: Success
+					Description: Actual: 68, Expected: 68, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans53_T2
+			DateTime: 30/07/2025 10:08:30 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check measured Distance ok Or Not with respect to PC data, Transition 53 - Path 2"
+				DateTime: 30/07/2025 10:08:30 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:30 AM
+					State: Error
+					Description: Actual: 68, Expected: 61, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans61_T1
+			DateTime: 30/07/2025 10:08:30 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check If Measured Diameter is in Tolerence, Transition 61 - Path 1"
+				DateTime: 30/07/2025 10:08:30 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:30 AM
+					State: Error
+					Description: Actual: 68, Expected: 62, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans62
+			DateTime: 30/07/2025 10:08:30 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 2
+				Path: "Wait for PC Acknowledge Zero, Transition 62"
+				DateTime: 30/07/2025 10:08:30 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 2
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:30 AM
+					State: Error
+					Description: Actual: 69, Expected: 63, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.qPCUploadCmd
+					DateTime: 30/07/2025 10:08:31 AM
+					State: Error
+					Description: Actual: False, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans63
+			DateTime: 30/07/2025 10:08:31 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Data Write Over From PC, Transition 63"
+				DateTime: 30/07/2025 10:08:31 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:31 AM
+					State: Error
+					Description: Actual: 69, Expected: 68, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: MemoryReset
+			DateTime: 30/07/2025 10:08:31 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Cycle"
+				DateTime: 30/07/2025 10:08:37 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans0
+			DateTime: 30/07/2025 10:08:37 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Initialize, Transition 0"
+				DateTime: 30/07/2025 10:08:38 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:38 AM
+					State: Success
+					Description: Actual: 44, Expected: 44, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans44
+			DateTime: 30/07/2025 10:08:38 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for reset release, Transition 44"
+				DateTime: 30/07/2025 10:08:38 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:38 AM
+					State: Success
+					Description: Actual: 45, Expected: 45, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans45
+			DateTime: 30/07/2025 10:08:38 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for Gantry Out Of Zone, Transition 45"
+				DateTime: 30/07/2025 10:08:38 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:38 AM
+					State: Success
+					Description: Actual: 46, Expected: 46, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans46_T1
+			DateTime: 30/07/2025 10:08:38 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check Station Home, Transition 46 - Path 1"
+				DateTime: 30/07/2025 10:08:38 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:38 AM
+					State: Error
+					Description: Actual: 67, Expected: 47, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans47
+			DateTime: 30/07/2025 10:08:38 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for Process Start From PZR, Transition 47"
+				DateTime: 30/07/2025 10:08:38 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:38 AM
+					State: Success
+					Description: Actual: 48, Expected: 48, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans48_T1
+			DateTime: 30/07/2025 10:08:39 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Check Recovery, Transition 48 - Path 1"
+				DateTime: 30/07/2025 10:08:39 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:39 AM
+					State: Success
+					Description: Actual: 49, Expected: 49, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.qCenteringSlideAdvance
+					DateTime: 30/07/2025 10:08:39 AM
+					State: Success
+					Description: Actual: True, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans49
+			DateTime: 30/07/2025 10:08:39 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for Centering Slide Advance, Transition 49"
+				DateTime: 30/07/2025 10:08:39 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:39 AM
+					State: Success
+					Description: Actual: 50, Expected: 50, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.qCheckDistance
+					DateTime: 30/07/2025 10:08:39 AM
+					State: Success
+					Description: Actual: True, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans50
+			DateTime: 30/07/2025 10:08:39 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Distance Sensor Feed Back, Transition 50"
+				DateTime: 30/07/2025 10:08:39 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:39 AM
+					State: Success
+					Description: Actual: 51, Expected: 51, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.qCenteringSlideRetract
+					DateTime: 30/07/2025 10:08:39 AM
+					State: Error
+					Description: Actual: False, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans51
+			DateTime: 30/07/2025 10:08:39 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for Centering Slide Retract, Transition 51"
+				DateTime: 30/07/2025 10:08:39 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:39 AM
+					State: Success
+					Description: Actual: 52, Expected: 52, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.qScanCmd
+					DateTime: 30/07/2025 10:08:39 AM
+					State: Success
+					Description: Actual: True, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans52_T1
+			DateTime: 30/07/2025 10:08:39 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for Scan Over, Transition 52 - Path 1"
+				DateTime: 30/07/2025 10:08:39 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:40 AM
+					State: Success
+					Description: Actual: 68, Expected: 68, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans53_T2
+			DateTime: 30/07/2025 10:08:40 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check measured Distance ok Or Not with respect to PC data, Transition 53 - Path 2"
+				DateTime: 30/07/2025 10:08:40 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:40 AM
+					State: Error
+					Description: Actual: 68, Expected: 61, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans61_T2
+			DateTime: 30/07/2025 10:08:40 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 2
+				Path: "Check If Measured Diameter is in Tolerence, Transition 61 - Path 2"
+				DateTime: 30/07/2025 10:08:40 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 2
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:40 AM
+					State: Error
+					Description: Actual: 68, Expected: 64, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.qMsg[2]
+					DateTime: 30/07/2025 10:08:40 AM
+					State: Error
+					Description: Actual: False, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans64
+			DateTime: 30/07/2025 10:08:40 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 2
+				Path: "Wait for Operator Intervention, Transition 64"
+				DateTime: 30/07/2025 10:08:40 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 2
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:40 AM
+					State: Error
+					Description: Actual: 68, Expected: 49, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.qCenteringSlideAdvance
+					DateTime: 30/07/2025 10:08:40 AM
+					State: Error
+					Description: Actual: False, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: MemoryReset
+			DateTime: 30/07/2025 10:08:40 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Cycle"
+				DateTime: 30/07/2025 10:08:46 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans0
+			DateTime: 30/07/2025 10:08:46 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Initialize, Transition 0"
+				DateTime: 30/07/2025 10:08:47 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:47 AM
+					State: Success
+					Description: Actual: 44, Expected: 44, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans44
+			DateTime: 30/07/2025 10:08:47 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for reset release, Transition 44"
+				DateTime: 30/07/2025 10:08:47 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:47 AM
+					State: Success
+					Description: Actual: 45, Expected: 45, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans45
+			DateTime: 30/07/2025 10:08:47 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for Gantry Out Of Zone, Transition 45"
+				DateTime: 30/07/2025 10:08:48 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:48 AM
+					State: Success
+					Description: Actual: 46, Expected: 46, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans46_T1
+			DateTime: 30/07/2025 10:08:48 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check Station Home, Transition 46 - Path 1"
+				DateTime: 30/07/2025 10:08:48 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:48 AM
+					State: Error
+					Description: Actual: 67, Expected: 47, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans47
+			DateTime: 30/07/2025 10:08:48 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for Process Start From PZR, Transition 47"
+				DateTime: 30/07/2025 10:08:48 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:48 AM
+					State: Success
+					Description: Actual: 48, Expected: 48, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans48_T2
+			DateTime: 30/07/2025 10:08:48 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 2
+				Path: "Check Recovery, Transition 48 - Path 2"
+				DateTime: 30/07/2025 10:08:48 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 2
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:48 AM
+					State: Error
+					Description: Actual: 49, Expected: 52, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.qScanCmd
+					DateTime: 30/07/2025 10:08:48 AM
+					State: Error
+					Description: Actual: False, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans52_T2
+			DateTime: 30/07/2025 10:08:48 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Scan Over, Transition 52 - Path 2"
+				DateTime: 30/07/2025 10:08:48 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:48 AM
+					State: Error
+					Description: Actual: 49, Expected: 65, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans65_T1
+			DateTime: 30/07/2025 10:08:49 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 2
+				Path: "Check Scan Retry Count Over Or Not, Transition 65 - Path 1"
+				DateTime: 30/07/2025 10:08:49 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 2
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:49 AM
+					State: Error
+					Description: Actual: 49, Expected: 52, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.qScanCmd
+					DateTime: 30/07/2025 10:08:49 AM
+					State: Error
+					Description: Actual: False, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans52_T1
+			DateTime: 30/07/2025 10:08:49 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Scan Over, Transition 52 - Path 1"
+				DateTime: 30/07/2025 10:08:49 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:49 AM
+					State: Error
+					Description: Actual: 49, Expected: 68, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: MemoryReset
+			DateTime: 30/07/2025 10:08:49 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Cycle"
+				DateTime: 30/07/2025 10:08:55 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans0
+			DateTime: 30/07/2025 10:08:55 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Initialize, Transition 0"
+				DateTime: 30/07/2025 10:08:56 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:56 AM
+					State: Success
+					Description: Actual: 44, Expected: 44, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans44
+			DateTime: 30/07/2025 10:08:56 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for reset release, Transition 44"
+				DateTime: 30/07/2025 10:08:56 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:56 AM
+					State: Success
+					Description: Actual: 45, Expected: 45, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans45
+			DateTime: 30/07/2025 10:08:56 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for Gantry Out Of Zone, Transition 45"
+				DateTime: 30/07/2025 10:08:56 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:56 AM
+					State: Success
+					Description: Actual: 46, Expected: 46, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans46_T1
+			DateTime: 30/07/2025 10:08:57 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check Station Home, Transition 46 - Path 1"
+				DateTime: 30/07/2025 10:08:57 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:57 AM
+					State: Error
+					Description: Actual: 67, Expected: 47, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans47
+			DateTime: 30/07/2025 10:08:57 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for Process Start From PZR, Transition 47"
+				DateTime: 30/07/2025 10:08:57 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:57 AM
+					State: Success
+					Description: Actual: 48, Expected: 48, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans48_T2
+			DateTime: 30/07/2025 10:08:57 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 2
+				Path: "Check Recovery, Transition 48 - Path 2"
+				DateTime: 30/07/2025 10:08:57 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 2
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:57 AM
+					State: Error
+					Description: Actual: 49, Expected: 52, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.qScanCmd
+					DateTime: 30/07/2025 10:08:57 AM
+					State: Error
+					Description: Actual: False, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans52_T2
+			DateTime: 30/07/2025 10:08:57 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Scan Over, Transition 52 - Path 2"
+				DateTime: 30/07/2025 10:08:57 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:57 AM
+					State: Error
+					Description: Actual: 49, Expected: 65, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans65_T2
+			DateTime: 30/07/2025 10:08:57 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 2
+				Path: "Check Scan Retry Count Over Or Not, Transition 65 - Path 2"
+				DateTime: 30/07/2025 10:08:57 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 2
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:58 AM
+					State: Error
+					Description: Actual: 49, Expected: 66, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.qMsg[1]
+					DateTime: 30/07/2025 10:08:58 AM
+					State: Error
+					Description: Actual: False, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans66
+			DateTime: 30/07/2025 10:08:58 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 2
+				Path: "Wait for Operator desicion, Transition 66"
+				DateTime: 30/07/2025 10:08:58 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 2
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:58 AM
+					State: Error
+					Description: Actual: 49, Expected: 52, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.qScanCmd
+					DateTime: 30/07/2025 10:08:58 AM
+					State: Error
+					Description: Actual: False, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans52_T1
+			DateTime: 30/07/2025 10:08:58 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Scan Over, Transition 52 - Path 1"
+				DateTime: 30/07/2025 10:08:58 AM
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:08:58 AM
+					State: Error
+					Description: Actual: 49, Expected: 68, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+			Path: MemoryReset
+			DateTime: 30/07/2025 10:08:58 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Cycle"
+				DateTime: 30/07/2025 10:09:04 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans0
+			DateTime: 30/07/2025 10:09:05 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Initialize, Transition 0"
+				DateTime: 30/07/2025 10:09:05 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:09:05 AM
+					State: Success
+					Description: Actual: 44, Expected: 44, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans44
+			DateTime: 30/07/2025 10:09:05 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for reset release, Transition 44"
+				DateTime: 30/07/2025 10:09:05 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:09:05 AM
+					State: Success
+					Description: Actual: 45, Expected: 45, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans45
+			DateTime: 30/07/2025 10:09:06 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait for Gantry Out Of Zone, Transition 45"
+				DateTime: 30/07/2025 10:09:06 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:09:06 AM
+					State: Success
+					Description: Actual: 46, Expected: 46, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans46_T2
+			DateTime: 30/07/2025 10:09:06 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Check Station Home, Transition 46 - Path 2"
+				DateTime: 30/07/2025 10:09:06 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:09:06 AM
+					State: Success
+					Description: Actual: 67, Expected: 67, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.qCenteringSlideRetract
+					DateTime: 30/07/2025 10:09:06 AM
+					State: Success
+					Description: Actual: True, Expected: True, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans67
+			DateTime: 30/07/2025 10:09:06 AM
+			State: Success
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Wait For Centering Slide Retract for Home, Transition 67"
+				DateTime: 30/07/2025 10:09:06 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_GantryUnload_Seqv25_51b799_DB.StateNo
+					DateTime: 30/07/2025 10:09:06 AM
+					State: Success
+					Description: Actual: 46, Expected: 46, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+	Path: 
+	DateTime: 30/07/2025 10:09:06 AM
+	State: Information
+	Description: Test case(s) execution completed.
+	Warning Count: 0
+	Error Count: 0

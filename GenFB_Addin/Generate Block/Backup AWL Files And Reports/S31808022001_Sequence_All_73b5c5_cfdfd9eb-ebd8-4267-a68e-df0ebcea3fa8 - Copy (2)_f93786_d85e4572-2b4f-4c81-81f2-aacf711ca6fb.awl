@@ -1,0 +1,1846 @@
+FUNCTION_BLOCK "S31808022001_Sequence_All_73b5c5_cfdfd9eb-ebd8-4267-a68e-df0ebcea3fa8 - Copy (2)_f93786"
+{ S7_Optimized_Access := 'FALSE' }
+VERSION : 0.1
+      VAR_INPUT
+      iAutoRunning : BOOL;
+      iFaultReset : BOOL;
+      iOTS_Frm_Prev_TTDown : BOOL;
+      iOTS_Frm_Prev_TTUp : BOOL;
+      iPalletNtPrsntAtTTDown : BOOL;
+      iPalletNtPrsntAtTTUp : BOOL;
+      iPalletPrsnt_TTDown : BOOL;
+      iPalletPrsnt_TTUp : BOOL;
+      iPartReject : BOOL;
+      iRTR_Frm_Next_0DegTTUp : BOOL;
+      iRTR_Frm_Next_90DegTTUp : BOOL;
+      iRTR_Frm_Next_TTDown : BOOL;
+      iRecvAreaClr_TTDown : BOOL;
+      iRecvAreaClr_TTUp : BOOL;
+      iReset_fault : Bool;
+      iRx_Frm_Prev_TTUp : BOOL;
+      iSstMode : BOOL;
+      iSstPB : BOOL;
+      iStprRaise_TTDown : BOOL;
+      iStprRaise_TTUp : BOOL;
+      iTTAt0Pos : BOOL;
+      iTTAt90Pos : BOOL;
+      iTTLocked : BOOL;
+      iTTUnlocked : BOOL;
+      iXferAreaClr_0DegTTDown : BOOL;
+      iXferAreaClr_0DegTTUp : BOOL;
+      iXferAreaClr_90DegTTUp : BOOL;
+   END_VAR
+
+   VAR_OUTPUT
+      qConvRun_TTDown : Bool;
+      qConvRun_TTUp : Bool;
+      qDelStprDown_TTUp : Bool;
+      qOTS_Frm_TTDown : Bool;
+      qOTS_Frm_TTUp : Bool;
+      qOutput1 : Bool;
+      qProcessStart : Bool;
+      qRTR_Frm_TTDwn : Bool;
+      qRTR_Frm_TTUp : Bool;
+      qStprDown_TTDown : Bool;
+      qStprDown_TTUp : Bool;
+      qStprRaise_TTDown : Bool;
+      qStprRaise_TTUp : Bool;
+      qTTLockCmd : Bool;
+      qTTUnlockCmd : Bool;
+      qTT_0Deg : Bool;
+      qTT_90Deg : Bool;
+   END_VAR
+
+   VAR_IN_OUT
+      iqRX_Frn_Prev_TtDown : BOOL;
+      iqRx_Frm_Prev_TTUp : BOOL;
+      iqTx_To_Next_0DegTTDown : BOOL;
+      iqTx_To_Next_0DegTTUp : BOOL;
+      iqTx_To_Next_90DegTTUp : BOOL;
+   END_VAR
+
+   VAR
+      StateNo : INT;
+      s100_StWtForTTUnlck : BOOL;
+      s100_StWtForTTUnlck_T1 : BOOL;
+      s10_StRecoveryCondition : BOOL;
+      s10_StRecoveryCondition_T1 : BOOL;
+      s10_StRecoveryCondition_T2 : BOOL;
+      s10_StRecoveryCondition_T3 : BOOL;
+      s10_StRecoveryCondition_T4 : BOOL;
+      s10_StRecoveryCondition_T5 : BOOL;
+      s10_StRecoveryCondition_T6 : BOOL;
+      s10_StRecoveryCondition_T7 : BOOL;
+      s110_StWtForTTTurn90 : BOOL;
+      s110_StWtForTTTurn90_T1 : BOOL;
+      s120_StWtForTTLck : BOOL;
+      s120_StWtForTTLck_T1 : BOOL;
+      s130_StChkTTDwnRdyToRecv : BOOL;
+      s130_StChkTTDwnRdyToRecv_T1 : BOOL;
+      s130_StChkTTDwnRdyToRecv_T2 : BOOL;
+      s140_StWtFrConveyorStrt : BOOL;
+      s140_StWtFrConveyorStrt_T1 : BOOL;
+      s150_StChkNxtStRdyToRecvTTUp : BOOL;
+      s150_StChkNxtStRdyToRecvTTUp_T1 : BOOL;
+      s150_StChkNxtStRdyToRecvTTUp_T2 : BOOL;
+      s15_StWaitForManCorrection : BOOL;
+      s15_StWaitForManCorrection_T1 : BOOL;
+      s160_StWtFrStprDn_CnvyrStrt : BOOL;
+      s160_StWtFrStprDn_CnvyrStrt_T1 : BOOL;
+      s165_StWtPalAbsnt : BOOL;
+      s165_StWtPalAbsnt_T1 : BOOL;
+      s167_StWtFrDeforkOvr : BOOL;
+      s167_StWtFrDeforkOvr_Cond1 : BOOL;
+      s167_StWtFrDeforkOvr_Cond2 : BOOL;
+      s167_StWtFrDeforkOvr_T1 : BOOL;
+      s170_StWtForTTUpStprUp : BOOL;
+      s170_StWtForTTUpStprUp_T1 : BOOL;
+      s180_StWtForTTUnlk : BOOL;
+      s180_StWtForTTUnlk_T1 : BOOL;
+      s190_StWtForTT_To_0 : BOOL;
+      s190_StWtForTT_To_0_T1 : BOOL;
+      s192_StWtForTTlok : BOOL;
+      s192_StWtForTTlok_T1 : BOOL;
+      s20_StChkForPalletPresent : BOOL;
+      s20_StChkForPalletPresent_T1 : BOOL;
+      s20_StChkForPalletPresent_T2 : BOOL;
+      s20_StChkForPalletPresent_T3 : BOOL;
+      s20_StChkForPalletPresent_T4 : BOOL;
+      s210_StWtFrTTUnlk : BOOL;
+      s210_StWtFrTTUnlk_T1 : BOOL;
+      s220_StWtFrTT_Trn_0 : BOOL;
+      s220_StWtFrTT_Trn_0_T1 : BOOL;
+      s230_StWtFrTTLock : BOOL;
+      s230_StWtFrTTLock_T1 : BOOL;
+      s240_StWtFRTRNxtStnTTDown : BOOL;
+      s240_StWtFRTRNxtStnTTDown_T1 : BOOL;
+      s240_StWtFRTRNxtStnTTDown_T2 : BOOL;
+      s250_StWtTTDnStprDn_CnvyrStr : BOOL;
+      s250_StWtTTDnStprDn_CnvyrStr_T1 : BOOL;
+      s260_StWtPalAbsent : BOOL;
+      s260_StWtPalAbsent_T1 : BOOL;
+      s270_StWtFrTTDwnStprUp : BOOL;
+      s270_StWtFrTTDwnStprUp_T1 : BOOL;
+      s280_StWtRFrOTSFRmPrev_TTUp : BOOL;
+      s280_StWtRFrOTSFRmPrev_TTUp_T1 : BOOL;
+      s290_StWtFrTTUpCnvyrStrt : BOOL;
+      s290_StWtFrTTUpCnvyrStrt_T1 : BOOL;
+      s300_StChkTTPos : BOOL;
+      s300_StChkTTPos_T1 : BOOL;
+      s300_StChkTTPos_T2 : BOOL;
+      s300_StChkTTPos_T3 : BOOL;
+      s30_StChckPartSts : BOOL;
+      s30_StChckPartSts_T1 : BOOL;
+      s310_StWtRTRFrmTTUpAt0 : BOOL;
+      s310_StWtRTRFrmTTUpAt0_T1 : BOOL;
+      s310_StWtRTRFrmTTUpAt0_T2 : BOOL;
+      s320_StWtFrTTUpCnvyrStrtAt0 : BOOL;
+      s320_StWtFrTTUpCnvyrStrtAt0_T1 : BOOL;
+      s340_StChkTTDwnRdyToRecvAt90 : BOOL;
+      s340_StChkTTDwnRdyToRecvAt90_T1 : BOOL;
+      s340_StChkTTDwnRdyToRecvAt90_T2 : BOOL;
+      s350_StWtCnvyrStrt90 : BOOL;
+      s350_StWtCnvyrStrt90_T1 : BOOL;
+      s365_StWtForTTUlkAtIbtwn : BOOL;
+      s365_StWtForTTUlkAtIbtwn_T1 : BOOL;
+      s370_StWtForTTTurnZrAtIbtwn : BOOL;
+      s370_StWtForTTTurnZrAtIbtwn_T1 : BOOL;
+      s380_StWtForTTLock : BOOL;
+      s380_StWtForTTLock_T1 : BOOL;
+      s400_StWt2Defork : BOOL;
+      s400_StWt2Defork_Cond1 : BOOL;
+      s400_StWt2Defork_Cond2 : BOOL;
+      s400_StWt2Defork_T1 : BOOL;
+      s40_StWtForTTUnlock : BOOL;
+      s40_StWtForTTUnlock_T1 : BOOL;
+      s410_StWtForTTUlkAtIbtwn : BOOL;
+      s410_StWtForTTUlkAtIbtwn_T1 : BOOL;
+      s415_StWtForTTTurn90AtIbtwn : BOOL;
+      s415_StWtForTTTurn90AtIbtwn_T1 : BOOL;
+      s420_StWtForTTLock1 : BOOL;
+      s420_StWtForTTLock1_T1 : BOOL;
+      s50_StWtForTTTurn0 : BOOL;
+      s50_StWtForTTTurn0_T1 : BOOL;
+      s60_StWtForTTLock : BOOL;
+      s60_StWtForTTLock_T1 : BOOL;
+      s70_StWtOTSfrmTTUp : BOOL;
+      s70_StWtOTSfrmTTUp_T1 : BOOL;
+      s80_StWtTTUpStpDwnCnvrStrt : BOOL;
+      s80_StWtTTUpStpDwnCnvrStrt_T1 : BOOL;
+      s85_StWtPalPresntAtRej : BOOL;
+      s85_StWtPalPresntAtRej_T1 : BOOL;
+      s90_StWtTTUpStprUp : BOOL;
+      s90_StWtTTUpStprUp_T1 : BOOL;
+      sDefork1Done : BOOL;
+      sDefork2Done : BOOL;
+      sOTSFrmDwnTout : BOOL;
+      sOTSFrmUpTout : BOOL;
+      sPalOnStop_TTDown : BOOL;
+      sPalOnStop_TTUp_0Deg : BOOL;
+      sPalOnStop_TTUp_90Deg : BOOL;
+      sPalletAbsnDebTTUp : BOOL;
+      sPalletAbsntDebTTDown : BOOL;
+      sPalletAbsntDebTTUp : BOOL;
+      sPalletPrsntDebTTDown : BOOL;
+      sPalletPrsntDebTTUp : BOOL;
+      sRTRFrmUpTout : BOOL;
+      sSst : BOOL;
+      sSstPulse : BOOL;
+      sSstRise : Bool;
+      sStWtResetRel : BOOL;
+      sStWtResetRel_T1 : BOOL;
+      sTTDwnSeqOver : BOOL;
+      sTTDwn_0Pos_TX_Time : BOOL;
+      sTTDwn_90Pos_RX_Time : BOOL;
+      sTTDwn_Timer_ON : BOOL;
+      sTTUpSeqOver : BOOL;
+      sTTUp_90Pos_TX_Time : BOOL;
+      sTTUp_Timer_ON : BOOL;
+      sTrBothPalletPresent : BOOL;
+   END_VAR
+
+   VAR_TEMP
+      tOne : BOOL;
+   END_VAR
+
+BEGIN
+NETWORK
+TITLE = 
+      O #tOne;
+      ON #tOne;
+      = #tOne;
+NETWORK
+TITLE = Create Single Step Pulse bit
+      A #iSstPB;
+      FP #sSstRise;
+      = #sSstPulse;
+NETWORK
+TITLE = Create Single Step bit
+      A #iSstMode;
+      A #sSstPulse;
+      ON #iSstMode;
+      = #sSst;
+NETWORK
+TITLE = Transition for STATE Num:0 Reset Released
+      A #sStWtResetRel;
+      A #iAutoRunning;
+      = #sStWtResetRel_T1;
+NETWORK
+TITLE = STATE Num:0 Reset Released
+      A(;
+      O #sStWtResetRel;
+      ON #iAutoRunning;
+      );
+      AN #sStWtResetRel_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #sStWtResetRel;
+      A %L1.0;
+      JNB Label_0;
+      L 0;
+      T #StateNo;
+Label_0:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:1 StWtResetRel
+      A #sStWtResetRel;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iAutoRunning;
+      = #sStWtResetRel_T1;
+NETWORK
+TITLE = STATE Num:1 StWtResetRel
+      A(;
+      O #sStWtResetRel;
+      //wrong transition variable removed
+      );
+      AN #sStWtResetRel;
+      AN #sStWtResetRel_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #sStWtResetRel;
+      A %L1.0;
+      JNB Label_1;
+      L 1;
+      T #StateNo;
+Label_1:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:10 StRecoveryCondition
+      A #s10_StRecoveryCondition;
+      AN #sStWtResetRel;
+      A #sSst;
+      = %L1.0;
+      A %L1.0;
+      A(;
+      O(;
+      A #iRx_Frm_Prev_TTUp;
+      AN #iTTAt0Pos;
+      );
+      O(;
+      A #iqRX_Frn_Prev_TtDown;
+AN #iTTAt90Pos;
+      );
+      O(;
+      O #iqTx_To_Next_90DegTTUp;
+      O #sPalOnStop_TTUp_90Deg;
+      AN #iTTAt90Pos;
+      );
+      O(;
+      O #iqTx_To_Next_0DegTTUp;
+      O #sPalOnStop_TTUp_0Deg;
+      AN #iTTAt0Pos;
+      );
+      O(;
+      O #iqTx_To_Next_0DegTTDown;
+      O #sPalOnStop_TTDown;
+      AN #iTTAt0Pos;
+      );
+      O(;
+      O #sPalOnStop_TTUp_0Deg;
+      O #sPalOnStop_TTUp_90Deg;
+      O #sPalOnStop_TTDown;
+      A #iTTUnlocked;
+      );
+      );
+      = #s10_StRecoveryCondition_T1;
+      A %L1.0;
+      AN #s10_StRecoveryCondition_T1;
+      A(;
+      O #iqTx_To_Next_0DegTTUp;
+      O #sPalOnStop_TTUp_0Deg;
+      );
+      A #iTTAt0Pos;
+      A #iTTLocked;
+      = #s10_StRecoveryCondition_T2;
+      A %L1.0;
+      AN #s10_StRecoveryCondition_T1;
+      AN #s10_StRecoveryCondition_T2;
+      A(;
+      O #iqTx_To_Next_90DegTTUp;
+      O #sPalOnStop_TTUp_90Deg;
+      );
+      A #iTTAt90Pos;
+      A #iTTLocked;
+      = #s10_StRecoveryCondition_T3;
+      A %L1.0;
+      AN #s10_StRecoveryCondition_T1;
+      AN #s10_StRecoveryCondition_T2;
+      AN #s10_StRecoveryCondition_T3;
+      A(;
+      O #iqTx_To_Next_0DegTTDown;
+      O #sPalOnStop_TTDown;
+      );
+      A #iTTAt0Pos;
+      A #iTTLocked;
+      = #s10_StRecoveryCondition_T4;
+      A %L1.0;
+      AN #s10_StRecoveryCondition_T1;
+      AN #s10_StRecoveryCondition_T2;
+      AN #s10_StRecoveryCondition_T3;
+      AN #s10_StRecoveryCondition_T4;
+      A(;
+      O #iRx_Frm_Prev_TTUp;
+      O #iRecvAreaClr_TTUp;
+      );
+      A #iTTAt0Pos;
+      A #iTTLocked;
+      = #s10_StRecoveryCondition_T5;
+      A %L1.0;
+      AN #s10_StRecoveryCondition_T1;
+      AN #s10_StRecoveryCondition_T2;
+      AN #s10_StRecoveryCondition_T3;
+      AN #s10_StRecoveryCondition_T4;
+      AN #s10_StRecoveryCondition_T5;
+      A(;
+      O #iqRX_Frn_Prev_TtDown;
+      ON #iRecvAreaClr_TTDown;
+      );
+      A #iTTAt90Pos;
+      A #iTTLocked;
+      = #s10_StRecoveryCondition_T6;
+      A %L1.0;
+      AN #s10_StRecoveryCondition_T1;
+      AN #s10_StRecoveryCondition_T2;
+      AN #s10_StRecoveryCondition_T3;
+      AN #s10_StRecoveryCondition_T4;
+      AN #s10_StRecoveryCondition_T5;
+      AN #s10_StRecoveryCondition_T6;
+      A(;
+      A(;
+      A #iXferAreaClr_90DegTTUp;
+      A #iXferAreaClr_0DegTTDown;
+      A #iRecvAreaClr_TTDown;
+      A #iRecvAreaClr_TTUp;
+      );
+      O(;
+      AN #sPalOnStop_TTUp_0Deg;
+      AN #sPalOnStop_TTUp_90Deg;
+      AN #sPalOnStop_TTDown;
+      );
+      O(;
+      AN #iqTx_To_Next_90DegTTUp;
+      AN #iqTx_To_Next_0DegTTUp;
+      AN #iqTx_To_Next_0DegTTDown;
+      AN #iqRX_Frn_Prev_TtDown;
+      AN #iRx_Frm_Prev_TTUp;
+      );
+      );
+      = #s10_StRecoveryCondition_T7;
+NETWORK
+TITLE = STATE Num:10 StRecoveryCondition
+      A(;
+      O #s10_StRecoveryCondition;
+	O #s15_StWaitForManCorrection_T1;
+      //wrong transition variable removed
+      );
+      AN #sStWtResetRel;
+      AN #s10_StRecoveryCondition_T1;
+      AN #s10_StRecoveryCondition_T2;
+      AN #s10_StRecoveryCondition_T3;
+      AN #s10_StRecoveryCondition_T4;
+      AN #s10_StRecoveryCondition_T5;
+      AN #s10_StRecoveryCondition_T6;
+      AN #s10_StRecoveryCondition_T7;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s10_StRecoveryCondition;
+      A %L1.0;
+      JNB Label_2;
+      L 10;
+      T #StateNo;
+Label_2:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:15 StWaitForManCorrection
+      A #s15_StWaitForManCorrection;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iFaultReset;
+      = #s15_StWaitForManCorrection_T1;
+NETWORK
+TITLE = STATE Num:15 StWaitForManCorrection
+      A(;
+      O #s15_StWaitForManCorrection;
+      O #s10_StRecoveryCondition_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s15_StWaitForManCorrection_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s15_StWaitForManCorrection;
+      A %L1.0;
+      JNB Label_3;
+      L 15;
+      T #StateNo;
+Label_3:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:20 StChkForPalletPresent
+      A #s20_StChkForPalletPresent;
+      AN #sStWtResetRel;
+      A #sSst;
+      = %L1.0;
+      A %L1.0;
+      A #iPalletPrsnt_TTUp;
+      AN #iPalletPrsnt_TTDown;
+      = #s20_StChkForPalletPresent_T1;
+      A %L1.0;
+      AN #s20_StChkForPalletPresent_T1;
+      A #iPalletPrsnt_TTDown;
+      AN #iPalletPrsnt_TTUp;
+      = #s20_StChkForPalletPresent_T2;
+      A %L1.0;
+      AN #s20_StChkForPalletPresent_T1;
+      AN #s20_StChkForPalletPresent_T2;
+      A #iPalletPrsnt_TTUp;
+      A #iPalletPrsnt_TTDown;
+      = #s20_StChkForPalletPresent_T3;
+      A %L1.0;
+      AN #s20_StChkForPalletPresent_T1;
+      AN #s20_StChkForPalletPresent_T2;
+      AN #s20_StChkForPalletPresent_T3;
+      A #iPalletNtPrsntAtTTUp;
+      AN #iPalletNtPrsntAtTTDown;
+      = #s20_StChkForPalletPresent_T4;
+NETWORK
+TITLE = STATE Num:20 StChkForPalletPresent
+      A(;
+      O #s20_StChkForPalletPresent;
+      O #s10_StRecoveryCondition_T7;
+      O #s90_StWtTTUpStprUp_T1;
+      O #s192_StWtForTTlok_T1;
+      O #s320_StWtFrTTUpCnvyrStrtAt0_T1;
+      O #s350_StWtCnvyrStrt90_T1;
+      O #s380_StWtForTTLock_T1;
+      O #s400_StWt2Defork_T1;
+      O #s420_StWtForTTLock1_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s20_StChkForPalletPresent_T1;
+      AN #s20_StChkForPalletPresent_T2;
+      AN #s20_StChkForPalletPresent_T3;
+      AN #s20_StChkForPalletPresent_T4;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s20_StChkForPalletPresent;
+      A %L1.0;
+      JNB Label_4;
+      L 20;
+      T #StateNo;
+Label_4:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:20 StChkForPalletPresent
+      A #s20_StChkForPalletPresent;
+      = #qOutput1;
+NETWORK
+TITLE = Transition for STATE Num:30 StChckPartSts
+      A #s30_StChckPartSts;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iPartReject;
+      = #s30_StChckPartSts_T1;
+NETWORK
+TITLE = STATE Num:30 StChckPartSts
+      A(;
+      O #s30_StChckPartSts;
+      O #s20_StChkForPalletPresent_T1;
+      O #s20_StChkForPalletPresent_T3;
+      );
+      AN #sStWtResetRel;
+      AN #s30_StChckPartSts_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s30_StChckPartSts;
+      A %L1.0;
+      JNB Label_5;
+      L 30;
+      T #StateNo;
+Label_5:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:30 StChckPartSts
+      A #s30_StChckPartSts;
+      = #qProcessStart;
+NETWORK
+TITLE = Transition for STATE Num:40 StWtForTTUnlock
+      A #s40_StWtForTTUnlock;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iTTUnlocked;
+      A #iRecvAreaClr_TTDown;
+      = #s40_StWtForTTUnlock_T1;
+NETWORK
+TITLE = STATE Num:40 StWtForTTUnlock
+      A(;
+      O #s40_StWtForTTUnlock;
+      O #s30_StChckPartSts_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s40_StWtForTTUnlock_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s40_StWtForTTUnlock;
+      A %L1.0;
+      JNB Label_6;
+      L 40;
+      T #StateNo;
+Label_6:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:40 StWtForTTUnlock
+      A #s40_StWtForTTUnlock;
+      = #qTTUnlockCmd;
+NETWORK
+TITLE = Transition for STATE Num:50 StWtForTTTurn0
+      A #s50_StWtForTTTurn0;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iTTAt0Pos;
+      = #s50_StWtForTTTurn0_T1;
+NETWORK
+TITLE = STATE Num:50 StWtForTTTurn0
+      A(;
+      O #s50_StWtForTTTurn0;
+      O #s40_StWtForTTUnlock_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s50_StWtForTTTurn0_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s50_StWtForTTTurn0;
+      A %L1.0;
+      JNB Label_7;
+      L 50;
+      T #StateNo;
+Label_7:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:50 StWtForTTTurn0
+      A #s50_StWtForTTTurn0;
+      = #qTT_0Deg;
+NETWORK
+TITLE = Transition for STATE Num:60 StWtForTTLock
+      A #s60_StWtForTTLock;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iTTLocked;
+      A #iXferAreaClr_0DegTTUp;
+      = #s60_StWtForTTLock_T1;
+NETWORK
+TITLE = STATE Num:60 StWtForTTLock
+      A(;
+      O #s60_StWtForTTLock;
+      O #s50_StWtForTTTurn0_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s60_StWtForTTLock_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s60_StWtForTTLock;
+      A %L1.0;
+      JNB Label_8;
+      L 60;
+      T #StateNo;
+Label_8:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:60 StWtForTTLock
+      A #s60_StWtForTTLock;
+      = #qTTLockCmd;
+NETWORK
+TITLE = Transition for STATE Num:70 StWtOTSfrmTTUp
+      A #s70_StWtOTSfrmTTUp;
+      AN #sStWtResetRel;
+A #sSst;
+      A #iRTR_Frm_Next_0DegTTUp;
+      A #iPalletPrsnt_TTUp;
+      = #s70_StWtOTSfrmTTUp_T1;
+NETWORK
+TITLE = STATE Num:70 StWtOTSfrmTTUp
+      A(;
+      O #s70_StWtOTSfrmTTUp;
+      O #s60_StWtForTTLock_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s70_StWtOTSfrmTTUp_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s70_StWtOTSfrmTTUp;
+      A %L1.0;
+      JNB Label_9;
+      L 70;
+      T #StateNo;
+Label_9:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:70 StWtOTSfrmTTUp
+      A #s70_StWtOTSfrmTTUp;
+      = #qOTS_Frm_TTUp;
+NETWORK
+TITLE = Transition for STATE Num:80 StWtTTUpStpDwnCnvrStrt
+      A #s80_StWtTTUpStpDwnCnvrStrt;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iqTx_To_Next_0DegTTUp;
+      AN #iXferAreaClr_0DegTTUp;
+      = #s80_StWtTTUpStpDwnCnvrStrt_T1;
+NETWORK
+TITLE = STATE Num:80 StWtTTUpStpDwnCnvrStrt
+      A(;
+      O #s80_StWtTTUpStpDwnCnvrStrt;
+      O #s70_StWtOTSfrmTTUp_T1;
+      O #s10_StRecoveryCondition_T2;
+      );
+      AN #sStWtResetRel;
+      AN #s80_StWtTTUpStpDwnCnvrStrt_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s80_StWtTTUpStpDwnCnvrStrt;
+      A %L1.0;
+      JNB Label_10;
+      L 80;
+      T #StateNo;
+Label_10:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:80 StWtTTUpStpDwnCnvrStrt
+      A #s80_StWtTTUpStpDwnCnvrStrt;
+      = #qDelStprDown_TTUp;
+      = #qConvRun_TTUp;
+NETWORK
+TITLE = Transition for STATE Num:85 StWtPalPresntAtRej
+      A #s85_StWtPalPresntAtRej;
+      AN #sStWtResetRel;
+      A #sSst;
+      AN #iPalletPrsnt_TTUp;
+      A #sPalletAbsnDebTTUp;
+      A #iXferAreaClr_0DegTTUp;
+      = #s85_StWtPalPresntAtRej_T1;
+NETWORK
+TITLE = STATE Num:85 StWtPalPresntAtRej
+      A(;
+      O #s85_StWtPalPresntAtRej;
+      O #s80_StWtTTUpStpDwnCnvrStrt_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s85_StWtPalPresntAtRej_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s85_StWtPalPresntAtRej;
+      A %L1.0;
+      JNB Label_11;
+      L 85;
+      T #StateNo;
+Label_11:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:85 StWtPalPresntAtRej
+      A #s85_StWtPalPresntAtRej;
+      = #qOutput1;
+NETWORK
+TITLE = Transition for STATE Num:90 StWtTTUpStprUp
+      A #s90_StWtTTUpStprUp;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iStprRaise_TTUp;
+      = #s90_StWtTTUpStprUp_T1;
+NETWORK
+TITLE = STATE Num:90 StWtTTUpStprUp
+      A(;
+      O #s90_StWtTTUpStprUp;
+      O #s85_StWtPalPresntAtRej_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s90_StWtTTUpStprUp_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s90_StWtTTUpStprUp;
+      A %L1.0;
+      JNB Label_12;
+      L 90;
+      T #StateNo;
+Label_12:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:90 StWtTTUpStprUp
+      A #s90_StWtTTUpStprUp;
+      = #qStprRaise_TTUp;
+NETWORK
+TITLE = Transition for STATE Num:100 StWtForTTUnlck
+      A #s100_StWtForTTUnlck;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iTTUnlocked;
+      A #iXferAreaClr_0DegTTDown;
+      = #s100_StWtForTTUnlck_T1;
+NETWORK
+TITLE = STATE Num:100 StWtForTTUnlck
+      A(;
+      O #s100_StWtForTTUnlck;
+      );
+      AN #sStWtResetRel;
+      AN #s100_StWtForTTUnlck_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s100_StWtForTTUnlck;
+      A %L1.0;
+      JNB Label_13;
+      L 100;
+      T #StateNo;
+Label_13:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:100 StWtForTTUnlck
+      A #s100_StWtForTTUnlck;
+      AN #iTTUnlocked;
+      = #qTTUnlockCmd;
+NETWORK
+TITLE = Transition for STATE Num:110 StWtForTTTurn90
+      A #s110_StWtForTTTurn90;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iTTAt90Pos;
+      = #s110_StWtForTTTurn90_T1;
+NETWORK
+TITLE = STATE Num:110 StWtForTTTurn90
+      A(;
+      O #s110_StWtForTTTurn90;
+      O #s100_StWtForTTUnlck_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s110_StWtForTTTurn90_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s110_StWtForTTTurn90;
+      A %L1.0;
+      JNB Label_14;
+      L 110;
+      T #StateNo;
+Label_14:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:110 StWtForTTTurn90
+      A #s110_StWtForTTTurn90;
+      = #qTT_90Deg;
+NETWORK
+TITLE = Transition for STATE Num:120 StWtForTTLck
+      A #s120_StWtForTTLck;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iTTLocked;
+      = #s120_StWtForTTLck_T1;
+NETWORK
+TITLE = STATE Num:120 StWtForTTLck
+      A(;
+      O #s120_StWtForTTLck;
+      O #s110_StWtForTTTurn90_T1;
+      O #s10_StRecoveryCondition_T3;
+      O #s10_StRecoveryCondition_T6;
+      );
+      AN #sStWtResetRel;
+      AN #s120_StWtForTTLck_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s120_StWtForTTLck;
+      A %L1.0;
+      JNB Label_15;
+      L 120;
+      T #StateNo;
+Label_15:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:120 StWtForTTLck
+      A #s120_StWtForTTLck;
+      = #qTTLockCmd;
+NETWORK
+TITLE = Transition for STATE Num:130 StChkTTDwnRdyToRecv
+      A #s130_StChkTTDwnRdyToRecv;
+      AN #sStWtResetRel;
+      A #sSst;
+      = %L1.0;
+      A %L1.0;
+      A #iOTS_Frm_Prev_TTDown;
+      = #s130_StChkTTDwnRdyToRecv_T1;
+      A %L1.0;
+      AN #s130_StChkTTDwnRdyToRecv_T1;
+      AN #iOTS_Frm_Prev_TTDown;
+      A #sTTDwn_90Pos_RX_Time;
+      = #s130_StChkTTDwnRdyToRecv_T2;
+NETWORK
+TITLE = STATE Num:130 StChkTTDwnRdyToRecv
+      A(;
+      O #s130_StChkTTDwnRdyToRecv;
+      O #s120_StWtForTTLck_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s130_StChkTTDwnRdyToRecv_T1;
+      AN #s130_StChkTTDwnRdyToRecv_T2;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s130_StChkTTDwnRdyToRecv;
+      A %L1.0;
+      JNB Label_16;
+      L 130;
+      T #StateNo;
+Label_16:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:130 StChkTTDwnRdyToRecv
+      A #s130_StChkTTDwnRdyToRecv;
+      = #qRTR_Frm_TTDwn;
+NETWORK
+TITLE = Transition for STATE Num:140 StWtFrConveyorStrt
+      A #s140_StWtFrConveyorStrt;
+      AN #sStWtResetRel;
+      A #sSst;
+      A(;
+      A #iPalletPrsnt_TTDown;
+      A #sPalletPrsntDebTTDown;
+      A #iRecvAreaClr_TTDown;
+      O #sOTSFrmDwnTout;
+      );
+      = #s140_StWtFrConveyorStrt_T1;
+NETWORK
+TITLE = STATE Num:140 StWtFrConveyorStrt
+      A(;
+      O #s140_StWtFrConveyorStrt;
+      O #s130_StChkTTDwnRdyToRecv_T1;
+      O #s130_StChkTTDwnRdyToRecv_T2;
+      );
+      AN #sStWtResetRel;
+      AN #s140_StWtFrConveyorStrt_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s140_StWtFrConveyorStrt;
+      A %L1.0;
+      JNB Label_17;
+      L 140;
+      T #StateNo;
+Label_17:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:140 StWtFrConveyorStrt
+      A #s140_StWtFrConveyorStrt;
+      = #qConvRun_TTDown;
+NETWORK
+TITLE = Transition for STATE Num:150 StChkNxtStRdyToRecvTTUp
+      A #s150_StChkNxtStRdyToRecvTTUp;
+      AN #sStWtResetRel;
+      A #sSst;
+      = %L1.0;
+      A %L1.0;
+      AN #iRTR_Frm_Next_90DegTTUp;
+      A #sTTUp_90Pos_TX_Time;
+      A(;
+      ON #iPalletPrsnt_TTUp;
+      O #iPalletPrsnt_TTDown;
+      );
+      = #s150_StChkNxtStRdyToRecvTTUp_T1;
+      A %L1.0;
+      AN #s150_StChkNxtStRdyToRecvTTUp_T1;
+      A(;
+      A #iRTR_Frm_Next_90DegTTUp;
+      A #iPalletPrsnt_TTUp;
+      O #sPalOnStop_TTUp_90Deg;
+      O #iqTx_To_Next_90DegTTUp;
+      );
+      = #s150_StChkNxtStRdyToRecvTTUp_T2;
+NETWORK
+TITLE = STATE Num:150 StChkNxtStRdyToRecvTTUp
+      A(;
+      O #s150_StChkNxtStRdyToRecvTTUp;
+      O #s120_StWtForTTLck_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s150_StChkNxtStRdyToRecvTTUp_T1;
+      AN #s150_StChkNxtStRdyToRecvTTUp_T2;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s150_StChkNxtStRdyToRecvTTUp;
+      A %L1.0;
+      JNB Label_18;
+      L 150;
+      T #StateNo;
+Label_18:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:150 StChkNxtStRdyToRecvTTUp
+      A #s150_StChkNxtStRdyToRecvTTUp;
+      = #qOTS_Frm_TTUp;
+NETWORK
+TITLE = Transition for STATE Num:160 StWtFrStprDn_CnvyrStrt
+      A #s160_StWtFrStprDn_CnvyrStrt;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iqTx_To_Next_90DegTTUp;
+      AN #iXferAreaClr_90DegTTUp;
+      AN #iPalletPrsnt_TTUp;
+      = #s160_StWtFrStprDn_CnvyrStrt_T1;
+NETWORK
+TITLE = STATE Num:160 StWtFrStprDn_CnvyrStrt
+      A(;
+      O #s160_StWtFrStprDn_CnvyrStrt;
+      //wrong transition variable removed
+      );
+      AN #sStWtResetRel;
+      AN #s160_StWtFrStprDn_CnvyrStrt_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s160_StWtFrStprDn_CnvyrStrt;
+      A %L1.0;
+      JNB Label_19;
+      L 160;
+      T #StateNo;
+Label_19:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:160 StWtFrStprDn_CnvyrStrt
+      A #s160_StWtFrStprDn_CnvyrStrt;
+      = #qStprDown_TTUp;
+      = #qConvRun_TTUp;
+NETWORK
+TITLE = Transition for STATE Num:165 StWtPalAbsnt
+      A #s165_StWtPalAbsnt;
+      AN #sStWtResetRel;
+      A #sSst;
+      A(;
+      AN #iPalletPrsnt_TTUp;
+      A #sPalletAbsntDebTTUp;
+      A #iXferAreaClr_90DegTTUp;
+      O #sRTRFrmUpTout;
+      );
+      = #s165_StWtPalAbsnt_T1;
+NETWORK
+TITLE = STATE Num:165 StWtPalAbsnt
+      A(;
+      O #s165_StWtPalAbsnt;
+	O #s150_StChkNxtStRdyToRecvTTUp_T2;
+      O #s150_StChkNxtStRdyToRecvTTUp_T1;
+      O #s160_StWtFrStprDn_CnvyrStrt_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s165_StWtPalAbsnt_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s165_StWtPalAbsnt;
+      A %L1.0;
+      JNB Label_20;
+      L 165;
+      T #StateNo;
+Label_20:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:165 StWtPalAbsnt
+      A #s165_StWtPalAbsnt;
+      = #qOutput1;
+NETWORK
+TITLE = Condition1 for STATE Num:167 StWtFrDeforkOvr
+      A(;
+      O #s140_StWtFrConveyorStrt_T1;   // Transition from state 140
+      O #s167_StWtFrDeforkOvr_Cond1;   // OR condition already set (self-latching)
+      );
+      AN #sStWtResetRel;               // Reset signal must be inactive
+      AN #s167_StWtFrDeforkOvr_T1;     // Condition resets when state transitions out
+      = #sDefork1Done;                 // Set the condition flag for Path 1
+
+NETWORK
+TITLE = Condition2 for STATE Num:167 StWtFrDeforkOvr
+      A(;
+      O #s165_StWtPalAbsnt_T1;        // Transition from state 165
+      O #s167_StWtFrDeforkOvr_Cond2;  // OR condition already set (self-latching)
+      );
+      AN #sStWtResetRel;              // Reset signal must be inactive
+      AN #s167_StWtFrDeforkOvr_T1;    // Condition resets when state transitions out
+      = #sDefork2Done;                // Set the condition flag for Path 2
+
+NETWORK
+TITLE = Transition for STATE Num:167 StWtFrDeforkOvr
+      A #s167_StWtFrDeforkOvr;        // Current state must be active
+      AN #sStWtResetRel;              // Reset signal must be inactive
+      A #sSst;                        // System running flag must be active
+      A #sDefork1Done;                // Path 1 must be complete
+      A #sDefork2Done;                // Path 2 must be complete
+      = #s167_StWtFrDeforkOvr_T1;     // Set transition flag to move to next state
+
+NETWORK
+TITLE = STATE Num:167 StWtFrDeforkOvr
+      A(;
+      O #s167_StWtFrDeforkOvr;        // State variable for state 167
+      O #s140_StWtFrConveyorStrt_T1;  // Transition from state 140 in OR condition with state variable
+      O #s165_StWtPalAbsnt_T1;        // Transition from state 165 in OR condition with state variable
+      );
+      AN #sStWtResetRel;
+      AN #s167_StWtFrDeforkOvr_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s167_StWtFrDeforkOvr;
+      A %L1.0;
+      JNB Label_21;
+      L 167;
+      T #StateNo;
+Label_21:      NOP 0;
+
+NETWORK
+TITLE = Transition for STATE Num:170 StWtForTTUpStprUp
+      A #s170_StWtForTTUpStprUp;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iStprRaise_TTUp;
+      = #s170_StWtForTTUpStprUp_T1;
+NETWORK
+TITLE = STATE Num:170 StWtForTTUpStprUp
+      A(;
+      O #s170_StWtForTTUpStprUp;
+      O #s167_StWtFrDeforkOvr_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s170_StWtForTTUpStprUp_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s170_StWtForTTUpStprUp;
+      A %L1.0;
+      JNB Label_22;
+      L 170;
+      T #StateNo;
+Label_22:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:170 StWtForTTUpStprUp
+      A #s170_StWtForTTUpStprUp;
+      = #qStprRaise_TTUp;
+NETWORK
+TITLE = Transition for STATE Num:180 StWtForTTUnlk
+      A #s180_StWtForTTUnlk;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iTTUnlocked;
+      A #iRecvAreaClr_TTDown;
+      = #s180_StWtForTTUnlk_T1;
+NETWORK
+TITLE = STATE Num:180 StWtForTTUnlk
+      A(;
+      O #s180_StWtForTTUnlk;
+      O #s170_StWtForTTUpStprUp_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s180_StWtForTTUnlk_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s180_StWtForTTUnlk;
+      A %L1.0;
+      JNB Label_23;
+      L 180;
+      T #StateNo;
+Label_23:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:180 StWtForTTUnlk
+      A #s180_StWtForTTUnlk;
+      = #qTTUnlockCmd;
+NETWORK
+TITLE = Transition for STATE Num:190 StWtForTT_To_0
+      A #s190_StWtForTT_To_0;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iTTAt0Pos;
+      = #s190_StWtForTT_To_0_T1;
+NETWORK
+TITLE = STATE Num:190 StWtForTT_To_0
+      A(;
+      O #s190_StWtForTT_To_0;
+      O #s180_StWtForTTUnlk_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s190_StWtForTT_To_0_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s190_StWtForTT_To_0;
+      A %L1.0;
+      JNB Label_24;
+      L 190;
+      T #StateNo;
+Label_24:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:190 StWtForTT_To_0
+      A #s190_StWtForTT_To_0;
+      = #qTT_0Deg;
+NETWORK
+TITLE = Transition for STATE Num:192 StWtForTTlok
+      A #s192_StWtForTTlok;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iTTLocked;
+      AN #iPalletPrsnt_TTUp;
+      AN #sTrBothPalletPresent;
+      = #s192_StWtForTTlok_T1;
+NETWORK
+TITLE = STATE Num:192 StWtForTTlok
+      A(;
+      O #s192_StWtForTTlok;
+      O #s190_StWtForTT_To_0_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s192_StWtForTTlok_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s192_StWtForTTlok;
+      A %L1.0;
+      JNB Label_25;
+      L 192;
+      T #StateNo;
+Label_25:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:192 StWtForTTlok
+      A #s192_StWtForTTlok;
+      = #qTTLockCmd;
+NETWORK
+TITLE = Transition for STATE Num:210 StWtFrTTUnlk
+      A #s210_StWtFrTTUnlk;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iTTUnlocked;
+      A #iRecvAreaClr_TTDown;
+      = #s210_StWtFrTTUnlk_T1;
+NETWORK
+TITLE = STATE Num:210 StWtFrTTUnlk
+      A(;
+      O #s210_StWtFrTTUnlk;
+      O #s20_StChkForPalletPresent_T2;
+      );
+      AN #sStWtResetRel;
+      AN #s210_StWtFrTTUnlk_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s210_StWtFrTTUnlk;
+      A %L1.0;
+      JNB Label_26;
+      L 210;
+      T #StateNo;
+Label_26:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:210 StWtFrTTUnlk
+      A #s210_StWtFrTTUnlk;
+      = #qTTUnlockCmd;
+NETWORK
+TITLE = Transition for STATE Num:220 StWtFrTT_Trn_0
+      A #s220_StWtFrTT_Trn_0;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iTTAt0Pos;
+      = #s220_StWtFrTT_Trn_0_T1;
+NETWORK
+TITLE = STATE Num:220 StWtFrTT_Trn_0
+      A(;
+      O #s220_StWtFrTT_Trn_0;
+      O #s210_StWtFrTTUnlk_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s220_StWtFrTT_Trn_0_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s220_StWtFrTT_Trn_0;
+      A %L1.0;
+      JNB Label_27;
+      L 220;
+      T #StateNo;
+Label_27:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:220 StWtFrTT_Trn_0
+      A #s220_StWtFrTT_Trn_0;
+      = #qTT_0Deg;
+NETWORK
+TITLE = Transition for STATE Num:230 StWtFrTTLock
+      A #s230_StWtFrTTLock;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iTTLocked;
+      = #s230_StWtFrTTLock_T1;
+NETWORK
+TITLE = STATE Num:230 StWtFrTTLock
+      A(;
+      O #s230_StWtFrTTLock;
+      O #s220_StWtFrTT_Trn_0_T1;
+      O #s10_StRecoveryCondition_T4;
+      O #s10_StRecoveryCondition_T5;
+      );
+      AN #sStWtResetRel;
+      AN #s230_StWtFrTTLock_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s230_StWtFrTTLock;
+      A %L1.0;
+      JNB Label_28;
+      L 230;
+      T #StateNo;
+Label_28:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:230 StWtFrTTLock
+      A #s230_StWtFrTTLock;
+      = #qTTLockCmd;
+NETWORK
+TITLE = Transition for STATE Num:240 StWtFRTRNxtStnTTDown
+      A #s240_StWtFRTRNxtStnTTDown;
+      AN #sStWtResetRel;
+      A #sSst;
+      = %L1.0;
+      A %L1.0;
+      A(;
+      A #iRTR_Frm_Next_TTDown;
+      A #iXferAreaClr_0DegTTDown;
+      O #iqTx_To_Next_0DegTTDown;
+      O #sPalOnStop_TTDown;
+      );
+      = #s240_StWtFRTRNxtStnTTDown_T1;
+      A %L1.0;
+      AN #s240_StWtFRTRNxtStnTTDown_T1;
+      A(;
+      A #iRTR_Frm_Next_TTDown;
+      A #iXferAreaClr_0DegTTDown;
+      O #iqTx_To_Next_0DegTTDown;
+      O #sPalOnStop_TTDown;
+      );
+      AN #iRTR_Frm_Next_TTDown;
+      A #sTTDwn_0Pos_TX_Time;
+      AN #iPalletPrsnt_TTDown;
+      = #s240_StWtFRTRNxtStnTTDown_T2;
+NETWORK
+TITLE = STATE Num:240 StWtFRTRNxtStnTTDown
+      A(;
+      O #s240_StWtFRTRNxtStnTTDown;
+O #s230_StWtFrTTLock_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s240_StWtFRTRNxtStnTTDown_T1;
+      AN #s240_StWtFRTRNxtStnTTDown_T2;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s240_StWtFRTRNxtStnTTDown;
+      A %L1.0;
+      JNB Label_29;
+      L 240;
+      T #StateNo;
+Label_29:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:240 StWtFRTRNxtStnTTDown
+      A #s240_StWtFRTRNxtStnTTDown;
+      = #qOTS_Frm_TTDown;
+NETWORK
+TITLE = Transition for STATE Num:250 StWtTTDnStprDn&CnvyrStr
+      A #s250_StWtTTDnStprDn_CnvyrStr;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iqTx_To_Next_0DegTTDown;
+      AN #iXferAreaClr_0DegTTDown;
+      = #s250_StWtTTDnStprDn_CnvyrStr_T1;
+NETWORK
+TITLE = STATE Num:250 StWtTTDnStprDn&CnvyrStr
+      A(;
+      O #s250_StWtTTDnStprDn_CnvyrStr;
+      O #s240_StWtFRTRNxtStnTTDown_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s250_StWtTTDnStprDn_CnvyrStr_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s250_StWtTTDnStprDn_CnvyrStr;
+      A %L1.0;
+      JNB Label_30;
+      L 250;
+      T #StateNo;
+Label_30:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:250 StWtTTDnStprDn&CnvyrStr
+      A #s250_StWtTTDnStprDn_CnvyrStr;
+      = #qStprDown_TTDown;
+      = #qConvRun_TTDown;
+NETWORK
+TITLE = Transition for STATE Num:260 StWtPalAbsent
+      A #s260_StWtPalAbsent;
+      AN #sStWtResetRel;
+      A #sSst;
+      AN #iPalletPrsnt_TTDown;
+      A #sPalletAbsntDebTTDown;
+      A #iXferAreaClr_0DegTTDown;
+      = #s260_StWtPalAbsent_T1;
+NETWORK
+TITLE = STATE Num:260 StWtPalAbsent
+      A(;
+      O #s260_StWtPalAbsent;
+      O #s250_StWtTTDnStprDn_CnvyrStr_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s260_StWtPalAbsent_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s260_StWtPalAbsent;
+      A %L1.0;
+      JNB Label_31;
+      L 260;
+      T #StateNo;
+Label_31:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:260 StWtPalAbsent
+      A #s260_StWtPalAbsent;
+      = #qOutput1;
+NETWORK
+TITLE = Transition for STATE Num:270 StWtFrTTDwnStprUp
+      A #s270_StWtFrTTDwnStprUp;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iStprRaise_TTDown;
+      = #s270_StWtFrTTDwnStprUp_T1;
+NETWORK
+TITLE = STATE Num:270 StWtFrTTDwnStprUp
+      A(;
+      O #s270_StWtFrTTDwnStprUp;
+      O #s240_StWtFRTRNxtStnTTDown_T2;
+      O #s260_StWtPalAbsent_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s270_StWtFrTTDwnStprUp_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s270_StWtFrTTDwnStprUp;
+      A %L1.0;
+      JNB Label_32;
+      L 270;
+      T #StateNo;
+Label_32:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:270 StWtFrTTDwnStprUp
+      A #s270_StWtFrTTDwnStprUp;
+      = #qStprRaise_TTDown;
+NETWORK
+TITLE = Transition for STATE Num:280 StWtRFrOTSFRmPrev_TTUp
+      A #s280_StWtRFrOTSFRmPrev_TTUp;
+      AN #sStWtResetRel;
+      A #sSst;
+      A(;
+      O #iOTS_Frm_Prev_TTUp;
+      O #iPalletPrsnt_TTUp;
+      O #iqRx_Frm_Prev_TTUp;
+      ON #iRecvAreaClr_TTUp;
+      );
+      = #s280_StWtRFrOTSFRmPrev_TTUp_T1;
+NETWORK
+TITLE = STATE Num:280 StWtRFrOTSFRmPrev_TTUp
+      A(;
+      O #s280_StWtRFrOTSFRmPrev_TTUp;
+      O #s230_StWtFrTTLock_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s280_StWtRFrOTSFRmPrev_TTUp_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s280_StWtRFrOTSFRmPrev_TTUp;
+      A %L1.0;
+      JNB Label_33;
+      L 280;
+      T #StateNo;
+Label_33:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:280 StWtRFrOTSFRmPrev_TTUp
+      A #s280_StWtRFrOTSFRmPrev_TTUp;
+      = #qRTR_Frm_TTUp;
+NETWORK
+TITLE = Transition for STATE Num:290 StWtFrTTUpCnvyrStrt
+      A #s290_StWtFrTTUpCnvyrStrt;
+      AN #sStWtResetRel;
+      A #sSst;
+      A(;
+      A #iPalletPrsnt_TTUp;
+      A #iRecvAreaClr_TTUp;
+      O #sOTSFrmUpTout;
+      );
+      = #s290_StWtFrTTUpCnvyrStrt_T1;
+NETWORK
+TITLE = STATE Num:290 StWtFrTTUpCnvyrStrt
+      A(;
+      O #s290_StWtFrTTUpCnvyrStrt;
+      O #s280_StWtRFrOTSFRmPrev_TTUp_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s290_StWtFrTTUpCnvyrStrt_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s290_StWtFrTTUpCnvyrStrt;
+      A %L1.0;
+      JNB Label_34;
+      L 290;
+      T #StateNo;
+Label_34:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:290 StWtFrTTUpCnvyrStrt
+      A #s290_StWtFrTTUpCnvyrStrt;
+      = #qConvRun_TTUp;
+NETWORK
+TITLE = Transition for STATE Num:300 StChkTTPos
+      A #s300_StChkTTPos;
+      AN #sStWtResetRel;
+      A #sSst;
+      = %L1.0;
+      A %L1.0;
+      A #iTTAt0Pos;
+      = #s300_StChkTTPos_T1;
+      A %L1.0;
+      AN #s300_StChkTTPos_T1;
+      A #iTTAt90Pos;
+      = #s300_StChkTTPos_T2;
+      A %L1.0;
+      AN #s300_StChkTTPos_T1;
+      AN #s300_StChkTTPos_T2;
+      AN #iTTAt0Pos;
+      AN #iTTAt90Pos;
+      = #s300_StChkTTPos_T3;
+NETWORK
+TITLE = STATE Num:300 StChkTTPos
+      A(;
+      O #s300_StChkTTPos;
+      O #s20_StChkForPalletPresent_T4;
+      );
+      AN #sStWtResetRel;
+      AN #s300_StChkTTPos_T1;
+      AN #s300_StChkTTPos_T2;
+      AN #s300_StChkTTPos_T3;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s300_StChkTTPos;
+      A %L1.0;
+      JNB Label_35;
+      L 300;
+      T #StateNo;
+Label_35:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:300 StChkTTPos
+      A #s300_StChkTTPos;
+      = #qOutput1;
+NETWORK
+TITLE = Transition for STATE Num:310 StWtRTRFrmTTUpAt0
+      A #s310_StWtRTRFrmTTUpAt0;
+      AN #sStWtResetRel;
+      A #sSst;
+      = %L1.0;
+      A %L1.0;
+      A #sTTUp_Timer_ON;
+      = #s310_StWtRTRFrmTTUpAt0_T1;
+      A %L1.0;
+      AN #s310_StWtRTRFrmTTUpAt0_T1;
+      A #iOTS_Frm_Prev_TTUp;
+      AN #sTTUp_Timer_ON;
+      = #s310_StWtRTRFrmTTUpAt0_T2;
+NETWORK
+TITLE = STATE Num:310 StWtRTRFrmTTUpAt0
+      A(;
+      O #s310_StWtRTRFrmTTUpAt0;
+      O #s300_StChkTTPos_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s310_StWtRTRFrmTTUpAt0_T1;
+      AN #s310_StWtRTRFrmTTUpAt0_T2;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s310_StWtRTRFrmTTUpAt0;
+      A %L1.0;
+      JNB Label_36;
+      L 310;
+      T #StateNo;
+Label_36:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:310 StWtRTRFrmTTUpAt0
+      A #s310_StWtRTRFrmTTUpAt0;
+      = #qRTR_Frm_TTUp;
+NETWORK
+TITLE = Transition for STATE Num:320 StWtFrTTUpCnvyrStrtAt0
+      A #s320_StWtFrTTUpCnvyrStrtAt0;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iPalletPrsnt_TTUp;
+      A #sPalletPrsntDebTTUp;
+      A #iRecvAreaClr_TTUp;
+      = #s320_StWtFrTTUpCnvyrStrtAt0_T1;
+NETWORK
+TITLE = STATE Num:320 StWtFrTTUpCnvyrStrtAt0
+      A(;
+      O #s320_StWtFrTTUpCnvyrStrtAt0;
+      O #s310_StWtRTRFrmTTUpAt0_T2;
+      );
+      AN #sStWtResetRel;
+      AN #s320_StWtFrTTUpCnvyrStrtAt0_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s320_StWtFrTTUpCnvyrStrtAt0;
+      A %L1.0;
+      JNB Label_37;
+      L 320;
+      T #StateNo;
+Label_37:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:320 StWtFrTTUpCnvyrStrtAt0
+      A #s320_StWtFrTTUpCnvyrStrtAt0;
+      = #qConvRun_TTUp;
+NETWORK
+TITLE = Transition for STATE Num:340 StChkTTDwnRdyToRecvAt90
+      A #s340_StChkTTDwnRdyToRecvAt90;
+      AN #sStWtResetRel;
+      A #sSst;
+      = %L1.0;
+      A %L1.0;
+      A #iOTS_Frm_Prev_TTDown;
+      AN #sTTDwn_Timer_ON;
+      = #s340_StChkTTDwnRdyToRecvAt90_T1;
+      A %L1.0;
+      AN #s340_StChkTTDwnRdyToRecvAt90_T1;
+      A #sTTDwn_Timer_ON;
+      = #s340_StChkTTDwnRdyToRecvAt90_T2;
+NETWORK
+TITLE = STATE Num:340 StChkTTDwnRdyToRecvAt90
+      A(;
+      O #s340_StChkTTDwnRdyToRecvAt90;
+      O #s300_StChkTTPos_T2;
+      );
+      AN #sStWtResetRel;
+      AN #s340_StChkTTDwnRdyToRecvAt90_T1;
+AN #s340_StChkTTDwnRdyToRecvAt90_T2;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s340_StChkTTDwnRdyToRecvAt90;
+      A %L1.0;
+      JNB Label_38;
+      L 340;
+      T #StateNo;
+Label_38:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:340 StChkTTDwnRdyToRecvAt90
+      A #s340_StChkTTDwnRdyToRecvAt90;
+      = #qRTR_Frm_TTDwn;
+NETWORK
+TITLE = Transition for STATE Num:350 StWtCnvyrStrt90
+      A #s350_StWtCnvyrStrt90;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iPalletPrsnt_TTDown;
+      A #iRecvAreaClr_TTDown;
+      = #s350_StWtCnvyrStrt90_T1;
+NETWORK
+TITLE = STATE Num:350 StWtCnvyrStrt90
+      A(;
+      O #s350_StWtCnvyrStrt90;
+      O #s340_StChkTTDwnRdyToRecvAt90_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s350_StWtCnvyrStrt90_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s350_StWtCnvyrStrt90;
+      A %L1.0;
+      JNB Label_39;
+      L 350;
+      T #StateNo;
+Label_39:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:350 StWtCnvyrStrt90
+      A #s350_StWtCnvyrStrt90;
+      = #qConvRun_TTDown;
+NETWORK
+TITLE = Transition for STATE Num:365 StWtForTTUlkAtIbtwn
+      A #s365_StWtForTTUlkAtIbtwn;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iTTUnlocked;
+      = #s365_StWtForTTUlkAtIbtwn_T1;
+NETWORK
+TITLE = STATE Num:365 StWtForTTUlkAtIbtwn
+      A(;
+      O #s365_StWtForTTUlkAtIbtwn;
+      O #s300_StChkTTPos_T3;
+      O #s340_StChkTTDwnRdyToRecvAt90_T2;
+      );
+      AN #sStWtResetRel;
+      AN #s365_StWtForTTUlkAtIbtwn_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s365_StWtForTTUlkAtIbtwn;
+      A %L1.0;
+      JNB Label_40;
+      L 365;
+      T #StateNo;
+Label_40:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:365 StWtForTTUlkAtIbtwn
+      A #s365_StWtForTTUlkAtIbtwn;
+      = #qTTUnlockCmd;
+NETWORK
+TITLE = Transition for STATE Num:370 StWtForTTTurnZrAtIbtwn
+      A #s370_StWtForTTTurnZrAtIbtwn;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iTTAt0Pos;
+      = #s370_StWtForTTTurnZrAtIbtwn_T1;
+NETWORK
+TITLE = STATE Num:370 StWtForTTTurnZrAtIbtwn
+      A(;
+      O #s370_StWtForTTTurnZrAtIbtwn;
+      O #s365_StWtForTTUlkAtIbtwn_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s370_StWtForTTTurnZrAtIbtwn_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s370_StWtForTTTurnZrAtIbtwn;
+      A %L1.0;
+      JNB Label_41;
+      L 370;
+      T #StateNo;
+Label_41:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:370 StWtForTTTurnZrAtIbtwn
+      A #s370_StWtForTTTurnZrAtIbtwn;
+      = #qTT_0Deg;
+NETWORK
+TITLE = Transition for STATE Num:380 StWtForTTLock
+      A #s380_StWtForTTLock;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iTTLocked;
+      = #s380_StWtForTTLock_T1;
+NETWORK
+TITLE = STATE Num:380 StWtForTTLock
+      A(;
+      O #s380_StWtForTTLock;
+      O #s370_StWtForTTTurnZrAtIbtwn_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s380_StWtForTTLock_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s380_StWtForTTLock;
+      A %L1.0;
+      JNB Label_42;
+      L 380;
+      T #StateNo;
+Label_42:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:380 StWtForTTLock
+      A #s380_StWtForTTLock;
+      = #qTTLockCmd;
+NETWORK
+TITLE = Condition1 for STATE Num:400 Wait for all 2 Sub Sequences to complete
+      A(;
+      O #s270_StWtFrTTDwnStprUp_T1;   // Transition from state 270
+      O #s400_StWt2Defork_Cond1;      // OR condition already set (self-latching)
+      );
+      AN #sStWtResetRel;              // Reset signal must be inactive
+      AN #s400_StWt2Defork_T1;        // Condition resets when state transitions out
+      = #sTTDwnSeqOver;               // Set the condition flag for Path 1
+
+NETWORK
+TITLE = Condition2 for STATE Num:400 Wait for all 2 Sub Sequences to complete
+      A(;
+      O #s290_StWtFrTTUpCnvyrStrt_T1; // Transition from state 290
+      O #s400_StWt2Defork_Cond2;      // OR condition already set (self-latching)
+      );
+      AN #sStWtResetRel;              // Reset signal must be inactive
+      AN #s400_StWt2Defork_T1;        // Condition resets when state transitions out
+      = #sTTUpSeqOver;                // Set the condition flag for Path 2
+
+NETWORK
+TITLE = Transition for STATE Num:400 Wait for all 2 Sub Sequences to complete
+      A #s400_StWt2Defork;            // Current state must be active
+      AN #sStWtResetRel;              // Reset signal must be inactive
+      A #sSst;                        // System running flag must be active
+      A #sTTUpSeqOver;                // Path 1 must be complete
+      A #sTTDwnSeqOver;               // Path 2 must be complete
+      = #s400_StWt2Defork_T1;         // Set transition flag to move to next state
+
+NETWORK
+TITLE = STATE Num:400 Wait for all 2 Sub Sequences to complete
+      A(;
+      O #s400_StWt2Defork;            // State variable for state 400
+      O #s270_StWtFrTTDwnStprUp_T1;   // Transition from state 270 in OR condition with state variable
+      O #s290_StWtFrTTUpCnvyrStrt_T1; // Transition from state 290 in OR condition with state variable
+      );
+      AN #sStWtResetRel;
+      AN #s400_StWt2Defork_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s400_StWt2Defork;
+      A %L1.0;
+      JNB Label_43;
+      L 400;
+      T #StateNo;
+Label_43:      NOP 0;
+
+NETWORK
+TITLE = Actions for STATE Num:400 StWt2Defork
+      A #s400_StWt2Defork;
+      R #sTTUpSeqOver;
+      R #sTTDwnSeqOver;
+      R #sOTSFrmUpTout;
+NETWORK
+TITLE = Transition for STATE Num:410 StWtForTTUlkAtIbtwn
+      A #s410_StWtForTTUlkAtIbtwn;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iTTUnlocked;
+      = #s410_StWtForTTUlkAtIbtwn_T1;
+NETWORK
+TITLE = STATE Num:410 StWtForTTUlkAtIbtwn
+      A(;
+      O #s410_StWtForTTUlkAtIbtwn;
+      O #s310_StWtRTRFrmTTUpAt0_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s410_StWtForTTUlkAtIbtwn_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s410_StWtForTTUlkAtIbtwn;
+      A %L1.0;
+      JNB Label_44;
+      L 410;
+      T #StateNo;
+Label_44:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:410 StWtForTTUlkAtIbtwn
+      A #s410_StWtForTTUlkAtIbtwn;
+      = #qTTUnlockCmd;
+NETWORK
+TITLE = Transition for STATE Num:415 StWtForTTTurn90AtIbtwn
+      A #s415_StWtForTTTurn90AtIbtwn;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iTTAt90Pos;
+      = #s415_StWtForTTTurn90AtIbtwn_T1;
+NETWORK
+TITLE = STATE Num:415 StWtForTTTurn90AtIbtwn
+      A(;
+      O #s415_StWtForTTTurn90AtIbtwn;
+      O #s410_StWtForTTUlkAtIbtwn_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s415_StWtForTTTurn90AtIbtwn_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s415_StWtForTTTurn90AtIbtwn;
+      A %L1.0;
+      JNB Label_45;
+      L 415;
+      T #StateNo;
+Label_45:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:415 StWtForTTTurn90AtIbtwn
+      A #s415_StWtForTTTurn90AtIbtwn;
+      = #qTT_90Deg;
+NETWORK
+TITLE = Transition for STATE Num:420 StWtForTTLock1
+      A #s420_StWtForTTLock1;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iTTLocked;
+      = #s420_StWtForTTLock1_T1;
+NETWORK
+TITLE = STATE Num:420 StWtForTTLock1
+      A(;
+      O #s420_StWtForTTLock1;
+      O #s415_StWtForTTTurn90AtIbtwn_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s420_StWtForTTLock1_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s420_StWtForTTLock1;
+      A %L1.0;
+      JNB Label_46;
+      L 420;
+      T #StateNo;
+Label_46:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:420 StWtForTTLock1
+      A #s420_StWtForTTLock1;
+      = #qTTLockCmd;
+END_FUNCTION_BLOCK

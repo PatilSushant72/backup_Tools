@@ -1,0 +1,4012 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2025-08-18T13:15:24.5720207Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17 Update 5</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17 Update 5</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>SINAMICS Startdrive Advanced</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G130, G150, S120, S150, SINAMICS MV, S210</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>SINAMICS Startdrive G110M, G120, G120C, G120D, G120P, G115D</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17 Update 5</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayVersion>V17 Update 5</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input">
+    <Member Name="iAutoRunning" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="iOperatorAuthorizationPB" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="iPCAckZero" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="iPCBypass" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="iPCDataReadOver" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="iPCDataWriteOver" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="iPalletPresentAtStation" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="iProcessOver" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="iProcessStartFormPZR" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="iRejectPB" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="iResetMem" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="iReset_fault" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="iScanOver" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="iScanResultNok" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="iScanResultOk" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="iScannerBypass" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="iSstMode" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="iSstPB" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="iUnloadCycleSelection" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+  </Section>
+  <Section Name="Output">
+    <Member Name="qPCReadCmd" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="qPCWriteCmd" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="qProcessOver" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="qResetPalletStatusData" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="qScanCmd" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+  </Section>
+  <Section Name="InOut" />
+  <Section Name="Static">
+    <Member Name="StateNo" Datatype="Int" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="s29_WaitProcStart" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="s29_WaitProcStart_T1" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="s30_WaitCartnSheetOp" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="s30_WaitCartnSheetOp_T1" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="s31_ChkCycleSelect" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="s31_ChkCycleSelect_T1" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="s31_ChkCycleSelect_T2" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="s32_WaitScanOver" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="s32_WaitScanOver_T1" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="s33_ChkScanResult" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="s33_ChkScanResult_T1" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="s33_ChkScanResult_T2" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="s34_WaitOpDecision" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="s34_WaitOpDecision_T1" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="s34_WaitOpDecision_T2" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="s35_ChkPCAckReset0" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="s35_ChkPCAckReset0_T1" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="s36_WaitDataReadPC" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="s36_WaitDataReadPC_T1" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="s38_WaitProcStartLow" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="s38_WaitProcStartLow_T1" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="s39_WaitPalletAbsnt" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="s39_WaitPalletAbsnt_T1" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="s40_WaitFaultReset" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="s40_WaitFaultReset_T1" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="s41_ChkPCAckReset0U" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="s41_ChkPCAckReset0U_T1" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="s42_WaitDataUpldPC" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="s42_WaitDataUpldPC_T1" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="s43_ChkRecovery" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="s43_ChkRecovery_T1" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="s43_ChkRecovery_T2" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="sPalletAccepted" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="sProcessOver" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="sSst" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="sSstPulse" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="sSstRise" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="sStWtResetRel" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="sStWtResetRel_T1" Datatype="Bool" Remanence="SetInIDB"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+  </Section>
+  <Section Name="Temp">
+    <Member Name="tOne" Datatype="Bool" />
+  </Section>
+  <Section Name="Constant" />
+</Sections></Interface>
+      <Name>PR_PC4005_Operator_DecisionV4_44797a</Name>
+      <Number>4</Number>
+      <ProgrammingLanguage>STL</ProgrammingLanguage>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="21">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="tOne" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="23">
+    <StlToken Text="ON" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="tOne" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="25">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="tOne" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="8" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="27">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="iSstPB" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="29">
+    <StlToken Text="Rise" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sSstRise" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="31">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sSstPulse" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="9" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="B" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Create Single Step Pulse bit</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="D" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="33">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="iSstMode" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="35">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sSstPulse" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="37">
+    <StlToken Text="ON" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="iSstMode" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="39">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sSst" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="10" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="11" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Create Single Step bit</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="12" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="41">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sStWtResetRel" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="43">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="iAutoRunning" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="45">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sStWtResetRel_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="13" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="14" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="15" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="16" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Transition for STATE Num:0 Reset Released</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="17" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="47">
+    <StlToken Text="A_BRACK" />
+  </StlStatement>
+  <StlStatement UId="48">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sStWtResetRel" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="50">
+    <StlToken Text="ON" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="iAutoRunning" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="52">
+    <StlToken Text="BRACKET" />
+  </StlStatement>
+  <StlStatement UId="53">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sStWtResetRel_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="55">
+    <StlToken Text="Assign" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="57">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="59">
+    <StlToken Text="BLD" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>102</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="61">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sStWtResetRel" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="63">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="65">
+    <StlToken Text="JNB" />
+    <Access Scope="Label">
+      <Label Name="Label_0" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="67">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="69">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="StateNo" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="71">
+    <LabelDeclaration>
+      <Label Name="Label_0" />
+    </LabelDeclaration>
+    <StlToken Text="NOP_0" />
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="18" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="19" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1A" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="1B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>STATE Num:0 Reset Released</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="1C" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="73">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s29_WaitProcStart" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="75">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sStWtResetRel" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="77">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sSst" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="79">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="iProcessStartFormPZR" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="81">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="iPalletPresentAtStation" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="83">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s29_WaitProcStart_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="1D" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="1E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1F" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="20" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Transition for STATE Num:29 Wait for Process Start</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="21" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="85">
+    <StlToken Text="A_BRACK" />
+  </StlStatement>
+  <StlStatement UId="86">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s29_WaitProcStart" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="88">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s39_WaitPalletAbsnt_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="90">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sStWtResetRel_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="92">
+    <StlToken Text="BRACKET" />
+  </StlStatement>
+  <StlStatement UId="93">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sStWtResetRel" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="95">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s29_WaitProcStart_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="97">
+    <StlToken Text="Assign" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="99">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="101">
+    <StlToken Text="BLD" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>102</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="103">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s29_WaitProcStart" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="105">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="107">
+    <StlToken Text="JNB" />
+    <Access Scope="Label">
+      <Label Name="Label_29" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="109">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>29</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="111">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="StateNo" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="113">
+    <LabelDeclaration>
+      <Label Name="Label_29" />
+    </LabelDeclaration>
+    <StlToken Text="NOP_0" />
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="22" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="23" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="24" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="25" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>STATE Num:29 Wait for Process Start</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="26" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="115">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s30_WaitCartnSheetOp" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="117">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sStWtResetRel" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="119">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sSst" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="121">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="iOperatorAuthorizationPB" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="123">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s30_WaitCartnSheetOp_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="27" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="28" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="29" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="2A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Transition for STATE Num:30 Wait for Carton Sheet Placement &amp; Operator Authorization</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="2B" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="125">
+    <StlToken Text="A_BRACK" />
+  </StlStatement>
+  <StlStatement UId="126">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s30_WaitCartnSheetOp" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="128">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s43_ChkRecovery_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="130">
+    <StlToken Text="BRACKET" />
+  </StlStatement>
+  <StlStatement UId="131">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sStWtResetRel" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="133">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s30_WaitCartnSheetOp_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="135">
+    <StlToken Text="Assign" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="137">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="139">
+    <StlToken Text="BLD" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>102</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="141">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s30_WaitCartnSheetOp" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="143">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="145">
+    <StlToken Text="JNB" />
+    <Access Scope="Label">
+      <Label Name="Label_30" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="147">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>30</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="149">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="StateNo" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="151">
+    <LabelDeclaration>
+      <Label Name="Label_30" />
+    </LabelDeclaration>
+    <StlToken Text="NOP_0" />
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="2C" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="2D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="2E" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="2F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>STATE Num:30 Wait for Carton Sheet Placement &amp; Operator Authorization</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="30" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="153">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s31_ChkCycleSelect" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="155">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sStWtResetRel" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="157">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sSst" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="159">
+    <StlToken Text="Assign" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="161">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="163">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="iUnloadCycleSelection" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="165">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s31_ChkCycleSelect_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="167">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="169">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s31_ChkCycleSelect_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="171">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="iUnloadCycleSelection" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="173">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s31_ChkCycleSelect_T2" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="31" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="32" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="33" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="34" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Transition for STATE Num:31 Check Cycle Selection</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="35" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="175">
+    <StlToken Text="A_BRACK" />
+  </StlStatement>
+  <StlStatement UId="176">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s31_ChkCycleSelect" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="178">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s30_WaitCartnSheetOp_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="180">
+    <StlToken Text="BRACKET" />
+  </StlStatement>
+  <StlStatement UId="181">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sStWtResetRel" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="183">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s31_ChkCycleSelect_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="185">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s31_ChkCycleSelect_T2" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="187">
+    <StlToken Text="Assign" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="189">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="191">
+    <StlToken Text="BLD" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>102</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="193">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s31_ChkCycleSelect" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="195">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="197">
+    <StlToken Text="JNB" />
+    <Access Scope="Label">
+      <Label Name="Label_31" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="199">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>31</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="201">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="StateNo" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="203">
+    <LabelDeclaration>
+      <Label Name="Label_31" />
+    </LabelDeclaration>
+    <StlToken Text="NOP_0" />
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="36" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="37" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="38" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="39" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>STATE Num:31 Check Cycle Selection</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="3A" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="205">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s32_WaitScanOver" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="207">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sStWtResetRel" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="209">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sSst" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="211">
+    <StlToken Text="Assign" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="213">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="215">
+    <StlToken Text="A_BRACK" />
+  </StlStatement>
+  <StlStatement UId="216">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="iScanOver" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="218">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="iScannerBypass" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="220">
+    <StlToken Text="BRACKET" />
+  </StlStatement>
+  <StlStatement UId="221">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s32_WaitScanOver_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="3B" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="3C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="3D" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="3E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Transition for STATE Num:32 Wait for Scan Over</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="3F" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="223">
+    <StlToken Text="A_BRACK" />
+  </StlStatement>
+  <StlStatement UId="224">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s32_WaitScanOver" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="226">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s31_ChkCycleSelect_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="228">
+    <StlToken Text="BRACKET" />
+  </StlStatement>
+  <StlStatement UId="229">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sStWtResetRel" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="231">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s32_WaitScanOver_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="233">
+    <StlToken Text="Assign" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="235">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="237">
+    <StlToken Text="BLD" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>102</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="239">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s32_WaitScanOver" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="241">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="243">
+    <StlToken Text="JNB" />
+    <Access Scope="Label">
+      <Label Name="Label_32" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="245">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>32</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="247">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="StateNo" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="249">
+    <LabelDeclaration>
+      <Label Name="Label_32" />
+    </LabelDeclaration>
+    <StlToken Text="NOP_0" />
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="40" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="41" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="42" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="43" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>STATE Num:32 Wait for Scan Over</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="44" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="251">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s32_WaitScanOver" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="253">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="qScanCmd" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="45" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="46" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="47" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="48" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Actions for STATE Num:32 Wait for Scan Over</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="49" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="255">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s33_ChkScanResult" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="257">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sStWtResetRel" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="259">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sSst" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="261">
+    <StlToken Text="Assign" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="263">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="265">
+    <StlToken Text="A_BRACK" />
+  </StlStatement>
+  <StlStatement UId="266">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="iScanOver" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="268">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="iScanResultOk" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="270">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="iScannerBypass" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="272">
+    <StlToken Text="BRACKET" />
+  </StlStatement>
+  <StlStatement UId="273">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s33_ChkScanResult_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="275">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="277">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s33_ChkScanResult_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="279">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="iScanOver" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="281">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="iScanResultNok" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="283">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s33_ChkScanResult_T2" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4A" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="4B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="4C" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="4D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Transition for STATE Num:33 Check Scan result</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="4E" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="285">
+    <StlToken Text="A_BRACK" />
+  </StlStatement>
+  <StlStatement UId="286">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s33_ChkScanResult" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="288">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s32_WaitScanOver_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="290">
+    <StlToken Text="BRACKET" />
+  </StlStatement>
+  <StlStatement UId="291">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sStWtResetRel" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="293">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s33_ChkScanResult_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="295">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s33_ChkScanResult_T2" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="297">
+    <StlToken Text="Assign" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="299">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="301">
+    <StlToken Text="BLD" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>102</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="303">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s33_ChkScanResult" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="305">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="307">
+    <StlToken Text="JNB" />
+    <Access Scope="Label">
+      <Label Name="Label_33" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="309">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>33</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="311">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="StateNo" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="313">
+    <LabelDeclaration>
+      <Label Name="Label_33" />
+    </LabelDeclaration>
+    <StlToken Text="NOP_0" />
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4F" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="50" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="51" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="52" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>STATE Num:33 Check Scan result</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="53" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="315">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s34_WaitOpDecision" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="317">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sStWtResetRel" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="319">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sSst" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="321">
+    <StlToken Text="Assign" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="323">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="325">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="iOperatorAuthorizationPB" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="327">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s34_WaitOpDecision_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="329">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="331">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s34_WaitOpDecision_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="333">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="iRejectPB" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="335">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s34_WaitOpDecision_T2" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="54" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="55" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="56" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="57" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Transition for STATE Num:34 Wait for Operator Decision</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="58" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="337">
+    <StlToken Text="A_BRACK" />
+  </StlStatement>
+  <StlStatement UId="338">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s34_WaitOpDecision" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="340">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s33_ChkScanResult_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="342">
+    <StlToken Text="BRACKET" />
+  </StlStatement>
+  <StlStatement UId="343">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sStWtResetRel" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="345">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s34_WaitOpDecision_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="347">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s34_WaitOpDecision_T2" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="349">
+    <StlToken Text="Assign" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="351">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="353">
+    <StlToken Text="BLD" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>102</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="355">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s34_WaitOpDecision" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="357">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="359">
+    <StlToken Text="JNB" />
+    <Access Scope="Label">
+      <Label Name="Label_34" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="361">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>34</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="363">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="StateNo" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="365">
+    <LabelDeclaration>
+      <Label Name="Label_34" />
+    </LabelDeclaration>
+    <StlToken Text="NOP_0" />
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="59" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="5B" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="5C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>STATE Num:34 Wait for Operator Decision</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="5D" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="367">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s34_WaitOpDecision" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="369">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="iOperatorAuthorizationPB" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="371">
+    <StlToken Text="S" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sPalletAccepted" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="5E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="60" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="61" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Actions for STATE Num:34 Wait for Operator Decision</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="62" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="373">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s35_ChkPCAckReset0" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="375">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sStWtResetRel" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="377">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sSst" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="379">
+    <StlToken Text="Assign" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="381">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="383">
+    <StlToken Text="A_BRACK" />
+  </StlStatement>
+  <StlStatement UId="384">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="iPCAckZero" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="386">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="iPCBypass" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="388">
+    <StlToken Text="BRACKET" />
+  </StlStatement>
+  <StlStatement UId="389">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s35_ChkPCAckReset0_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="63" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="64" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="65" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="66" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Transition for STATE Num:35 Check PC Acknowledge value reset to zero</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="67" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="391">
+    <StlToken Text="A_BRACK" />
+  </StlStatement>
+  <StlStatement UId="392">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s35_ChkPCAckReset0" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="394">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s34_WaitOpDecision_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="396">
+    <StlToken Text="BRACKET" />
+  </StlStatement>
+  <StlStatement UId="397">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sStWtResetRel" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="399">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s35_ChkPCAckReset0_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="401">
+    <StlToken Text="Assign" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="403">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="405">
+    <StlToken Text="BLD" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>102</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="407">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s35_ChkPCAckReset0" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="409">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="411">
+    <StlToken Text="JNB" />
+    <Access Scope="Label">
+      <Label Name="Label_35" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="413">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>35</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="415">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="StateNo" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="417">
+    <LabelDeclaration>
+      <Label Name="Label_35" />
+    </LabelDeclaration>
+    <StlToken Text="NOP_0" />
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="68" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="69" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6A" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="6B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>STATE Num:35 Check PC Acknowledge value reset to zero</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="6C" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="419">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s36_WaitDataReadPC" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="421">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sStWtResetRel" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="423">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sSst" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="425">
+    <StlToken Text="Assign" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="427">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="429">
+    <StlToken Text="A_BRACK" />
+  </StlStatement>
+  <StlStatement UId="430">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="iPCDataReadOver" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="432">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="iPCBypass" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="434">
+    <StlToken Text="BRACKET" />
+  </StlStatement>
+  <StlStatement UId="435">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s36_WaitDataReadPC_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="6D" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="6E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6F" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="70" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Transition for STATE Num:36 Wait for Data Read From PC</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="71" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="437">
+    <StlToken Text="A_BRACK" />
+  </StlStatement>
+  <StlStatement UId="438">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s36_WaitDataReadPC" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="440">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s35_ChkPCAckReset0_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="442">
+    <StlToken Text="BRACKET" />
+  </StlStatement>
+  <StlStatement UId="443">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sStWtResetRel" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="445">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s36_WaitDataReadPC_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="447">
+    <StlToken Text="Assign" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="449">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="451">
+    <StlToken Text="BLD" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>102</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="453">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s36_WaitDataReadPC" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="455">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="457">
+    <StlToken Text="JNB" />
+    <Access Scope="Label">
+      <Label Name="Label_36" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="459">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>36</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="461">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="StateNo" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="463">
+    <LabelDeclaration>
+      <Label Name="Label_36" />
+    </LabelDeclaration>
+    <StlToken Text="NOP_0" />
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="72" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="73" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="74" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="75" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>STATE Num:36 Wait for Data Read From PC</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="76" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="465">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s36_WaitDataReadPC" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="467">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="qPCReadCmd" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="77" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="78" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="79" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Actions for STATE Num:36 Wait for Data Read From PC</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="7B" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="469">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s38_WaitProcStartLow" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="471">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sStWtResetRel" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="473">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sSst" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="475">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="iProcessStartFormPZR" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="477">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s38_WaitProcStartLow_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="7C" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="7D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="7E" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Transition for STATE Num:38 Wait for Process Start Low</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="80" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="479">
+    <StlToken Text="A_BRACK" />
+  </StlStatement>
+  <StlStatement UId="480">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s38_WaitProcStartLow" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="482">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s31_ChkCycleSelect_T2" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="484">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s36_WaitDataReadPC_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="486">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s40_WaitFaultReset_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="488">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s42_WaitDataUpldPC_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="490">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s43_ChkRecovery_T2" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="492">
+    <StlToken Text="BRACKET" />
+  </StlStatement>
+  <StlStatement UId="493">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sStWtResetRel" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="495">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s38_WaitProcStartLow_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="497">
+    <StlToken Text="Assign" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="499">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="501">
+    <StlToken Text="BLD" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>102</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="503">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s38_WaitProcStartLow" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="505">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="507">
+    <StlToken Text="JNB" />
+    <Access Scope="Label">
+      <Label Name="Label_38" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="509">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>38</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="511">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="StateNo" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="513">
+    <LabelDeclaration>
+      <Label Name="Label_38" />
+    </LabelDeclaration>
+    <StlToken Text="NOP_0" />
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="81" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="82" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="83" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="84" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>STATE Num:38 Wait for Process Start Low</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="85" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="515">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s38_WaitProcStartLow" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="517">
+    <StlToken Text="S" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sProcessOver" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="519">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="qProcessOver" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="86" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="87" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="88" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="89" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Actions for STATE Num:38 Wait for Process Start Low</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="8A" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="521">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s39_WaitPalletAbsnt" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="523">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sStWtResetRel" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="525">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sSst" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="527">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="iPalletPresentAtStation" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="529">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s39_WaitPalletAbsnt_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="8B" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="8C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="8D" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="8E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Transition for STATE Num:39 Wait for Pallet Absent</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="8F" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="531">
+    <StlToken Text="A_BRACK" />
+  </StlStatement>
+  <StlStatement UId="532">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s39_WaitPalletAbsnt" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="534">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s38_WaitProcStartLow_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="536">
+    <StlToken Text="BRACKET" />
+  </StlStatement>
+  <StlStatement UId="537">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sStWtResetRel" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="539">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s39_WaitPalletAbsnt_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="541">
+    <StlToken Text="Assign" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="543">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="545">
+    <StlToken Text="BLD" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>102</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="547">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s39_WaitPalletAbsnt" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="549">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="551">
+    <StlToken Text="JNB" />
+    <Access Scope="Label">
+      <Label Name="Label_39" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="553">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>39</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="555">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="StateNo" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="557">
+    <LabelDeclaration>
+      <Label Name="Label_39" />
+    </LabelDeclaration>
+    <StlToken Text="NOP_0" />
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="90" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="91" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="92" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="93" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>STATE Num:39 Wait for Pallet Absent</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="94" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="559">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s39_WaitPalletAbsnt" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="561">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="iAutoRunning" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="563">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="iResetMem" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="565">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="qResetPalletStatusData" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="95" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="96" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="97" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="98" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Actions for STATE Num:39 Wait for Pallet Absent</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="99" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="567">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s40_WaitFaultReset" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="569">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sStWtResetRel" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="571">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sSst" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="573">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="iReset_fault" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="575">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s40_WaitFaultReset_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="9A" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="9B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="9C" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="9D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Transition for STATE Num:40 Wait for Fault Reset</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="9E" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="577">
+    <StlToken Text="A_BRACK" />
+  </StlStatement>
+  <StlStatement UId="578">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s40_WaitFaultReset" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="580">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s33_ChkScanResult_T2" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="582">
+    <StlToken Text="BRACKET" />
+  </StlStatement>
+  <StlStatement UId="583">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sStWtResetRel" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="585">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s40_WaitFaultReset_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="587">
+    <StlToken Text="Assign" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="589">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="591">
+    <StlToken Text="BLD" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>102</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="593">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s40_WaitFaultReset" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="595">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="597">
+    <StlToken Text="JNB" />
+    <Access Scope="Label">
+      <Label Name="Label_40" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="599">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>40</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="601">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="StateNo" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="603">
+    <LabelDeclaration>
+      <Label Name="Label_40" />
+    </LabelDeclaration>
+    <StlToken Text="NOP_0" />
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="9F" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="A0" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="A1" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="A2" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>STATE Num:40 Wait for Fault Reset</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="A3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="605">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s41_ChkPCAckReset0U" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="607">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sStWtResetRel" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="609">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sSst" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="611">
+    <StlToken Text="Assign" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="613">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="615">
+    <StlToken Text="A_BRACK" />
+  </StlStatement>
+  <StlStatement UId="616">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="iPCAckZero" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="618">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="iPCBypass" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="620">
+    <StlToken Text="BRACKET" />
+  </StlStatement>
+  <StlStatement UId="621">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s41_ChkPCAckReset0U_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="A4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="A5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="A6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="A7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Transition for STATE Num:41 Check PC Acknowledge value reset to zero for Upload</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="A8" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="623">
+    <StlToken Text="A_BRACK" />
+  </StlStatement>
+  <StlStatement UId="624">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s41_ChkPCAckReset0U" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="626">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s34_WaitOpDecision_T2" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="628">
+    <StlToken Text="BRACKET" />
+  </StlStatement>
+  <StlStatement UId="629">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sStWtResetRel" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="631">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s41_ChkPCAckReset0U_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="633">
+    <StlToken Text="Assign" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="635">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="637">
+    <StlToken Text="BLD" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>102</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="639">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s41_ChkPCAckReset0U" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="641">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="643">
+    <StlToken Text="JNB" />
+    <Access Scope="Label">
+      <Label Name="Label_41" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="645">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>41</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="647">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="StateNo" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="649">
+    <LabelDeclaration>
+      <Label Name="Label_41" />
+    </LabelDeclaration>
+    <StlToken Text="NOP_0" />
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="A9" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="AA" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="AB" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="AC" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>STATE Num:41 Check PC Acknowledge value reset to zero for Upload</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="AD" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="651">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s42_WaitDataUpldPC" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="653">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sStWtResetRel" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="655">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sSst" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="657">
+    <StlToken Text="Assign" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="659">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="661">
+    <StlToken Text="A_BRACK" />
+  </StlStatement>
+  <StlStatement UId="662">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="iPCDataWriteOver" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="664">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="iPCBypass" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="666">
+    <StlToken Text="BRACKET" />
+  </StlStatement>
+  <StlStatement UId="667">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s42_WaitDataUpldPC_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="AE" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="AF" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="B0" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="B1" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Transition for STATE Num:42 Wait for Data Upload From PC</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="B2" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="669">
+    <StlToken Text="A_BRACK" />
+  </StlStatement>
+  <StlStatement UId="670">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s42_WaitDataUpldPC" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="672">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s41_ChkPCAckReset0U_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="674">
+    <StlToken Text="BRACKET" />
+  </StlStatement>
+  <StlStatement UId="675">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sStWtResetRel" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="677">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s42_WaitDataUpldPC_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="679">
+    <StlToken Text="Assign" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="681">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="683">
+    <StlToken Text="BLD" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>102</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="685">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s42_WaitDataUpldPC" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="687">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="689">
+    <StlToken Text="JNB" />
+    <Access Scope="Label">
+      <Label Name="Label_42" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="691">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>42</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="693">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="StateNo" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="695">
+    <LabelDeclaration>
+      <Label Name="Label_42" />
+    </LabelDeclaration>
+    <StlToken Text="NOP_0" />
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="B3" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="B4" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="B5" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="B6" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>STATE Num:42 Wait for Data Upload From PC</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="B7" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="697">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s42_WaitDataUpldPC" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="699">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="qPCWriteCmd" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="B8" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="B9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="BA" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="BB" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Actions for STATE Num:42 Wait for Data Upload From PC</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="BC" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="701">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s43_ChkRecovery" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="703">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sStWtResetRel" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="705">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sSst" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="707">
+    <StlToken Text="Assign" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="709">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="711">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="iProcessOver" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="713">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s43_ChkRecovery_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="715">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="717">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s43_ChkRecovery_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="719">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="iProcessOver" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="721">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s43_ChkRecovery_T2" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="BD" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="BE" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="BF" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="C0" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Transition for STATE Num:43 Check Recovery</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="C1" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v4">
+  <StlStatement UId="723">
+    <StlToken Text="A_BRACK" />
+  </StlStatement>
+  <StlStatement UId="724">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s43_ChkRecovery" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="726">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s29_WaitProcStart_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="728">
+    <StlToken Text="BRACKET" />
+  </StlStatement>
+  <StlStatement UId="729">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="sStWtResetRel" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="731">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s43_ChkRecovery_T1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="733">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s43_ChkRecovery_T2" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="735">
+    <StlToken Text="Assign" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="737">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="739">
+    <StlToken Text="BLD" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>102</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="741">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="s43_ChkRecovery" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="743">
+    <StlToken Text="A" />
+    <Access Scope="Address">
+      <Address Area="Local" Type="Bool" BitOffset="8" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="745">
+    <StlToken Text="JNB" />
+    <Access Scope="Label">
+      <Label Name="Label_43" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="747">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>43</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="749">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="StateNo" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="751">
+    <LabelDeclaration>
+      <Label Name="Label_43" />
+    </LabelDeclaration>
+    <StlToken Text="NOP_0" />
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="C2" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="C3" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="C4" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="C5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>STATE Num:43 Check Recovery</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="C6" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="C7" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

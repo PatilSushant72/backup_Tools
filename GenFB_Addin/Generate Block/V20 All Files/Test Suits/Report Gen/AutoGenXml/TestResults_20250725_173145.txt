@@ -1,0 +1,237 @@
+State: Error
+Warning Count: 0
+Error Count: 18
+	Path: Application test
+	DateTime: 25/07/2025 12:01:41 PM
+	State: Error
+	Description: 
+	Warning Count: 0
+	Error Count: 18
+		Path: PR_CentreStand_Fix_Seq_V12_1026b5
+		DateTime: 25/07/2025 12:01:41 PM
+		State: Error
+		Description: 
+		Warning Count: 0
+		Error Count: 18
+			Path: MemoryReset
+			DateTime: 25/07/2025 12:01:41 PM
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 25/07/2025 12:01:41 PM
+				State: Error
+				Description: Please select the valid PLC to run the test case.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans0
+			DateTime: 25/07/2025 12:01:41 PM
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 25/07/2025 12:01:41 PM
+				State: Error
+				Description: Please select the valid PLC to run the test case.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans138_T1
+			DateTime: 25/07/2025 12:01:41 PM
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 25/07/2025 12:01:41 PM
+				State: Error
+				Description: Please select the valid PLC to run the test case.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans139
+			DateTime: 25/07/2025 12:01:41 PM
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 25/07/2025 12:01:41 PM
+				State: Error
+				Description: Please select the valid PLC to run the test case.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans141
+			DateTime: 25/07/2025 12:01:41 PM
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 25/07/2025 12:01:41 PM
+				State: Error
+				Description: Please select the valid PLC to run the test case.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans142
+			DateTime: 25/07/2025 12:01:41 PM
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 25/07/2025 12:01:41 PM
+				State: Error
+				Description: Please select the valid PLC to run the test case.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans143
+			DateTime: 25/07/2025 12:01:41 PM
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 25/07/2025 12:01:41 PM
+				State: Error
+				Description: Please select the valid PLC to run the test case.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans144
+			DateTime: 25/07/2025 12:01:41 PM
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 25/07/2025 12:01:41 PM
+				State: Error
+				Description: Please select the valid PLC to run the test case.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans145
+			DateTime: 25/07/2025 12:01:41 PM
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 25/07/2025 12:01:41 PM
+				State: Error
+				Description: Please select the valid PLC to run the test case.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans146
+			DateTime: 25/07/2025 12:01:41 PM
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 25/07/2025 12:01:41 PM
+				State: Error
+				Description: Please select the valid PLC to run the test case.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans191
+			DateTime: 25/07/2025 12:01:41 PM
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 25/07/2025 12:01:41 PM
+				State: Error
+				Description: Please select the valid PLC to run the test case.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans147
+			DateTime: 25/07/2025 12:01:41 PM
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 25/07/2025 12:01:41 PM
+				State: Error
+				Description: Please select the valid PLC to run the test case.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans148
+			DateTime: 25/07/2025 12:01:41 PM
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 25/07/2025 12:01:41 PM
+				State: Error
+				Description: Please select the valid PLC to run the test case.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans149
+			DateTime: 25/07/2025 12:01:41 PM
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 25/07/2025 12:01:41 PM
+				State: Error
+				Description: Please select the valid PLC to run the test case.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans138_T2_R2OpComp
+			DateTime: 25/07/2025 12:01:41 PM
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 25/07/2025 12:01:41 PM
+				State: Error
+				Description: Please select the valid PLC to run the test case.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans140_T2
+			DateTime: 25/07/2025 12:01:41 PM
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 25/07/2025 12:01:41 PM
+				State: Error
+				Description: Please select the valid PLC to run the test case.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans138_T2_R2OpNtComp
+			DateTime: 25/07/2025 12:01:41 PM
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 25/07/2025 12:01:41 PM
+				State: Error
+				Description: Please select the valid PLC to run the test case.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans140_T1
+			DateTime: 25/07/2025 12:01:41 PM
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 25/07/2025 12:01:41 PM
+				State: Error
+				Description: Please select the valid PLC to run the test case.
+				Warning Count: 0
+				Error Count: 1
+	Path: 
+	DateTime: 25/07/2025 12:01:41 PM
+	State: Error
+	Description: Test case execution pre-condition not met.
+	Warning Count: 0
+	Error Count: 1

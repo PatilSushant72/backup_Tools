@@ -1,0 +1,57 @@
+State: Error
+Warning Count: 0
+Error Count: 1
+	Path: Application test
+	DateTime: 25-07-2025 11:57:08
+	State: Error
+	Description: 
+	Warning Count: 0
+	Error Count: 1
+		Path: PR_CentreStand_Fix_Seq_V12
+		DateTime: 25-07-2025 11:57:08
+		State: Error
+		Description: Test cases executed : 2 ; Passed : 1 ; Failed : 1 ; Inconclusive : 0
+		Warning Count: 0
+		Error Count: 1
+			Path: MemoryReset
+			DateTime: 25-07-2025 11:57:08
+			State: Success
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Cycle"
+				DateTime: 25-07-2025 11:57:21
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+					Path: PR_CentreStand_Fix_Seq_V12_DB.StateNo
+					DateTime: 25-07-2025 11:57:21
+					State: Success
+					Description: Actual: 0, Expected: 0, Assert type: Equal
+					Warning Count: 0
+					Error Count: 0
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans138_T1
+			DateTime: 25-07-2025 11:57:21
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 138"
+				DateTime: 25-07-2025 11:57:21
+				State: Error
+				Description: Fail
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_DB.StateNo
+					DateTime: 25-07-2025 11:57:21
+					State: Error
+					Description: Actual: 0, Expected: 139, Assert type: Equal
+					Warning Count: 0
+					Error Count: 1
+	Path: 
+	DateTime: 25-07-2025 11:57:21
+	State: Information
+	Description: Test case(s) execution completed.
+	Warning Count: 0
+	Error Count: 0

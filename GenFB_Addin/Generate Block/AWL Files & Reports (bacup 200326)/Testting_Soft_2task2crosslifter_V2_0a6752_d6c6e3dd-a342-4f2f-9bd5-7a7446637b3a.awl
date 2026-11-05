@@ -1,0 +1,917 @@
+FUNCTION_BLOCK "Testting_Soft_2task2crosslifter_V2_0a6752"
+{ S7_Optimized_Access := 'FALSE' }
+VERSION : 0.1
+      VAR_INPUT
+      iAreaClearPath2 : BOOL;
+      iAreaClearPath3 : BOOL;
+      iAutoRunning : BOOL;
+      iCylHome : BOOL;
+      iCylMid : BOOL;
+      iCylWork : BOOL;
+      iOTS_frm_P1 : BOOL;
+      iOTS_frm_P2 : BOOL;
+      iPalletSensor : BOOL;
+      iPickPath : INT;
+      iPickPos : INT;
+      iProcessCmplt : BOOL;
+      iRTR_frm_P2 : BOOL;
+      iRTR_frm_P3 : BOOL;
+      iReset_fault : Bool;
+      iSendPath : INT;
+      iSendPos : INT;
+      iSstMode : BOOL;
+      iSstPB : BOOL;
+   END_VAR
+
+   VAR_OUTPUT
+      qCylHome : Bool;
+      qCylMid : Bool;
+      qCylWork : Bool;
+      qErr : Array[0..3] of Bool;
+      qProcess : Bool;
+   END_VAR
+
+   VAR_IN_OUT
+      iqRx : BOOL;
+      iqTx : BOOL;
+   END_VAR
+
+   VAR
+      StateNo : INT;
+      s100_WaitForPalletPresence : BOOL;
+      s100_WaitForPalletPresence_T1 : BOOL;
+      s10_RecoveryCondition : BOOL;
+      s10_RecoveryCondition_T1 : BOOL;
+      s10_RecoveryCondition_T2 : BOOL;
+      s10_RecoveryCondition_T3 : BOOL;
+      s110_WaitForProcessCompletion : BOOL;
+      s110_WaitForProcessCompletion_T1 : BOOL;
+      s120_WaitForPathConfig2 : BOOL;
+      s120_WaitForPathConfig2_T1 : BOOL;
+      s120_WaitForPathConfig2_T2 : BOOL;
+      s130_WaitForLifterConfig2 : BOOL;
+      s130_WaitForLifterConfig2_T1 : BOOL;
+      s130_WaitForLifterConfig2_T2 : BOOL;
+      s130_WaitForLifterConfig2_T3 : BOOL;
+      s140_WaitForRTR : BOOL;
+      s140_WaitForRTR_T1 : BOOL;
+      s150_WaitForPalletAbsence : BOOL;
+      s150_WaitForPalletAbsence_T1 : BOOL;
+      s150_WaitForPalletAbsence_T2 : BOOL;
+      s160_WaitForAreaUnhealthyP3 : BOOL;
+      s160_WaitForAreaUnhealthyP3_T1 : BOOL;
+      s170_WaitForNextCycle : BOOL;
+      s170_WaitForNextCycle_T1 : BOOL;
+      s180_Errors : BOOL;
+      s180_Errors_T1 : BOOL;
+      s180_Errors_T2 : BOOL;
+      s180_Errors_T3 : BOOL;
+      s1_WaitForAutoRun : BOOL;
+      s1_WaitForAutoRun_T1 : BOOL;
+      s20_WaitForPathConfig1 : BOOL;
+      s20_WaitForPathConfig1_T1 : BOOL;
+      s20_WaitForPathConfig1_T2 : BOOL;
+      s30_WaitForLifterConfig1 : BOOL;
+      s30_WaitForLifterConfig1_T1 : BOOL;
+      s30_WaitForLifterConfig1_T2 : BOOL;
+      s30_WaitForLifterConfig1_T3 : BOOL;
+      s40_WaitForRxTxBits : BOOL;
+      s40_WaitForRxTxBits_T1 : BOOL;
+      s40_WaitForRxTxBits_T2 : BOOL;
+      s50_MoveCylinderHome : BOOL;
+      s50_MoveCylinderHome_T1 : BOOL;
+      s60_MoveCylinderMid : BOOL;
+      s60_MoveCylinderMid_T1 : BOOL;
+      s70_MoveCylinderWork : BOOL;
+      s70_MoveCylinderWork_T1 : BOOL;
+      s80_WaitForOTS : BOOL;
+      s80_WaitForOTS_T1 : BOOL;
+      s80_WaitForOTS_T2 : BOOL;
+      s90_WaitForAreaUnhealthyP2 : BOOL;
+      s90_WaitForAreaUnhealthyP2_T1 : BOOL;
+      s90_WaitForAreaUnhealthyP2_T2 : BOOL;
+      sSst : BOOL;
+      sSstPulse : BOOL;
+      sSstRise : Bool;
+      sStWtResetRel : BOOL;
+      sStWtResetRel_T1 : BOOL;
+   END_VAR
+
+   VAR_TEMP
+      tOne : BOOL;
+   END_VAR
+
+BEGIN
+NETWORK
+TITLE = 
+      O #tOne;
+      ON #tOne;
+      = #tOne;
+NETWORK
+TITLE = Create Single Step Pulse bit
+      A #iSstPB;
+      FP #sSstRise;
+      = #sSstPulse;
+NETWORK
+TITLE = Create Single Step bit
+      A #iSstMode;
+      A #sSstPulse;
+      ON #iSstMode;
+      = #sSst;
+NETWORK
+TITLE = Transition for STATE Num:0 Reset Released
+      A #sStWtResetRel;
+      A #iAutoRunning;
+      = #sStWtResetRel_T1;
+NETWORK
+TITLE = STATE Num:0 Reset Released
+      A(;
+      O #sStWtResetRel;
+      ON #iAutoRunning;
+      );
+      AN #sStWtResetRel_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #sStWtResetRel;
+      A %L1.0;
+      JNB Label_0;
+      L 0;
+      T #StateNo;
+Label_0:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:1 Wait for AutoRun
+      A #s1_WaitForAutoRun;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iAutoRunning;
+      AN #iAreaClearPath2;
+      AN #iAreaClearPath3;
+      = #s1_WaitForAutoRun_T1;
+NETWORK
+TITLE = STATE Num:1 Wait for AutoRun
+      A(;
+      O #s1_WaitForAutoRun;
+      O #sStWtResetRel_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s1_WaitForAutoRun_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s1_WaitForAutoRun;
+      A %L1.0;
+      JNB Label_1;
+      L 1;
+      T #StateNo;
+Label_1:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:10 Recovery Condition
+      A #s10_RecoveryCondition;
+      AN #sStWtResetRel;
+      A #sSst;
+      = %L1.0;
+      A %L1.0;
+      AN #iPalletSensor;
+      AN #iAreaClearPath2;
+      AN #iAreaClearPath3;
+      A #iqRx;
+      = #s10_RecoveryCondition_T1;
+      A %L1.0;
+      AN #s10_RecoveryCondition_T1;
+      A #iPalletSensor;
+      AN #iAreaClearPath2;
+      AN #iAreaClearPath3;
+      A #iqTx;
+      = #s10_RecoveryCondition_T2;
+      A %L1.0;
+      AN #s10_RecoveryCondition_T1;
+      AN #s10_RecoveryCondition_T2;
+      AN #iqRx;
+      AN #iqTx;
+      AN #iAreaClearPath2;
+      AN #iAreaClearPath3;
+      AN #iPalletSensor;
+      = #s10_RecoveryCondition_T3;
+NETWORK
+TITLE = STATE Num:10 Recovery Condition
+      A(;
+      O #s10_RecoveryCondition;
+      O #s1_WaitForAutoRun_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s10_RecoveryCondition_T1;
+      AN #s10_RecoveryCondition_T2;
+      AN #s10_RecoveryCondition_T3;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s10_RecoveryCondition;
+      A %L1.0;
+      JNB Label_10;
+      L 10;
+      T #StateNo;
+Label_10:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:20 Wait for Path Configuration 1
+      A #s20_WaitForPathConfig1;
+      AN #sStWtResetRel;
+      A #sSst;
+      = %L1.0;
+      A %L1.0;
+      AN #iPalletSensor;
+      A(;
+      L #iPickPath;
+      L 1;
+      ==I;
+      );
+      AN #qErr[2];
+      = #s20_WaitForPathConfig1_T1;
+      A %L1.0;
+      AN #s20_WaitForPathConfig1_T1;
+      AN #iPalletSensor;
+      A(;
+      L #iPickPath;
+      L 2;
+      ==I;
+      );
+      AN #qErr[2];
+      = #s20_WaitForPathConfig1_T2;
+NETWORK
+TITLE = STATE Num:20 Wait for Path Configuration 1
+      A(;
+      O #s20_WaitForPathConfig1;
+      O #s10_RecoveryCondition_T3;
+      O #s170_WaitForNextCycle_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s20_WaitForPathConfig1_T1;
+      AN #s20_WaitForPathConfig1_T2;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s20_WaitForPathConfig1;
+      A %L1.0;
+      JNB Label_20;
+      L 20;
+      T #StateNo;
+Label_20:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:30 Wait for Lifter Configuration 1
+      A #s30_WaitForLifterConfig1;
+      AN #sStWtResetRel;
+      A #sSst;
+      = %L1.0;
+      A %L1.0;
+      A(;
+      L #iPickPos;
+      L 1;
+      ==I;
+      );
+      AN #qErr[3];
+      = #s30_WaitForLifterConfig1_T1;
+      A %L1.0;
+      AN #s30_WaitForLifterConfig1_T1;
+      A(;
+      L #iPickPos;
+      L 2;
+      ==I;
+      );
+      AN #qErr[3];
+      = #s30_WaitForLifterConfig1_T2;
+      A %L1.0;
+      AN #s30_WaitForLifterConfig1_T1;
+      AN #s30_WaitForLifterConfig1_T2;
+      A(;
+      L #iPickPos;
+      L 3;
+      ==I;
+      );
+      AN #qErr[3];
+      = #s30_WaitForLifterConfig1_T3;
+NETWORK
+TITLE = STATE Num:30 Wait for Lifter Configuration 1
+      A(;
+      O #s30_WaitForLifterConfig1;
+      O #s20_WaitForPathConfig1_T1;
+      O #s20_WaitForPathConfig1_T2;
+      );
+      AN #sStWtResetRel;
+      AN #s30_WaitForLifterConfig1_T1;
+      AN #s30_WaitForLifterConfig1_T2;
+      AN #s30_WaitForLifterConfig1_T3;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s30_WaitForLifterConfig1;
+      A %L1.0;
+      JNB Label_30;
+      L 30;
+      T #StateNo;
+Label_30:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:40 Wait for RxTx bits
+      A #s40_WaitForRxTxBits;
+      AN #sStWtResetRel;
+      A #sSst;
+      = %L1.0;
+      A %L1.0;
+      AN #qErr[1];
+      A #iqRx;
+      = #s40_WaitForRxTxBits_T1;
+      A %L1.0;
+      AN #s40_WaitForRxTxBits_T1;
+      AN #qErr[1];
+      A #iqTx;
+      = #s40_WaitForRxTxBits_T2;
+NETWORK
+TITLE = STATE Num:40 Wait for RxTx bits
+      A(;
+      O #s40_WaitForRxTxBits;
+      O #s50_MoveCylinderHome_T1;
+      O #s60_MoveCylinderMid_T1;
+      O #s70_MoveCylinderWork_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s40_WaitForRxTxBits_T1;
+      AN #s40_WaitForRxTxBits_T2;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s40_WaitForRxTxBits;
+      A %L1.0;
+      JNB Label_40;
+      L 40;
+      T #StateNo;
+Label_40:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:50 Move Cylinder Home
+      A #s50_MoveCylinderHome;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iCylHome;
+      AN #iCylMid;
+      AN #iCylWork;
+      = #s50_MoveCylinderHome_T1;
+NETWORK
+TITLE = STATE Num:50 Move Cylinder Home
+      A(;
+      O #s50_MoveCylinderHome;
+      O #s30_WaitForLifterConfig1_T1;
+      O #s130_WaitForLifterConfig2_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s50_MoveCylinderHome_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s50_MoveCylinderHome;
+A %L1.0;
+      JNB Label_50;
+      L 50;
+      T #StateNo;
+Label_50:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:50 Move Cylinder Home
+      A #s50_MoveCylinderHome;
+      = #qCylHome;
+NETWORK
+TITLE = Transition for STATE Num:60 Move Cylinder Mid
+      A #s60_MoveCylinderMid;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iCylMid;
+      AN #iCylHome;
+      AN #iCylWork;
+      = #s60_MoveCylinderMid_T1;
+NETWORK
+TITLE = STATE Num:60 Move Cylinder Mid
+      A(;
+      O #s60_MoveCylinderMid;
+      O #s30_WaitForLifterConfig1_T2;
+      O #s130_WaitForLifterConfig2_T2;
+      );
+      AN #sStWtResetRel;
+      AN #s60_MoveCylinderMid_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s60_MoveCylinderMid;
+      A %L1.0;
+      JNB Label_60;
+      L 60;
+      T #StateNo;
+Label_60:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:60 Move Cylinder Mid
+      A #s60_MoveCylinderMid;
+      = #qCylMid;
+NETWORK
+TITLE = Transition for STATE Num:70 Move Cylinder Work
+      A #s70_MoveCylinderWork;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iCylWork;
+      AN #iCylHome;
+      AN #iCylMid;
+      = #s70_MoveCylinderWork_T1;
+NETWORK
+TITLE = STATE Num:70 Move Cylinder Work
+      A(;
+      O #s70_MoveCylinderWork;
+      O #s30_WaitForLifterConfig1_T3;
+      O #s130_WaitForLifterConfig2_T3;
+      );
+      AN #sStWtResetRel;
+      AN #s70_MoveCylinderWork_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s70_MoveCylinderWork;
+      A %L1.0;
+      JNB Label_70;
+      L 70;
+      T #StateNo;
+Label_70:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:70 Move Cylinder Work
+      A #s70_MoveCylinderWork;
+      = #qCylWork;
+NETWORK
+TITLE = Transition for STATE Num:80 Wait for OTS
+      A #s80_WaitForOTS;
+      AN #sStWtResetRel;
+      A #sSst;
+      = %L1.0;
+      A %L1.0;
+      AN #iPalletSensor;
+      A #iAreaClearPath2;
+      A #iOTS_frm_P1;
+      A(;
+      L #iPickPath;
+      L 1;
+      ==I;
+      );
+      = #s80_WaitForOTS_T1;
+      A %L1.0;
+      AN #s80_WaitForOTS_T1;
+      AN #iPalletSensor;
+      A #iAreaClearPath2;
+      A #iOTS_frm_P2;
+      A(;
+      L #iPickPath;
+      L 2;
+      ==I;
+      );
+      = #s80_WaitForOTS_T2;
+NETWORK
+TITLE = STATE Num:80 Wait for OTS
+      A(;
+      O #s80_WaitForOTS;
+      O #s40_WaitForRxTxBits_T1;
+      O #s10_RecoveryCondition_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s80_WaitForOTS_T1;
+      AN #s80_WaitForOTS_T2;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s80_WaitForOTS;
+      A %L1.0;
+      JNB Label_80;
+      L 80;
+      T #StateNo;
+Label_80:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:90 Wait for Area Unhealthy P2
+      A #s90_WaitForAreaUnhealthyP2;
+      AN #sStWtResetRel;
+      A #sSst;
+      = %L1.0;
+      A %L1.0;
+      A(;
+      L #iSendPath;
+      L 2;
+      ==I;
+      );
+      A #iqTx;
+      = #s90_WaitForAreaUnhealthyP2_T1;
+      A %L1.0;
+      AN #s90_WaitForAreaUnhealthyP2_T1;
+      A #iAreaClearPath2;
+      A #iqRx;
+      = #s90_WaitForAreaUnhealthyP2_T2;
+NETWORK
+TITLE = STATE Num:90 Wait for Area Unhealthy P2
+      A(;
+      O #s90_WaitForAreaUnhealthyP2;
+      O #s80_WaitForOTS_T2;
+      O #s150_WaitForPalletAbsence_T2;
+      );
+      AN #sStWtResetRel;
+      AN #s90_WaitForAreaUnhealthyP2_T1;
+      AN #s90_WaitForAreaUnhealthyP2_T2;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s90_WaitForAreaUnhealthyP2;
+      A %L1.0;
+      JNB Label_90;
+      L 90;
+      T #StateNo;
+Label_90:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:100 Wait for pallet presence
+      A #s100_WaitForPalletPresence;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iPalletSensor;
+      AN #iAreaClearPath2;
+      = #s100_WaitForPalletPresence_T1;
+NETWORK
+TITLE = STATE Num:100 Wait for pallet presence
+      A(;
+      O #s100_WaitForPalletPresence;
+      O #s80_WaitForOTS_T1;
+      O #s90_WaitForAreaUnhealthyP2_T2;
+      );
+      AN #sStWtResetRel;
+      AN #s100_WaitForPalletPresence_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s100_WaitForPalletPresence;
+      A %L1.0;
+      JNB Label_100;
+      L 100;
+      T #StateNo;
+Label_100:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:100 Wait for pallet presence
+      A #s100_WaitForPalletPresence;
+      R #iqRx;
+      S #iqTx;
+NETWORK
+TITLE = Transition for STATE Num:110 Wait for Process completion
+      A #s110_WaitForProcessCompletion;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iProcessCmplt;
+      A #iPalletSensor;
+      = #s110_WaitForProcessCompletion_T1;
+NETWORK
+TITLE = STATE Num:110 Wait for Process completion
+      A(;
+      O #s110_WaitForProcessCompletion;
+      O #s100_WaitForPalletPresence_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s110_WaitForProcessCompletion_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s110_WaitForProcessCompletion;
+      A %L1.0;
+      JNB Label_110;
+      L 110;
+      T #StateNo;
+Label_110:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:110 Wait for Process completion
+      A #s110_WaitForProcessCompletion;
+      = #qProcess;
+NETWORK
+TITLE = Transition for STATE Num:120 Wait for Path Configuration 2
+      A #s120_WaitForPathConfig2;
+      AN #sStWtResetRel;
+      A #sSst;
+      = %L1.0;
+      A %L1.0;
+      A #iPalletSensor;
+      AN #iProcessCmplt;
+      A(;
+      L #iSendPath;
+      L 2;
+      ==I;
+      );
+      AN #qErr[2];
+      = #s120_WaitForPathConfig2_T1;
+      A %L1.0;
+      AN #s120_WaitForPathConfig2_T1;
+      A #iPalletSensor;
+      AN #iProcessCmplt;
+      A(;
+      L #iSendPath;
+      L 3;
+      ==I;
+      );
+      AN #qErr[2];
+      = #s120_WaitForPathConfig2_T2;
+NETWORK
+TITLE = STATE Num:120 Wait for Path Configuration 2
+      A(;
+      O #s120_WaitForPathConfig2;
+      O #s110_WaitForProcessCompletion_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s120_WaitForPathConfig2_T1;
+      AN #s120_WaitForPathConfig2_T2;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s120_WaitForPathConfig2;
+      A %L1.0;
+      JNB Label_120;
+      L 120;
+      T #StateNo;
+Label_120:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:130 Wait for Lifter Configuration 2
+      A #s130_WaitForLifterConfig2;
+      AN #sStWtResetRel;
+      A #sSst;
+      = %L1.0;
+      A %L1.0;
+      A(;
+      L #iSendPos;
+      L 1;
+      ==I;
+      );
+      AN #qErr[3];
+      = #s130_WaitForLifterConfig2_T1;
+      A %L1.0;
+      AN #s130_WaitForLifterConfig2_T1;
+      A(;
+      L #iSendPos;
+      L 2;
+      ==I;
+      );
+      AN #qErr[3];
+      = #s130_WaitForLifterConfig2_T2;
+      A %L1.0;
+      AN #s130_WaitForLifterConfig2_T1;
+      AN #s130_WaitForLifterConfig2_T2;
+      A(;
+      L #iSendPos;
+      L 3;
+      ==I;
+      );
+      AN #qErr[3];
+      = #s130_WaitForLifterConfig2_T3;
+NETWORK
+TITLE = STATE Num:130 Wait for Lifter Configuration 2
+      A(;
+      O #s130_WaitForLifterConfig2;
+      O #s120_WaitForPathConfig2_T1;
+      O #s120_WaitForPathConfig2_T2;
+      );
+      AN #sStWtResetRel;
+      AN #s130_WaitForLifterConfig2_T1;
+      AN #s130_WaitForLifterConfig2_T2;
+      AN #s130_WaitForLifterConfig2_T3;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s130_WaitForLifterConfig2;
+      A %L1.0;
+      JNB Label_130;
+      L 130;
+      T #StateNo;
+Label_130:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:140 Wait for RTR
+      A #s140_WaitForRTR;
+      AN #sStWtResetRel;
+      A #sSst;
+      A(;
+      A(;
+      L #iSendPath;
+      L 2;
+      ==I;
+      );
+      A #iRTR_frm_P2;
+      O;
+      A(;
+      L #iSendPath;
+      L 3;
+      ==I;
+      );
+      A #iRTR_frm_P3;
+      );
+      = #s140_WaitForRTR_T1;
+NETWORK
+TITLE = STATE Num:140 Wait for RTR
+      A(;
+      O #s140_WaitForRTR;
+      O #s40_WaitForRxTxBits_T2;
+      O #s10_RecoveryCondition_T2;
+      );
+      AN #sStWtResetRel;
+      AN #s140_WaitForRTR_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s140_WaitForRTR;
+      A %L1.0;
+      JNB Label_140;
+      L 140;
+      T #StateNo;
+Label_140:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:140 Wait for RTR
+      A #s140_WaitForRTR;
+      S #iqTx;
+NETWORK
+TITLE = Transition for STATE Num:150 Wait for Pallet Absence
+      A #s150_WaitForPalletAbsence;
+      AN #sStWtResetRel;
+      A #sSst;
+      = %L1.0;
+      A %L1.0;
+      AN #iPalletSensor;
+      AN #iProcessCmplt;
+      A(;
+      L #iSendPath;
+      L 3;
+      ==I;
+      );
+      = #s150_WaitForPalletAbsence_T1;
+      A %L1.0;
+      AN #s150_WaitForPalletAbsence_T1;
+      AN #iPalletSensor;
+      AN #iProcessCmplt;
+      A(;
+      L #iSendPath;
+      L 2;
+      ==I;
+      );
+      = #s150_WaitForPalletAbsence_T2;
+NETWORK
+TITLE = STATE Num:150 Wait for Pallet Absence
+      A(;
+      O #s150_WaitForPalletAbsence;
+      O #s140_WaitForRTR_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s150_WaitForPalletAbsence_T1;
+      AN #s150_WaitForPalletAbsence_T2;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s150_WaitForPalletAbsence;
+      A %L1.0;
+      JNB Label_150;
+      L 150;
+      T #StateNo;
+Label_150:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:160 Wait for Area Unhealthy P3
+      A #s160_WaitForAreaUnhealthyP3;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iAreaClearPath3;
+      A #iqTx;
+      = #s160_WaitForAreaUnhealthyP3_T1;
+NETWORK
+TITLE = STATE Num:160 Wait for Area Unhealthy P3
+      A(;
+      O #s160_WaitForAreaUnhealthyP3;
+      O #s150_WaitForPalletAbsence_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s160_WaitForAreaUnhealthyP3_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s160_WaitForAreaUnhealthyP3;
+      A %L1.0;
+      JNB Label_160;
+      L 160;
+      T #StateNo;
+Label_160:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:170 Wait for Next Cycle
+      A #s170_WaitForNextCycle;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iAutoRunning;
+      AN #iAreaClearPath2;
+      AN #iAreaClearPath3;
+      = #s170_WaitForNextCycle_T1;
+NETWORK
+TITLE = STATE Num:170 Wait for Next Cycle
+      A(;
+      O #s170_WaitForNextCycle;
+      O #s90_WaitForAreaUnhealthyP2_T1;
+      O #s160_WaitForAreaUnhealthyP3_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s170_WaitForNextCycle_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s170_WaitForNextCycle;
+      A %L1.0;
+      JNB Label_170;
+      L 170;
+      T #StateNo;
+Label_170:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:180 Errors
+      A #s180_Errors;
+      AN #sStWtResetRel;
+      A #sSst;
+      = %L1.0;
+      A %L1.0;
+      A(;
+      A #iCylHome;
+      A #iCylMid;
+      O;
+      A #iCylMid;
+      A #iCylWork;
+      O;
+      A #iCylWork;
+      A #iCylHome;
+      );
+      = #s180_Errors_T1;
+      A %L1.0;
+      AN #s180_Errors_T1;
+      A(;
+      A(;
+      L #iPickPath;
+      L 3;
+      >=I;
+      );
+      O;
+      A(;
+      L #iSendPath;
+      L 3;
+      >I;
+      );
+      O;
+      A(;
+      L #iSendPath;
+      L 1;
+      ==I;
+      );
+      O;
+      A(;
+      L #iSendPath;
+      L 2;
+      ==I;
+      );
+      A(;
+      L #iPickPath;
+      L 2;
+      ==I;
+      );
+      );
+      = #s180_Errors_T2;
+      A %L1.0;
+      AN #s180_Errors_T1;
+      AN #s180_Errors_T2;
+      A(;
+      A(;
+      L #iPickPos;
+      L 3;
+      >I;
+      );
+      O;
+      A(;
+      L #iSendPos;
+      L 3;
+      >I;
+      );
+      );
+      = #s180_Errors_T3;
+NETWORK
+TITLE = STATE Num:180 Errors
+      A(;
+      O #s180_Errors;
+      );
+      AN #sStWtResetRel;
+      AN #s180_Errors_T1;
+      AN #s180_Errors_T2;
+      AN #s180_Errors_T3;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s180_Errors;
+      A %L1.0;
+      JNB Label_180;
+      L 180;
+      T #StateNo;
+Label_180:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:180 Errors
+      A #s180_Errors;
+      A #s180_Errors_T1;
+      = #qErr[1];
+      A #s180_Errors;
+      A #s180_Errors_T2;
+      = #qErr[2];
+      A #s180_Errors;
+      A #s180_Errors_T3;
+      = #qErr[3];
+END_FUNCTION_BLOCK

@@ -1,0 +1,58 @@
+Block_Name : ,PR_CentreStand_Fix_Seq_V12_1026b5
+,,,Output tag Flow : 1,State traces Flow : 1
+Tag,Value,State Number,Output tag Flow : 2,State traces Flow : 2
+iAutoRunning,"[TRUE]","[0]"/,Output tag Flow : 3,State traces Flow : 3
+iFixClamp,"[TRUE]","[145]"/
+iFixEmpty,"[TRUE]","[139,149]"/
+iFixTrayPresent,"[TRUE]","[143,138_T2,140_T2,140_T1]"/
+iFixUnclamp,"[TRUE]","[141,147]"/
+iR1DropOver,"[TRUE]","[142]"/
+iR1PickOver,"[TRUE]","[148]"/
+iR2OperationOver,"[TRUE]","[146]"/
+iR2ServiceActivated,"[TRUE]","[145]"/
+iReset_fault
+iRobotOutofZone,"[TRUE]","[138_T1,144,145,191,149,138_T2,140_T2,140_T1]"/
+iSstMode
+iSstPB
+qFixClamp
+qFixUnclamp
+qR1ReadytoDropTray
+qR1ReadytoPickTray
+qR2OperationStart
+iqR2ServiceActive
+iqR2ServiceCompleted
+
+Block_Name : ,PR_GantryUnload_Seqv25_57af70
+,,,Output tag Flow : 1,State traces Flow : 1
+Tag,Value,State Number,Output tag Flow : 2,State traces Flow : 2
+iAutoRunning,"[TRUE]","[44,45,46_T1,46_T2,47,48_T1,48_T2,48_T3,49,50,51,52_T1,52_T2,53_T1,53_T2,54,55,56,57,58,61_T1,61_T2,62,63,64,65_T1,65_T2,66,67,68,69]"/,Output tag Flow : 3,State traces Flow : 3
+iCenteringSlideAtHome,"[TRUE]","[46_T1,47,48_T1,48_T2,48_T3,51,52_T1,52_T2,53_T1,53_T2,54,55,56,57,58,61_T1,61_T2,62,63,64,65_T1,65_T2,66,67,68,69]"/,Output tag Flow : 4,State traces Flow : 4
+iCenteringSlideAtWork,"[TRUE]","[49,50]"/,Output tag Flow : 5,State traces Flow : 5
+iDistSenHighLimit,,,Output tag Flow : 6,State traces Flow : 6
+iDistSenLowLimit,,,Output tag Flow : 7,State traces Flow : 7
+iDistSensorIP,,,Output tag Flow : 8,State traces Flow : 8
+iDryCycleWithoutPal
+iGantryOutofZone,"[TRUE]","[45,46_T1,46_T2,47,48_T1,48_T2,48_T3,49,50,51,52_T1,52_T2,53_T1,53_T2,56,57,58,61_T1,61_T2,62,63,64,65_T1,65_T2,66,67,68,69]"/
+iGantryPickOver,"[TRUE]","[55,56,57,58]"/
+iPCAckZero,"[TRUE]","[62,63,68,69]"/
+iPCBypass
+iPCDataReadOver,"[TRUE]","[69]"/
+iPCDataWriteOver,"[TRUE]","[63]"/
+iPalletPresent
+iProcessStart,"[TRUE]","[47,48_T1,48_T2,48_T3,49,50,51,52_T1,52_T2,53_T1,53_T2,54,55,56,57,61_T1,61_T2,62,63,64,65_T1,65_T2,66,68,69]"/
+iReset_fault
+iRetryPB,"[TRUE]","[64,66]"/
+iScanErr,"[TRUE]","[52_T2,65_T1,65_T2,66]"/
+iScanOver,"[TRUE]","[52_T1,53_T1,53_T2,54,55,56,57,58,61_T1,61_T2,62,63,64,68,69]"/
+iScannerBypass
+iSstMode
+iSstPB
+qCenteringSlideAdvance
+qCenteringSlideRetract
+qCheckDistance
+qGantryOkToUnload
+qMsg
+qPCReadCmd
+qPCUploadCmd
+qProcessOver
+qScanCmd

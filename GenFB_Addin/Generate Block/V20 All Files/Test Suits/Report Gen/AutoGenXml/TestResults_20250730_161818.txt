@@ -1,0 +1,3459 @@
+State: Error
+Warning Count: 0
+Error Count: 555
+	Path: Application test
+	DateTime: 30-07-2025 10:47:32
+	State: Error
+	Description: 
+	Warning Count: 0
+	Error Count: 555
+		Path: PR_CentreStand_Fix_Seq_V12_1026b5
+		DateTime: 30-07-2025 10:47:33
+		State: Error
+		Description: 
+		Warning Count: 0
+		Error Count: 555
+			Path: MemoryReset
+			DateTime: 30-07-2025 10:47:33
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 2
+				Path: Line: 10
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 15
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans0
+			DateTime: 30-07-2025 10:47:33
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 33
+				Path: Line: 2
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstPB" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 3
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstMode" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 4
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 5
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iReset_fault" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 6
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 7
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixTrayPresent" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 8
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixEmpty" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 9
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 10
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1DropOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 11
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 12
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2OperationOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 13
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2ServiceActivated" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 14
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 15
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 16
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 17
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoDropTray" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 18
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 19
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR2OperationStart" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 20
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoPickTray" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 24
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iAutoRunning" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 26
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iSstPB" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 27
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iSstMode" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 28
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iReset_fault" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 29
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iRobotOutofZone" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 30
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixTrayPresent" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 31
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixEmpty" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 32
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 33
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR1DropOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 34
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 35
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR2OperationOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 36
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR2ServiceActivated" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 37
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR1PickOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 39
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans138_T1
+			DateTime: 30-07-2025 10:47:33
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 32
+				Path: Line: 2
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstPB" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 3
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstMode" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 4
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 5
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iReset_fault" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 6
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 7
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixTrayPresent" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 8
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixEmpty" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 9
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 10
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1DropOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 11
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 12
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2OperationOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 13
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2ServiceActivated" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 14
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 15
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 16
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 17
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoDropTray" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 18
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 19
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR2OperationStart" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 20
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoPickTray" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 24
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iRobotOutofZone" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 25
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixTrayPresent" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 27
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iSstPB" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 28
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iSstMode" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 29
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iReset_fault" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 30
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixEmpty" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 31
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 32
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR1DropOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 33
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 34
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR2OperationOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 35
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR2ServiceActivated" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 36
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR1PickOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 39
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans139
+			DateTime: 30-07-2025 10:47:33
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 33
+				Path: Line: 2
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstPB" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 3
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstMode" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 4
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 5
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iReset_fault" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 6
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 7
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixTrayPresent" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 8
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixEmpty" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 9
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 10
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1DropOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 11
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 12
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2OperationOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 13
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2ServiceActivated" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 14
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 15
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 16
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 17
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoDropTray" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 18
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 19
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR2OperationStart" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 20
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoPickTray" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 24
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixEmpty" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 26
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iSstPB" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 27
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iSstMode" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 28
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iReset_fault" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 29
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iRobotOutofZone" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 30
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixTrayPresent" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 31
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 32
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR1DropOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 33
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 34
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR2OperationOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 35
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR2ServiceActivated" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 36
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR1PickOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 39
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 40
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "qFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans141
+			DateTime: 30-07-2025 10:47:33
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 33
+				Path: Line: 2
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstPB" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 3
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstMode" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 4
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 5
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iReset_fault" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 6
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 7
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixTrayPresent" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 8
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixEmpty" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 9
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 10
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1DropOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 11
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 12
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2OperationOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 13
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2ServiceActivated" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 14
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 15
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 16
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 17
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoDropTray" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 18
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 19
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR2OperationStart" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 20
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoPickTray" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 24
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 26
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iSstPB" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 27
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iSstMode" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 28
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iReset_fault" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 29
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iRobotOutofZone" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 30
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixTrayPresent" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 31
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixEmpty" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 32
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR1DropOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 33
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 34
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR2OperationOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 35
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR2ServiceActivated" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 36
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR1PickOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 39
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 40
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "qR1ReadytoDropTray" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans142
+			DateTime: 30-07-2025 10:47:33
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 32
+				Path: Line: 2
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstPB" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 3
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstMode" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 4
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 5
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iReset_fault" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 6
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 7
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixTrayPresent" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 8
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixEmpty" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 9
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 10
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1DropOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 11
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 12
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2OperationOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 13
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2ServiceActivated" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 14
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 15
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 16
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 17
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoDropTray" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 18
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 19
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR2OperationStart" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 20
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoPickTray" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 24
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR1DropOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 26
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iSstPB" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 27
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iSstMode" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 28
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iReset_fault" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 29
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iRobotOutofZone" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 30
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixTrayPresent" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 31
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixEmpty" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 32
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 33
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 34
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR2OperationOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 35
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR2ServiceActivated" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 36
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR1PickOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 39
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans143
+			DateTime: 30-07-2025 10:47:33
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 32
+				Path: Line: 2
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstPB" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 3
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstMode" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 4
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 5
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iReset_fault" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 6
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 7
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixTrayPresent" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 8
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixEmpty" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 9
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 10
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1DropOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 11
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 12
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2OperationOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 13
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2ServiceActivated" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 14
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 15
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 16
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 17
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoDropTray" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 18
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 19
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR2OperationStart" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 20
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoPickTray" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 24
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixTrayPresent" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 26
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iSstPB" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 27
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iSstMode" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 28
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iReset_fault" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 29
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iRobotOutofZone" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 30
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixEmpty" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 31
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 32
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR1DropOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 33
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 34
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR2OperationOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 35
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR2ServiceActivated" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 36
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR1PickOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 39
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans144
+			DateTime: 30-07-2025 10:47:33
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 33
+				Path: Line: 2
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstPB" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 3
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstMode" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 4
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 5
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iReset_fault" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 6
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 7
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixTrayPresent" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 8
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixEmpty" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 9
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 10
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1DropOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 11
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 12
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2OperationOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 13
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2ServiceActivated" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 14
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 15
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 16
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 17
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoDropTray" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 18
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 19
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR2OperationStart" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 20
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoPickTray" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 24
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iRobotOutofZone" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 26
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iSstPB" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 27
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iSstMode" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 28
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iReset_fault" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 29
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixTrayPresent" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 30
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixEmpty" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 31
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 32
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR1DropOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 33
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 34
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR2OperationOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 35
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR2ServiceActivated" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 36
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR1PickOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 39
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 40
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "qFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans145
+			DateTime: 30-07-2025 10:47:33
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 33
+				Path: Line: 2
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstPB" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 3
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstMode" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 4
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 5
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iReset_fault" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 6
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 7
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixTrayPresent" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 8
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixEmpty" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 9
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 10
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1DropOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 11
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 12
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2OperationOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 13
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2ServiceActivated" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 14
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 15
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 16
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 17
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoDropTray" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 18
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 19
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR2OperationStart" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 20
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoPickTray" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 24
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iRobotOutofZone" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 25
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 26
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR2ServiceActivated" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 28
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iSstPB" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 29
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iSstMode" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 30
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iReset_fault" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 31
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixTrayPresent" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 32
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixEmpty" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 33
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 34
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR1DropOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 35
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR2OperationOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 36
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR1PickOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 39
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 40
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "qR2OperationStart" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans146
+			DateTime: 30-07-2025 10:47:33
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 32
+				Path: Line: 2
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstPB" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 3
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstMode" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 4
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 5
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iReset_fault" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 6
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 7
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixTrayPresent" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 8
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixEmpty" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 9
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 10
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1DropOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 11
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 12
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2OperationOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 13
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2ServiceActivated" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 14
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 15
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 16
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 17
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoDropTray" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 18
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 19
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR2OperationStart" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 20
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoPickTray" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 24
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR2OperationOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 26
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iSstPB" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 27
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iSstMode" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 28
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iReset_fault" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 29
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iRobotOutofZone" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 30
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixTrayPresent" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 31
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixEmpty" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 32
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 33
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR1DropOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 34
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 35
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR2ServiceActivated" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 36
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR1PickOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 39
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans191
+			DateTime: 30-07-2025 10:47:33
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 33
+				Path: Line: 2
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstPB" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 3
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstMode" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 4
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 5
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iReset_fault" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 6
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 7
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixTrayPresent" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 8
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixEmpty" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 9
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 10
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1DropOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 11
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 12
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2OperationOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 13
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2ServiceActivated" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 14
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 15
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 16
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 17
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoDropTray" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 18
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 19
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR2OperationStart" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 20
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoPickTray" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 24
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iRobotOutofZone" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 26
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iSstPB" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 27
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iSstMode" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 28
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iReset_fault" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 29
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixTrayPresent" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 30
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixEmpty" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 31
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 32
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR1DropOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 33
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 34
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR2OperationOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 35
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR2ServiceActivated" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 36
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR1PickOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 39
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 40
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "qFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans147
+			DateTime: 30-07-2025 10:47:33
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 33
+				Path: Line: 2
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstPB" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 3
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstMode" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 4
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 5
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iReset_fault" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 6
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 7
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixTrayPresent" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 8
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixEmpty" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 9
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 10
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1DropOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 11
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 12
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2OperationOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 13
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2ServiceActivated" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 14
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 15
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 16
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 17
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoDropTray" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 18
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 19
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR2OperationStart" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 20
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoPickTray" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 24
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 26
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iSstPB" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 27
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iSstMode" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 28
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iReset_fault" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 29
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iRobotOutofZone" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 30
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixTrayPresent" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 31
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixEmpty" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 32
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR1DropOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 33
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 34
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR2OperationOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 35
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR2ServiceActivated" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 36
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR1PickOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 39
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 40
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "qR1ReadytoPickTray" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans148
+			DateTime: 30-07-2025 10:47:33
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 32
+				Path: Line: 2
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstPB" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 3
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstMode" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 4
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 5
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iReset_fault" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 6
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 7
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixTrayPresent" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 8
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixEmpty" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 9
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 10
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1DropOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 11
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 12
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2OperationOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 13
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2ServiceActivated" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 14
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 15
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 16
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 17
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoDropTray" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 18
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 19
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR2OperationStart" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 20
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoPickTray" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 24
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR1PickOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 26
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iSstPB" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 27
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iSstMode" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 28
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iReset_fault" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 29
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iRobotOutofZone" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 30
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixTrayPresent" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 31
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixEmpty" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 32
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 33
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR1DropOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 34
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 35
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR2OperationOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 36
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR2ServiceActivated" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 39
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans149
+			DateTime: 30-07-2025 10:47:33
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 33
+				Path: Line: 2
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstPB" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 3
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstMode" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 4
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 5
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iReset_fault" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 6
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 7
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixTrayPresent" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 8
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixEmpty" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 9
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 10
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1DropOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 11
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 12
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2OperationOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 13
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2ServiceActivated" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 14
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 15
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 16
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 17
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoDropTray" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 18
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 19
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR2OperationStart" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 20
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoPickTray" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 24
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iRobotOutofZone" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 25
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixEmpty" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 27
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iSstPB" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 28
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iSstMode" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 29
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iReset_fault" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 30
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixTrayPresent" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 31
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 32
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR1DropOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 33
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 34
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR2OperationOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 35
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR2ServiceActivated" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 36
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR1PickOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 38
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 39
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans138_T2_R2OpComp
+			DateTime: 30-07-2025 10:47:33
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 32
+				Path: Line: 2
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstPB" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 3
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstMode" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 4
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 5
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iReset_fault" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 6
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 7
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixTrayPresent" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 8
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixEmpty" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 9
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 10
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1DropOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 11
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 12
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2OperationOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 13
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2ServiceActivated" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 14
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 15
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 16
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 17
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoDropTray" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 18
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 19
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR2OperationStart" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 20
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoPickTray" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 24
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iRobotOutofZone" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 25
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixTrayPresent" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 28
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iSstPB" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 29
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iSstMode" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 30
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iReset_fault" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 31
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixEmpty" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 32
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 33
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR1DropOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 34
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 35
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR2OperationOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 36
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR2ServiceActivated" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 37
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR1PickOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 40
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans140_T2
+			DateTime: 30-07-2025 10:47:33
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 33
+				Path: Line: 2
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstPB" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 3
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstMode" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 4
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 5
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iReset_fault" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 6
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 7
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixTrayPresent" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 8
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixEmpty" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 9
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 10
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1DropOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 11
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 12
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2OperationOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 13
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2ServiceActivated" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 14
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 15
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 16
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 17
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoDropTray" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 18
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 19
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR2OperationStart" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 20
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoPickTray" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 25
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iRobotOutofZone" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 26
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixTrayPresent" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 29
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iSstPB" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 30
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iSstMode" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 31
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iReset_fault" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 32
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixEmpty" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 33
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 34
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR1DropOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 35
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 36
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR2OperationOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 37
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR2ServiceActivated" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 38
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR1PickOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 41
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 42
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "qFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans138_T2_R2OpNtComp
+			DateTime: 30-07-2025 10:47:33
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 32
+				Path: Line: 2
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstPB" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 3
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstMode" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 4
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 5
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iReset_fault" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 6
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 7
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixTrayPresent" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 8
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixEmpty" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 9
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 10
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1DropOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 11
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 12
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2OperationOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 13
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2ServiceActivated" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 14
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 15
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 16
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 17
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoDropTray" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 18
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 19
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR2OperationStart" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 20
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoPickTray" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 24
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iRobotOutofZone" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 25
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixTrayPresent" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 28
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iSstPB" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 29
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iSstMode" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 30
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iReset_fault" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 31
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixEmpty" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 32
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 33
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR1DropOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 34
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 35
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR2OperationOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 36
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR2ServiceActivated" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 37
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR1PickOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 40
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans140_T1
+			DateTime: 30-07-2025 10:47:33
+			State: Error
+			Description: 
+			Warning Count: 0
+			Error Count: 32
+				Path: Line: 2
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstPB" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 3
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iSstMode" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 4
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 5
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iReset_fault" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 6
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 7
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixTrayPresent" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 8
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixEmpty" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 9
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 10
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1DropOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 11
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 12
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2OperationOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 13
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2ServiceActivated" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 14
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 15
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 16
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 17
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoDropTray" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 18
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 19
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR2OperationStart" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 20
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "PR_CentreStand_Fix_Seq_V12_1026b5_DB.qR1ReadytoPickTray" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 24
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iRobotOutofZone" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 25
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixTrayPresent" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 28
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iSstPB" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 29
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iSstMode" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 30
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iReset_fault" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 31
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixEmpty" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 32
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixUnclamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 33
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR1DropOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 34
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iFixClamp" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 35
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR2OperationOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 36
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR2ServiceActivated" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 37
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "iR1PickOver" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+				Path: Line: 40
+				DateTime: 30-07-2025 10:47:33
+				State: Error
+				Description: Tag "StateNo" not defined in the selected PLC.
+				Warning Count: 0
+				Error Count: 1
+	Path: 
+	DateTime: 30-07-2025 10:47:33
+	State: Error
+	Description: Test case execution pre-condition not met.
+	Warning Count: 0
+	Error Count: 1

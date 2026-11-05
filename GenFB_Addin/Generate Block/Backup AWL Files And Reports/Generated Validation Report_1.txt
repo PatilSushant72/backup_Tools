@@ -1,0 +1,10 @@
+=== SPREADSHEET NAME ===
+PR_GantryUnload_Seqv2 5_57af70_1fb51a9a-5897-4462-a51f-bba69fd82344.xlsx
+=== DESCRIPTION ===
+One or more state network has no incoming conections from any transition variables. Verify the pseudo code for the following states - ['s44_WaitResetRelease']
+------------------------------------------------------------
+=== SPREADSHEET NAME ===
+PR_PC4005_Operator_DecisionV4_44797a_39a23383-1099-4d93-bc85-155cc05999b0.xlsx
+=== DESCRIPTION ===
+All state networks have atleast one connection from a transition variable
+------------------------------------------------------------

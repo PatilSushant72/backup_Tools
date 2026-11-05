@@ -1,0 +1,36 @@
+Spreadsheet name: Testting_Soft_2task2crosslifter_V2_844638.xlsx
+
+Generation time: 20251208_114456
+
+LLM selected: anthropic.claude-3-5-sonnet-20240620-v1:0
+
+LLM params selected: {'temperature': 0.4, 'top_p': 0.2, 'top_k': 250, 'max_tokens': 8192, 'stop_sequences': ['Human:']}
+
+There are no duplicate transition flags
+
+All transitions connect to one state
+
+All state flags are unique
+
+There are one or more transitions which are not connected to any state - ['s180_Errors_T1', 's180_Errors_T2', 's180_Errors_T3']
+
+Dangling trans - s180_Errors_T1 couldnot be corrected as state:190 doesnot exist
+Dangling trans - s180_Errors_T2 couldnot be corrected as state:190 doesnot exist
+Dangling trans - s180_Errors_T3 couldnot be corrected as state:190 doesnot exist
+
+
+Transition variables which are connected connect to a correct state network
+
+All transition flags trigger a state change
+
+Only one of the transition flag variable is set at a time
+
+All state variables in the pseudo query are there in the PLC text ladder
+
+One or more state network has no incoming conections from any transition variables. Verify the pseudo code for the following states - ['s1_WaitForAutoRun', 's180_Errors']
+
+All transition networks present
+
+Forking logic is not applicable for the code
+
+Specifically verify if the boolean expressions are properly created for the states in spreadsheet rows -  [5]

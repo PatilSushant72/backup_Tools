@@ -1,0 +1,29 @@
+Spreadsheet name: LifterSeq_79bef3.xlsx
+
+Generation time: 20260320_145718
+
+LLM selected: anthropic.claude-3-5-sonnet-20240620-v1:0
+
+LLM params selected: {'temperature': 0.4, 'top_p': 0.2, 'top_k': 271, 'max_tokens': 8192, 'stop_sequences': ['Human:']}
+
+There are no duplicate transition flags
+
+All transitions connect to one state
+
+All state flags are unique
+
+All transition flags are connected to a state
+
+Transition variables which are connected connect to a correct state network
+
+All transition flags trigger a state change
+
+Only one of the transition flag variable is set at a time
+
+All state variables in the pseudo query are there in the PLC text ladder
+
+All state networks have atleast one connection from a transition variable
+
+All transition networks present
+
+Forking logic is not applicable for the code

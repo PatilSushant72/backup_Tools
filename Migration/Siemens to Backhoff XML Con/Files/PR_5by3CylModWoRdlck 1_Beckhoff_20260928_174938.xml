@@ -1,0 +1,3195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://www.plcopen.org/xml/tc6_0200">
+  <fileHeader companyName="SiemensToBackhoff" productName="Siemens TIA Portal to Beckhoff TwinCAT PLCopen Converter" productVersion="2.0" creationDateTime="2026-09-28T12:19:39.070834" />
+  <contentHeader name="PR_5by3CylModWoRdlck_PLC" modificationDateTime="2026-09-28T12:19:39.070834">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="1" y="1" />
+      </fbd>
+      <ld>
+        <scaling x="1" y="1" />
+      </ld>
+      <sfc>
+        <scaling x="1" y="1" />
+      </sfc>
+    </coordinateInfo>
+    <addData>
+      <data name="http://www.3s-software.com/plcopenxml/projectinformation" handleUnknown="implementation">
+        <ProjectInformation />
+      </data>
+    </addData>
+  </contentHeader>
+  <types>
+    <dataTypes />
+    <pous>
+      <pou name="PR_5by3CylModWoRdlck" pouType="functionBlock">
+        <interface>
+          <inputVars>
+            <variable name="iResetModule">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Reset if 1</xhtml>
+              </documentation>
+            </variable>
+            <variable name="iResetFaults">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Reset Fault CMD</xhtml>
+              </documentation>
+            </variable>
+            <variable name="iEnergizeAtPwrOn">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Energize Poweron Input</xhtml>
+              </documentation>
+            </variable>
+            <variable name="iWorkCmd">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Cyl Work Postion CMD</xhtml>
+              </documentation>
+            </variable>
+            <variable name="iHomeCmd">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Cyl Home Postion CMD</xhtml>
+              </documentation>
+            </variable>
+            <variable name="iWorkSen">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Cyl Work Postion Input</xhtml>
+              </documentation>
+            </variable>
+            <variable name="iHomeSen">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Cyl Home Postion Input</xhtml>
+              </documentation>
+            </variable>
+            <variable name="iWorkCleartoMove">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">connect work position interlock condition healthy</xhtml>
+              </documentation>
+            </variable>
+            <variable name="iHomeCleartoMove">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">connect home position interlock condition healthy</xhtml>
+              </documentation>
+            </variable>
+            <variable name="iWorkPositionLeftOption">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">It is the selection of the  to keep work solenoid coil on after reaching work position</xhtml>
+              </documentation>
+            </variable>
+            <variable name="iHomePositionLeftOption">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">It is the selection of the  to keep home solenoid coil on after reaching home position</xhtml>
+              </documentation>
+            </variable>
+            <variable name="iTimeoutValue">
+              <type>
+                <TIME />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Time Required E.g T#500MS,T#2S</xhtml>
+              </documentation>
+            </variable>
+            <variable name="iWorkSensDebounceVal">
+              <type>
+                <TIME />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Time Required E.g T#500MS,T#2S</xhtml>
+              </documentation>
+            </variable>
+            <variable name="iHomeSensDebounceVal">
+              <type>
+                <TIME />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Time Required E.g T#500MS,T#2S</xhtml>
+              </documentation>
+            </variable>
+          </inputVars>
+          <outputVars>
+            <variable name="qWorkSol">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Cyl Work Position Sol Output</xhtml>
+              </documentation>
+            </variable>
+            <variable name="qHomeSol">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Cyl Home Position Sol Output</xhtml>
+              </documentation>
+            </variable>
+            <variable name="qWorkOver">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">1 if Cyl at Work Position</xhtml>
+              </documentation>
+            </variable>
+            <variable name="qHomeOver">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">1 if Cyl at Home Position</xhtml>
+              </documentation>
+            </variable>
+            <variable name="qModError">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Module Error</xhtml>
+              </documentation>
+            </variable>
+            <variable name="qErrBothSensorOn">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">1 If both WorkSen and HomeSen inputs are high at the same time.</xhtml>
+              </documentation>
+            </variable>
+            <variable name="qErrHomeInterlock">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">1 If homeCleartoMove is low and home command is active.</xhtml>
+              </documentation>
+            </variable>
+            <variable name="qErrHomeSenNotLeft">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">1 If home position sensor did not turn off within defined time</xhtml>
+              </documentation>
+            </variable>
+            <variable name="qErrHomeTout">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">1 If cylinder did not reach home position within defined time</xhtml>
+              </documentation>
+            </variable>
+            <variable name="qErrWorkInterlock">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">1 If WorkCleartoMove is low and work command is active.</xhtml>
+              </documentation>
+            </variable>
+            <variable name="qErrWorkSenNotLeft">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">1 If work position sensor did not turn off within defined time</xhtml>
+              </documentation>
+            </variable>
+            <variable name="qErrWorkTout">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">1 If cylinder did not reach work position within defined time</xhtml>
+              </documentation>
+            </variable>
+            <variable name="qMsgWorkPosLost">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">1 If work position achieved and lost its position without home</xhtml>
+              </documentation>
+            </variable>
+            <variable name="qMsgHomePosLost">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">1 If home position achieved and lost its position without work</xhtml>
+              </documentation>
+            </variable>
+            <variable name="qMsgBothCmdOn">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">1 if Home &amp; work position command on same time</xhtml>
+              </documentation>
+            </variable>
+          </outputVars>
+          <localVars>
+            <variable name="sFltRstPls">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Stat bit for positive edge of reset fault input</xhtml>
+              </documentation>
+            </variable>
+            <variable name="sFltEdge">
+              <type>
+                <derived name="R_TRIG" />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Positive edge of fault reset input</xhtml>
+              </documentation>
+            </variable>
+            <variable name="sWorkPosMemBit">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Stat bit for work position memory bit</xhtml>
+              </documentation>
+            </variable>
+            <variable name="sHomePosMemBit">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Stat bit for Home position memory bit</xhtml>
+              </documentation>
+            </variable>
+            <variable name="sModError">
+              <type>
+                <BOOL />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Stat bit for Module error</xhtml>
+              </documentation>
+            </variable>
+            <variable name="sWorkSensDebTime">
+              <type>
+                <TIME />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Stat bit work sensor debounce time</xhtml>
+              </documentation>
+            </variable>
+            <variable name="sHomeSensDebTime">
+              <type>
+                <TIME />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Stat bit work sensor debounce time</xhtml>
+              </documentation>
+            </variable>
+            <variable name="sTimeoutValue">
+              <type>
+                <TIME />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Stat bit for time out value</xhtml>
+              </documentation>
+            </variable>
+            <variable name="sElapsedTime">
+              <type>
+                <TIME />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Stat bit for time elapsed</xhtml>
+              </documentation>
+            </variable>
+            <variable name="sDlyWorkSensDeb">
+              <type>
+                <derived name="TON" />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">On Delay for Work Sensor Debounce</xhtml>
+              </documentation>
+            </variable>
+            <variable name="sDlyHomeSensDeb">
+              <type>
+                <derived name="TON" />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">On Delay For Home Sensor Debounce</xhtml>
+              </documentation>
+            </variable>
+            <variable name="sDlyTimeOut">
+              <type>
+                <derived name="TON" />
+              </type>
+              <documentation>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">On Delay Time Out timer</xhtml>
+              </documentation>
+            </variable>
+            <variable name="sWorkSol">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="sErrWorkTout">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="sHomeSol">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="sErrHomeTout">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="sErrBothSensorOn">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="sErrWorkInterlock">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="sErrHomeInterlock">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="sErrWorkSenNotLeft">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="sErrHomeSenNotLeft">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="sMsgHomePosLost">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="sMsgWorkPosLost">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="sPosEdge">
+              <type>
+                <derived name="R_TRIG" />
+              </type>
+            </variable>
+            <variable name="sPosEdge1">
+              <type>
+                <derived name="R_TRIG" />
+              </type>
+            </variable>
+            <variable name="sRegainWrkPos">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="sRegainHomePos">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="sBothCmdOn">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="sWorkPositionLeft">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="sHomePositionLeft">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+          </localVars>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK PR_5by3CylModWoRdlck
+VAR_INPUT
+	iResetModule : BOOL;  // Reset if 1
+	iResetFaults : BOOL;  // Reset Fault CMD
+	iEnergizeAtPwrOn : BOOL;  // Energize Poweron Input
+	iWorkCmd : BOOL;  // Cyl Work Postion CMD
+	iHomeCmd : BOOL;  // Cyl Home Postion CMD
+	iWorkSen : BOOL;  // Cyl Work Postion Input
+	iHomeSen : BOOL;  // Cyl Home Postion Input
+	iWorkCleartoMove : BOOL;  // connect work position interlock condition healthy
+	iHomeCleartoMove : BOOL;  // connect home position interlock condition healthy
+	iWorkPositionLeftOption : BOOL;  // It is the selection of the to keep work solenoid coil on after reaching work position
+	iHomePositionLeftOption : BOOL;  // It is the selection of the to keep home solenoid coil on after reaching home position
+	iTimeoutValue : TIME;  // Time Required E.g T#500MS,T#2S
+	iWorkSensDebounceVal : TIME;  // Time Required E.g T#500MS,T#2S
+	iHomeSensDebounceVal : TIME;  // Time Required E.g T#500MS,T#2S
+END_VAR
+VAR_OUTPUT
+	qWorkSol : BOOL;  // Cyl Work Position Sol Output
+	qHomeSol : BOOL;  // Cyl Home Position Sol Output
+	qWorkOver : BOOL;  // 1 if Cyl at Work Position
+	qHomeOver : BOOL;  // 1 if Cyl at Home Position
+	qModError : BOOL;  // Module Error
+	qErrBothSensorOn : BOOL;  // 1 If both WorkSen and HomeSen inputs are high at the same time.
+	qErrHomeInterlock : BOOL;  // 1 If homeCleartoMove is low and home command is active.
+	qErrHomeSenNotLeft : BOOL;  // 1 If home position sensor did not turn off within defined time
+	qErrHomeTout : BOOL;  // 1 If cylinder did not reach home position within defined time
+	qErrWorkInterlock : BOOL;  // 1 If WorkCleartoMove is low and work command is active.
+	qErrWorkSenNotLeft : BOOL;  // 1 If work position sensor did not turn off within defined time
+	qErrWorkTout : BOOL;  // 1 If cylinder did not reach work position within defined time
+	qMsgWorkPosLost : BOOL;  // 1 If work position achieved and lost its position without home
+	qMsgHomePosLost : BOOL;  // 1 If home position achieved and lost its position without work
+	qMsgBothCmdOn : BOOL;  // 1 if Home &amp; work position command on same time
+END_VAR
+VAR
+	sFltRstPls : BOOL;  // Stat bit for positive edge of reset fault input
+	sFltEdge : R_TRIG;  // Positive edge of fault reset input
+	sWorkPosMemBit : BOOL;  // Stat bit for work position memory bit
+	sHomePosMemBit : BOOL;  // Stat bit for Home position memory bit
+	sModError : BOOL;  // Stat bit for Module error
+	sWorkSensDebTime : TIME;  // Stat bit work sensor debounce time
+	sHomeSensDebTime : TIME;  // Stat bit work sensor debounce time
+	sTimeoutValue : TIME;  // Stat bit for time out value
+	sElapsedTime : TIME;  // Stat bit for time elapsed
+	sDlyWorkSensDeb : TON;  // On Delay for Work Sensor Debounce
+	sDlyHomeSensDeb : TON;  // On Delay For Home Sensor Debounce
+	sDlyTimeOut : TON;  // On Delay Time Out timer
+	sWorkSol : BOOL;
+	sErrWorkTout : BOOL;
+	sHomeSol : BOOL;
+	sErrHomeTout : BOOL;
+	sErrBothSensorOn : BOOL;
+	sErrWorkInterlock : BOOL;
+	sErrHomeInterlock : BOOL;
+	sErrWorkSenNotLeft : BOOL;
+	sErrHomeSenNotLeft : BOOL;
+	sMsgHomePosLost : BOOL;
+	sMsgWorkPosLost : BOOL;
+	sPosEdge : R_TRIG;
+	sPosEdge1 : R_TRIG;
+	sRegainWrkPos : BOOL;
+	sRegainHomePos : BOOL;
+	sBothCmdOn : BOOL;
+	sWorkPositionLeft : BOOL;
+	sHomePositionLeft : BOOL;
+END_VAR
+</xhtml>
+              </InterfaceAsPlainText>
+            </data>
+          </addData>
+        </interface>
+        <body>
+          <LD>
+            <leftPowerRail localId="0">
+              <position x="0" y="0" />
+              <connectionPointOut formalParameter="none" />
+            </leftPowerRail>
+            <comment localId="1" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">==============================================================================
+ Company: Precision Automation &amp; Robotics India Ltd. 
+------------------------------------------------------------------------------
+ Item Code:SM0101022005
+ Author/Created by: Amiya Das
+ Reviewed/Checked by: Atul Patwardhan
+ First Release on: 20-01-2017
+ Latest update on:27-01-2025 
+------------------------------------------------------------------------------
+ Tested with:Simulator
+ Engineering/Editor: TIA Portal 15 &amp; Higher
+------------------------------------------------------------------------------
+ Restrictions: No
+ Dependencies/Requirements: NA
+------------------------------------------------------------------------------
+ Change Log:
+ Ver.	Date                            Changed by                                  Details of changes
+ 0.2           20-01-2017                  Amiya Das      	              Second release version
+ 0.3           27-01-2025                 Sujeet Rote                                qMsgBothCmdOn message is added
+ 0.4           29-01-2025                  Sujeet Rote                                Work &amp; home position left option bit
+------------------------------------------------------------------------------
+Functionality: This block is used to control a simple motion with one work 
+position output, one home position  output, one work position sensor and one 
+home position sensor.
+Inputs
+iResetModule	Bool
+iResetFaults	Bool
+iEnergizeAtPwrOn	Bool
+iWorkCmd	Bool
+iHomeCmd	Bool
+iWorkSen	Bool
+iHomeSen	Bool
+iWorkCleartoMove	Bool
+iHomeCleartoMove	Bool
+iWorkPositionLeftOption	Bool
+iHomePositionLeftOption	Bool
+iTimeoutValue	Time
+iWorkSensDebounceVal	Time
+iHomeSensDebounceVal	Time
+
+Outputs
+qWorkSol	Bool
+qHomeSol	Bool
+qWorkOver	Bool
+qHomeOver	Bool
+qErrBothSensorOn	Bool
+qErrHomeInterlock	Bool
+qErrHomeSenNotLeft	Bool
+qErrHomeTout	Bool
+qErrWorkInterlock	Bool
+qErrWorkSenNotLeft	Bool
+qErrWorkTout	Bool
+qMsgWorkPosLost	Bool
+qMsgHomePosLost	Bool
+qMsgBothCmdOn	Bool
+
+In-outs
+NIL
+------------------------------------------------------------------------------
+Errors reported:
+1.qErrBothSensorOn: If both WorkSen and HomeSen inputs are high at the same time.          
+2.qErrHomeInterlock: If homeCleartoMove is low and home command is active.
+3.qErrHomeSenNotLeft: If home position sensor did not turn off within defined time 
+4.qErrHomeTout: If cylinder did not reach home position within defined time 
+5.qErrWorkInterlock: If WorkCleartoMove is low and work command is active. 
+7.qErrWorkSenNotLeft: If work position sensor did not turn off within defined time 
+8.qErrWorkTout: If cylinder did not reach work position within defined time 
+9.qErrPipeSwaped: If Pipe or sensor swapped
+
+Messages reported:
+1.qMsgHomePosLost: If home position achieved and lost its position without work
+2.qMsgWorkPosLost: If work position achieved and lost its position without home 
+3.qMsgBothCmdOn :  Home &amp; work position command on same time
+==============================================================================</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="2">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <comment localId="3" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Fault Reset Pulse</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="4">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="5" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iResetFaults</variable>
+            </contact>
+            <block localId="6" typeName="R_TRIG" instanceName="sFltEdge">
+              <position x="0" y="0" />
+              <inputVariables>
+                <variable formalParameter="CLK">
+                  <connectionPointIn>
+                    <connection refLocalId="5" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="Q">
+                  <connectionPointOut />
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">functionblock</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <coil localId="7" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="6" formalParameter="Q" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sFltRstPls</variable>
+            </coil>
+            <comment localId="8" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Regain Position after power On logic</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="9">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="10" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>TRUE</variable>
+            </contact>
+            <contact localId="11" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="10" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iResetModule</variable>
+            </contact>
+            <contact localId="12" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="11" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sModError</variable>
+            </contact>
+            <contact localId="13" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="12" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iEnergizeAtPwrOn</variable>
+            </contact>
+            <contact localId="14" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="13" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDlyWorkSensDeb.Q</variable>
+            </contact>
+            <contact localId="15" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="13" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDlyHomeSensDeb.Q</variable>
+            </contact>
+            <contact localId="16" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="14" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iWorkCleartoMove</variable>
+            </contact>
+            <contact localId="17" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="16" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sWorkPosMemBit</variable>
+            </contact>
+            <contact localId="18" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="17" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sMsgWorkPosLost</variable>
+            </contact>
+            <block localId="19" typeName="R_TRIG" instanceName="sPosEdge">
+              <position x="0" y="0" />
+              <inputVariables>
+                <variable formalParameter="CLK">
+                  <connectionPointIn>
+                    <connection refLocalId="18" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="Q">
+                  <connectionPointOut />
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">functionblock</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <coil localId="20" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="19" formalParameter="Q" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sRegainWrkPos</variable>
+            </coil>
+            <contact localId="21" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="15" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iHomeCleartoMove</variable>
+            </contact>
+            <contact localId="22" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="21" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sHomePosMemBit</variable>
+            </contact>
+            <contact localId="23" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="22" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sMsgHomePosLost</variable>
+            </contact>
+            <block localId="24" typeName="R_TRIG" instanceName="sPosEdge1">
+              <position x="0" y="0" />
+              <inputVariables>
+                <variable formalParameter="CLK">
+                  <connectionPointIn>
+                    <connection refLocalId="23" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="Q">
+                  <connectionPointOut />
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">functionblock</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <coil localId="25" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="24" formalParameter="Q" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sRegainHomePos</variable>
+            </coil>
+            <comment localId="26" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Work sensor default debounce value</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="27">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="28" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>TRUE</variable>
+            </contact>
+            <inVariable localId="29">
+              <position x="0" y="0" />
+              <connectionPointOut />
+              <expression>iWorkSensDebounceVal</expression>
+            </inVariable>
+            <inVariable localId="30">
+              <position x="0" y="0" />
+              <connectionPointOut />
+              <expression>T#0MS</expression>
+            </inVariable>
+            <block localId="31" typeName="EQ">
+              <position x="0" y="0" />
+              <inputVariables>
+                <variable formalParameter="EN">
+                  <connectionPointIn>
+                    <connection refLocalId="28" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="In2">
+                  <connectionPointIn>
+                    <connection refLocalId="29" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="In3">
+                  <connectionPointIn>
+                    <connection refLocalId="30" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="Out1">
+                  <connectionPointOut />
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">operator</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <block localId="32" typeName="NOT">
+              <position x="0" y="0" />
+              <inputVariables>
+                <variable formalParameter="In1">
+                  <connectionPointIn>
+                    <connection refLocalId="31" formalParameter="Out1" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="Out1">
+                  <connectionPointOut />
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">operator</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <inVariable localId="33">
+              <position x="0" y="0" />
+              <connectionPointOut />
+              <expression>T#500MS</expression>
+            </inVariable>
+            <block localId="34" typeName="MOVE">
+              <position x="0" y="0" />
+              <inputVariables>
+                <variable formalParameter="EN">
+                  <connectionPointIn>
+                    <connection refLocalId="31" formalParameter="Out1" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="In2">
+                  <connectionPointIn>
+                    <connection refLocalId="33" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="ENO">
+                  <connectionPointOut />
+                </variable>
+                <variable formalParameter="Out2">
+                  <connectionPointOut>
+                    <expression>sWorkSensDebTime</expression>
+                  </connectionPointOut>
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">operator</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <inVariable localId="35">
+              <position x="0" y="0" />
+              <connectionPointOut />
+              <expression>iWorkSensDebounceVal</expression>
+            </inVariable>
+            <block localId="36" typeName="MOVE">
+              <position x="0" y="0" />
+              <inputVariables>
+                <variable formalParameter="EN">
+                  <connectionPointIn>
+                    <connection refLocalId="32" formalParameter="Out1" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="In2">
+                  <connectionPointIn>
+                    <connection refLocalId="35" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="ENO">
+                  <connectionPointOut />
+                </variable>
+                <variable formalParameter="Out2">
+                  <connectionPointOut>
+                    <expression>sWorkSensDebTime</expression>
+                  </connectionPointOut>
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">operator</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <comment localId="37" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Work Sensor On Debounce Timer</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="38">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="39" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iWorkSen</variable>
+            </contact>
+            <inVariable localId="40">
+              <position x="0" y="0" />
+              <connectionPointOut />
+              <expression>sWorkSensDebTime</expression>
+            </inVariable>
+            <block localId="41" typeName="TON" instanceName="sDlyWorkSensDeb">
+              <position x="0" y="0" />
+              <inputVariables>
+                <variable formalParameter="IN">
+                  <connectionPointIn>
+                    <connection refLocalId="39" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="PT">
+                  <connectionPointIn>
+                    <connection refLocalId="40" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="Q">
+                  <connectionPointOut />
+                </variable>
+                <variable formalParameter="ET">
+                  <connectionPointOut>
+                    <expression />
+                  </connectionPointOut>
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">functionblock</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL TIME</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <comment localId="42" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Home sensor default debounce value</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="43">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="44" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>TRUE</variable>
+            </contact>
+            <inVariable localId="45">
+              <position x="0" y="0" />
+              <connectionPointOut />
+              <expression>iHomeSensDebounceVal</expression>
+            </inVariable>
+            <inVariable localId="46">
+              <position x="0" y="0" />
+              <connectionPointOut />
+              <expression>T#0MS</expression>
+            </inVariable>
+            <block localId="47" typeName="EQ">
+              <position x="0" y="0" />
+              <inputVariables>
+                <variable formalParameter="EN">
+                  <connectionPointIn>
+                    <connection refLocalId="44" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="In2">
+                  <connectionPointIn>
+                    <connection refLocalId="45" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="In3">
+                  <connectionPointIn>
+                    <connection refLocalId="46" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="Out1">
+                  <connectionPointOut />
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">operator</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <block localId="48" typeName="NOT">
+              <position x="0" y="0" />
+              <inputVariables>
+                <variable formalParameter="In1">
+                  <connectionPointIn>
+                    <connection refLocalId="47" formalParameter="Out1" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="Out1">
+                  <connectionPointOut />
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">operator</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <inVariable localId="49">
+              <position x="0" y="0" />
+              <connectionPointOut />
+              <expression>T#500MS</expression>
+            </inVariable>
+            <block localId="50" typeName="MOVE">
+              <position x="0" y="0" />
+              <inputVariables>
+                <variable formalParameter="EN">
+                  <connectionPointIn>
+                    <connection refLocalId="47" formalParameter="Out1" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="In2">
+                  <connectionPointIn>
+                    <connection refLocalId="49" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="ENO">
+                  <connectionPointOut />
+                </variable>
+                <variable formalParameter="Out2">
+                  <connectionPointOut>
+                    <expression>sHomeSensDebTime</expression>
+                  </connectionPointOut>
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">operator</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <inVariable localId="51">
+              <position x="0" y="0" />
+              <connectionPointOut />
+              <expression>iHomeSensDebounceVal</expression>
+            </inVariable>
+            <block localId="52" typeName="MOVE">
+              <position x="0" y="0" />
+              <inputVariables>
+                <variable formalParameter="EN">
+                  <connectionPointIn>
+                    <connection refLocalId="48" formalParameter="Out1" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="In2">
+                  <connectionPointIn>
+                    <connection refLocalId="51" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="ENO">
+                  <connectionPointOut />
+                </variable>
+                <variable formalParameter="Out2">
+                  <connectionPointOut>
+                    <expression>sHomeSensDebTime</expression>
+                  </connectionPointOut>
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">operator</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <comment localId="53" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Home Sensor On Debounce Timer</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="54">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="55" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iHomeSen</variable>
+            </contact>
+            <inVariable localId="56">
+              <position x="0" y="0" />
+              <connectionPointOut />
+              <expression>sHomeSensDebTime</expression>
+            </inVariable>
+            <block localId="57" typeName="TON" instanceName="sDlyHomeSensDeb">
+              <position x="0" y="0" />
+              <inputVariables>
+                <variable formalParameter="IN">
+                  <connectionPointIn>
+                    <connection refLocalId="55" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="PT">
+                  <connectionPointIn>
+                    <connection refLocalId="56" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="Q">
+                  <connectionPointOut />
+                </variable>
+                <variable formalParameter="ET">
+                  <connectionPointOut>
+                    <expression />
+                  </connectionPointOut>
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">functionblock</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL TIME</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <comment localId="58" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Timeout Value</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="59">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="60" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>TRUE</variable>
+            </contact>
+            <inVariable localId="61">
+              <position x="0" y="0" />
+              <connectionPointOut />
+              <expression>iTimeoutValue</expression>
+            </inVariable>
+            <inVariable localId="62">
+              <position x="0" y="0" />
+              <connectionPointOut />
+              <expression>T#0MS</expression>
+            </inVariable>
+            <block localId="63" typeName="EQ">
+              <position x="0" y="0" />
+              <inputVariables>
+                <variable formalParameter="EN">
+                  <connectionPointIn>
+                    <connection refLocalId="60" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="In2">
+                  <connectionPointIn>
+                    <connection refLocalId="61" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="In3">
+                  <connectionPointIn>
+                    <connection refLocalId="62" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="Out1">
+                  <connectionPointOut />
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">operator</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <block localId="64" typeName="NOT">
+              <position x="0" y="0" />
+              <inputVariables>
+                <variable formalParameter="In1">
+                  <connectionPointIn>
+                    <connection refLocalId="63" formalParameter="Out1" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="Out1">
+                  <connectionPointOut />
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">operator</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <inVariable localId="65">
+              <position x="0" y="0" />
+              <connectionPointOut />
+              <expression>T#10S</expression>
+            </inVariable>
+            <block localId="66" typeName="MOVE">
+              <position x="0" y="0" />
+              <inputVariables>
+                <variable formalParameter="EN">
+                  <connectionPointIn>
+                    <connection refLocalId="63" formalParameter="Out1" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="In2">
+                  <connectionPointIn>
+                    <connection refLocalId="65" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="ENO">
+                  <connectionPointOut />
+                </variable>
+                <variable formalParameter="Out2">
+                  <connectionPointOut>
+                    <expression>sTimeoutValue</expression>
+                  </connectionPointOut>
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">operator</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <inVariable localId="67">
+              <position x="0" y="0" />
+              <connectionPointOut />
+              <expression>iTimeoutValue</expression>
+            </inVariable>
+            <block localId="68" typeName="MOVE">
+              <position x="0" y="0" />
+              <inputVariables>
+                <variable formalParameter="EN">
+                  <connectionPointIn>
+                    <connection refLocalId="64" formalParameter="Out1" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="In2">
+                  <connectionPointIn>
+                    <connection refLocalId="67" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="ENO">
+                  <connectionPointOut />
+                </variable>
+                <variable formalParameter="Out2">
+                  <connectionPointOut>
+                    <expression>sTimeoutValue</expression>
+                  </connectionPointOut>
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">operator</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <comment localId="69" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Sensor timeout Timer</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="70">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="71" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sWorkSol</variable>
+            </contact>
+            <contact localId="72" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sHomeSol</variable>
+            </contact>
+            <contact localId="73" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="71" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDlyWorkSensDeb.Q</variable>
+            </contact>
+            <contact localId="74" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="73" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sErrWorkTout</variable>
+            </contact>
+            <contact localId="75" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="72" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDlyHomeSensDeb.Q</variable>
+            </contact>
+            <contact localId="76" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="75" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sErrHomeTout</variable>
+            </contact>
+            <inVariable localId="77">
+              <position x="0" y="0" />
+              <connectionPointOut />
+              <expression>sTimeoutValue</expression>
+            </inVariable>
+            <block localId="78" typeName="TON" instanceName="sDlyTimeOut">
+              <position x="0" y="0" />
+              <inputVariables>
+                <variable formalParameter="IN">
+                  <connectionPointIn>
+                    <connection refLocalId="74" />
+                    <connection refLocalId="76" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="PT">
+                  <connectionPointIn>
+                    <connection refLocalId="77" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="Q">
+                  <connectionPointOut />
+                </variable>
+                <variable formalParameter="ET">
+                  <connectionPointOut>
+                    <expression>sElapsedTime</expression>
+                  </connectionPointOut>
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">functionblock</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL TIME</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <comment localId="79" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Cylinder Work Sol</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="80">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="81" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iWorkCmd</variable>
+            </contact>
+            <contact localId="82" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sRegainWrkPos</variable>
+            </contact>
+            <contact localId="83" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sWorkSol</variable>
+            </contact>
+            <contact localId="84" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="81" />
+                <connection refLocalId="82" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iWorkCleartoMove</variable>
+            </contact>
+            <contact localId="85" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="83" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDlyWorkSensDeb.Q</variable>
+            </contact>
+            <contact localId="86" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="85" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDlyHomeSensDeb.Q</variable>
+            </contact>
+            <contact localId="87" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="86" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iWorkPositionLeftOption</variable>
+            </contact>
+            <contact localId="88" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="84" />
+                <connection refLocalId="87" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iHomeCmd</variable>
+            </contact>
+            <contact localId="89" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="88" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sHomeSol</variable>
+            </contact>
+            <contact localId="90" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="89" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iResetModule</variable>
+            </contact>
+            <contact localId="91" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="90" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sModError</variable>
+            </contact>
+            <contact localId="92" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="91" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sBothCmdOn</variable>
+            </contact>
+            <coil localId="93" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="92" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qWorkSol</variable>
+            </coil>
+            <coil localId="94" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="92" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sWorkSol</variable>
+            </coil>
+            <comment localId="95" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Cylinder Home Sol</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="96">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="97" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iHomeCmd</variable>
+            </contact>
+            <contact localId="98" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sRegainHomePos</variable>
+            </contact>
+            <contact localId="99" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sHomeSol</variable>
+            </contact>
+            <contact localId="100" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="97" />
+                <connection refLocalId="98" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iHomeCleartoMove</variable>
+            </contact>
+            <contact localId="101" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="99" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDlyHomeSensDeb.Q</variable>
+            </contact>
+            <contact localId="102" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="101" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDlyWorkSensDeb.Q</variable>
+            </contact>
+            <contact localId="103" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="102" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iHomePositionLeftOption</variable>
+            </contact>
+            <contact localId="104" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="100" />
+                <connection refLocalId="103" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iWorkCmd</variable>
+            </contact>
+            <contact localId="105" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="104" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sWorkSol</variable>
+            </contact>
+            <contact localId="106" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="105" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iResetModule</variable>
+            </contact>
+            <contact localId="107" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="106" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sModError</variable>
+            </contact>
+            <contact localId="108" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="107" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sBothCmdOn</variable>
+            </contact>
+            <coil localId="109" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="108" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qHomeSol</variable>
+            </coil>
+            <coil localId="110" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="108" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sHomeSol</variable>
+            </coil>
+            <comment localId="111" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Both Sensor On Error</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="112">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="113" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDlyWorkSensDeb.Q</variable>
+            </contact>
+            <contact localId="114" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sErrBothSensorOn</variable>
+            </contact>
+            <contact localId="115" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="113" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDlyHomeSensDeb.Q</variable>
+            </contact>
+            <contact localId="116" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="114" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sFltRstPls</variable>
+            </contact>
+            <coil localId="117" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="115" />
+                <connection refLocalId="116" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qErrBothSensorOn</variable>
+            </coil>
+            <coil localId="118" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="115" />
+                <connection refLocalId="116" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sErrBothSensorOn</variable>
+            </coil>
+            <comment localId="119" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Work Interlock Error</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="120">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="121" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iWorkCmd</variable>
+            </contact>
+            <contact localId="122" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sRegainWrkPos</variable>
+            </contact>
+            <contact localId="123" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sErrWorkInterlock</variable>
+            </contact>
+            <contact localId="124" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="121" />
+                <connection refLocalId="122" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iWorkCleartoMove</variable>
+            </contact>
+            <contact localId="125" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="123" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sFltRstPls</variable>
+            </contact>
+            <contact localId="126" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="124" />
+                <connection refLocalId="125" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sBothCmdOn</variable>
+            </contact>
+            <coil localId="127" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="126" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qErrWorkInterlock</variable>
+            </coil>
+            <coil localId="128" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="126" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sErrWorkInterlock</variable>
+            </coil>
+            <comment localId="129" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Home Interlock Error pending</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="130">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="131" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iHomeCmd</variable>
+            </contact>
+            <contact localId="132" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sRegainHomePos</variable>
+            </contact>
+            <contact localId="133" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sErrHomeInterlock</variable>
+            </contact>
+            <contact localId="134" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="131" />
+                <connection refLocalId="132" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iHomeCleartoMove</variable>
+            </contact>
+            <contact localId="135" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="133" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sFltRstPls</variable>
+            </contact>
+            <contact localId="136" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="134" />
+                <connection refLocalId="135" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sBothCmdOn</variable>
+            </contact>
+            <coil localId="137" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="136" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qErrHomeInterlock</variable>
+            </coil>
+            <coil localId="138" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="136" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sErrHomeInterlock</variable>
+            </coil>
+            <comment localId="139" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Work Sensor Not Left Error  pending</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="140">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="141" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sHomeSol</variable>
+            </contact>
+            <contact localId="142" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sErrWorkSenNotLeft</variable>
+            </contact>
+            <contact localId="143" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="141" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDlyWorkSensDeb.Q</variable>
+            </contact>
+            <contact localId="144" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="143" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDlyHomeSensDeb.Q</variable>
+            </contact>
+            <contact localId="145" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="144" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDlyTimeOut.Q</variable>
+            </contact>
+            <contact localId="146" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="142" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sFltRstPls</variable>
+            </contact>
+            <coil localId="147" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="145" />
+                <connection refLocalId="146" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qErrWorkSenNotLeft</variable>
+            </coil>
+            <coil localId="148" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="145" />
+                <connection refLocalId="146" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sErrWorkSenNotLeft</variable>
+            </coil>
+            <comment localId="149" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Work Timeout Error</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="150">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="151" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sWorkSol</variable>
+            </contact>
+            <contact localId="152" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sErrWorkTout</variable>
+            </contact>
+            <contact localId="153" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="151" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDlyWorkSensDeb.Q</variable>
+            </contact>
+            <contact localId="154" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="153" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDlyTimeOut.Q</variable>
+            </contact>
+            <contact localId="155" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="152" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sFltRstPls</variable>
+            </contact>
+            <contact localId="156" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="154" />
+                <connection refLocalId="155" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sErrHomeSenNotLeft</variable>
+            </contact>
+            <contact localId="157" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="156" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sMsgWorkPosLost</variable>
+            </contact>
+            <coil localId="158" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="157" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qErrWorkTout</variable>
+            </coil>
+            <coil localId="159" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="157" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sErrWorkTout</variable>
+            </coil>
+            <comment localId="160" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Home Sensor Not Left Error</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="161">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="162" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sWorkSol</variable>
+            </contact>
+            <contact localId="163" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sErrHomeSenNotLeft</variable>
+            </contact>
+            <contact localId="164" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="162" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDlyHomeSensDeb.Q</variable>
+            </contact>
+            <contact localId="165" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="164" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDlyWorkSensDeb.Q</variable>
+            </contact>
+            <contact localId="166" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="165" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDlyTimeOut.Q</variable>
+            </contact>
+            <contact localId="167" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="163" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sFltRstPls</variable>
+            </contact>
+            <coil localId="168" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="166" />
+                <connection refLocalId="167" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qErrHomeSenNotLeft</variable>
+            </coil>
+            <coil localId="169" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="166" />
+                <connection refLocalId="167" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sErrHomeSenNotLeft</variable>
+            </coil>
+            <comment localId="170" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Home Timeout Error</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="171">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="172" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sHomeSol</variable>
+            </contact>
+            <contact localId="173" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sErrHomeTout</variable>
+            </contact>
+            <contact localId="174" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="172" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDlyHomeSensDeb.Q</variable>
+            </contact>
+            <contact localId="175" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="174" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDlyTimeOut.Q</variable>
+            </contact>
+            <contact localId="176" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="173" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sFltRstPls</variable>
+            </contact>
+            <contact localId="177" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="175" />
+                <connection refLocalId="176" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sErrWorkSenNotLeft</variable>
+            </contact>
+            <contact localId="178" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="177" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sMsgHomePosLost</variable>
+            </contact>
+            <coil localId="179" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="178" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qErrHomeTout</variable>
+            </coil>
+            <coil localId="180" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="178" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sErrHomeTout</variable>
+            </coil>
+            <comment localId="181" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Work Position Left option bit Logic</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="182">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="183" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iWorkPositionLeftOption</variable>
+            </contact>
+            <contact localId="184" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sWorkPositionLeft</variable>
+            </contact>
+            <contact localId="185" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="184" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iHomeSen</variable>
+            </contact>
+            <coil localId="186" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="183" />
+                <connection refLocalId="185" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sWorkPositionLeft</variable>
+            </coil>
+            <comment localId="187" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Home Position Left option bit Logic</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="188">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="189" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iHomePositionLeftOption</variable>
+            </contact>
+            <contact localId="190" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sHomePositionLeft</variable>
+            </contact>
+            <contact localId="191" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="190" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iWorkSen</variable>
+            </contact>
+            <coil localId="192" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="189" />
+                <connection refLocalId="191" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sHomePositionLeft</variable>
+            </coil>
+            <comment localId="193" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Work Position Memory Bit</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="194">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="195" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sWorkSol</variable>
+            </contact>
+            <contact localId="196" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sWorkPosMemBit</variable>
+            </contact>
+            <contact localId="197" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="195" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDlyWorkSensDeb.Q</variable>
+            </contact>
+            <contact localId="198" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="196" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sWorkPositionLeft</variable>
+            </contact>
+            <contact localId="199" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="197" />
+                <connection refLocalId="198" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iWorkCmd</variable>
+            </contact>
+            <contact localId="200" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="199" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iHomeCmd</variable>
+            </contact>
+            <contact localId="201" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="200" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sErrBothSensorOn</variable>
+            </contact>
+            <coil localId="202" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="201" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sWorkPosMemBit</variable>
+            </coil>
+            <comment localId="203" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Home Position Memory Bit</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="204">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="205" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sHomeSol</variable>
+            </contact>
+            <contact localId="206" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sHomePosMemBit</variable>
+            </contact>
+            <contact localId="207" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="205" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDlyHomeSensDeb.Q</variable>
+            </contact>
+            <contact localId="208" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="206" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sHomePositionLeft</variable>
+            </contact>
+            <contact localId="209" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="207" />
+                <connection refLocalId="208" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iWorkCmd</variable>
+            </contact>
+            <contact localId="210" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="209" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iHomeCmd</variable>
+            </contact>
+            <contact localId="211" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="210" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sErrBothSensorOn</variable>
+            </contact>
+            <coil localId="212" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="211" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sHomePosMemBit</variable>
+            </coil>
+            <comment localId="213" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Msg:-Work Position Lost</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="214">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="215" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sWorkPosMemBit</variable>
+            </contact>
+            <contact localId="216" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="215" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDlyWorkSensDeb.Q</variable>
+            </contact>
+            <contact localId="217" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="216" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iHomeCmd</variable>
+            </contact>
+            <coil localId="218" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="217" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sMsgWorkPosLost</variable>
+            </coil>
+            <coil localId="219" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="217" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qMsgWorkPosLost</variable>
+            </coil>
+            <comment localId="220" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Msg:- Home Position Lost</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="221">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="222" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sHomePosMemBit</variable>
+            </contact>
+            <contact localId="223" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="222" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDlyHomeSensDeb.Q</variable>
+            </contact>
+            <contact localId="224" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="223" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iWorkCmd</variable>
+            </contact>
+            <coil localId="225" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="224" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sMsgHomePosLost</variable>
+            </coil>
+            <coil localId="226" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="224" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qMsgHomePosLost</variable>
+            </coil>
+            <comment localId="227" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Msg:- Both command On</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="228">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="229" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iWorkCmd</variable>
+            </contact>
+            <contact localId="230" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="229" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iHomeCmd</variable>
+            </contact>
+            <coil localId="231" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="230" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sBothCmdOn</variable>
+            </coil>
+            <coil localId="232" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="230" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qMsgBothCmdOn</variable>
+            </coil>
+            <comment localId="233" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Module Error</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="234">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="235" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sErrBothSensorOn</variable>
+            </contact>
+            <contact localId="236" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sErrWorkInterlock</variable>
+            </contact>
+            <contact localId="237" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sErrHomeInterlock</variable>
+            </contact>
+            <contact localId="238" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sErrWorkSenNotLeft</variable>
+            </contact>
+            <contact localId="239" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sErrWorkTout</variable>
+            </contact>
+            <contact localId="240" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sErrHomeSenNotLeft</variable>
+            </contact>
+            <contact localId="241" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sErrHomeTout</variable>
+            </contact>
+            <coil localId="242" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="235" />
+                <connection refLocalId="236" />
+                <connection refLocalId="237" />
+                <connection refLocalId="238" />
+                <connection refLocalId="239" />
+                <connection refLocalId="240" />
+                <connection refLocalId="241" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sModError</variable>
+            </coil>
+            <coil localId="243" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="235" />
+                <connection refLocalId="236" />
+                <connection refLocalId="237" />
+                <connection refLocalId="238" />
+                <connection refLocalId="239" />
+                <connection refLocalId="240" />
+                <connection refLocalId="241" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qModError</variable>
+            </coil>
+            <comment localId="244" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Work Over</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="245">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="246" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDlyWorkSensDeb.Q</variable>
+            </contact>
+            <contact localId="247" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="246" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDlyHomeSensDeb.Q</variable>
+            </contact>
+            <contact localId="248" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="247" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sModError</variable>
+            </contact>
+            <contact localId="249" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="248" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iResetModule</variable>
+            </contact>
+            <contact localId="250" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="249" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sMsgHomePosLost</variable>
+            </contact>
+            <coil localId="251" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="250" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qWorkOver</variable>
+            </coil>
+            <comment localId="252" height="0" width="0">
+              <position x="0" y="0" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Home Over</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="253">
+              <position x="0" y="0" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="254" negated="false" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDlyHomeSensDeb.Q</variable>
+            </contact>
+            <contact localId="255" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="254" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDlyWorkSensDeb.Q</variable>
+            </contact>
+            <contact localId="256" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="255" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sModError</variable>
+            </contact>
+            <contact localId="257" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="256" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iResetModule</variable>
+            </contact>
+            <contact localId="258" negated="true" storage="none" edge="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="257" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sMsgWorkPosLost</variable>
+            </contact>
+            <coil localId="259" negated="false" storage="none">
+              <position x="0" y="0" />
+              <connectionPointIn>
+                <connection refLocalId="258" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qHomeOver</variable>
+            </coil>
+            <rightPowerRail localId="2147483646">
+              <position x="0" y="0" />
+              <connectionPointIn />
+            </rightPowerRail>
+          </LD>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK PR_5by3CylModWoRdlck
+VAR_INPUT
+	iResetModule : BOOL;  // Reset if 1
+	iResetFaults : BOOL;  // Reset Fault CMD
+	iEnergizeAtPwrOn : BOOL;  // Energize Poweron Input
+	iWorkCmd : BOOL;  // Cyl Work Postion CMD
+	iHomeCmd : BOOL;  // Cyl Home Postion CMD
+	iWorkSen : BOOL;  // Cyl Work Postion Input
+	iHomeSen : BOOL;  // Cyl Home Postion Input
+	iWorkCleartoMove : BOOL;  // connect work position interlock condition healthy
+	iHomeCleartoMove : BOOL;  // connect home position interlock condition healthy
+	iWorkPositionLeftOption : BOOL;  // It is the selection of the to keep work solenoid coil on after reaching work position
+	iHomePositionLeftOption : BOOL;  // It is the selection of the to keep home solenoid coil on after reaching home position
+	iTimeoutValue : TIME;  // Time Required E.g T#500MS,T#2S
+	iWorkSensDebounceVal : TIME;  // Time Required E.g T#500MS,T#2S
+	iHomeSensDebounceVal : TIME;  // Time Required E.g T#500MS,T#2S
+END_VAR
+VAR_OUTPUT
+	qWorkSol : BOOL;  // Cyl Work Position Sol Output
+	qHomeSol : BOOL;  // Cyl Home Position Sol Output
+	qWorkOver : BOOL;  // 1 if Cyl at Work Position
+	qHomeOver : BOOL;  // 1 if Cyl at Home Position
+	qModError : BOOL;  // Module Error
+	qErrBothSensorOn : BOOL;  // 1 If both WorkSen and HomeSen inputs are high at the same time.
+	qErrHomeInterlock : BOOL;  // 1 If homeCleartoMove is low and home command is active.
+	qErrHomeSenNotLeft : BOOL;  // 1 If home position sensor did not turn off within defined time
+	qErrHomeTout : BOOL;  // 1 If cylinder did not reach home position within defined time
+	qErrWorkInterlock : BOOL;  // 1 If WorkCleartoMove is low and work command is active.
+	qErrWorkSenNotLeft : BOOL;  // 1 If work position sensor did not turn off within defined time
+	qErrWorkTout : BOOL;  // 1 If cylinder did not reach work position within defined time
+	qMsgWorkPosLost : BOOL;  // 1 If work position achieved and lost its position without home
+	qMsgHomePosLost : BOOL;  // 1 If home position achieved and lost its position without work
+	qMsgBothCmdOn : BOOL;  // 1 if Home &amp; work position command on same time
+END_VAR
+VAR
+	sFltRstPls : BOOL;  // Stat bit for positive edge of reset fault input
+	sFltEdge : R_TRIG;  // Positive edge of fault reset input
+	sWorkPosMemBit : BOOL;  // Stat bit for work position memory bit
+	sHomePosMemBit : BOOL;  // Stat bit for Home position memory bit
+	sModError : BOOL;  // Stat bit for Module error
+	sWorkSensDebTime : TIME;  // Stat bit work sensor debounce time
+	sHomeSensDebTime : TIME;  // Stat bit work sensor debounce time
+	sTimeoutValue : TIME;  // Stat bit for time out value
+	sElapsedTime : TIME;  // Stat bit for time elapsed
+	sDlyWorkSensDeb : TON;  // On Delay for Work Sensor Debounce
+	sDlyHomeSensDeb : TON;  // On Delay For Home Sensor Debounce
+	sDlyTimeOut : TON;  // On Delay Time Out timer
+	sWorkSol : BOOL;
+	sErrWorkTout : BOOL;
+	sHomeSol : BOOL;
+	sErrHomeTout : BOOL;
+	sErrBothSensorOn : BOOL;
+	sErrWorkInterlock : BOOL;
+	sErrHomeInterlock : BOOL;
+	sErrWorkSenNotLeft : BOOL;
+	sErrHomeSenNotLeft : BOOL;
+	sMsgHomePosLost : BOOL;
+	sMsgWorkPosLost : BOOL;
+	sPosEdge : R_TRIG;
+	sPosEdge1 : R_TRIG;
+	sRegainWrkPos : BOOL;
+	sRegainHomePos : BOOL;
+	sBothCmdOn : BOOL;
+	sWorkPositionLeft : BOOL;
+	sHomePositionLeft : BOOL;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>2f1d9d65-6e2e-4a8b-a021-60ff0f772631</ObjectId>
+          </data>
+        </addData>
+      </pou>
+    </pous>
+  </types>
+  <instances>
+    <configurations />
+  </instances>
+  <addData>
+    <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
+      <ProjectStructure>
+        <Object Name="PR_5by3CylModWoRdlck" ObjectId="2f1d9d65-6e2e-4a8b-a021-60ff0f772631" />
+      </ProjectStructure>
+    </data>
+  </addData>
+</project>

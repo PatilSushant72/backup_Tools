@@ -1,0 +1,1629 @@
+State: Error
+Warning Count: 0
+Error Count: 84
+	Path: Application test
+	DateTime: 22/07/2025 11:51:53 AM
+	State: Error
+	Description: 
+	Warning Count: 0
+	Error Count: 84
+		Path: PR_GantryUnload_Seqv25_57af70
+		DateTime: 22/07/2025 11:51:54 AM
+		State: Error
+		Description: Test cases executed : 92 ; Passed : 8 ; Failed : 0 ; Inconclusive : 84
+		Warning Count: 0
+		Error Count: 84
+			Path: MemoryReset
+			DateTime: 22/07/2025 11:51:54 AM
+			State: Success
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Cycle"
+				DateTime: 22/07/2025 11:51:59 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans0
+			DateTime: 22/07/2025 11:51:59 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Initialize, Transition 0"
+				DateTime: 22/07/2025 11:52:00 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iSstPB
+					DateTime: 22/07/2025 11:52:00 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans44
+			DateTime: 22/07/2025 11:52:00 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 44"
+				DateTime: 22/07/2025 11:52:00 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iAutoRunning
+					DateTime: 22/07/2025 11:52:00 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans45
+			DateTime: 22/07/2025 11:52:00 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Gantry Out Of Zone, Transition 45"
+				DateTime: 22/07/2025 11:52:00 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iGantryOutofZone
+					DateTime: 22/07/2025 11:52:00 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans46_T1
+			DateTime: 22/07/2025 11:52:00 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check Station Home, Transition 46 - Path 1"
+				DateTime: 22/07/2025 11:52:00 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iGantryOutofZone
+					DateTime: 22/07/2025 11:52:00 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans47
+			DateTime: 22/07/2025 11:52:00 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Process Start From PZR, Transition 47"
+				DateTime: 22/07/2025 11:52:00 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iProcessStart
+					DateTime: 22/07/2025 11:52:00 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans48_T1
+			DateTime: 22/07/2025 11:52:00 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check Recovery, Transition 48 - Path 1"
+				DateTime: 22/07/2025 11:52:00 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.sRecoveryInt
+					DateTime: 22/07/2025 11:52:01 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans49
+			DateTime: 22/07/2025 11:52:01 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Centering Slide Advance, Transition 49"
+				DateTime: 22/07/2025 11:52:01 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iCenteringSlideAtWork
+					DateTime: 22/07/2025 11:52:01 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans50
+			DateTime: 22/07/2025 11:52:01 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Distance Sensor Feed Back, Transition 50"
+				DateTime: 22/07/2025 11:52:01 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iSstPB
+					DateTime: 22/07/2025 11:52:01 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans51
+			DateTime: 22/07/2025 11:52:01 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Centering Slide Retract, Transition 51"
+				DateTime: 22/07/2025 11:52:01 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iCenteringSlideAtHome
+					DateTime: 22/07/2025 11:52:01 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans52_T1
+			DateTime: 22/07/2025 11:52:01 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Scan Over, Transition 52 - Path 1"
+				DateTime: 22/07/2025 11:52:01 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iScanOver
+					DateTime: 22/07/2025 11:52:01 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans53_T1
+			DateTime: 22/07/2025 11:52:01 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check measured Distance ok Or Not with respect to PC data, Transition 53 - Path 1"
+				DateTime: 22/07/2025 11:52:01 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iDistSensorIP
+					DateTime: 22/07/2025 11:52:01 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans54
+			DateTime: 22/07/2025 11:52:02 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Gantry at Unload Position, Transition 54"
+				DateTime: 22/07/2025 11:52:02 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iGantryOutofZone
+					DateTime: 22/07/2025 11:52:02 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans55
+			DateTime: 22/07/2025 11:52:02 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Gantry Unload Over, Transition 55"
+				DateTime: 22/07/2025 11:52:02 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iGantryPickOver
+					DateTime: 22/07/2025 11:52:02 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans56
+			DateTime: 22/07/2025 11:52:02 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Gantry Out Of zone after Unload, Transition 56"
+				DateTime: 22/07/2025 11:52:02 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iGantryOutofZone
+					DateTime: 22/07/2025 11:52:02 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans57
+			DateTime: 22/07/2025 11:52:02 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check Reel Absent at Conveyor, Transition 57"
+				DateTime: 22/07/2025 11:52:02 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iPalletPresent
+					DateTime: 22/07/2025 11:52:02 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans58
+			DateTime: 22/07/2025 11:52:02 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Process Start Low, Transition 58"
+				DateTime: 22/07/2025 11:52:02 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iProcessStart
+					DateTime: 22/07/2025 11:52:02 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: MemoryReset
+			DateTime: 22/07/2025 11:52:03 AM
+			State: Success
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Cycle"
+				DateTime: 22/07/2025 11:52:08 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans0
+			DateTime: 22/07/2025 11:52:08 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Initialize, Transition 0"
+				DateTime: 22/07/2025 11:52:09 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iSstPB
+					DateTime: 22/07/2025 11:52:09 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans44
+			DateTime: 22/07/2025 11:52:09 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 44"
+				DateTime: 22/07/2025 11:52:09 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iAutoRunning
+					DateTime: 22/07/2025 11:52:09 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans45
+			DateTime: 22/07/2025 11:52:09 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Gantry Out Of Zone, Transition 45"
+				DateTime: 22/07/2025 11:52:09 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iGantryOutofZone
+					DateTime: 22/07/2025 11:52:09 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans46_T1
+			DateTime: 22/07/2025 11:52:09 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check Station Home, Transition 46 - Path 1"
+				DateTime: 22/07/2025 11:52:09 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iGantryOutofZone
+					DateTime: 22/07/2025 11:52:09 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans47
+			DateTime: 22/07/2025 11:52:09 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Process Start From PZR, Transition 47"
+				DateTime: 22/07/2025 11:52:09 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iProcessStart
+					DateTime: 22/07/2025 11:52:09 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans48_T2
+			DateTime: 22/07/2025 11:52:10 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check Recovery, Transition 48 - Path 2"
+				DateTime: 22/07/2025 11:52:10 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.sRecoveryInt
+					DateTime: 22/07/2025 11:52:10 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans52_T1
+			DateTime: 22/07/2025 11:52:10 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Scan Over, Transition 52 - Path 1"
+				DateTime: 22/07/2025 11:52:10 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iScanOver
+					DateTime: 22/07/2025 11:52:10 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans68
+			DateTime: 22/07/2025 11:52:10 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for PC Acknowledge Zero for Read, Transition 68"
+				DateTime: 22/07/2025 11:52:10 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iPCAckZero
+					DateTime: 22/07/2025 11:52:10 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans69
+			DateTime: 22/07/2025 11:52:10 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Data Read Over From PC, Transition 69"
+				DateTime: 22/07/2025 11:52:10 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iPCDataReadOver
+					DateTime: 22/07/2025 11:52:10 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans53_T1
+			DateTime: 22/07/2025 11:52:10 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check measured Distance ok Or Not with respect to PC data, Transition 53 - Path 1"
+				DateTime: 22/07/2025 11:52:10 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iDistSensorIP
+					DateTime: 22/07/2025 11:52:10 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: MemoryReset
+			DateTime: 22/07/2025 11:52:11 AM
+			State: Success
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Cycle"
+				DateTime: 22/07/2025 11:52:16 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans0
+			DateTime: 22/07/2025 11:52:16 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Initialize, Transition 0"
+				DateTime: 22/07/2025 11:52:17 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iSstPB
+					DateTime: 22/07/2025 11:52:17 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans44
+			DateTime: 22/07/2025 11:52:17 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 44"
+				DateTime: 22/07/2025 11:52:17 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iAutoRunning
+					DateTime: 22/07/2025 11:52:17 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans45
+			DateTime: 22/07/2025 11:52:17 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Gantry Out Of Zone, Transition 45"
+				DateTime: 22/07/2025 11:52:17 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iGantryOutofZone
+					DateTime: 22/07/2025 11:52:17 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans46_T1
+			DateTime: 22/07/2025 11:52:17 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check Station Home, Transition 46 - Path 1"
+				DateTime: 22/07/2025 11:52:17 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iGantryOutofZone
+					DateTime: 22/07/2025 11:52:17 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans47
+			DateTime: 22/07/2025 11:52:17 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Process Start From PZR, Transition 47"
+				DateTime: 22/07/2025 11:52:17 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iProcessStart
+					DateTime: 22/07/2025 11:52:17 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans48_T3
+			DateTime: 22/07/2025 11:52:18 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check Recovery, Transition 48 - Path 3"
+				DateTime: 22/07/2025 11:52:18 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.sRecoveryInt
+					DateTime: 22/07/2025 11:52:18 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans53_T1
+			DateTime: 22/07/2025 11:52:18 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check measured Distance ok Or Not with respect to PC data, Transition 53 - Path 1"
+				DateTime: 22/07/2025 11:52:18 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iDistSensorIP
+					DateTime: 22/07/2025 11:52:18 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: MemoryReset
+			DateTime: 22/07/2025 11:52:18 AM
+			State: Success
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Cycle"
+				DateTime: 22/07/2025 11:52:24 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans0
+			DateTime: 22/07/2025 11:52:24 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Initialize, Transition 0"
+				DateTime: 22/07/2025 11:52:24 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iSstPB
+					DateTime: 22/07/2025 11:52:24 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans44
+			DateTime: 22/07/2025 11:52:24 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 44"
+				DateTime: 22/07/2025 11:52:24 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iAutoRunning
+					DateTime: 22/07/2025 11:52:25 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans45
+			DateTime: 22/07/2025 11:52:25 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Gantry Out Of Zone, Transition 45"
+				DateTime: 22/07/2025 11:52:25 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iGantryOutofZone
+					DateTime: 22/07/2025 11:52:25 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans46_T1
+			DateTime: 22/07/2025 11:52:25 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check Station Home, Transition 46 - Path 1"
+				DateTime: 22/07/2025 11:52:25 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iGantryOutofZone
+					DateTime: 22/07/2025 11:52:25 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans47
+			DateTime: 22/07/2025 11:52:25 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Process Start From PZR, Transition 47"
+				DateTime: 22/07/2025 11:52:25 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iProcessStart
+					DateTime: 22/07/2025 11:52:25 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans48_T1
+			DateTime: 22/07/2025 11:52:25 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check Recovery, Transition 48 - Path 1"
+				DateTime: 22/07/2025 11:52:25 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.sRecoveryInt
+					DateTime: 22/07/2025 11:52:25 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans49
+			DateTime: 22/07/2025 11:52:25 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Centering Slide Advance, Transition 49"
+				DateTime: 22/07/2025 11:52:25 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iCenteringSlideAtWork
+					DateTime: 22/07/2025 11:52:25 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans50
+			DateTime: 22/07/2025 11:52:26 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Distance Sensor Feed Back, Transition 50"
+				DateTime: 22/07/2025 11:52:26 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iSstPB
+					DateTime: 22/07/2025 11:52:26 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans51
+			DateTime: 22/07/2025 11:52:26 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Centering Slide Retract, Transition 51"
+				DateTime: 22/07/2025 11:52:26 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iCenteringSlideAtHome
+					DateTime: 22/07/2025 11:52:26 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans52_T1
+			DateTime: 22/07/2025 11:52:26 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Scan Over, Transition 52 - Path 1"
+				DateTime: 22/07/2025 11:52:26 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iScanOver
+					DateTime: 22/07/2025 11:52:26 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans53_T2
+			DateTime: 22/07/2025 11:52:26 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check measured Distance ok Or Not with respect to PC data, Transition 53 - Path 2"
+				DateTime: 22/07/2025 11:52:26 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iDistSensorIP
+					DateTime: 22/07/2025 11:52:26 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans61_T1
+			DateTime: 22/07/2025 11:52:26 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check If Measured Diameter is in Tolerence, Transition 61 - Path 1"
+				DateTime: 22/07/2025 11:52:26 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iDistSensorIP
+					DateTime: 22/07/2025 11:52:26 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans62
+			DateTime: 22/07/2025 11:52:27 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for PC Acknowledge Zero, Transition 62"
+				DateTime: 22/07/2025 11:52:27 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iPCAckZero
+					DateTime: 22/07/2025 11:52:27 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans63
+			DateTime: 22/07/2025 11:52:27 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Data Write Over From PC, Transition 63"
+				DateTime: 22/07/2025 11:52:27 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iPCDataWriteOver
+					DateTime: 22/07/2025 11:52:27 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: MemoryReset
+			DateTime: 22/07/2025 11:52:27 AM
+			State: Success
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Cycle"
+				DateTime: 22/07/2025 11:52:32 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans0
+			DateTime: 22/07/2025 11:52:32 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Initialize, Transition 0"
+				DateTime: 22/07/2025 11:52:33 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iSstPB
+					DateTime: 22/07/2025 11:52:33 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans44
+			DateTime: 22/07/2025 11:52:33 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 44"
+				DateTime: 22/07/2025 11:52:33 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iAutoRunning
+					DateTime: 22/07/2025 11:52:33 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans45
+			DateTime: 22/07/2025 11:52:33 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Gantry Out Of Zone, Transition 45"
+				DateTime: 22/07/2025 11:52:33 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iGantryOutofZone
+					DateTime: 22/07/2025 11:52:33 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans46_T1
+			DateTime: 22/07/2025 11:52:34 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check Station Home, Transition 46 - Path 1"
+				DateTime: 22/07/2025 11:52:34 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iGantryOutofZone
+					DateTime: 22/07/2025 11:52:34 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans47
+			DateTime: 22/07/2025 11:52:34 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Process Start From PZR, Transition 47"
+				DateTime: 22/07/2025 11:52:34 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iProcessStart
+					DateTime: 22/07/2025 11:52:34 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans48_T1
+			DateTime: 22/07/2025 11:52:34 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check Recovery, Transition 48 - Path 1"
+				DateTime: 22/07/2025 11:52:34 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.sRecoveryInt
+					DateTime: 22/07/2025 11:52:34 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans49
+			DateTime: 22/07/2025 11:52:34 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Centering Slide Advance, Transition 49"
+				DateTime: 22/07/2025 11:52:34 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iCenteringSlideAtWork
+					DateTime: 22/07/2025 11:52:34 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans50
+			DateTime: 22/07/2025 11:52:34 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Distance Sensor Feed Back, Transition 50"
+				DateTime: 22/07/2025 11:52:34 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iSstPB
+					DateTime: 22/07/2025 11:52:34 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans51
+			DateTime: 22/07/2025 11:52:35 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Centering Slide Retract, Transition 51"
+				DateTime: 22/07/2025 11:52:35 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iCenteringSlideAtHome
+					DateTime: 22/07/2025 11:52:35 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans52_T1
+			DateTime: 22/07/2025 11:52:35 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Scan Over, Transition 52 - Path 1"
+				DateTime: 22/07/2025 11:52:35 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iScanOver
+					DateTime: 22/07/2025 11:52:35 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans53_T2
+			DateTime: 22/07/2025 11:52:35 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check measured Distance ok Or Not with respect to PC data, Transition 53 - Path 2"
+				DateTime: 22/07/2025 11:52:35 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iDistSensorIP
+					DateTime: 22/07/2025 11:52:35 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans61_T2
+			DateTime: 22/07/2025 11:52:35 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check If Measured Diameter is in Tolerence, Transition 61 - Path 2"
+				DateTime: 22/07/2025 11:52:35 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iDistSensorIP
+					DateTime: 22/07/2025 11:52:35 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans64
+			DateTime: 22/07/2025 11:52:35 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Operator Intervention, Transition 64"
+				DateTime: 22/07/2025 11:52:35 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iRetryPB
+					DateTime: 22/07/2025 11:52:35 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: MemoryReset
+			DateTime: 22/07/2025 11:52:36 AM
+			State: Success
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Cycle"
+				DateTime: 22/07/2025 11:52:41 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans0
+			DateTime: 22/07/2025 11:52:41 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Initialize, Transition 0"
+				DateTime: 22/07/2025 11:52:42 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iSstPB
+					DateTime: 22/07/2025 11:52:42 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans44
+			DateTime: 22/07/2025 11:52:42 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 44"
+				DateTime: 22/07/2025 11:52:42 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iAutoRunning
+					DateTime: 22/07/2025 11:52:42 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans45
+			DateTime: 22/07/2025 11:52:42 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Gantry Out Of Zone, Transition 45"
+				DateTime: 22/07/2025 11:52:42 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iGantryOutofZone
+					DateTime: 22/07/2025 11:52:42 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans46_T1
+			DateTime: 22/07/2025 11:52:42 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check Station Home, Transition 46 - Path 1"
+				DateTime: 22/07/2025 11:52:42 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iGantryOutofZone
+					DateTime: 22/07/2025 11:52:43 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans47
+			DateTime: 22/07/2025 11:52:43 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Process Start From PZR, Transition 47"
+				DateTime: 22/07/2025 11:52:43 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iProcessStart
+					DateTime: 22/07/2025 11:52:43 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans48_T2
+			DateTime: 22/07/2025 11:52:43 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check Recovery, Transition 48 - Path 2"
+				DateTime: 22/07/2025 11:52:43 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.sRecoveryInt
+					DateTime: 22/07/2025 11:52:43 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans52_T2
+			DateTime: 22/07/2025 11:52:43 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Scan Over, Transition 52 - Path 2"
+				DateTime: 22/07/2025 11:52:43 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iScanOver
+					DateTime: 22/07/2025 11:52:43 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans65_T1
+			DateTime: 22/07/2025 11:52:43 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check Scan Retry Count Over Or Not, Transition 65 - Path 1"
+				DateTime: 22/07/2025 11:52:43 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.sScanRetryCount
+					DateTime: 22/07/2025 11:52:43 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans52_T1
+			DateTime: 22/07/2025 11:52:43 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Scan Over, Transition 52 - Path 1"
+				DateTime: 22/07/2025 11:52:43 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iScanOver
+					DateTime: 22/07/2025 11:52:44 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: MemoryReset
+			DateTime: 22/07/2025 11:52:44 AM
+			State: Success
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Cycle"
+				DateTime: 22/07/2025 11:52:49 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans0
+			DateTime: 22/07/2025 11:52:49 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Initialize, Transition 0"
+				DateTime: 22/07/2025 11:52:50 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iSstPB
+					DateTime: 22/07/2025 11:52:50 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans44
+			DateTime: 22/07/2025 11:52:50 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 44"
+				DateTime: 22/07/2025 11:52:50 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iAutoRunning
+					DateTime: 22/07/2025 11:52:50 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans45
+			DateTime: 22/07/2025 11:52:50 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Gantry Out Of Zone, Transition 45"
+				DateTime: 22/07/2025 11:52:50 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iGantryOutofZone
+					DateTime: 22/07/2025 11:52:50 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans46_T1
+			DateTime: 22/07/2025 11:52:50 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check Station Home, Transition 46 - Path 1"
+				DateTime: 22/07/2025 11:52:50 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iGantryOutofZone
+					DateTime: 22/07/2025 11:52:50 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans47
+			DateTime: 22/07/2025 11:52:51 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Process Start From PZR, Transition 47"
+				DateTime: 22/07/2025 11:52:51 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iProcessStart
+					DateTime: 22/07/2025 11:52:51 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans48_T2
+			DateTime: 22/07/2025 11:52:51 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check Recovery, Transition 48 - Path 2"
+				DateTime: 22/07/2025 11:52:51 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.sRecoveryInt
+					DateTime: 22/07/2025 11:52:51 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans52_T2
+			DateTime: 22/07/2025 11:52:51 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Scan Over, Transition 52 - Path 2"
+				DateTime: 22/07/2025 11:52:51 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iScanOver
+					DateTime: 22/07/2025 11:52:51 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans65_T2
+			DateTime: 22/07/2025 11:52:51 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check Scan Retry Count Over Or Not, Transition 65 - Path 2"
+				DateTime: 22/07/2025 11:52:51 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.sScanRetryCount
+					DateTime: 22/07/2025 11:52:51 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans66
+			DateTime: 22/07/2025 11:52:51 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Operator desicion, Transition 66"
+				DateTime: 22/07/2025 11:52:51 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iRetryPB
+					DateTime: 22/07/2025 11:52:51 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans52_T1
+			DateTime: 22/07/2025 11:52:52 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Scan Over, Transition 52 - Path 1"
+				DateTime: 22/07/2025 11:52:52 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iScanOver
+					DateTime: 22/07/2025 11:52:52 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: MemoryReset
+			DateTime: 22/07/2025 11:52:52 AM
+			State: Success
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+				Path: "Cycle"
+				DateTime: 22/07/2025 11:52:57 AM
+				State: Success
+				Description: Pass
+				Warning Count: 0
+				Error Count: 0
+			Path: PR_GantryUnload_Seqv2_Trans0
+			DateTime: 22/07/2025 11:52:57 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Initialize, Transition 0"
+				DateTime: 22/07/2025 11:52:58 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iSstPB
+					DateTime: 22/07/2025 11:52:58 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans44
+			DateTime: 22/07/2025 11:52:58 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 44"
+				DateTime: 22/07/2025 11:52:58 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iAutoRunning
+					DateTime: 22/07/2025 11:52:58 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans45
+			DateTime: 22/07/2025 11:52:58 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for Gantry Out Of Zone, Transition 45"
+				DateTime: 22/07/2025 11:52:58 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iGantryOutofZone
+					DateTime: 22/07/2025 11:52:59 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans46_T2
+			DateTime: 22/07/2025 11:52:59 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Check Station Home, Transition 46 - Path 2"
+				DateTime: 22/07/2025 11:52:59 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iGantryOutofZone
+					DateTime: 22/07/2025 11:52:59 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_GantryUnload_Seqv2_Trans67
+			DateTime: 22/07/2025 11:52:59 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait For Centering Slide Retract for Home, Transition 67"
+				DateTime: 22/07/2025 11:52:59 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_GantryUnload_Seqv25_57af70_DB.iCenteringSlideAtHome
+					DateTime: 22/07/2025 11:52:59 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+	Path: 
+	DateTime: 22/07/2025 11:52:59 AM
+	State: Information
+	Description: Test case(s) execution completed with errors.
+	Warning Count: 0
+	Error Count: 0

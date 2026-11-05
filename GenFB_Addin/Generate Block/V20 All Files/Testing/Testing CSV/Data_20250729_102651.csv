@@ -1,0 +1,58 @@
+Block_Name : ,PR_CentreStand_Fix_Seq_V12
+,,,qFixUnclamp : [OFF : 141],138, STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand,qFixUnclamp : [OFF : 142],142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request
+Tag,Value,State Number,qR1ReadytoDropTray : [ON  : 142],139, STATE Num:139 Fix Empty,qR1ReadytoDropTray : [ON  : 142],142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request
+iAutoRunning,"[TRUE]","[0]"/,qFixClamp : [ON  : 145],141, STATE Num:141 Fix Unclamp Cmd,qFixClamp : [ON  : 145],142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request
+iFixClamp,"[TRUE]","[145]"/,qR2OperationStart : [OFF : 146],142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request,qR2OperationStart : [OFF : 146],142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request
+iFixEmpty,"[TRUE]","[139,149]"/,qFixUnclamp : [ON  : 147],143, STATE Num:143 Robot Drop Fix and Check Tray Present,qFixUnclamp : [ON  : 147],143, STATE Num:143 Robot Drop Fix and Check Tray Present
+iFixTrayPresent,"[TRUE]","[143,138_T2,140_T2,140_T1]"/,qR1ReadytoPickTray : [OFF : 148],144, STATE Num:144 Rbt Out of Area After Drop,qR1ReadytoPickTray : [OFF : 148],144, STATE Num:144 Rbt Out of Area After Drop
+iFixUnclamp,"[TRUE]","[141,147]"/,qFixUnclamp : [OFF : 141],145, STATE Num:145 Fix Clamp,qFixUnclamp : [OFF : 141],145, STATE Num:145 Fix Clamp
+iR1DropOver,"[TRUE]","[142]"/,qR1ReadytoPickTray : [OFF : 142],146, STATE Num:146 Robot-2 All Alloys Pick Or Drop Operation over,qR1ReadytoPickTray : [OFF : 142],146, STATE Num:146 Robot-2 All Alloys Pick Or Drop Operation over
+iR1PickOver,"[TRUE]","[148]"/,qR2OperationStart : [OFF : 142],191, STATE Num:191 Wait For Robot-2 Out Of Area,qR2OperationStart : [OFF : 142],191, STATE Num:191 Wait For Robot-2 Out Of Area
+iR2OperationOver,"[TRUE]","[146]"/,qFixUnclamp : [OFF : 142],147, STATE Num:147 Fix Unclamp Cmd After Opern over,qFixUnclamp : [OFF : 142],147, STATE Num:147 Fix Unclamp Cmd After Opern over
+iR2ServiceActivated,"[TRUE]","[145]"/,qR1ReadytoPickTray : [OFF : 142],148, STATE Num:148 Rdy to Pick Tray After Oprn Over- Wait for Robot Accept Request,qR1ReadytoPickTray : [OFF : 142],148, STATE Num:148 Rdy to Pick Tray After Oprn Over- Wait for Robot Accept Request
+iReset_fault,,,StateNo : 142,149, STATE Num:149 Robot Picked Tray and Check Tray Loc Empty,StateNo : 142,149, STATE Num:149 Robot Picked Tray and Check Tray Loc Empty
+iRobotOutofZone,"[TRUE]","[138_T1,144,145,191,149,138_T2,140_T2,140_T1]"/,138, STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand,138, STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand
+iSstMode,141, STATE Num:141 Fix Unclamp Cmd,141, STATE Num:141 Fix Unclamp Cmd
+iSstPB,141, STATE Num:141 Fix Unclamp Cmd,141, STATE Num:141 Fix Unclamp Cmd
+qFixClamp,141, STATE Num:141 Fix Unclamp Cmd,141, STATE Num:141 Fix Unclamp Cmd
+qFixUnclamp,142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request,142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request
+qR1ReadytoDropTray,142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request,142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request
+qR1ReadytoPickTray,142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request,142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request
+qR2OperationStart,142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request,142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request
+iqR2ServiceActive,142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request,142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request
+iqR2ServiceCompleted,142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request,142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request
+,,,,142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request,142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request
+,,,,142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request,142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request
+,,,,142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request,142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request
+,,,,142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request,142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request
+,,,,142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request,142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request
+,,,,142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request,142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request
+Block_Name : ,PR_CentreStand_Fix_Seq_V12
+,,,qFixUnclamp : [OFF : 141],138, STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand
+Tag,Value,State Number,qR1ReadytoDropTray : [ON  : 142],139, STATE Num:139 Fix Empty
+iAutoRunning,"[TRUE]","[0]"/,qFixClamp : [ON  : 145],141, STATE Num:141 Fix Unclamp Cmd
+iFixClamp,"[TRUE]","[145]"/,qR2OperationStart : [OFF : 146],142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request
+iFixEmpty,"[TRUE]","[139,149]"/,qFixUnclamp : [ON  : 147],143, STATE Num:143 Robot Drop Fix and Check Tray Present
+iFixTrayPresent,"[TRUE]","[143,138_T2,140_T2,140_T1]"/,qR1ReadytoPickTray : [OFF : 148],144, STATE Num:144 Rbt Out of Area After Drop
+iFixUnclamp,"[TRUE]","[141,147]"/,qFixUnclamp : [OFF : 141],145, STATE Num:145 Fix Clamp
+iR1DropOver,"[TRUE]","[142]"/,qR1ReadytoPickTray : [OFF : 142],146, STATE Num:146 Robot-2 All Alloys Pick Or Drop Operation over
+iR1PickOver,"[TRUE]","[148]"/,qR2OperationStart : [OFF : 142],191, STATE Num:191 Wait For Robot-2 Out Of Area
+iR2OperationOver,"[TRUE]","[146]"/,qFixUnclamp : [OFF : 142],147, STATE Num:147 Fix Unclamp Cmd After Opern over
+iR2ServiceActivated,"[TRUE]","[145]"/,qR1ReadytoPickTray : [OFF : 142],148, STATE Num:148 Rdy to Pick Tray After Oprn Over- Wait for Robot Accept Request
+iReset_fault,,,StateNo : 142,149, STATE Num:149 Robot Picked Tray and Check Tray Loc Empty
+iRobotOutofZone,"[TRUE]","[138_T1,144,145,191,149,138_T2,140_T2,140_T1]"/,138, STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand
+iSstMode,141, STATE Num:141 Fix Unclamp Cmd
+iSstPB,141, STATE Num:141 Fix Unclamp Cmd
+qFixClamp,141, STATE Num:141 Fix Unclamp Cmd
+qFixUnclamp,142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request
+qR1ReadytoDropTray,142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request
+qR1ReadytoPickTray,142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request
+qR2OperationStart,142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request
+iqR2ServiceActive,142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request
+iqR2ServiceCompleted,142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request
+,,,,142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request
+,,,,142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request
+,,,,142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request
+,,,,142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request
+,,,,142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request
+,,,,142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request

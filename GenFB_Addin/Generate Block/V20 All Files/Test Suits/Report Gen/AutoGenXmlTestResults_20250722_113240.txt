@@ -1,0 +1,579 @@
+State: Error
+Warning Count: 0
+Error Count: 31
+	Path: Application test
+	DateTime: 22/07/2025 6:02:01 AM
+	State: Error
+	Description: 
+	Warning Count: 0
+	Error Count: 31
+		Path: PR_CentreStand_Fix_Seq_V12_1026b5
+		DateTime: 22/07/2025 6:02:01 AM
+		State: Error
+		Description: Test cases executed : 31 ; Passed : 0 ; Failed : 0 ; Inconclusive : 31
+		Warning Count: 0
+		Error Count: 31
+			Path: MemoryReset
+			DateTime: 22/07/2025 6:02:01 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Cycle"
+				DateTime: 22/07/2025 6:02:08 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: 
+					DateTime: 22/07/2025 6:02:08 AM
+					State: Error
+					Description: Failed to read the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans0
+			DateTime: 22/07/2025 6:02:08 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 0"
+				DateTime: 22/07/2025 6:02:08 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning
+					DateTime: 22/07/2025 6:02:08 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans138_T1
+			DateTime: 22/07/2025 6:02:08 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 138"
+				DateTime: 22/07/2025 6:02:08 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone
+					DateTime: 22/07/2025 6:02:09 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans139
+			DateTime: 22/07/2025 6:02:09 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 139"
+				DateTime: 22/07/2025 6:02:09 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixEmpty
+					DateTime: 22/07/2025 6:02:09 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans141
+			DateTime: 22/07/2025 6:02:09 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 141"
+				DateTime: 22/07/2025 6:02:09 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp
+					DateTime: 22/07/2025 6:02:09 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans142
+			DateTime: 22/07/2025 6:02:09 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 142"
+				DateTime: 22/07/2025 6:02:09 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1DropOver
+					DateTime: 22/07/2025 6:02:09 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans143
+			DateTime: 22/07/2025 6:02:09 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 143"
+				DateTime: 22/07/2025 6:02:09 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixTrayPresent
+					DateTime: 22/07/2025 6:02:09 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans144
+			DateTime: 22/07/2025 6:02:09 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 144"
+				DateTime: 22/07/2025 6:02:09 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone
+					DateTime: 22/07/2025 6:02:09 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans145
+			DateTime: 22/07/2025 6:02:09 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 145"
+				DateTime: 22/07/2025 6:02:09 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone
+					DateTime: 22/07/2025 6:02:09 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans146
+			DateTime: 22/07/2025 6:02:09 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 146"
+				DateTime: 22/07/2025 6:02:09 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2OperationOver
+					DateTime: 22/07/2025 6:02:10 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans191
+			DateTime: 22/07/2025 6:02:10 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 191"
+				DateTime: 22/07/2025 6:02:10 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone
+					DateTime: 22/07/2025 6:02:10 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans147
+			DateTime: 22/07/2025 6:02:10 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 147"
+				DateTime: 22/07/2025 6:02:10 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp
+					DateTime: 22/07/2025 6:02:10 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans148
+			DateTime: 22/07/2025 6:02:10 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 148"
+				DateTime: 22/07/2025 6:02:10 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver
+					DateTime: 22/07/2025 6:02:10 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans149
+			DateTime: 22/07/2025 6:02:10 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 149"
+				DateTime: 22/07/2025 6:02:10 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone
+					DateTime: 22/07/2025 6:02:10 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: MemoryReset
+			DateTime: 22/07/2025 6:02:10 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Cycle"
+				DateTime: 22/07/2025 6:02:15 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: 
+					DateTime: 22/07/2025 6:02:15 AM
+					State: Error
+					Description: Failed to read the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans0
+			DateTime: 22/07/2025 6:02:15 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 0"
+				DateTime: 22/07/2025 6:02:15 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning
+					DateTime: 22/07/2025 6:02:15 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans138_T2_R2OpComp
+			DateTime: 22/07/2025 6:02:16 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 138"
+				DateTime: 22/07/2025 6:02:16 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone
+					DateTime: 22/07/2025 6:02:16 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans140_T2
+			DateTime: 22/07/2025 6:02:16 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 140 T2"
+				DateTime: 22/07/2025 6:02:16 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone
+					DateTime: 22/07/2025 6:02:16 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans147
+			DateTime: 22/07/2025 6:02:16 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 147"
+				DateTime: 22/07/2025 6:02:16 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp
+					DateTime: 22/07/2025 6:02:16 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans148
+			DateTime: 22/07/2025 6:02:16 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 148"
+				DateTime: 22/07/2025 6:02:16 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver
+					DateTime: 22/07/2025 6:02:16 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans149
+			DateTime: 22/07/2025 6:02:16 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 149"
+				DateTime: 22/07/2025 6:02:16 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone
+					DateTime: 22/07/2025 6:02:16 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: MemoryReset
+			DateTime: 22/07/2025 6:02:17 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Cycle"
+				DateTime: 22/07/2025 6:02:21 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: 
+					DateTime: 22/07/2025 6:02:21 AM
+					State: Error
+					Description: Failed to read the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans0
+			DateTime: 22/07/2025 6:02:21 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 0"
+				DateTime: 22/07/2025 6:02:21 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iAutoRunning
+					DateTime: 22/07/2025 6:02:21 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans138_T2_R2OpNtComp
+			DateTime: 22/07/2025 6:02:22 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 138"
+				DateTime: 22/07/2025 6:02:22 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone
+					DateTime: 22/07/2025 6:02:22 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans140_T1
+			DateTime: 22/07/2025 6:02:22 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 140"
+				DateTime: 22/07/2025 6:02:22 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone
+					DateTime: 22/07/2025 6:02:22 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans145
+			DateTime: 22/07/2025 6:02:22 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 145"
+				DateTime: 22/07/2025 6:02:22 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone
+					DateTime: 22/07/2025 6:02:22 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans146
+			DateTime: 22/07/2025 6:02:22 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 146"
+				DateTime: 22/07/2025 6:02:22 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR2OperationOver
+					DateTime: 22/07/2025 6:02:22 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans191
+			DateTime: 22/07/2025 6:02:22 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 191"
+				DateTime: 22/07/2025 6:02:22 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone
+					DateTime: 22/07/2025 6:02:22 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans147
+			DateTime: 22/07/2025 6:02:23 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 147"
+				DateTime: 22/07/2025 6:02:23 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iFixUnclamp
+					DateTime: 22/07/2025 6:02:23 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans148
+			DateTime: 22/07/2025 6:02:23 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 148"
+				DateTime: 22/07/2025 6:02:23 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iR1PickOver
+					DateTime: 22/07/2025 6:02:23 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans149
+			DateTime: 22/07/2025 6:02:23 AM
+			State: Error
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: "Wait for reset release, Transition 149"
+				DateTime: 22/07/2025 6:02:23 AM
+				State: Error
+				Description: Inconclusive
+				Warning Count: 0
+				Error Count: 1
+					Path: PR_CentreStand_Fix_Seq_V12_1026b5_DB.iRobotOutofZone
+					DateTime: 22/07/2025 6:02:23 AM
+					State: Error
+					Description: Failed to write  the value. Error code : DoesNotExist
+					Warning Count: 0
+					Error Count: 1
+	Path: 
+	DateTime: 22/07/2025 6:02:23 AM
+	State: Information
+	Description: Test case(s) execution completed with errors.
+	Warning Count: 0
+	Error Count: 0

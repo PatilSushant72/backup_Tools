@@ -1,0 +1,918 @@
+FUNCTION_BLOCK "PR_GantryUnload_Seqv25_868e8f"
+{ S7_Optimized_Access := 'FALSE' }
+VERSION : 0.1
+      VAR_INPUT
+      iAutoRunning : BOOL;
+      iCenteringSlideAtHome : BOOL;
+      iCenteringSlideAtWork : BOOL;
+      iDistSenHighLimit : INT;
+      iDistSenLowLimit : INT;
+      iDistSensorIP : INT;
+      iDryCycleWithoutPal : BOOL;
+      iGantryOutofZone : BOOL;
+      iGantryPickOver : BOOL;
+      iPCAckZero : BOOL;
+      iPCBypass : BOOL;
+      iPCDataReadOver : BOOL;
+      iPCDataWriteOver : BOOL;
+      iPalletPresent : BOOL;
+      iProcessStart : BOOL;
+      iReset_fault : Bool;
+      iRetryPB : BOOL;
+      iScanErr : BOOL;
+      iScanOver : BOOL;
+      iScannerBypass : BOOL;
+      iSstMode : BOOL;
+      iSstPB : BOOL;
+   END_VAR
+
+   VAR_OUTPUT
+      qCenteringSlideAdvance : Bool;
+      qCenteringSlideRetract : Bool;
+      qCheckDistance : Bool;
+      qGantryOkToUnload : Bool;
+      qMsg : Array[0..2] of Bool;
+      qPCReadCmd : Bool;
+      qPCUploadCmd : Bool;
+      qProcessOver : Bool;
+      qScanCmd : Bool;
+   END_VAR
+
+   VAR
+      StateNo : INT;
+      s44_WaitResetRelease : BOOL;
+      s44_WaitResetRelease_T1 : BOOL;
+      s45_WaitGantryOutZone : BOOL;
+      s45_WaitGantryOutZone_T1 : BOOL;
+      s46_ChkStationHome : BOOL;
+      s46_ChkStationHome_T1 : BOOL;
+      s46_ChkStationHome_T2 : BOOL;
+      s47_WaitProcStartPZR : BOOL;
+      s47_WaitProcStartPZR_T1 : BOOL;
+      s48_ChkRecovery : BOOL;
+      s48_ChkRecovery_T1 : BOOL;
+      s48_ChkRecovery_T2 : BOOL;
+      s48_ChkRecovery_T3 : BOOL;
+      s49_WaitCentSlideAdv : BOOL;
+      s49_WaitCentSlideAdv_T1 : BOOL;
+      s50_WaitDistSensorFB : BOOL;
+      s50_WaitDistSensorFB_T1 : BOOL;
+      s51_WaitCentSlideRet : BOOL;
+      s51_WaitCentSlideRet_T1 : BOOL;
+      s52_WaitScanOver : BOOL;
+      s52_WaitScanOver_T1 : BOOL;
+      s52_WaitScanOver_T2 : BOOL;
+      s53_ChkMeasDistOkPC : BOOL;
+      s53_ChkMeasDistOkPC_T1 : BOOL;
+      s53_ChkMeasDistOkPC_T2 : BOOL;
+      s54_WaitGantryUnload : BOOL;
+      s54_WaitGantryUnload_T1 : BOOL;
+      s55_WaitGantryUnldOvr : BOOL;
+      s55_WaitGantryUnldOvr_T1 : BOOL;
+      s56_WaitGantryOutZone : BOOL;
+      s56_WaitGantryOutZone_T1 : BOOL;
+      s57_ChkReelAbsentConv : BOOL;
+      s57_ChkReelAbsentConv_T1 : BOOL;
+      s58_WaitProcStartLow : BOOL;
+      s58_WaitProcStartLow_T1 : BOOL;
+      s61_ChkMeasDiamTol : BOOL;
+      s61_ChkMeasDiamTol_T1 : BOOL;
+      s61_ChkMeasDiamTol_T2 : BOOL;
+      s62_WaitPCAckZero : BOOL;
+      s62_WaitPCAckZero_T1 : BOOL;
+      s63_WaitDataWritePC : BOOL;
+      s63_WaitDataWritePC_T1 : BOOL;
+      s64_WaitOperIntervent : BOOL;
+      s64_WaitOperIntervent_T1 : BOOL;
+      s65_ChkScanRetryOver : BOOL;
+      s65_ChkScanRetryOver_T1 : BOOL;
+      s65_ChkScanRetryOver_T2 : BOOL;
+      s66_WaitOperDecision : BOOL;
+      s66_WaitOperDecision_T1 : BOOL;
+      s67_WaitCentSlideRet : BOOL;
+      s67_WaitCentSlideRet_T1 : BOOL;
+      s68_WaitPCAckZeroRead : BOOL;
+      s68_WaitPCAckZeroRead_T1 : BOOL;
+      s69_WaitDataReadPC : BOOL;
+      s69_WaitDataReadPC_T1 : BOOL;
+      sDistanceHighLimit : INT;
+      sDistanceLowLimit : INT;
+      sRecoveryInt : INT;
+      sScanRetryCount : INT;
+      sSst : BOOL;
+      sSstPulse : BOOL;
+      sSstRise : Bool;
+      sStWtResetRel : BOOL;
+      sStWtResetRel_T1 : BOOL;
+   END_VAR
+
+   VAR_TEMP
+      tOne : BOOL;
+   END_VAR
+
+BEGIN
+NETWORK
+TITLE = 
+      O #tOne;
+      ON #tOne;
+      = #tOne;
+NETWORK
+TITLE = Create Single Step Pulse bit
+      A #iSstPB;
+      FP #sSstRise;
+      = #sSstPulse;
+NETWORK
+TITLE = Create Single Step bit
+      A #iSstMode;
+      A #sSstPulse;
+      ON #iSstMode;
+      = #sSst;
+NETWORK
+TITLE = Transition for STATE Num:0 Reset Released
+      A #sStWtResetRel;
+      A #iAutoRunning;
+      = #sStWtResetRel_T1;
+NETWORK
+TITLE = STATE Num:0 Reset Released
+      A(;
+      O #sStWtResetRel;
+      ON #iAutoRunning;
+      );
+      AN #sStWtResetRel_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #sStWtResetRel;
+      A %L1.0;
+      JNB Label_0;
+      L 0;
+      T #StateNo;
+Label_0:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:44 Wait for reset release
+      A #s44_WaitResetRelease;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iAutoRunning;
+      = #s44_WaitResetRelease_T1;
+NETWORK
+TITLE = STATE Num:44 Wait for reset release
+      A(;
+      O #s44_WaitResetRelease;
+      O #sStWtResetRel_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s44_WaitResetRelease_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s44_WaitResetRelease;
+      A %L1.0;
+      JNB Label_44;
+      L 44;
+      T #StateNo;
+Label_44:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:45 Wait for Gantry Out Of Zone
+      A #s45_WaitGantryOutZone;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iGantryOutofZone;
+      = #s45_WaitGantryOutZone_T1;
+NETWORK
+TITLE = STATE Num:45 Wait for Gantry Out Of Zone
+      A(;
+      O #s45_WaitGantryOutZone;
+      O #s44_WaitResetRelease_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s45_WaitGantryOutZone_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s45_WaitGantryOutZone;
+      A %L1.0;
+      JNB Label_45;
+      L 45;
+      T #StateNo;
+Label_45:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:46 Check Station Home
+      A #s46_ChkStationHome;
+      AN #sStWtResetRel;
+      A #sSst;
+      = %L1.0;
+      A %L1.0;
+      A #iGantryOutofZone;
+      A #iCenteringSlideAtHome;
+      = #s46_ChkStationHome_T1;
+      A %L1.0;
+      AN #s46_ChkStationHome_T1;
+      AN #iCenteringSlideAtHome;
+      = #s46_ChkStationHome_T2;
+NETWORK
+TITLE = STATE Num:46 Check Station Home
+      A(;
+      O #s46_ChkStationHome;
+      O #s45_WaitGantryOutZone_T1;
+      O #s67_WaitCentSlideRet_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s46_ChkStationHome_T1;
+      AN #s46_ChkStationHome_T2;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s46_ChkStationHome;
+      A %L1.0;
+      JNB Label_46;
+      L 46;
+      T #StateNo;
+Label_46:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:47 Wait for Process Start From PZR
+      A #s47_WaitProcStartPZR;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iProcessStart;
+      = #s47_WaitProcStartPZR_T1;
+NETWORK
+TITLE = STATE Num:47 Wait for Process Start From PZR
+      A(;
+      O #s47_WaitProcStartPZR;
+      O #s46_ChkStationHome_T1;
+      O #s58_WaitProcStartLow_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s47_WaitProcStartPZR_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s47_WaitProcStartPZR;
+      A %L1.0;
+      JNB Label_47;
+      L 47;
+      T #StateNo;
+Label_47:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:48 Check Recovery
+      A #s48_ChkRecovery;
+      AN #sStWtResetRel;
+      A #sSst;
+      = %L1.0;
+      A %L1.0;
+      A(;
+      L #sRecoveryInt;
+      L 0;
+      ==I;
+      );
+      = #s48_ChkRecovery_T1;
+      A %L1.0;
+      AN #s48_ChkRecovery_T1;
+      = %L1.1;
+      A %L1.1;
+      A(;
+      L #sRecoveryInt;
+      L 1;
+      ==I;
+      );
+      = #s48_ChkRecovery_T2;
+      A %L1.1;
+      AN #s48_ChkRecovery_T1;
+      AN #s48_ChkRecovery_T2;
+      A(;
+      L #sRecoveryInt;
+      L 2;
+      ==I;
+      );
+      = #s48_ChkRecovery_T3;
+NETWORK
+TITLE = STATE Num:48 Check Recovery
+      A(;
+      O #s48_ChkRecovery;
+      O #s47_WaitProcStartPZR_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s48_ChkRecovery_T1;
+      AN #s48_ChkRecovery_T2;
+      AN #s48_ChkRecovery_T3;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s48_ChkRecovery;
+      A %L1.0;
+      JNB Label_48;
+      L 48;
+      T #StateNo;
+Label_48:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:49 Wait for Centering Slide Advance
+      A #s49_WaitCentSlideAdv;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iCenteringSlideAtWork;
+      = #s49_WaitCentSlideAdv_T1;
+NETWORK
+TITLE = STATE Num:49 Wait for Centering Slide Advance
+      A(;
+      O #s49_WaitCentSlideAdv;
+      O #s48_ChkRecovery_T1;
+      O #s64_WaitOperIntervent_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s49_WaitCentSlideAdv_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s49_WaitCentSlideAdv;
+      A %L1.0;
+      JNB Label_49;
+      L 49;
+      T #StateNo;
+Label_49:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:49 Wait for Centering Slide Advance
+      A #s49_WaitCentSlideAdv;
+      = #qCenteringSlideAdvance;
+NETWORK
+TITLE = Transition for STATE Num:50 Wait for Distance Sensor Feed Back
+      A #s50_WaitDistSensorFB;
+      AN #sStWtResetRel;
+      A #sSst;
+      = #s50_WaitDistSensorFB_T1;
+NETWORK
+TITLE = STATE Num:50 Wait for Distance Sensor Feed Back
+      A(;
+      O #s50_WaitDistSensorFB;
+      O #s49_WaitCentSlideAdv_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s50_WaitDistSensorFB_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s50_WaitDistSensorFB;
+      A %L1.0;
+      JNB Label_50;
+      L 50;
+      T #StateNo;
+Label_50:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:50 Wait for Distance Sensor Feed Back
+      A #s50_WaitDistSensorFB;
+NETWORK
+TITLE = Actions for STATE Num:50 Wait for Distance Sensor Feed Back
+      A #s50_WaitDistSensorFB;
+      = #qCheckDistance;
+NETWORK
+TITLE = Transition for STATE Num:51 Wait for Centering Slide Retract
+      A #s51_WaitCentSlideRet;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iCenteringSlideAtHome;
+      = #s51_WaitCentSlideRet_T1;
+NETWORK
+TITLE = STATE Num:51 Wait for Centering Slide Retract
+      A(;
+      O #s51_WaitCentSlideRet;
+      O #s50_WaitDistSensorFB_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s51_WaitCentSlideRet_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s51_WaitCentSlideRet;
+      A %L1.0;
+      JNB Label_51;
+      L 51;
+      T #StateNo;
+Label_51:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:51 Wait for Centering Slide Retract
+      A #s51_WaitCentSlideRet;
+      = #qCenteringSlideRetract;
+NETWORK
+TITLE = Transition for STATE Num:52 Wait for Scan Over
+      A #s52_WaitScanOver;
+      AN #sStWtResetRel;
+      A #sSst;
+      = %L1.0;
+      A %L1.0;
+      A(;
+      A #iScanOver;
+      AN #iScanErr;
+      O #iScannerBypass;
+      O #iDryCycleWithoutPal;
+      );
+      = #s52_WaitScanOver_T1;
+      A %L1.0;
+      AN #s52_WaitScanOver_T1;
+      A #iScanErr;
+      = #s52_WaitScanOver_T2;
+NETWORK
+TITLE = STATE Num:52 Wait for Scan Over
+      A(;
+      O #s52_WaitScanOver;
+      O #s48_ChkRecovery_T2;
+      O #s51_WaitCentSlideRet_T1;
+      O #s66_WaitOperDecision_T1;
+      O #s65_ChkScanRetryOver_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s52_WaitScanOver_T1;
+      AN #s52_WaitScanOver_T2;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s52_WaitScanOver;
+      A %L1.0;
+      JNB Label_52;
+      L 52;
+      T #StateNo;
+Label_52:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:52 Wait for Scan Over
+      A #s52_WaitScanOver;
+      = #qScanCmd;
+NETWORK
+TITLE = Transition for STATE Num:53 Check measured Distance ok Or Not with respect to PC data
+      A #s53_ChkMeasDistOkPC;
+      AN #sStWtResetRel;
+      A #sSst;
+      = %L1.0;
+      A %L1.0;
+      A(;
+      L #iDistSensorIP;
+      L #sDistanceLowLimit;
+      >=R;
+      O;
+      L #iDistSensorIP;
+      L #sDistanceHighLimit;
+      <=R;
+      );
+      = #s53_ChkMeasDistOkPC_T1;
+      A %L1.0;
+      AN #s53_ChkMeasDistOkPC_T1;
+      A(;
+      L #iDistSensorIP;
+      L #sDistanceLowLimit;
+      <R;
+      O;
+      L #iDistSensorIP;
+      L #sDistanceHighLimit;
+      >R;
+      );
+      = #s53_ChkMeasDistOkPC_T2;
+NETWORK
+TITLE = STATE Num:53 Check measured Distance ok Or Not with respect to PC data
+      A(;
+      O #s53_ChkMeasDistOkPC;
+      O #s48_ChkRecovery_T3;
+      O #s69_WaitDataReadPC_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s53_ChkMeasDistOkPC_T1;
+      AN #s53_ChkMeasDistOkPC_T2;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s53_ChkMeasDistOkPC;
+      A %L1.0;
+      JNB Label_53;
+      L 53;
+      T #StateNo;
+Label_53:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:54 Wait for Gantry at Unload Position.
+      A #s54_WaitGantryUnload;
+      AN #sStWtResetRel;
+      A #sSst;
+      AN #iGantryOutofZone;
+      = #s54_WaitGantryUnload_T1;
+NETWORK
+TITLE = STATE Num:54 Wait for Gantry at Unload Position.
+      A(;
+      O #s54_WaitGantryUnload;
+      O #s53_ChkMeasDistOkPC_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s54_WaitGantryUnload_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s54_WaitGantryUnload;
+      A %L1.0;
+      JNB Label_54;
+      L 54;
+      T #StateNo;
+Label_54:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:54 Wait for Gantry at Unload Position.
+      A #s54_WaitGantryUnload;
+      A #iCenteringSlideAtHome;
+      = #qGantryOkToUnload;
+NETWORK
+TITLE = Transition for STATE Num:55 Wait for Gantry Unload Over.
+      A #s55_WaitGantryUnldOvr;
+      AN #sStWtResetRel;
+      A #sSst;
+      A(;
+      O #iGantryPickOver;
+      O #iDryCycleWithoutPal;
+      );
+      = #s55_WaitGantryUnldOvr_T1;
+NETWORK
+TITLE = STATE Num:55 Wait for Gantry Unload Over.
+      A(;
+      O #s55_WaitGantryUnldOvr;
+      O #s54_WaitGantryUnload_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s55_WaitGantryUnldOvr_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s55_WaitGantryUnldOvr;
+      A %L1.0;
+      JNB Label_55;
+      L 55;
+      T #StateNo;
+Label_55:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:55 Wait for Gantry Unload Over.
+      A #s55_WaitGantryUnldOvr;
+      A #iCenteringSlideAtHome;
+      = #qGantryOkToUnload;
+NETWORK
+TITLE = Transition for STATE Num:56 Wait for Gantry Out Of zone after Unload.
+      A #s56_WaitGantryOutZone;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iGantryOutofZone;
+      = #s56_WaitGantryOutZone_T1;
+NETWORK
+TITLE = STATE Num:56 Wait for Gantry Out Of zone after Unload.
+      A(;
+      O #s56_WaitGantryOutZone;
+      O #s55_WaitGantryUnldOvr_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s56_WaitGantryOutZone_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s56_WaitGantryOutZone;
+      A %L1.0;
+      JNB Label_56;
+      L 56;
+      T #StateNo;
+Label_56:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:57 Check Reel Absent at Conveyor.
+      A #s57_ChkReelAbsentConv;
+      AN #sStWtResetRel;
+      A #sSst;
+      AN #iPalletPresent;
+      = #s57_ChkReelAbsentConv_T1;
+NETWORK
+TITLE = STATE Num:57 Check Reel Absent at Conveyor.
+      A(;
+      O #s57_ChkReelAbsentConv;
+      O #s56_WaitGantryOutZone_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s57_ChkReelAbsentConv_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s57_ChkReelAbsentConv;
+      A %L1.0;
+      JNB Label_57;
+      L 57;
+      T #StateNo;
+Label_57:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:57 Check Reel Absent at Conveyor.
+      A #s57_ChkReelAbsentConv;
+      = #qProcessOver;
+NETWORK
+TITLE = Transition for STATE Num:58 Wait for Process Start Low
+      A #s58_WaitProcStartLow;
+      AN #sStWtResetRel;
+      A #sSst;
+      AN #iProcessStart;
+      = #s58_WaitProcStartLow_T1;
+NETWORK
+TITLE = STATE Num:58 Wait for Process Start Low
+      A(;
+      O #s58_WaitProcStartLow;
+      O #s57_ChkReelAbsentConv_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s58_WaitProcStartLow_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s58_WaitProcStartLow;
+      A %L1.0;
+      JNB Label_58;
+      L 58;
+      T #StateNo;
+Label_58:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:58 Wait for Process Start Low
+      A #s58_WaitProcStartLow;
+      = #qProcessOver;
+NETWORK
+TITLE = Transition for STATE Num:61 Check If Measured Diameter is in Tolerence
+      A #s61_ChkMeasDiamTol;
+      AN #sStWtResetRel;
+      A #sSst;
+      = %L1.0;
+      A %L1.0;
+      A(;
+      L #iDistSenLowLimit;
+      L #iDistSensorIP;
+      <=R;
+      O;
+      L #iDistSensorIP;
+      L #iDistSenHighLimit;
+      <=R;
+      );
+      = #s61_ChkMeasDiamTol_T1;
+      A %L1.0;
+      AN #s61_ChkMeasDiamTol_T1;
+      A(;
+      L #iDistSenLowLimit;
+      L #iDistSensorIP;
+      >R;
+      O;
+      L #iDistSensorIP;
+      L #iDistSenHighLimit;
+      >R;
+      );
+      = #s61_ChkMeasDiamTol_T2;
+NETWORK
+TITLE = STATE Num:61 Check If Measured Diameter is in Tolerence
+      A(;
+      O #s61_ChkMeasDiamTol;
+      O #s53_ChkMeasDistOkPC_T2;
+      );
+      AN #sStWtResetRel;
+      AN #s61_ChkMeasDiamTol_T1;
+      AN #s61_ChkMeasDiamTol_T2;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s61_ChkMeasDiamTol;
+      A %L1.0;
+      JNB Label_61;
+      L 61;
+      T #StateNo;
+Label_61:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:62 Wait for PC Acknowledge Zero
+      A #s62_WaitPCAckZero;
+      AN #sStWtResetRel;
+      A #sSst;
+      A(;
+      O #iPCAckZero;
+      O #iPCBypass;
+      O #iDryCycleWithoutPal;
+      );
+      = #s62_WaitPCAckZero_T1;
+NETWORK
+TITLE = STATE Num:62 Wait for PC Acknowledge Zero
+      A(;
+      O #s62_WaitPCAckZero;
+      O #s61_ChkMeasDiamTol_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s62_WaitPCAckZero_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s62_WaitPCAckZero;
+      A %L1.0;
+      JNB Label_62;
+      L 62;
+      T #StateNo;
+Label_62:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:63 Wait for Data Write Over From PC
+      A #s63_WaitDataWritePC;
+      AN #sStWtResetRel;
+      A #sSst;
+      A(;
+      O #iPCDataWriteOver;
+      O #iPCBypass;
+      O #iDryCycleWithoutPal;
+      );
+      = #s63_WaitDataWritePC_T1;
+NETWORK
+TITLE = STATE Num:63 Wait for Data Write Over From PC
+      A(;
+      O #s63_WaitDataWritePC;
+      O #s62_WaitPCAckZero_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s63_WaitDataWritePC_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s63_WaitDataWritePC;
+      A %L1.0;
+      JNB Label_63;
+      L 63;
+      T #StateNo;
+Label_63:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:63 Wait for Data Write Over From PC
+      A #s63_WaitDataWritePC;
+      = #qPCUploadCmd;
+NETWORK
+TITLE = Transition for STATE Num:64 Wait for Operator Intervention
+      A #s64_WaitOperIntervent;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iRetryPB;
+      = #s64_WaitOperIntervent_T1;
+NETWORK
+TITLE = STATE Num:64 Wait for Operator Intervention
+      A(;
+      O #s64_WaitOperIntervent;
+      O #s61_ChkMeasDiamTol_T2;
+      );
+      AN #sStWtResetRel;
+      AN #s64_WaitOperIntervent_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s64_WaitOperIntervent;
+      A %L1.0;
+      JNB Label_64;
+      L 64;
+      T #StateNo;
+Label_64:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:64 Wait for Operator Intervention
+      A #s64_WaitOperIntervent;
+      = #qMsg[2];
+NETWORK
+TITLE = Transition for STATE Num:65 Check Scan Retry Count Over Or Not
+      A #s65_ChkScanRetryOver;
+      AN #sStWtResetRel;
+      A #sSst;
+      = %L1.0;
+      A %L1.0;
+      A(;
+      L #sScanRetryCount;
+      L 3;
+      <I;
+      );
+      = #s65_ChkScanRetryOver_T1;
+      A %L1.0;
+      AN #s65_ChkScanRetryOver_T1;
+      A(;
+      L #sScanRetryCount;
+      L 3;
+      >=I;
+      );
+      = #s65_ChkScanRetryOver_T2;
+NETWORK
+TITLE = STATE Num:65 Check Scan Retry Count Over Or Not
+      A(;
+      O #s65_ChkScanRetryOver;
+      O #s52_WaitScanOver_T2;
+      );
+      AN #sStWtResetRel;
+      AN #s65_ChkScanRetryOver_T1;
+      AN #s65_ChkScanRetryOver_T2;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s65_ChkScanRetryOver;
+      A %L1.0;
+      JNB Label_65;
+      L 65;
+      T #StateNo;
+Label_65:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:66 Wait for Operator desicion
+      A #s66_WaitOperDecision;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iRetryPB;
+      = #s66_WaitOperDecision_T1;
+NETWORK
+TITLE = STATE Num:66 Wait for Operator desicion
+      A(;
+      O #s66_WaitOperDecision;
+      O #s65_ChkScanRetryOver_T2;
+      );
+      AN #sStWtResetRel;
+      AN #s66_WaitOperDecision_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s66_WaitOperDecision;
+      A %L1.0;
+      JNB Label_66;
+      L 66;
+      T #StateNo;
+Label_66:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:66 Wait for Operator desicion
+      A #s66_WaitOperDecision;
+      = #qMsg[1];
+NETWORK
+TITLE = Transition for STATE Num:67 Wait For Centering Slide Retract for Home
+      A #s67_WaitCentSlideRet;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iCenteringSlideAtHome;
+      = #s67_WaitCentSlideRet_T1;
+NETWORK
+TITLE = STATE Num:67 Wait For Centering Slide Retract for Home
+      A(;
+      O #s67_WaitCentSlideRet;
+      O #s46_ChkStationHome_T2;
+      );
+      AN #sStWtResetRel;
+      AN #s67_WaitCentSlideRet_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s67_WaitCentSlideRet;
+      A %L1.0;
+      JNB Label_67;
+      L 67;
+      T #StateNo;
+Label_67:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:67 Wait For Centering Slide Retract for Home
+      A #s67_WaitCentSlideRet;
+      = #qCenteringSlideRetract;
+NETWORK
+TITLE = Transition for STATE Num:68 Wait for PC Acknowledge Zero for Read
+      A #s68_WaitPCAckZeroRead;
+      AN #sStWtResetRel;
+      A #sSst;
+      A(;
+      O #iPCAckZero;
+      O #iPCBypass;
+      O #iDryCycleWithoutPal;
+      );
+      = #s68_WaitPCAckZeroRead_T1;
+NETWORK
+TITLE = STATE Num:68 Wait for PC Acknowledge Zero for Read
+      A(;
+      O #s68_WaitPCAckZeroRead;
+      O #s52_WaitScanOver_T1;
+      O #s63_WaitDataWritePC_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s68_WaitPCAckZeroRead_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s68_WaitPCAckZeroRead;
+      A %L1.0;
+      JNB Label_68;
+      L 68;
+      T #StateNo;
+Label_68:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:69 Wait for Data Read Over From PC
+      A #s69_WaitDataReadPC;
+      AN #sStWtResetRel;
+      A #sSst;
+      A(;
+      O #iPCDataReadOver;
+      O #iPCBypass;
+      O #iDryCycleWithoutPal;
+      );
+      = #s69_WaitDataReadPC_T1;
+NETWORK
+TITLE = STATE Num:69 Wait for Data Read Over From PC
+      A(;
+      O #s69_WaitDataReadPC;
+      O #s68_WaitPCAckZeroRead_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s69_WaitDataReadPC_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s69_WaitDataReadPC;
+      A %L1.0;
+      JNB Label_69;
+      L 69;
+      T #StateNo;
+Label_69:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:69 Wait for Data Read Over From PC
+      A #s69_WaitDataReadPC;
+      = #qPCReadCmd;
+END_FUNCTION_BLOCK

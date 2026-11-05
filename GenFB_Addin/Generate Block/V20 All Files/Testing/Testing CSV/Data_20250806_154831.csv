@@ -1,0 +1,35 @@
+Block_Name : ,FB_CentreStand_Fix_Seq_3
+,,,Output tag Flow : 1,State traces Flow : 1
+Tag,Value,State Number,qFixUnclamp : [OFF : 141],0, STATE Num:0 Reset Released
+iAutoRunning,"[TRUE]","[0]"/,qR1ReadytoDropTray : [ON  : 142],138, STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand
+iFixClamp,"[TRUE]","[145]"/,qFixClamp : [ON  : 145],139, STATE Num:139 Fix Empty
+iFixEmpty,"[TRUE]","[139,149]"/,qR2OperationStart : [ON  : 146],141, STATE Num:141 Fix Unclamp Cmd
+iFixTrayPresent,"[TRUE]","[143,138_T2,140_T2,140_T1]"/,qFixUnclamp : [ON  : 147],142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request
+iFixUnclamp,"[TRUE]","[141,147]"/,qR1ReadytoPickTray : [ON  : 148],143, STATE Num:143 Robot Drop Fix and Check Tray Present
+iR1DropOver,"[TRUE]","[142]"/,Output tag Flow : 2,144, STATE Num:144 Rbt Out of Area After Drop
+iR1PickOver,"[TRUE]","[148]"/,qFixUnclamp : [OFF : 145],145, STATE Num:145 Fix Clamp
+iR2OperationOver,"[TRUE]","[146]"/,qR1ReadytoPickTray : [OFF : 145],146, STATE Num:146 Robot-2 All Alloys Pick Or Drop Operation over
+iR2ServiceActivated,"[TRUE]","[145]"/,Output tag Flow : 3,191, STATE Num:191 Wait For Robot-2 Out Of Area
+iR2ServiceCompleted,,,qR2OperationStart : [ON  : 146],147, STATE Num:147 Fix Unclamp Cmd After Opern over
+iReset_fault,,,qFixUnclamp : [ON  : 147],148, STATE Num:148 Rdy to Pick Tray After Oprn Over- Wait for Robot Accept Request
+iRobotOutofZone,"[TRUE]","[138_T1,144,145,191,149,138_T2,140_T2,140_T1]"/,qR1ReadytoPickTray : [ON  : 148],149, STATE Num:149 Robot Picked Tray and Check Tray Loc Empty
+iSstMode,,,StateNo : 138,138, STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand
+iSstPB,,,,State traces Flow : 2
+qFixClamp,,,,0, STATE Num:0 Reset Released
+qFixUnclamp,,,,138, STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand
+qR1ReadytoDropTray,,,,140, STATE Num:140 Fix Tray Present_Rec Operation pending
+qR1ReadytoPickTray,,,,145, STATE Num:145 Fix Clamp
+qR2OperationStart,,,,145, STATE Num:145 Fix Clamp
+iqR2ServiceActive,,,,145, STATE Num:145 Fix Clamp
+iqR2ServiceCompleted,,,,145, STATE Num:145 Fix Clamp
+,,,,State traces Flow : 3
+,,,,0, STATE Num:0 Reset Released
+,,,,138, STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand
+,,,,140, STATE Num:140 Fix Tray Present_Rec Operation pending
+,,,,145, STATE Num:145 Fix Clamp
+,,,,146, STATE Num:146 Robot-2 All Alloys Pick Or Drop Operation over
+,,,,191, STATE Num:191 Wait For Robot-2 Out Of Area
+,,,,147, STATE Num:147 Fix Unclamp Cmd After Opern over
+,,,,148, STATE Num:148 Rdy to Pick Tray After Oprn Over- Wait for Robot Accept Request
+,,,,149, STATE Num:149 Robot Picked Tray and Check Tray Loc Empty
+,,,,138, STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand

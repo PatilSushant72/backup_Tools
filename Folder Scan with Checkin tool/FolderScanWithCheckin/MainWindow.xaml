@@ -1,0 +1,97 @@
+﻿<Window x:Class="FolderScan.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FolderScan"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        Title="Folder Scan" Height="400" Width="900">
+    <TabControl>
+        <TabItem x:Name="tabFolderScan" Header="Folder Scan">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50*"></RowDefinition>
+                    <RowDefinition Height="50*"></RowDefinition>
+                    <RowDefinition Height="50*"></RowDefinition>
+                    <RowDefinition Height="50*"></RowDefinition>
+                    <RowDefinition Height="50*"></RowDefinition>
+                    <RowDefinition Height="50*"></RowDefinition>
+                    <RowDefinition Height="50*"></RowDefinition>
+                    <RowDefinition Height="50*"></RowDefinition>
+                    <RowDefinition Height="50*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Margin="5" Grid.Column="0">
+                    <Label
+                    Width="110"
+                    Margin="0,0,0,0"
+                    HorizontalAlignment="Left"
+                    Content="Directory path:" />
+                    <TextBox
+                    x:Name="Path"
+                    Margin="110,0,0,0"
+                    VerticalContentAlignment="Center"
+                    >
+                    </TextBox>
+
+
+                </Grid>
+                <Grid Margin="5" Grid.Column="0" Grid.Row="1">
+                    <Label
+                    Width="110"
+                    Margin="0,0,0,0"
+                    HorizontalAlignment="Left"
+                    Content="Size (In KB)" />
+                    <TextBox
+                    x:Name="Size" Text="24"
+                    Margin="110,0,0,0"
+                    VerticalContentAlignment="Center"
+                    >
+                    </TextBox>
+
+
+                </Grid>
+                <!-- 🔹 PROJECT COUNT (NEW) -->
+                <Grid Margin="5" Grid.Column="0" Grid.Row="2">
+                    <Label Width="110"
+HorizontalAlignment="Left"
+Content="Projects:" />
+
+                    <ComboBox x:Name="cmbProjectCount"
+          Margin="110,0,0,0"
+          Height="25"
+          IsEditable="True"
+          IsTextSearchEnabled="False"
+          SelectedIndex="0"
+          SelectionChanged="cmbProjectCount_SelectionChanged">
+                        <ComboBoxItem Content="1"/>
+                        <ComboBoxItem Content="All"/>
+                    </ComboBox>
+                </Grid>
+                <Grid Margin="5" Grid.Column="1">
+                    <Button x:Name="Browse" Click="Browse_Click"
+                    Width="25"
+                    Margin="0,0,0,5"
+                   >
+                        ...
+                    </Button>
+                </Grid>
+                <Button x:Name="btnGenerateCSV" Grid.Row="3" Grid.Column="0" Foreground="SteelBlue" Background="White" BorderThickness="1" BorderBrush="Black"
+                        Width="100"
+                        Margin="0,0,0,0" HorizontalAlignment="Left"  Click="btnGenerateCSV_Click"
+                      >
+                    Create
+                </Button>
+                <Label Grid.Row="4"
+            x:Name="RunningFolder"
+                    Margin="0,0,0,0"
+                    HorizontalAlignment="Left"
+                    Content="" />
+            </Grid>
+        </TabItem>
+    </TabControl>
+</Window>

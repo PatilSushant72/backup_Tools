@@ -1,0 +1,298 @@
+FUNCTION_BLOCK "LifterSeq_aa1288"
+{ S7_Optimized_Access := 'FALSE' }
+VERSION : 0.1
+      VAR_INPUT
+      iArea_Clear : BOOL;
+      iAutoRunning : BOOL;
+      iLifter_Down_over : BOOL;
+      iLifter_Up_over : BOOL;
+      iNext_Stan_RTR : BOOL;
+      iOTS_from_Prevous_STN : BOOL;
+      iReset_fault : Bool;
+      iSstMode : BOOL;
+      iSstPB : BOOL;
+   END_VAR
+
+   VAR_OUTPUT
+      qLifter_DOWN_CMD : Bool;
+      qLifter_UP_CMD : Bool;
+   END_VAR
+
+   VAR
+      StateNo : INT;
+      s10_WaitForStart : BOOL;
+      s10_WaitForStart_T1 : BOOL;
+      s11_ChkPalletPrsnt : BOOL;
+      s11_ChkPalletPrsnt_T1 : BOOL;
+      s11_ChkPalletPrsnt_T2 : BOOL;
+      s12_WaitAreaClear : BOOL;
+      s12_WaitAreaClear_T1 : BOOL;
+      s14_WaitLifterDown : BOOL;
+      s14_WaitLifterDown_T1 : BOOL;
+      s15_WaitNextStnRdy : BOOL;
+      s15_WaitNextStnRdy_T1 : BOOL;
+      s16_WaitPalletAbsnt : BOOL;
+      s16_WaitPalletAbsnt_T1 : BOOL;
+      s17_WaitAreaClear : BOOL;
+      s17_WaitAreaClear_T1 : BOOL;
+      s18_WaitLifterUp : BOOL;
+      s18_WaitLifterUp_T1 : BOOL;
+      sSst : BOOL;
+      sSstPulse : BOOL;
+      sSstRise : Bool;
+      sStWtResetRel : BOOL;
+      sStWtResetRel_T1 : BOOL;
+   END_VAR
+
+   VAR_TEMP
+      tOne : BOOL;
+   END_VAR
+
+BEGIN
+NETWORK
+TITLE = 
+      O #tOne;
+      ON #tOne;
+      = #tOne;
+NETWORK
+TITLE = Create Single Step Pulse bit
+      A #iSstPB;
+      FP #sSstRise;
+      = #sSstPulse;
+NETWORK
+TITLE = Create Single Step bit
+      A #iSstMode;
+      A #sSstPulse;
+      ON #iSstMode;
+      = #sSst;
+NETWORK
+TITLE = Transition for STATE Num:0 Reset Released
+      A #sStWtResetRel;
+      A #iAutoRunning;
+      = #sStWtResetRel_T1;
+NETWORK
+TITLE = STATE Num:0 Reset Released
+      A(;
+      O #sStWtResetRel;
+      ON #iAutoRunning;
+      );
+      AN #sStWtResetRel_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #sStWtResetRel;
+      A %L1.0;
+      JNB Label_0;
+      L 0;
+      T #StateNo;
+Label_0:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:10 Wait for Start
+      A #s10_WaitForStart;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iOTS_from_Prevous_STN;
+      = #s10_WaitForStart_T1;
+NETWORK
+TITLE = STATE Num:10 Wait for Start
+      A(;
+      O #s10_WaitForStart;
+      O #s11_ChkPalletPrsnt_T2;
+      O #sStWtResetRel_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s10_WaitForStart_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s10_WaitForStart;
+      A %L1.0;
+      JNB Label_10;
+      L 10;
+      T #StateNo;
+Label_10:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:11 Check Pallet present
+      A #s11_ChkPalletPrsnt;
+      AN #sStWtResetRel;
+      A #sSst;
+      = %L1.0;
+      A %L1.0;
+      A "Pallet Present";
+      = #s11_ChkPalletPrsnt_T1;
+      A %L1.0;
+      AN #s11_ChkPalletPrsnt_T1;
+      AN "Pallet Present";
+      = #s11_ChkPalletPrsnt_T2;
+NETWORK
+TITLE = STATE Num:11 Check Pallet present
+      A(;
+      O #s11_ChkPalletPrsnt;
+      O #s10_WaitForStart_T1;
+      O #s18_WaitLifterUp_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s11_ChkPalletPrsnt_T1;
+      AN #s11_ChkPalletPrsnt_T2;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s11_ChkPalletPrsnt;
+      A %L1.0;
+      JNB Label_11;
+      L 11;
+      T #StateNo;
+Label_11:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:12 Wait Area Clear
+      A #s12_WaitAreaClear;
+      AN #sStWtResetRel;
+      A #sSst;
+      AN #iArea_Clear;
+      = #s12_WaitAreaClear_T1;
+NETWORK
+TITLE = STATE Num:12 Wait Area Clear
+      A(;
+      O #s12_WaitAreaClear;
+      O #s11_ChkPalletPrsnt_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s12_WaitAreaClear_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s12_WaitAreaClear;
+      A %L1.0;
+      JNB Label_12;
+      L 12;
+      T #StateNo;
+Label_12:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:14 Wait Lifter Down
+      A #s14_WaitLifterDown;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iLifter_Down_over;
+      = #s14_WaitLifterDown_T1;
+NETWORK
+TITLE = STATE Num:14 Wait Lifter Down
+      A(;
+      O #s14_WaitLifterDown;
+      O #s12_WaitAreaClear_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s14_WaitLifterDown_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s14_WaitLifterDown;
+      A %L1.0;
+      JNB Label_14;
+      L 14;
+      T #StateNo;
+Label_14:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:14 Wait Lifter Down
+      A #s14_WaitLifterDown;
+      = #qLifter_DOWN_CMD;
+NETWORK
+TITLE = Transition for STATE Num:15 Wait Next Stn Ready
+      A #s15_WaitNextStnRdy;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iNext_Stan_RTR;
+      = #s15_WaitNextStnRdy_T1;
+NETWORK
+TITLE = STATE Num:15 Wait Next Stn Ready
+      A(;
+      O #s15_WaitNextStnRdy;
+      O #s14_WaitLifterDown_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s15_WaitNextStnRdy_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s15_WaitNextStnRdy;
+      A %L1.0;
+      JNB Label_15;
+      L 15;
+      T #StateNo;
+Label_15:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:16 Wait Pallet Absent
+      A #s16_WaitPalletAbsnt;
+      AN #sStWtResetRel;
+      A #sSst;
+      AN "Pallet Present";
+      = #s16_WaitPalletAbsnt_T1;
+NETWORK
+TITLE = STATE Num:16 Wait Pallet Absent
+      A(;
+      O #s16_WaitPalletAbsnt;
+      O #s15_WaitNextStnRdy_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s16_WaitPalletAbsnt_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s16_WaitPalletAbsnt;
+      A %L1.0;
+      JNB Label_16;
+      L 16;
+      T #StateNo;
+Label_16:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:17 Wait Area Clear
+      A #s17_WaitAreaClear;
+      AN #sStWtResetRel;
+      A #sSst;
+      AN #iArea_Clear;
+      = #s17_WaitAreaClear_T1;
+NETWORK
+TITLE = STATE Num:17 Wait Area Clear
+      A(;
+      O #s17_WaitAreaClear;
+      O #s16_WaitPalletAbsnt_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s17_WaitAreaClear_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s17_WaitAreaClear;
+      A %L1.0;
+      JNB Label_17;
+      L 17;
+      T #StateNo;
+Label_17:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:18 Wait Lifter Up
+      A #s18_WaitLifterUp;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iLifter_Up_over;
+      = #s18_WaitLifterUp_T1;
+NETWORK
+TITLE = STATE Num:18 Wait Lifter Up
+      A(;
+      O #s18_WaitLifterUp;
+      O #s17_WaitAreaClear_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s18_WaitLifterUp_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s18_WaitLifterUp;
+      A %L1.0;
+      JNB Label_18;
+      L 18;
+      T #StateNo;
+Label_18:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:18 Wait Lifter Up
+      A #s18_WaitLifterUp;
+      = #qLifter_UP_CMD;
+END_FUNCTION_BLOCK

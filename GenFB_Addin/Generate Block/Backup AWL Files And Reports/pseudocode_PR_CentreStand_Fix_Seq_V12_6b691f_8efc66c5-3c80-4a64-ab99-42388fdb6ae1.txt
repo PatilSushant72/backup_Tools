@@ -1,0 +1,107 @@
+State Number: 138
+Description: Wait for Both Robots Out of Alloy Fixture Center Stand
+State Name: WaitBothRbtOutAl
+Action:
+Transitions:
+ - Condition1: IF RobotOutofZone & !FixTrayPresent
+    - Goto State Number 139
+ - Condition2: IF RobotOutofZone & FixTrayPresent
+    - Goto State Number 140
+
+State Number: 139
+Description: Fix Empty
+State Name: FixEmpty
+Action:
+Transitions:
+ - Condition: IF FixEmpty
+    - Goto State Number 141
+
+State Number: 140
+Description: Fix Tray Present_Rec Operation pending
+State Name: FixTrayPrsntRec
+Action:
+Transitions:
+ - Condition1: IF FixTrayPresent & RobotOutofZone & !iqR2ServiceCompleted
+    - Goto State Number 145
+ - Condition2: IF FixTrayPresent & RobotOutofZone & iqR2ServiceCompleted
+    - Goto State Number 147
+
+State Number: 141
+Description: Fix Unclamp Cmd
+State Name: FixUnclampCmd
+Action: qFixUnclamp
+Transitions:
+ - Condition: IF FixUnclamp
+    - Goto State Number 142
+
+State Number: 142
+Description: Tray Rdy to Drop Fix- Wait for Robot Accept request
+State Name: TrayRdyDropFix
+Action: qR1ReadytoDropTray
+Transitions:
+ - Condition: IF R1DropOver
+    - Goto State Number 143
+
+State Number: 143
+Description: Robot Drop Fix and Check Tray Present
+State Name: RbtDropFixChkTr
+Action:
+Transitions:
+ - Condition: IF FixTrayPresent
+    - Goto State Number 144
+
+State Number: 144
+Description: Rbt Out of Area After Drop
+State Name: RbtOutAreaDrop
+Action:
+Transitions:
+ - Condition: IF RobotOutofZone
+    - Goto State Number 145
+
+State Number: 145
+Description: Fix Clamp
+State Name: FixClamp
+Action: qFixClamp
+Transitions:
+ - Condition: IF RobotOutofZone & FixClamp
+    - Goto State Number 146
+
+State Number: 146
+Description: Robot-2 All Alloys Pick Or Drop Operation over
+State Name: Rbt2AlloyOpOver
+Action: qR2OperationStart, IF R2ServiceActivated THEN SET iqR2ServiceActive, IF R2OperationOver & iqR2ServiceActive THEN RESET iqR2ServiceActive
+Transitions:
+ - Condition: IF R2OperationOver
+    - Goto State Number 191
+
+State Number: 147
+Description: Fix Unclamp Cmd After Opern over
+State Name: FixUnclmpCmdAft
+Action: qFixUnclamp
+Transitions:
+ - Condition: IF FixUnclamp
+    - Goto State Number 148
+
+State Number: 148
+Description: Rdy to Pick Tray After Oprn Over- Wait for Robot Accept Request
+State Name: RdyPickTrayAftr
+Action: qR1ReadytoPickTray, IF R1PickOver THEN RESET iqR2ServiceCompleted
+Transitions:
+ - Condition: IF R1PickOver
+    - Goto State Number 149
+
+State Number: 149
+Description: Robot Picked Tray and Check Tray Loc Empty
+State Name: RbtPickTrayChkE
+Action: RESET iqR2ServiceCompleted
+Transitions:
+ - Condition: IF FixEmpty
+    - Goto State Number 138
+
+State Number: 191
+Description: Wait For Robot-2 Out Of Area
+State Name: WaitRbt2OutArea
+Action:
+Transitions:
+ - Condition: IF RobotOutofZone
+    - Goto State Number 147

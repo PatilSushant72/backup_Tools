@@ -1,0 +1,107 @@
+FB_CentreStand_Fix_Seq_4, ,Application test: 
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4: Test cases executed : 31 ; Passed : 26 ; Failed : 5 ; Inconclusive : 0
+FB_CentreStand_Fix_Seq_4, ,MemoryReset: PLC_2[PLCSIM Instance : myplc]
+FB_CentreStand_Fix_Seq_4, ,"Cycle": Pass
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.StateNo: Actual: 0, Expected: 0, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,PR_CentreStand_Fix_Seq_V1Updt_Trans0: PLC_2[PLCSIM Instance : myplc]
+FB_CentreStand_Fix_Seq_4, 0,"Wait for reset release, Transition 0": Pass
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.StateNo: Actual: 138, Expected: 138, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,PR_CentreStand_Fix_Seq_V1Updt_Trans138_T1: PLC_2[PLCSIM Instance : myplc]
+FB_CentreStand_Fix_Seq_4, 138,"Wait for reset release, Transition 138": Pass
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.StateNo: Actual: 139, Expected: 139, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,PR_CentreStand_Fix_Seq_V1Updt_Trans139: PLC_2[PLCSIM Instance : myplc]
+FB_CentreStand_Fix_Seq_4, 139,"Wait for reset release, Transition 139": Fail
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.StateNo: Actual: 141, Expected: 141, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.qFixUnclamp: Actual: False, Expected: True, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,PR_CentreStand_Fix_Seq_V1Updt_Trans141: PLC_2[PLCSIM Instance : myplc]
+FB_CentreStand_Fix_Seq_4, 141,"Wait for reset release, Transition 141": Pass
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.StateNo: Actual: 142, Expected: 142, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.qR1ReadytoDropTray: Actual: True, Expected: True, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,PR_CentreStand_Fix_Seq_V1Updt_Trans142: PLC_2[PLCSIM Instance : myplc]
+FB_CentreStand_Fix_Seq_4, 142,"Wait for reset release, Transition 142": Pass
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.StateNo: Actual: 143, Expected: 143, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,PR_CentreStand_Fix_Seq_V1Updt_Trans143: PLC_2[PLCSIM Instance : myplc]
+FB_CentreStand_Fix_Seq_4, 143,"Wait for reset release, Transition 143": Pass
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.StateNo: Actual: 144, Expected: 144, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,PR_CentreStand_Fix_Seq_V1Updt_Trans144: PLC_2[PLCSIM Instance : myplc]
+FB_CentreStand_Fix_Seq_4, 144,"Wait for reset release, Transition 144": Pass
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.StateNo: Actual: 145, Expected: 145, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.qFixClamp: Actual: True, Expected: True, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,PR_CentreStand_Fix_Seq_V1Updt_Trans145: PLC_2[PLCSIM Instance : myplc]
+FB_CentreStand_Fix_Seq_4, 145,"Wait for reset release, Transition 145": Pass
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.StateNo: Actual: 146, Expected: 146, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.qR2OperationStart: Actual: True, Expected: True, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,PR_CentreStand_Fix_Seq_V1Updt_Trans146: PLC_2[PLCSIM Instance : myplc]
+FB_CentreStand_Fix_Seq_4, 146,"Wait for reset release, Transition 146": Pass
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.StateNo: Actual: 191, Expected: 191, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,PR_CentreStand_Fix_Seq_V1Updt_Trans191: PLC_2[PLCSIM Instance : myplc]
+FB_CentreStand_Fix_Seq_4, 191,"Wait for reset release, Transition 191": Pass
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.StateNo: Actual: 147, Expected: 147, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.qFixUnclamp: Actual: True, Expected: True, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,PR_CentreStand_Fix_Seq_V1Updt_Trans147: PLC_2[PLCSIM Instance : myplc]
+FB_CentreStand_Fix_Seq_4, 147,"Wait for reset release, Transition 147": Pass
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.StateNo: Actual: 148, Expected: 148, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.qR1ReadytoPickTray: Actual: True, Expected: True, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,PR_CentreStand_Fix_Seq_V1Updt_Trans148: PLC_2[PLCSIM Instance : myplc]
+FB_CentreStand_Fix_Seq_4, 148,"Wait for reset release, Transition 148": Pass
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.StateNo: Actual: 149, Expected: 149, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,PR_CentreStand_Fix_Seq_V1Updt_Trans149: PLC_2[PLCSIM Instance : myplc]
+FB_CentreStand_Fix_Seq_4, 149,"Wait for reset release, Transition 149": Pass [Run with condition satisfied]
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.StateNo: Actual: 138, Expected: 138, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,MemoryReset: PLC_2[PLCSIM Instance : myplc]
+FB_CentreStand_Fix_Seq_4, ,"Cycle": Pass
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.StateNo: Actual: 0, Expected: 0, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,PR_CentreStand_Fix_Seq_V1Updt_Trans0: PLC_2[PLCSIM Instance : myplc]
+FB_CentreStand_Fix_Seq_4, 0,"Wait for reset release, Transition 0": Pass
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.StateNo: Actual: 138, Expected: 138, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,PR_CentreStand_Fix_Seq_V1Updt_Trans138_T2_R2OpComp: PLC_2[PLCSIM Instance : myplc]
+FB_CentreStand_Fix_Seq_4, 138,"Wait for reset release, Transition 138": Pass
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.StateNo: Actual: 140, Expected: 140, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,PR_CentreStand_Fix_Seq_V1Updt_Trans140_T2: PLC_2[PLCSIM Instance : myplc]
+FB_CentreStand_Fix_Seq_4, 140,"Wait for reset release, Transition 140 T2": Fail
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.StateNo: Actual: 145, Expected: 147, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.qFixUnclamp: Actual: False, Expected: True, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,PR_CentreStand_Fix_Seq_V1Updt_Trans147: PLC_2[PLCSIM Instance : myplc]
+FB_CentreStand_Fix_Seq_4, 147,"Wait for reset release, Transition 147": Fail
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.StateNo: Actual: 145, Expected: 148, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.qR1ReadytoPickTray: Actual: False, Expected: True, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,PR_CentreStand_Fix_Seq_V1Updt_Trans148: PLC_2[PLCSIM Instance : myplc]
+FB_CentreStand_Fix_Seq_4, 148,"Wait for reset release, Transition 148": Fail
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.StateNo: Actual: 145, Expected: 149, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,PR_CentreStand_Fix_Seq_V1Updt_Trans149: PLC_2[PLCSIM Instance : myplc]
+FB_CentreStand_Fix_Seq_4, 149,"Wait for reset release, Transition 149": Fail [Run with condition not satisfied as "FB_CentreStand_Fix_Seq_4_DB.StateNo" = 145]
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.StateNo: Actual: 145, Expected: 138, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,MemoryReset: PLC_2[PLCSIM Instance : myplc]
+FB_CentreStand_Fix_Seq_4, ,"Cycle": Pass
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.StateNo: Actual: 0, Expected: 0, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,PR_CentreStand_Fix_Seq_V1Updt_Trans0: PLC_2[PLCSIM Instance : myplc]
+FB_CentreStand_Fix_Seq_4, 0,"Wait for reset release, Transition 0": Pass
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.StateNo: Actual: 138, Expected: 138, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,PR_CentreStand_Fix_Seq_V1Updt_Trans138_T2_R2OpNtComp: PLC_2[PLCSIM Instance : myplc]
+FB_CentreStand_Fix_Seq_4, 138,"Wait for reset release, Transition 138": Pass
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.StateNo: Actual: 140, Expected: 140, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,PR_CentreStand_Fix_Seq_V1Updt_Trans140_T1: PLC_2[PLCSIM Instance : myplc]
+FB_CentreStand_Fix_Seq_4, 140,"Wait for reset release, Transition 140": Pass
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.StateNo: Actual: 145, Expected: 145, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,PR_CentreStand_Fix_Seq_V1Updt_Trans145: PLC_2[PLCSIM Instance : myplc]
+FB_CentreStand_Fix_Seq_4, 145,"Wait for reset release, Transition 145": Pass
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.StateNo: Actual: 146, Expected: 146, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.qR2OperationStart: Actual: True, Expected: True, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,PR_CentreStand_Fix_Seq_V1Updt_Trans146: PLC_2[PLCSIM Instance : myplc]
+FB_CentreStand_Fix_Seq_4, 146,"Wait for reset release, Transition 146": Pass
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.StateNo: Actual: 191, Expected: 191, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,PR_CentreStand_Fix_Seq_V1Updt_Trans191: PLC_2[PLCSIM Instance : myplc]
+FB_CentreStand_Fix_Seq_4, 191,"Wait for reset release, Transition 191": Pass
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.StateNo: Actual: 147, Expected: 147, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.qFixUnclamp: Actual: True, Expected: True, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,PR_CentreStand_Fix_Seq_V1Updt_Trans147: PLC_2[PLCSIM Instance : myplc]
+FB_CentreStand_Fix_Seq_4, 147,"Wait for reset release, Transition 147": Pass
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.StateNo: Actual: 148, Expected: 148, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.qR1ReadytoPickTray: Actual: True, Expected: True, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,PR_CentreStand_Fix_Seq_V1Updt_Trans148: PLC_2[PLCSIM Instance : myplc]
+FB_CentreStand_Fix_Seq_4, 148,"Wait for reset release, Transition 148": Pass
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.StateNo: Actual: 149, Expected: 149, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,PR_CentreStand_Fix_Seq_V1Updt_Trans149: PLC_2[PLCSIM Instance : myplc]
+FB_CentreStand_Fix_Seq_4, 149,"Wait for reset release, Transition 149": Pass [Run with condition satisfied]
+FB_CentreStand_Fix_Seq_4, ,FB_CentreStand_Fix_Seq_4_DB.StateNo: Actual: 138, Expected: 138, Assert type: Equal
+FB_CentreStand_Fix_Seq_4, ,: Test case(s) execution completed.

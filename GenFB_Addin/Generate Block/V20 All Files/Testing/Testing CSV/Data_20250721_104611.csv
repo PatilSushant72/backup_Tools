@@ -1,0 +1,92 @@
+Block_Name : ,PR_GantryUnload_Seqv25_57af70,,Output tag Flow : 1,,,State traces Flow : 1
+,,,qCenteringSlideAdvance : [OFF : 0],,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+Tag,Value,State Number,qCheckDistance : [OFF : 0],,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+iAutoRunning,"[TRUE]","[44,qCenteringSlideRetract : [OFF : 0],46_T1,46_T2,PR_GantryUnload_Seqv25_57af70,StateNo,0
+iCenteringSlideAtHome,"[TRUE]","[46_T1,qScanCmd : [OFF : 0],48_T1,48_T2,PR_GantryUnload_Seqv25_57af70,StateNo,0
+iCenteringSlideAtWork,"[TRUE]","[49,qGantryOkToUnload : [OFF : 0],,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+iDistSenHighLimit,,,qProcessOver : [OFF : 0],,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+iDistSenLowLimit,,,qProcessOver : [OFF : 0],,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+iDistSensorIP,,,Output tag Flow : 2,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+iDryCycleWithoutPal,,,qScanCmd : [OFF : 0],,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+iGantryOutofZone,"[TRUE]","[45,qPCReadCmd : [OFF : 0],46_T2,47,PR_GantryUnload_Seqv25_57af70,StateNo,0
+iGantryPickOver,"[TRUE]","[55,Output tag Flow : 3,57,58]"/,PR_GantryUnload_Seqv25_57af70,StateNo,0
+iPCAckZero,"[TRUE]","[62,Output tag Flow : 4,68,69]"/,PR_GantryUnload_Seqv25_57af70,StateNo,0
+iPCBypass,,,qCenteringSlideAdvance : [OFF : 0],,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+iPCDataReadOver,"[TRUE]","[69]"/,qCheckDistance : [OFF : 0],,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+iPCDataWriteOver,"[TRUE]","[63]"/,qCenteringSlideRetract : [OFF : 0],,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+iPalletPresent,,,qScanCmd : [OFF : 0],,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+iProcessStart,"[TRUE]","[47,qPCUploadCmd : [OFF : 0],48_T2,48_T3,State traces Flow : 2
+iReset_fault,,,Output tag Flow : 5,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+iRetryPB,"[TRUE]","[64,qCenteringSlideAdvance : [OFF : 0],,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+iScanErr,"[TRUE]","[52_T2,qCheckDistance : [OFF : 0],65_T2,66]"/,PR_GantryUnload_Seqv25_57af70,StateNo,0
+iScanOver,"[TRUE]","[52_T1,qCenteringSlideRetract : [OFF : 0],53_T2,54,PR_GantryUnload_Seqv25_57af70,StateNo,0
+iScannerBypass,,,qScanCmd : [OFF : 0],,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+iSstMode,,,qMsg[2] : [OFF : 0],,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+iSstPB,,,qCenteringSlideAdvance : [OFF : 0],,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+qCenteringSlideAdvance,,,Output tag Flow : 6,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+qCenteringSlideRetract,,,qScanCmd : [OFF : 0],,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+qCheckDistance,,,qScanCmd : [OFF : 0],,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+qGantryOkToUnload,,,Output tag Flow : 7,,,State traces Flow : 3
+qMsg,,,qScanCmd : [OFF : 0],,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+qPCReadCmd,,,qMsg[1] : [OFF : 0],,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+qPCUploadCmd,,,qScanCmd : [OFF : 0],,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+qProcessOver,,,Output tag Flow : 8,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+qScanCmd,,,qCenteringSlideRetract : [OFF : 0],,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,StateNo : 0,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,State traces Flow : 4
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,State traces Flow : 5
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,State traces Flow : 6
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,State traces Flow : 7
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,State traces Flow : 8
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0
+,,,,,,PR_GantryUnload_Seqv25_57af70,StateNo,0

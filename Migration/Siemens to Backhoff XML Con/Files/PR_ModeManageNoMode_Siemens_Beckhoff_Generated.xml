@@ -1,0 +1,1186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0200 http://www.plcopen.org/xml/tc6_0200" xmlns="http://www.plcopen.org/xml/tc6_0200">
+  <fileHeader companyName="SiemensToBackhoff" productName="Siemens TIA Portal to Beckhoff TwinCAT PLCopen Converter" productVersion="1.0" creationDateTime="2026-09-28T08:41:48.575973Z" />
+  <contentHeader name="PR_ModeManageNoMode_PLC" modificationDateTime="2026-09-28T08:41:48.575973Z">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="1" y="1" />
+      </fbd>
+      <ld>
+        <scaling x="1" y="1" />
+      </ld>
+      <sfc>
+        <scaling x="1" y="1" />
+      </sfc>
+    </coordinateInfo>
+  </contentHeader>
+  <types>
+    <dataTypes />
+    <pous>
+      <pou name="PR_ModeManageNoMode" pouType="functionBlock">
+        <interface>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation" xmlns="">
+              <InterfaceAsPlainText>
+                <xhtml:xhtml>FUNCTION_BLOCK PR_ModeManageNoMode
+</xhtml:xhtml>
+              </InterfaceAsPlainText>
+            </data>
+          </addData>
+        </interface>
+        <body>
+          <LD>
+            <!--Generated from Siemens TIA Portal FlgNet.-->
+            <leftPowerRail localId="0">
+              <position x="0" y="0" />
+              <connectionPointOut formalParameter="none" />
+            </leftPowerRail>
+            <comment localId="10" height="0" width="0">
+              <position x="10" y="50" />
+              <content>
+                <xhtml:xhtml>Cycle Start delay validation
+Cycle Start delay validation</xhtml:xhtml>
+              </content>
+            </comment>
+            <block localId="11" typeName="LT" instanceName="inst_LT_11">
+              <position x="120" y="120" />
+              <inputVariables>
+                <variable formalParameter="pre">
+                  <connectionPointIn>
+                    <connection refLocalId="0" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="in1">
+                  <connectionPointIn>
+                    <connection refLocalId="0" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="in2">
+                  <connectionPointIn>
+                    <connection refLocalId="0" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="out">
+                  <connectionPointOut />
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">functionblock</CallType>
+                </data>
+              </addData>
+            </block>
+            <block localId="12" typeName="GT" instanceName="inst_GT_12">
+              <position x="120" y="250" />
+              <inputVariables>
+                <variable formalParameter="pre">
+                  <connectionPointIn>
+                    <connection refLocalId="0" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="in1">
+                  <connectionPointIn>
+                    <connection refLocalId="0" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="in2">
+                  <connectionPointIn>
+                    <connection refLocalId="0" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="out">
+                  <connectionPointOut />
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">functionblock</CallType>
+                </data>
+              </addData>
+            </block>
+            <block localId="13" typeName="MOVE" instanceName="inst_MOVE_13">
+              <position x="120" y="380" />
+              <inputVariables>
+                <variable formalParameter="en">
+                  <connectionPointIn>
+                    <connection refLocalId="0" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="in">
+                  <connectionPointIn>
+                    <connection refLocalId="0" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="out1">
+                  <connectionPointOut>
+                    <expression>sCycleStartDelay</expression>
+                  </connectionPointOut>
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">functionblock</CallType>
+                </data>
+              </addData>
+            </block>
+            <block localId="14" typeName="MOVE" instanceName="inst_MOVE_14">
+              <position x="120" y="510" />
+              <inputVariables>
+                <variable formalParameter="en">
+                  <connectionPointIn>
+                    <connection refLocalId="0" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="in">
+                  <connectionPointIn>
+                    <connection refLocalId="0" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="out1">
+                  <connectionPointOut>
+                    <expression>sCycleStartDelay</expression>
+                  </connectionPointOut>
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">functionblock</CallType>
+                </data>
+              </addData>
+            </block>
+            <comment localId="15" height="0" width="0">
+              <position x="10" y="570" />
+              <content>
+                <xhtml:xhtml>Power ON reset Bit during initial power ON
+Reset Active</xhtml:xhtml>
+              </content>
+            </comment>
+            <contact localId="16" negated="true" storage="none" edge="none">
+              <position x="120" y="640" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iControlOn</variable>
+            </contact>
+            <contact localId="17" negated="false" storage="none" edge="none">
+              <position x="240" y="640" />
+              <connectionPointIn>
+                <connection refLocalId="16" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iFirstscan</variable>
+            </contact>
+            <coil localId="18" negated="false" storage="none">
+              <position x="360" y="640" />
+              <connectionPointIn>
+                <connection refLocalId="17" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sPowerOnReset</variable>
+            </coil>
+            <comment localId="19" height="0" width="0">
+              <position x="10" y="700" />
+              <content>
+                <xhtml:xhtml>Control On pulse
+#sControlOnPulse</xhtml:xhtml>
+              </content>
+            </comment>
+            <block localId="20" typeName="R_TRIG" instanceName="inst_R_TRIG_20">
+              <position x="120" y="770" />
+              <inputVariables>
+                <variable formalParameter="in">
+                  <connectionPointIn>
+                    <connection refLocalId="0" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="bit">
+                  <connectionPointIn>
+                    <connection refLocalId="0" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="out">
+                  <connectionPointOut />
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">functionblock</CallType>
+                </data>
+              </addData>
+            </block>
+            <coil localId="21" negated="false" storage="none">
+              <position x="260" y="770" />
+              <connectionPointIn>
+                <connection refLocalId="20" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sControlOnPulse</variable>
+            </coil>
+            <comment localId="22" height="0" width="0">
+              <position x="10" y="830" />
+              <content>
+                <xhtml:xhtml>Manual mode active
+Man Mode</xhtml:xhtml>
+              </content>
+            </comment>
+            <contact localId="23" negated="false" storage="none" edge="none">
+              <position x="120" y="900" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iManMode</variable>
+            </contact>
+            <contact localId="24" negated="false" storage="none" edge="none">
+              <position x="240" y="900" />
+              <connectionPointIn>
+                <connection refLocalId="23" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sManModeActive</variable>
+            </contact>
+            <contact localId="25" negated="true" storage="none" edge="none">
+              <position x="360" y="900" />
+              <connectionPointIn>
+                <connection refLocalId="24" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iAutoMode</variable>
+            </contact>
+            <contact localId="26" negated="true" storage="none" edge="none">
+              <position x="500" y="900" />
+              <connectionPointIn>
+                <connection refLocalId="25" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sAutoRunningActive</variable>
+            </contact>
+            <contact localId="27" negated="true" storage="none" edge="none">
+              <position x="640" y="900" />
+              <connectionPointIn>
+                <connection refLocalId="26" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sHomeRunningActive</variable>
+            </contact>
+            <contact localId="28" negated="false" storage="none" edge="none">
+              <position x="780" y="900" />
+              <connectionPointIn>
+                <connection refLocalId="27" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iManModeEnable</variable>
+            </contact>
+            <contact localId="29" negated="true" storage="none" edge="none">
+              <position x="920" y="900" />
+              <connectionPointIn>
+                <connection refLocalId="28" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sPowerOnReset</variable>
+            </contact>
+            <coil localId="30" negated="false" storage="none">
+              <position x="1060" y="900" />
+              <connectionPointIn>
+                <connection refLocalId="29" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sManModeActive</variable>
+            </coil>
+            <comment localId="31" height="0" width="0">
+              <position x="10" y="960" />
+              <content>
+                <xhtml:xhtml>Waiting for cycle to start
+Auto Mode</xhtml:xhtml>
+              </content>
+            </comment>
+            <contact localId="32" negated="false" storage="none" edge="none">
+              <position x="120" y="1030" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iAutoMode</variable>
+            </contact>
+            <contact localId="33" negated="true" storage="none" edge="none">
+              <position x="240" y="1030" />
+              <connectionPointIn>
+                <connection refLocalId="32" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iManMode</variable>
+            </contact>
+            <contact localId="34" negated="false" storage="none" edge="none">
+              <position x="360" y="1030" />
+              <connectionPointIn>
+                <connection refLocalId="33" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sWaitForCStart</variable>
+            </contact>
+            <contact localId="35" negated="true" storage="none" edge="none">
+              <position x="480" y="1030" />
+              <connectionPointIn>
+                <connection refLocalId="34" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iImmediateStop</variable>
+            </contact>
+            <contact localId="36" negated="true" storage="none" edge="none">
+              <position x="620" y="1030" />
+              <connectionPointIn>
+                <connection refLocalId="35" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sManModeActive</variable>
+            </contact>
+            <contact localId="37" negated="true" storage="none" edge="none">
+              <position x="760" y="1030" />
+              <connectionPointIn>
+                <connection refLocalId="36" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sAutoRunningActive</variable>
+            </contact>
+            <contact localId="38" negated="false" storage="none" edge="none">
+              <position x="900" y="1030" />
+              <connectionPointIn>
+                <connection refLocalId="37" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iAutoModeEnable</variable>
+            </contact>
+            <contact localId="39" negated="true" storage="none" edge="none">
+              <position x="1040" y="1030" />
+              <connectionPointIn>
+                <connection refLocalId="38" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sPowerOnReset</variable>
+            </contact>
+            <coil localId="40" negated="false" storage="none">
+              <position x="1180" y="1030" />
+              <connectionPointIn>
+                <connection refLocalId="39" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sWaitForCStart</variable>
+            </coil>
+            <comment localId="41" height="0" width="0">
+              <position x="10" y="1090" />
+              <content>
+                <xhtml:xhtml>CycleStartDelayTimer
+CycleStartDelayTimer</xhtml:xhtml>
+              </content>
+            </comment>
+            <block localId="42" typeName="TON" instanceName="CycleStartOnDelayTimer">
+              <position x="120" y="1160" />
+              <inputVariables>
+                <variable formalParameter="IN">
+                  <connectionPointIn>
+                    <connection refLocalId="0" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="PT">
+                  <connectionPointIn>
+                    <connection refLocalId="0" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="ET">
+                  <connectionPointIn>
+                    <connection refLocalId="0" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="Q">
+                  <connectionPointOut />
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">functionblock</CallType>
+                </data>
+              </addData>
+            </block>
+            <comment localId="43" height="0" width="0">
+              <position x="10" y="1220" />
+              <content>
+                <xhtml:xhtml>Drain,Dry,Cycle Stop Active
+Drain,Dry,Cycle Stop Active</xhtml:xhtml>
+              </content>
+            </comment>
+            <contact localId="44" negated="false" storage="none" edge="none">
+              <position x="120" y="1290" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>true</variable>
+            </contact>
+            <contact localId="45" negated="false" storage="none" edge="none">
+              <position x="240" y="1290" />
+              <connectionPointIn>
+                <connection refLocalId="44" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iDrainCycle</variable>
+            </contact>
+            <contact localId="46" negated="false" storage="none" edge="none">
+              <position x="360" y="1290" />
+              <connectionPointIn>
+                <connection refLocalId="45" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>true</variable>
+            </contact>
+            <contact localId="47" negated="false" storage="none" edge="none">
+              <position x="480" y="1290" />
+              <connectionPointIn>
+                <connection refLocalId="46" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDrainActive</variable>
+            </contact>
+            <contact localId="48" negated="false" storage="none" edge="none">
+              <position x="600" y="1290" />
+              <connectionPointIn>
+                <connection refLocalId="47" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sAutoRunningActive</variable>
+            </contact>
+            <contact localId="49" negated="true" storage="none" edge="none">
+              <position x="740" y="1290" />
+              <connectionPointIn>
+                <connection refLocalId="48" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sPowerOnReset</variable>
+            </contact>
+            <contact localId="50" negated="true" storage="none" edge="none">
+              <position x="880" y="1290" />
+              <connectionPointIn>
+                <connection refLocalId="49" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iDryCycle</variable>
+            </contact>
+            <contact localId="51" negated="true" storage="none" edge="none">
+              <position x="1020" y="1290" />
+              <connectionPointIn>
+                <connection refLocalId="50" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDryCycleActive</variable>
+            </contact>
+            <coil localId="52" negated="false" storage="none">
+              <position x="1160" y="1290" />
+              <connectionPointIn>
+                <connection refLocalId="51" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDrainActive</variable>
+            </coil>
+            <contact localId="53" negated="false" storage="none" edge="none">
+              <position x="120" y="1420" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>true</variable>
+            </contact>
+            <contact localId="54" negated="false" storage="none" edge="none">
+              <position x="240" y="1420" />
+              <connectionPointIn>
+                <connection refLocalId="53" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iDryCycle</variable>
+            </contact>
+            <contact localId="55" negated="false" storage="none" edge="none">
+              <position x="360" y="1420" />
+              <connectionPointIn>
+                <connection refLocalId="54" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sWaitForCStart</variable>
+            </contact>
+            <contact localId="56" negated="false" storage="none" edge="none">
+              <position x="480" y="1420" />
+              <connectionPointIn>
+                <connection refLocalId="55" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>true</variable>
+            </contact>
+            <contact localId="57" negated="false" storage="none" edge="none">
+              <position x="600" y="1420" />
+              <connectionPointIn>
+                <connection refLocalId="56" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDryCycleActive</variable>
+            </contact>
+            <contact localId="58" negated="true" storage="none" edge="none">
+              <position x="720" y="1420" />
+              <connectionPointIn>
+                <connection refLocalId="57" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sManModeActive</variable>
+            </contact>
+            <contact localId="59" negated="false" storage="none" edge="none">
+              <position x="860" y="1420" />
+              <connectionPointIn>
+                <connection refLocalId="58" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iAutoModeEnable</variable>
+            </contact>
+            <contact localId="60" negated="true" storage="none" edge="none">
+              <position x="1000" y="1420" />
+              <connectionPointIn>
+                <connection refLocalId="59" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sPowerOnReset</variable>
+            </contact>
+            <contact localId="61" negated="true" storage="none" edge="none">
+              <position x="1140" y="1420" />
+              <connectionPointIn>
+                <connection refLocalId="60" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iDrainCycle</variable>
+            </contact>
+            <contact localId="62" negated="true" storage="none" edge="none">
+              <position x="1280" y="1420" />
+              <connectionPointIn>
+                <connection refLocalId="61" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDrainActive</variable>
+            </contact>
+            <coil localId="63" negated="false" storage="none">
+              <position x="1420" y="1420" />
+              <connectionPointIn>
+                <connection refLocalId="62" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDryCycleActive</variable>
+            </coil>
+            <contact localId="64" negated="false" storage="none" edge="none">
+              <position x="120" y="1550" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>true</variable>
+            </contact>
+            <contact localId="65" negated="false" storage="none" edge="none">
+              <position x="240" y="1550" />
+              <connectionPointIn>
+                <connection refLocalId="64" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iCycleStop</variable>
+            </contact>
+            <contact localId="66" negated="false" storage="none" edge="none">
+              <position x="360" y="1550" />
+              <connectionPointIn>
+                <connection refLocalId="65" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>true</variable>
+            </contact>
+            <contact localId="67" negated="false" storage="none" edge="none">
+              <position x="480" y="1550" />
+              <connectionPointIn>
+                <connection refLocalId="66" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sAutoRunningActive</variable>
+            </contact>
+            <contact localId="68" negated="false" storage="none" edge="none">
+              <position x="600" y="1550" />
+              <connectionPointIn>
+                <connection refLocalId="67" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iManMode</variable>
+            </contact>
+            <contact localId="69" negated="false" storage="none" edge="none">
+              <position x="720" y="1550" />
+              <connectionPointIn>
+                <connection refLocalId="68" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>true</variable>
+            </contact>
+            <contact localId="70" negated="false" storage="none" edge="none">
+              <position x="840" y="1550" />
+              <connectionPointIn>
+                <connection refLocalId="69" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sCycleStopActive</variable>
+            </contact>
+            <contact localId="71" negated="false" storage="none" edge="none">
+              <position x="960" y="1550" />
+              <connectionPointIn>
+                <connection refLocalId="70" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sAutoRunningActive</variable>
+            </contact>
+            <contact localId="72" negated="true" storage="none" edge="none">
+              <position x="1100" y="1550" />
+              <connectionPointIn>
+                <connection refLocalId="71" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sPowerOnReset</variable>
+            </contact>
+            <coil localId="73" negated="false" storage="none">
+              <position x="1240" y="1550" />
+              <connectionPointIn>
+                <connection refLocalId="72" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sCycleStopActive</variable>
+            </coil>
+            <comment localId="74" height="0" width="0">
+              <position x="10" y="1610" />
+              <content>
+                <xhtml:xhtml>Auto running active
+Auto Running</xhtml:xhtml>
+              </content>
+            </comment>
+            <block localId="75" typeName="UNKNOWN" instanceName="inst_UNKNOWN_75">
+              <position x="120" y="1680" />
+              <inputVariables>
+                <variable formalParameter="IN">
+                  <connectionPointIn>
+                    <connection refLocalId="0" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="Q">
+                  <connectionPointOut />
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">functionblock</CallType>
+                </data>
+              </addData>
+            </block>
+            <contact localId="76" negated="true" storage="none" edge="none">
+              <position x="240" y="1680" />
+              <connectionPointIn>
+                <connection refLocalId="75" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iDrainCompleted</variable>
+            </contact>
+            <block localId="77" typeName="UNKNOWN" instanceName="inst_UNKNOWN_77">
+              <position x="360" y="1680" />
+              <inputVariables>
+                <variable formalParameter="IN">
+                  <connectionPointIn>
+                    <connection refLocalId="76" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="Q">
+                  <connectionPointOut />
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">functionblock</CallType>
+                </data>
+              </addData>
+            </block>
+            <contact localId="78" negated="true" storage="none" edge="none">
+              <position x="480" y="1680" />
+              <connectionPointIn>
+                <connection refLocalId="77" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDrainActive</variable>
+            </contact>
+            <contact localId="79" negated="false" storage="none" edge="none">
+              <position x="600" y="1680" />
+              <connectionPointIn>
+                <connection refLocalId="78" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iAutoModeEnable</variable>
+            </contact>
+            <contact localId="80" negated="true" storage="none" edge="none">
+              <position x="740" y="1680" />
+              <connectionPointIn>
+                <connection refLocalId="79" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sPowerOnReset</variable>
+            </contact>
+            <coil localId="81" negated="false" storage="none">
+              <position x="880" y="1680" />
+              <connectionPointIn>
+                <connection refLocalId="80" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sAutoRunningActive</variable>
+            </coil>
+            <comment localId="82" height="0" width="0">
+              <position x="10" y="1740" />
+              <content>
+                <xhtml:xhtml>Home running active
+Home Running Active</xhtml:xhtml>
+              </content>
+            </comment>
+            <contact localId="83" negated="false" storage="none" edge="none">
+              <position x="120" y="1810" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iHomePB</variable>
+            </contact>
+            <contact localId="84" negated="false" storage="none" edge="none">
+              <position x="240" y="1810" />
+              <connectionPointIn>
+                <connection refLocalId="83" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qManModeActive</variable>
+            </contact>
+            <contact localId="85" negated="false" storage="none" edge="none">
+              <position x="360" y="1810" />
+              <connectionPointIn>
+                <connection refLocalId="84" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sHomeRunningActive</variable>
+            </contact>
+            <contact localId="86" negated="true" storage="none" edge="none">
+              <position x="480" y="1810" />
+              <connectionPointIn>
+                <connection refLocalId="85" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iAutoMode</variable>
+            </contact>
+            <contact localId="87" negated="true" storage="none" edge="none">
+              <position x="620" y="1810" />
+              <connectionPointIn>
+                <connection refLocalId="86" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iHomeCompleted</variable>
+            </contact>
+            <contact localId="88" negated="true" storage="none" edge="none">
+              <position x="760" y="1810" />
+              <connectionPointIn>
+                <connection refLocalId="87" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sPowerOnReset</variable>
+            </contact>
+            <contact localId="89" negated="false" storage="none" edge="none">
+              <position x="900" y="1810" />
+              <connectionPointIn>
+                <connection refLocalId="88" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iManModeEnable</variable>
+            </contact>
+            <contact localId="90" negated="true" storage="none" edge="none">
+              <position x="1040" y="1810" />
+              <connectionPointIn>
+                <connection refLocalId="89" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iImmediateStop</variable>
+            </contact>
+            <coil localId="91" negated="false" storage="none">
+              <position x="1180" y="1810" />
+              <connectionPointIn>
+                <connection refLocalId="90" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sHomeRunningActive</variable>
+            </coil>
+            <comment localId="92" height="0" width="0">
+              <position x="10" y="1870" />
+              <content>
+                <xhtml:xhtml>Resetting module to initial state
+Module Reset</xhtml:xhtml>
+              </content>
+            </comment>
+            <contact localId="93" negated="true" storage="none" edge="none">
+              <position x="120" y="1940" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sManModeActive</variable>
+            </contact>
+            <contact localId="94" negated="true" storage="none" edge="none">
+              <position x="240" y="1940" />
+              <connectionPointIn>
+                <connection refLocalId="93" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sAutoRunningActive</variable>
+            </contact>
+            <contact localId="95" negated="true" storage="none" edge="none">
+              <position x="360" y="1940" />
+              <connectionPointIn>
+                <connection refLocalId="94" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sHomeRunningActive</variable>
+            </contact>
+            <contact localId="96" negated="false" storage="none" edge="none">
+              <position x="480" y="1940" />
+              <connectionPointIn>
+                <connection refLocalId="95" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sManModeActive</variable>
+            </contact>
+            <coil localId="97" negated="false" storage="none">
+              <position x="600" y="1940" />
+              <connectionPointIn>
+                <connection refLocalId="96" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sModuleReset</variable>
+            </coil>
+            <block localId="98" typeName="R_TRIG" instanceName="inst_R_TRIG_98">
+              <position x="120" y="2070" />
+              <inputVariables>
+                <variable formalParameter="in">
+                  <connectionPointIn>
+                    <connection refLocalId="0" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="bit">
+                  <connectionPointIn>
+                    <connection refLocalId="0" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="out">
+                  <connectionPointOut />
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">functionblock</CallType>
+                </data>
+              </addData>
+            </block>
+            <comment localId="99" height="0" width="0">
+              <position x="10" y="2130" />
+              <content>
+                <xhtml:xhtml>Message if machine is started without home conditions OK
+Machine Not At Home if C Start Press</xhtml:xhtml>
+              </content>
+            </comment>
+            <contact localId="100" negated="false" storage="none" edge="none">
+              <position x="120" y="2200" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iCycleStart</variable>
+            </contact>
+            <contact localId="101" negated="false" storage="none" edge="none">
+              <position x="260" y="2200" />
+              <connectionPointIn>
+                <connection refLocalId="100" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sWaitForCStart</variable>
+            </contact>
+            <contact localId="102" negated="true" storage="none" edge="none">
+              <position x="400" y="2200" />
+              <connectionPointIn>
+                <connection refLocalId="101" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iHomeCompleted</variable>
+            </contact>
+            <contact localId="103" negated="true" storage="none" edge="none">
+              <position x="540" y="2200" />
+              <connectionPointIn>
+                <connection refLocalId="102" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iBypassHomeOption</variable>
+            </contact>
+            <coil localId="104" negated="false" storage="none">
+              <position x="680" y="2200" />
+              <connectionPointIn>
+                <connection refLocalId="103" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sMsgCStartandNoHome</variable>
+            </coil>
+            <comment localId="105" height="0" width="0">
+              <position x="10" y="2260" />
+              <content>
+                <xhtml:xhtml>Message if manual mode selected during auto running
+MsgManModeinAutoRunning</xhtml:xhtml>
+              </content>
+            </comment>
+            <contact localId="106" negated="false" storage="none" edge="none">
+              <position x="120" y="2330" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sAutoRunningActive</variable>
+            </contact>
+            <contact localId="107" negated="false" storage="none" edge="none">
+              <position x="260" y="2330" />
+              <connectionPointIn>
+                <connection refLocalId="106" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iManMode</variable>
+            </contact>
+            <coil localId="108" negated="false" storage="none">
+              <position x="400" y="2330" />
+              <connectionPointIn>
+                <connection refLocalId="107" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sMsgManModeinAutoRunning</variable>
+            </coil>
+            <comment localId="109" height="0" width="0">
+              <position x="10" y="2390" />
+              <content>
+                <xhtml:xhtml>Outputs
+Outputs</xhtml:xhtml>
+              </content>
+            </comment>
+            <contact localId="110" negated="false" storage="none" edge="none">
+              <position x="120" y="2460" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sManModeActive</variable>
+            </contact>
+            <coil localId="111" negated="false" storage="none">
+              <position x="260" y="2460" />
+              <connectionPointIn>
+                <connection refLocalId="110" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qManModeActive</variable>
+            </coil>
+            <contact localId="112" negated="false" storage="none" edge="none">
+              <position x="120" y="2590" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sWaitForCStart</variable>
+            </contact>
+            <coil localId="113" negated="false" storage="none">
+              <position x="260" y="2590" />
+              <connectionPointIn>
+                <connection refLocalId="112" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qWaitForCStart</variable>
+            </coil>
+            <contact localId="114" negated="false" storage="none" edge="none">
+              <position x="120" y="2720" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDrainActive</variable>
+            </contact>
+            <coil localId="115" negated="false" storage="none">
+              <position x="260" y="2720" />
+              <connectionPointIn>
+                <connection refLocalId="114" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qDrainActive</variable>
+            </coil>
+            <contact localId="116" negated="false" storage="none" edge="none">
+              <position x="120" y="2850" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sDryCycleActive</variable>
+            </contact>
+            <coil localId="117" negated="false" storage="none">
+              <position x="260" y="2850" />
+              <connectionPointIn>
+                <connection refLocalId="116" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qDryCycleActive</variable>
+            </coil>
+            <contact localId="118" negated="false" storage="none" edge="none">
+              <position x="120" y="2980" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sCycleStopActive</variable>
+            </contact>
+            <coil localId="119" negated="false" storage="none">
+              <position x="260" y="2980" />
+              <connectionPointIn>
+                <connection refLocalId="118" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qCycleStopActive</variable>
+            </coil>
+            <contact localId="120" negated="false" storage="none" edge="none">
+              <position x="120" y="3110" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sAutoRunningActive</variable>
+            </contact>
+            <coil localId="121" negated="false" storage="none">
+              <position x="260" y="3110" />
+              <connectionPointIn>
+                <connection refLocalId="120" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qAutoRunningActive</variable>
+            </coil>
+            <contact localId="122" negated="false" storage="none" edge="none">
+              <position x="120" y="3240" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sHomeRunningActive</variable>
+            </contact>
+            <coil localId="123" negated="false" storage="none">
+              <position x="260" y="3240" />
+              <connectionPointIn>
+                <connection refLocalId="122" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qHomeRunningActive</variable>
+            </coil>
+            <contact localId="124" negated="false" storage="none" edge="none">
+              <position x="120" y="3370" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sModuleReset</variable>
+            </contact>
+            <coil localId="125" negated="false" storage="none">
+              <position x="260" y="3370" />
+              <connectionPointIn>
+                <connection refLocalId="124" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qModuleReset</variable>
+            </coil>
+            <contact localId="126" negated="false" storage="none" edge="none">
+              <position x="120" y="3500" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sMsgManModeinAutoRunning</variable>
+            </contact>
+            <coil localId="127" negated="false" storage="none">
+              <position x="260" y="3500" />
+              <connectionPointIn>
+                <connection refLocalId="126" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qMsgManModeinAutoRunning</variable>
+            </coil>
+            <contact localId="128" negated="false" storage="none" edge="none">
+              <position x="120" y="3630" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sMsgCStartandNoHome</variable>
+            </contact>
+            <coil localId="129" negated="false" storage="none">
+              <position x="260" y="3630" />
+              <connectionPointIn>
+                <connection refLocalId="128" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qMsgCStartandNoHome</variable>
+            </coil>
+            <rightPowerRail localId="2147483646">
+              <position x="1200" y="0" />
+              <connectionPointIn />
+            </rightPowerRail>
+          </LD>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation" xmlns="">
+            <InterfaceAsPlainText>
+              <xhtml:xhtml>FUNCTION_BLOCK PR_ModeManageNoMode
+</xhtml:xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId xmlns="">1a3c281f-14f6-443a-a16b-ca89e6620fe4</ObjectId>
+          </data>
+        </addData>
+      </pou>
+    </pous>
+  </types>
+  <instances>
+    <configurations />
+  </instances>
+  <addData>
+    <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
+      <ProjectStructure xmlns="">
+        <Object Name="PR_ModeManageNoMode" ObjectId="f7901926-a52e-4d19-9c4b-1d8d00dfce7c" />
+      </ProjectStructure>
+    </data>
+  </addData>
+</project>

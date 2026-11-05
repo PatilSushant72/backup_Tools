@@ -1,0 +1,188 @@
+State Number: 1
+Description: Wait for AutoRun
+State Name: NaN
+Action:
+Transitions:
+ - Condition: IF iAutoRunning & !iAreaClearPath2 & i!AreaClearPath3
+    - Goto State Number 10
+
+State Number: 10
+Description: Recovery Condition
+State Name: NaN
+Action:
+Transitions:
+ - Condition1: IF !iPalletSensor & !iAreaClearPath2 & !iAreaClearPath& iqRx
+    - Goto State Number 80
+ - Condition2: IF iPalletSensor & !iAreaClearPath2 & !iAreaClearPath3 & iqTx
+    - Goto State Number 140
+ - Condition3: IF !iqRx & !iqTx & !iAreaClearPath2 & !iAreaClearPath3 & !iPalletSensor
+    - Goto State Number 20
+
+State Number: 20
+Description: Wait for Path Configuration 1
+State Name: NaN
+Action:
+Transitions:
+ - Condition1: IF !iPalletSensor & iPickPath==1 & !qErr[2]
+    - Goto State Number 30
+ - Condition2: IF !iPalletSensor & iPickPath==2 & !qErr[2]
+    - Goto State Number 30
+
+State Number: 30
+Description: Wait for Lifter Configuration 1
+State Name: NaN
+Action:
+Transitions:
+ - Condition1: IF iPickPos==1 &!qErr[3]
+    - Goto State Number 50
+ - Condition2: IF iPickPos==2 &!qErr[3]
+    - Goto State Number 60
+ - Condition3: IF iPickPos==3 &!qErr[3]
+    - Goto State Number 70
+
+State Number: 40
+Description: Wait for RxTx bits
+State Name: NaN
+Action:
+Transitions:
+ - Condition1: IF !qErr[1] & If iqRx = True
+    - Goto State Number 80
+ - Condition2: IF !qErr[1] & If iqTx = True
+    - Goto State Number 140
+
+State Number: 50
+Description: Move Cylinder Home
+State Name: NaN
+Action: qCylHome
+Transitions:
+ - Condition: IF iCylHome & !iCylMid & !iCylWork
+    - Goto State Number 40
+
+State Number: 60
+Description: Move Cylinder Mid
+State Name: NaN
+Action: qCylMid
+Transitions:
+ - Condition: IF iCylMid & !iCylHome & !iCylWork
+    - Goto State Number 40
+
+State Number: 70
+Description: Move Cylinder Work
+State Name: NaN
+Action: qCylWork
+Transitions:
+ - Condition: IF iCylWork & !iCylHome & !iCylMid
+    - Goto State Number 40
+
+State Number: 80
+Description: Wait for OTS
+State Name: NaN
+Action:
+Transitions:
+ - Condition: IF !iPalletSensor & iAreaClearPath2 & iOTS_frm_P1 & iPickPath==1
+    - Goto State Number 100
+
+State Number: 80
+Description: Wait for OTS
+State Name: NaN
+Action:
+Transitions:
+ - Condition: IF !iPalletSensor & iAreaClearPath2 & iOTS_frm_P2 & iPickPath==2
+    - Goto State Number 90
+
+State Number: 90
+Description: Wait for Area Unhealthy P2
+State Name: NaN
+Action:
+Transitions:
+ - Condition1: IF iSendPath==2 & iqTx
+    - Goto State Number 170
+ - Condition2: IF iAreaClearPath2 & iqRx
+    - Goto State Number 100
+
+State Number: 100
+Description: Wait for pallet presence
+State Name: NaN
+Action: iqRx=False & iqTx=True
+Transitions:
+ - Condition: IF iPalletSensor & !iAreaClearPath2
+    - Goto State Number 110
+
+State Number: 110
+Description: Wait for Process completion
+State Name: NaN
+Action: qProcess
+Transitions:
+ - Condition: IF iProcessCmplt & iPalletSensor
+    - Goto State Number 120
+
+State Number: 120
+Description: Wait for Path Configuration 2
+State Name: NaN
+Action:
+Transitions:
+ - Condition1: IF iPalletSensor & !iProcessCmplt & iSendPath==2 & !qErr[2]
+    - Goto State Number 130
+ - Condition2: IF iPalletSensor & !iProcessCmplt & iSendPath==3 & !qErr[2]
+    - Goto State Number 130
+
+State Number: 130
+Description: Wait for Lifter Configuration 2
+State Name: NaN
+Action:
+Transitions:
+ - Condition1: IF iSendPos==1 & !qErr[3]
+    - Goto State Number 50
+ - Condition2: IF iSendPos==2 & !qErr[3]
+    - Goto State Number 60
+ - Condition3: IF iSendPos==3 & !qErr[3]
+    - Goto State Number 70
+
+State Number: 140
+Description: Wait for RTR
+State Name: NaN
+Action: iqTx=True
+Transitions:
+ - Condition: IF (iRTR_frm_P2 & iSendPath==2) || (iRTR_frm_P3 & iSendPath==3)
+    - Goto State Number 150
+
+State Number: 150
+Description: Wait for Pallet Absence
+State Name: NaN
+Action:
+Transitions:
+ - Condition1: IF !iPalletSensor & !iProcessCmplt & iSendPath==3
+    - Goto State Number 160
+ - Condition2: IF !iPalletSensor & !iProcessCmplt & iSendPath==2
+    - Goto State Number 90
+
+State Number: 160
+Description: Wait for Area Unhealthy P3
+State Name: NaN
+Action:
+Transitions:
+ - Condition: IF iAreaClearPath3 & iqTx
+    - Goto State Number 170
+
+State Number: 170
+Description: Wait for Next Cycle
+State Name: NaN
+Action:
+Transitions:
+ - Condition: IF iAutoRunning & !iAreaClearPath2 & i!AreaClearPath3
+    - Goto State Number 20
+
+State Number: 180
+Description: Errors
+State Name: Errors
+Action: 
+Transitions:
+ - Condition: IF (iCylHome & iCylMid) || (iCylMid & iCylWork) || (iCylWork & iCylHome)
+    - Goto State Number 190
+    - Action: qErr[1]=true
+ - Condition: IF (iPickPath>=3) ||(iSendPath>3) || (iSendPath==1) || (iSendPath==2 & iPickPath==2)
+    - Goto State Number 190
+    - Action: qErr[2]=true
+ - Condition: IF (iPickPos>3) || (iSendPos>3)
+    - Goto State Number 190
+    - Action: qErr[3]=true

@@ -1,0 +1,393 @@
+State: Error
+Warning Count: 0
+Error Count: 31
+	Path: Application test
+	DateTime: 28/07/2025 8:50:08 AM
+	State: Error
+	Description: 
+	Warning Count: 0
+	Error Count: 31
+		Path: PR_CentreStand_Fix_Seq_V12_1026b5
+		DateTime: 28/07/2025 8:50:09 AM
+		State: Error
+		Description: Test cases executed : 31 ; Passed : 0 ; Failed : 0 ; Inconclusive : 31
+		Warning Count: 0
+		Error Count: 31
+			Path: MemoryReset
+			DateTime: 28/07/2025 8:50:09 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 28/07/2025 8:50:09 AM
+				State: Error
+				Description: Failed to establish connection. Error code : TestSuite_PLCSIMInstanceShutDown
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans0
+			DateTime: 28/07/2025 8:50:09 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 28/07/2025 8:50:09 AM
+				State: Error
+				Description: Failed to establish connection. Error code : TestSuite_PLCSIMInstanceShutDown
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans138_T1
+			DateTime: 28/07/2025 8:50:09 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 28/07/2025 8:50:09 AM
+				State: Error
+				Description: Failed to establish connection. Error code : TestSuite_PLCSIMInstanceShutDown
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans139
+			DateTime: 28/07/2025 8:50:09 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 28/07/2025 8:50:09 AM
+				State: Error
+				Description: Failed to establish connection. Error code : TestSuite_PLCSIMInstanceShutDown
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans141
+			DateTime: 28/07/2025 8:50:09 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 28/07/2025 8:50:09 AM
+				State: Error
+				Description: Failed to establish connection. Error code : TestSuite_PLCSIMInstanceShutDown
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans142
+			DateTime: 28/07/2025 8:50:09 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 28/07/2025 8:50:09 AM
+				State: Error
+				Description: Failed to establish connection. Error code : TestSuite_PLCSIMInstanceShutDown
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans143
+			DateTime: 28/07/2025 8:50:09 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 28/07/2025 8:50:09 AM
+				State: Error
+				Description: Failed to establish connection. Error code : TestSuite_PLCSIMInstanceShutDown
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans144
+			DateTime: 28/07/2025 8:50:09 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 28/07/2025 8:50:09 AM
+				State: Error
+				Description: Failed to establish connection. Error code : TestSuite_PLCSIMInstanceShutDown
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans145
+			DateTime: 28/07/2025 8:50:09 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 28/07/2025 8:50:09 AM
+				State: Error
+				Description: Failed to establish connection. Error code : TestSuite_PLCSIMInstanceShutDown
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans146
+			DateTime: 28/07/2025 8:50:09 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 28/07/2025 8:50:09 AM
+				State: Error
+				Description: Failed to establish connection. Error code : TestSuite_PLCSIMInstanceShutDown
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans191
+			DateTime: 28/07/2025 8:50:09 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 28/07/2025 8:50:09 AM
+				State: Error
+				Description: Failed to establish connection. Error code : TestSuite_PLCSIMInstanceShutDown
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans147
+			DateTime: 28/07/2025 8:50:09 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 28/07/2025 8:50:09 AM
+				State: Error
+				Description: Failed to establish connection. Error code : TestSuite_PLCSIMInstanceShutDown
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans148
+			DateTime: 28/07/2025 8:50:09 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 28/07/2025 8:50:09 AM
+				State: Error
+				Description: Failed to establish connection. Error code : TestSuite_PLCSIMInstanceShutDown
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans149
+			DateTime: 28/07/2025 8:50:10 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 28/07/2025 8:50:10 AM
+				State: Error
+				Description: Failed to establish connection. Error code : TestSuite_PLCSIMInstanceShutDown
+				Warning Count: 0
+				Error Count: 1
+			Path: MemoryReset
+			DateTime: 28/07/2025 8:50:10 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 28/07/2025 8:50:10 AM
+				State: Error
+				Description: Failed to establish connection. Error code : TestSuite_PLCSIMInstanceShutDown
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans0
+			DateTime: 28/07/2025 8:50:10 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 28/07/2025 8:50:10 AM
+				State: Error
+				Description: Failed to establish connection. Error code : TestSuite_PLCSIMInstanceShutDown
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans138_T2_R2OpComp
+			DateTime: 28/07/2025 8:50:10 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 28/07/2025 8:50:10 AM
+				State: Error
+				Description: Failed to establish connection. Error code : TestSuite_PLCSIMInstanceShutDown
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans140_T2
+			DateTime: 28/07/2025 8:50:10 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 28/07/2025 8:50:10 AM
+				State: Error
+				Description: Failed to establish connection. Error code : TestSuite_PLCSIMInstanceShutDown
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans147
+			DateTime: 28/07/2025 8:50:10 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 28/07/2025 8:50:10 AM
+				State: Error
+				Description: Failed to establish connection. Error code : TestSuite_PLCSIMInstanceShutDown
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans148
+			DateTime: 28/07/2025 8:50:10 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 28/07/2025 8:50:10 AM
+				State: Error
+				Description: Failed to establish connection. Error code : TestSuite_PLCSIMInstanceShutDown
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans149
+			DateTime: 28/07/2025 8:50:10 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 28/07/2025 8:50:10 AM
+				State: Error
+				Description: Failed to establish connection. Error code : TestSuite_PLCSIMInstanceShutDown
+				Warning Count: 0
+				Error Count: 1
+			Path: MemoryReset
+			DateTime: 28/07/2025 8:50:10 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 28/07/2025 8:50:10 AM
+				State: Error
+				Description: Failed to establish connection. Error code : TestSuite_PLCSIMInstanceShutDown
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans0
+			DateTime: 28/07/2025 8:50:10 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 28/07/2025 8:50:10 AM
+				State: Error
+				Description: Failed to establish connection. Error code : TestSuite_PLCSIMInstanceShutDown
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans138_T2_R2OpNtComp
+			DateTime: 28/07/2025 8:50:10 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 28/07/2025 8:50:10 AM
+				State: Error
+				Description: Failed to establish connection. Error code : TestSuite_PLCSIMInstanceShutDown
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans140_T1
+			DateTime: 28/07/2025 8:50:10 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 28/07/2025 8:50:10 AM
+				State: Error
+				Description: Failed to establish connection. Error code : TestSuite_PLCSIMInstanceShutDown
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans145
+			DateTime: 28/07/2025 8:50:10 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 28/07/2025 8:50:10 AM
+				State: Error
+				Description: Failed to establish connection. Error code : TestSuite_PLCSIMInstanceShutDown
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans146
+			DateTime: 28/07/2025 8:50:10 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 28/07/2025 8:50:10 AM
+				State: Error
+				Description: Failed to establish connection. Error code : TestSuite_PLCSIMInstanceShutDown
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans191
+			DateTime: 28/07/2025 8:50:10 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 28/07/2025 8:50:10 AM
+				State: Error
+				Description: Failed to establish connection. Error code : TestSuite_PLCSIMInstanceShutDown
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans147
+			DateTime: 28/07/2025 8:50:10 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 28/07/2025 8:50:10 AM
+				State: Error
+				Description: Failed to establish connection. Error code : TestSuite_PLCSIMInstanceShutDown
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans148
+			DateTime: 28/07/2025 8:50:10 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 28/07/2025 8:50:10 AM
+				State: Error
+				Description: Failed to establish connection. Error code : TestSuite_PLCSIMInstanceShutDown
+				Warning Count: 0
+				Error Count: 1
+			Path: PR_CentreStand_Fix_Seq_V1Updt_Trans149
+			DateTime: 28/07/2025 8:50:10 AM
+			State: Error
+			Description: PLC_2[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 1
+				Path: 
+				DateTime: 28/07/2025 8:50:10 AM
+				State: Error
+				Description: Failed to establish connection. Error code : TestSuite_PLCSIMInstanceShutDown
+				Warning Count: 0
+				Error Count: 1
+	Path: 
+	DateTime: 28/07/2025 8:50:10 AM
+	State: Information
+	Description: Test case(s) execution completed with errors.
+	Warning Count: 0
+	Error Count: 0

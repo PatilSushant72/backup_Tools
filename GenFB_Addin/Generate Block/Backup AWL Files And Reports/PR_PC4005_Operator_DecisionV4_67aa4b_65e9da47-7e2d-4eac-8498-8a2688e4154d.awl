@@ -1,0 +1,547 @@
+FUNCTION_BLOCK "PR_PC4005_Operator_DecisionV4_67aa4b"
+{ S7_Optimized_Access := 'FALSE' }
+VERSION : 0.1
+      VAR_INPUT
+      iAutoRunning : BOOL;
+      iOperatorAuthorizationPB : BOOL;
+      iPCAckZero : BOOL;
+      iPCBypass : BOOL;
+      iPCDataReadOver : BOOL;
+      iPCDataWriteOver : BOOL;
+      iPalletPresentAtStation : BOOL;
+      iProcessOver : BOOL;
+      iProcessStartFormPZR : BOOL;
+      iRejectPB : BOOL;
+      iResetMem : BOOL;
+      iReset_fault : BOOL;
+      iScanOver : BOOL;
+      iScanResultNok : BOOL;
+      iScanResultOk : BOOL;
+      iScannerBypass : BOOL;
+      iSstMode : BOOL;
+      iSstPB : BOOL;
+      iUnloadCycleSelection : BOOL;
+   END_VAR
+
+   VAR_OUTPUT
+      qPCReadCmd : Bool;
+      qPCWriteCmd : Bool;
+      qProcessOver : Bool;
+      qResetPalletStatusData : Bool;
+      qScanCmd : Bool;
+   END_VAR
+
+   VAR
+      StateNo : INT;
+      s29_WaitProcStart : BOOL;
+      s29_WaitProcStart_T1 : BOOL;
+      s30_WaitCartnSheetOp : BOOL;
+      s30_WaitCartnSheetOp_T1 : BOOL;
+      s31_ChkCycleSelect : BOOL;
+      s31_ChkCycleSelect_T1 : BOOL;
+      s31_ChkCycleSelect_T2 : BOOL;
+      s32_WaitScanOver : BOOL;
+      s32_WaitScanOver_T1 : BOOL;
+      s33_ChkScanResult : BOOL;
+      s33_ChkScanResult_T1 : BOOL;
+      s33_ChkScanResult_T2 : BOOL;
+      s34_WaitOpDecision : BOOL;
+      s34_WaitOpDecision_T1 : BOOL;
+      s34_WaitOpDecision_T2 : BOOL;
+      s35_ChkPCAckReset0 : BOOL;
+      s35_ChkPCAckReset0_T1 : BOOL;
+      s36_WaitDataReadPC : BOOL;
+      s36_WaitDataReadPC_T1 : BOOL;
+      s38_WaitProcStartLow : BOOL;
+      s38_WaitProcStartLow_T1 : BOOL;
+      s39_WaitPalletAbsnt : BOOL;
+      s39_WaitPalletAbsnt_T1 : BOOL;
+      s40_WaitFaultReset : BOOL;
+      s40_WaitFaultReset_T1 : BOOL;
+      s41_ChkPCAckReset0Up : BOOL;
+      s41_ChkPCAckReset0Up_T1 : BOOL;
+      s42_WaitDataUploadPC : BOOL;
+      s42_WaitDataUploadPC_T1 : BOOL;
+      s43_ChkRecovery : BOOL;
+      s43_ChkRecovery_T1 : BOOL;
+      s43_ChkRecovery_T2 : BOOL;
+      sPalletAccepted : BOOL;
+      sProcessOver : BOOL;
+      sSst : BOOL;
+      sSstPulse : BOOL;
+      sSstRise : Bool;
+      sStWtResetRel : BOOL;
+      sStWtResetRel_T1 : BOOL;
+   END_VAR
+
+   VAR_TEMP
+      tOne : BOOL;
+   END_VAR
+
+BEGIN
+NETWORK
+TITLE = 
+      O #tOne;
+      ON #tOne;
+      = #tOne;
+NETWORK
+TITLE = Create Single Step Pulse bit
+      A #iSstPB;
+      FP #sSstRise;
+      = #sSstPulse;
+NETWORK
+TITLE = Create Single Step bit
+      A #iSstMode;
+      A #sSstPulse;
+      ON #iSstMode;
+      = #sSst;
+NETWORK
+TITLE = Transition for STATE Num:0 Reset Released
+      A #sStWtResetRel;
+      A #iAutoRunning;
+      = #sStWtResetRel_T1;
+NETWORK
+TITLE = STATE Num:0 Reset Released
+      A(;
+      O #sStWtResetRel;
+      ON #iAutoRunning;
+      );
+      AN #sStWtResetRel_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #sStWtResetRel;
+      A %L1.0;
+      JNB Label_0;
+      L 0;
+      T #StateNo;
+Label_0:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:29 Wait for Process Start
+      A #s29_WaitProcStart;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iProcessStartFormPZR;
+      A #iPalletPresentAtStation;
+      = #s29_WaitProcStart_T1;
+NETWORK
+TITLE = STATE Num:29 Wait for Process Start
+      A(;
+      O #s29_WaitProcStart;
+      O #s39_WaitPalletAbsnt_T1;
+      O #sStWtResetRel_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s29_WaitProcStart_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s29_WaitProcStart;
+      A %L1.0;
+      JNB Label_29;
+      L 29;
+      T #StateNo;
+Label_29:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:30 Wait for Carton Sheet Placement & Operator Authorization
+      A #s30_WaitCartnSheetOp;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iOperatorAuthorizationPB;
+      = #s30_WaitCartnSheetOp_T1;
+NETWORK
+TITLE = STATE Num:30 Wait for Carton Sheet Placement & Operator Authorization
+      A(;
+      O #s30_WaitCartnSheetOp;
+      O #s43_ChkRecovery_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s30_WaitCartnSheetOp_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s30_WaitCartnSheetOp;
+      A %L1.0;
+      JNB Label_30;
+      L 30;
+      T #StateNo;
+Label_30:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:31 Check Cycle Selection
+      A #s31_ChkCycleSelect;
+      AN #sStWtResetRel;
+      A #sSst;
+      = %L1.0;
+      A %L1.0;
+      AN #iUnloadCycleSelection;
+      = #s31_ChkCycleSelect_T1;
+      A %L1.0;
+      AN #s31_ChkCycleSelect_T1;
+      A #iUnloadCycleSelection;
+      = #s31_ChkCycleSelect_T2;
+NETWORK
+TITLE = STATE Num:31 Check Cycle Selection
+      A(;
+      O #s31_ChkCycleSelect;
+      O #s30_WaitCartnSheetOp_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s31_ChkCycleSelect_T1;
+      AN #s31_ChkCycleSelect_T2;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s31_ChkCycleSelect;
+      A %L1.0;
+      JNB Label_31;
+      L 31;
+      T #StateNo;
+Label_31:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:32 Wait for Scan Over
+      A #s32_WaitScanOver;
+      AN #sStWtResetRel;
+      A #sSst;
+      = %L1.0;
+      A %L1.0;
+      A(;
+      O #iScanOver;
+      O #iScannerBypass;
+      );
+      = #s32_WaitScanOver_T1;
+NETWORK
+TITLE = STATE Num:32 Wait for Scan Over
+      A(;
+      O #s32_WaitScanOver;
+      O #s31_ChkCycleSelect_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s32_WaitScanOver_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s32_WaitScanOver;
+      A %L1.0;
+      JNB Label_32;
+      L 32;
+      T #StateNo;
+Label_32:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:32 Wait for Scan Over
+      A #s32_WaitScanOver;
+      = #qScanCmd;
+NETWORK
+TITLE = Transition for STATE Num:33 Check Scan result
+      A #s33_ChkScanResult;
+      AN #sStWtResetRel;
+      A #sSst;
+      = %L1.0;
+      A %L1.0;
+      A(;
+      A #iScanOver;
+      A #iScanResultOk;
+      O #iScannerBypass;
+      );
+      = #s33_ChkScanResult_T1;
+      A %L1.0;
+      AN #s33_ChkScanResult_T1;
+      A #iScanOver;
+      A #iScanResultNok;
+      = #s33_ChkScanResult_T2;
+NETWORK
+TITLE = STATE Num:33 Check Scan result
+      A(;
+      O #s33_ChkScanResult;
+      O #s32_WaitScanOver_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s33_ChkScanResult_T1;
+      AN #s33_ChkScanResult_T2;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s33_ChkScanResult;
+      A %L1.0;
+      JNB Label_33;
+      L 33;
+      T #StateNo;
+Label_33:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:34 Wait for Operator Decision
+      A #s34_WaitOpDecision;
+      AN #sStWtResetRel;
+      A #sSst;
+      = %L1.0;
+      A %L1.0;
+      A #iOperatorAuthorizationPB;
+      = #s34_WaitOpDecision_T1;
+      A %L1.0;
+      AN #s34_WaitOpDecision_T1;
+      A #iRejectPB;
+      = #s34_WaitOpDecision_T2;
+NETWORK
+TITLE = STATE Num:34 Wait for Operator Decision
+      A(;
+      O #s34_WaitOpDecision;
+      O #s33_ChkScanResult_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s34_WaitOpDecision_T1;
+      AN #s34_WaitOpDecision_T2;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s34_WaitOpDecision;
+      A %L1.0;
+      JNB Label_34;
+      L 34;
+      T #StateNo;
+Label_34:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:34 Wait for Operator Decision
+      A #s34_WaitOpDecision;
+      A #iOperatorAuthorizationPB;
+      S #sPalletAccepted;
+NETWORK
+TITLE = Transition for STATE Num:35 Check PC Acknowledge value reset to zero
+      A #s35_ChkPCAckReset0;
+      AN #sStWtResetRel;
+      A #sSst;
+      = %L1.0;
+      A %L1.0;
+      A(;
+      O #iPCAckZero;
+      O #iPCBypass;
+      );
+      = #s35_ChkPCAckReset0_T1;
+NETWORK
+TITLE = STATE Num:35 Check PC Acknowledge value reset to zero
+      A(;
+      O #s35_ChkPCAckReset0;
+      O #s34_WaitOpDecision_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s35_ChkPCAckReset0_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s35_ChkPCAckReset0;
+      A %L1.0;
+      JNB Label_35;
+      L 35;
+      T #StateNo;
+Label_35:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:36 Wait for Data Read From PC
+      A #s36_WaitDataReadPC;
+      AN #sStWtResetRel;
+      A #sSst;
+      = %L1.0;
+      A %L1.0;
+      A(;
+      O #iPCDataReadOver;
+      O #iPCBypass;
+      );
+      = #s36_WaitDataReadPC_T1;
+NETWORK
+TITLE = STATE Num:36 Wait for Data Read From PC
+      A(;
+      O #s36_WaitDataReadPC;
+      O #s35_ChkPCAckReset0_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s36_WaitDataReadPC_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s36_WaitDataReadPC;
+      A %L1.0;
+      JNB Label_36;
+      L 36;
+      T #StateNo;
+Label_36:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:36 Wait for Data Read From PC
+      A #s36_WaitDataReadPC;
+      = #qPCReadCmd;
+NETWORK
+TITLE = Transition for STATE Num:38 Wait for Process Start Low
+      A #s38_WaitProcStartLow;
+      AN #sStWtResetRel;
+      A #sSst;
+      AN #iProcessStartFormPZR;
+      = #s38_WaitProcStartLow_T1;
+NETWORK
+TITLE = STATE Num:38 Wait for Process Start Low
+      A(;
+      O #s38_WaitProcStartLow;
+      O #s31_ChkCycleSelect_T2;
+      O #s36_WaitDataReadPC_T1;
+      O #s40_WaitFaultReset_T1;
+      O #s42_WaitDataUploadPC_T1;
+O #s43_ChkRecovery_T2;
+      );
+      AN #sStWtResetRel;
+      AN #s38_WaitProcStartLow_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s38_WaitProcStartLow;
+      A %L1.0;
+      JNB Label_38;
+      L 38;
+      T #StateNo;
+Label_38:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:38 Wait for Process Start Low
+      A #s38_WaitProcStartLow;
+      S #sProcessOver;
+      = #qProcessOver;
+NETWORK
+TITLE = Transition for STATE Num:39 Wait for Pallet Absent
+      A #s39_WaitPalletAbsnt;
+      AN #sStWtResetRel;
+      A #sSst;
+      AN #iPalletPresentAtStation;
+      = #s39_WaitPalletAbsnt_T1;
+NETWORK
+TITLE = STATE Num:39 Wait for Pallet Absent
+      A(;
+      O #s39_WaitPalletAbsnt;
+      O #s38_WaitProcStartLow_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s39_WaitPalletAbsnt_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s39_WaitPalletAbsnt;
+      A %L1.0;
+      JNB Label_39;
+      L 39;
+      T #StateNo;
+Label_39:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:39 Wait for Pallet Absent
+      A #s39_WaitPalletAbsnt;
+      AN #iAutoRunning;
+      A #iResetMem;
+      = #qResetPalletStatusData;
+NETWORK
+TITLE = Transition for STATE Num:40 Wait for Fault Reset
+      A #s40_WaitFaultReset;
+      AN #sStWtResetRel;
+      A #sSst;
+      A #iReset_fault;
+      = #s40_WaitFaultReset_T1;
+NETWORK
+TITLE = STATE Num:40 Wait for Fault Reset
+      A(;
+      O #s40_WaitFaultReset;
+      O #s33_ChkScanResult_T2;
+      );
+      AN #sStWtResetRel;
+      AN #s40_WaitFaultReset_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s40_WaitFaultReset;
+      A %L1.0;
+      JNB Label_40;
+      L 40;
+      T #StateNo;
+Label_40:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:41 Check PC Acknowledge value reset to zero for Upload
+      A #s41_ChkPCAckReset0Up;
+      AN #sStWtResetRel;
+      A #sSst;
+      = %L1.0;
+      A %L1.0;
+      A(;
+      O #iPCAckZero;
+      O #iPCBypass;
+      );
+      = #s41_ChkPCAckReset0Up_T1;
+NETWORK
+TITLE = STATE Num:41 Check PC Acknowledge value reset to zero for Upload
+      A(;
+      O #s41_ChkPCAckReset0Up;
+      O #s34_WaitOpDecision_T2;
+      );
+      AN #sStWtResetRel;
+      AN #s41_ChkPCAckReset0Up_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s41_ChkPCAckReset0Up;
+      A %L1.0;
+      JNB Label_41;
+      L 41;
+      T #StateNo;
+Label_41:      NOP 0;
+NETWORK
+TITLE = Transition for STATE Num:42 Wait for Data Upload From PC
+      A #s42_WaitDataUploadPC;
+      AN #sStWtResetRel;
+      A #sSst;
+      = %L1.0;
+      A %L1.0;
+      A(;
+      O #iPCDataWriteOver;
+      O #iPCBypass;
+      );
+      = #s42_WaitDataUploadPC_T1;
+NETWORK
+TITLE = STATE Num:42 Wait for Data Upload From PC
+      A(;
+      O #s42_WaitDataUploadPC;
+      O #s41_ChkPCAckReset0Up_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s42_WaitDataUploadPC_T1;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s42_WaitDataUploadPC;
+      A %L1.0;
+      JNB Label_42;
+      L 42;
+      T #StateNo;
+Label_42:      NOP 0;
+NETWORK
+TITLE = Actions for STATE Num:42 Wait for Data Upload From PC
+      A #s42_WaitDataUploadPC;
+      = #qPCWriteCmd;
+NETWORK
+TITLE = Transition for STATE Num:43 Check Recovery
+      A #s43_ChkRecovery;
+      AN #sStWtResetRel;
+      A #sSst;
+      = %L1.0;
+      A %L1.0;
+      AN #iProcessOver;
+      = #s43_ChkRecovery_T1;
+      A %L1.0;
+      AN #s43_ChkRecovery_T1;
+      A #iProcessOver;
+      = #s43_ChkRecovery_T2;
+NETWORK
+TITLE = STATE Num:43 Check Recovery
+      A(;
+      O #s43_ChkRecovery;
+      O #s29_WaitProcStart_T1;
+      );
+      AN #sStWtResetRel;
+      AN #s43_ChkRecovery_T1;
+      AN #s43_ChkRecovery_T2;
+      = %L1.0;
+      A %L1.0;
+      BLD 102;
+      = #s43_ChkRecovery;
+      A %L1.0;
+      JNB Label_43;
+      L 43;
+      T #StateNo;
+Label_43:      NOP 0;
+END_FUNCTION_BLOCK

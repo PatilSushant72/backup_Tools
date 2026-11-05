@@ -1,0 +1,2850 @@
+TEST_SET "FB_PR_GantryUnload_Seqv25_V6"
+
+PROPERTY
+
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+
+END_PROPERTY
+
+SEQUENCER
+
+//Normal Flow
+"MemoryReset"();
+"PR_GantryUnload_Seqv2_Trans0"();
+"PR_GantryUnload_Seqv2_Trans44"();
+"PR_GantryUnload_Seqv2_Trans45"();
+"PR_GantryUnload_Seqv2_Trans46_T1"();
+"PR_GantryUnload_Seqv2_Trans47"();
+"PR_GantryUnload_Seqv2_Trans48_T1"();
+"PR_GantryUnload_Seqv2_Trans49"();
+"PR_GantryUnload_Seqv2_Trans50"();
+"PR_GantryUnload_Seqv2_Trans51"();
+"PR_GantryUnload_Seqv2_Trans52_T1"();
+"PR_GantryUnload_Seqv2_Trans53_T1"();
+"PR_GantryUnload_Seqv2_Trans54"();
+"PR_GantryUnload_Seqv2_Trans55"();
+"PR_GantryUnload_Seqv2_Trans56"();
+"PR_GantryUnload_Seqv2_Trans57"();
+"PR_GantryUnload_Seqv2_Trans58"();
+
+//Recovery Flow 1
+"MemoryReset"();
+"PR_GantryUnload_Seqv2_Trans0"();
+"PR_GantryUnload_Seqv2_Trans44"();
+"PR_GantryUnload_Seqv2_Trans45"();
+"PR_GantryUnload_Seqv2_Trans46_T1"();
+"PR_GantryUnload_Seqv2_Trans47"();
+"PR_GantryUnload_Seqv2_Trans48_T2"();
+"PR_GantryUnload_Seqv2_Trans52_T1"();
+"PR_GantryUnload_Seqv2_Trans68"();
+"PR_GantryUnload_Seqv2_Trans69"();
+"PR_GantryUnload_Seqv2_Trans53_T1"();
+
+//Recovery Flow 2
+"MemoryReset"();
+"PR_GantryUnload_Seqv2_Trans0"();
+"PR_GantryUnload_Seqv2_Trans44"();
+"PR_GantryUnload_Seqv2_Trans45"();
+"PR_GantryUnload_Seqv2_Trans46_T1"();
+"PR_GantryUnload_Seqv2_Trans47"();
+"PR_GantryUnload_Seqv2_Trans48_T3"();
+"PR_GantryUnload_Seqv2_Trans53_T1"();
+
+//Distance Out of PC Range Flow
+"MemoryReset"();
+"PR_GantryUnload_Seqv2_Trans0"();
+"PR_GantryUnload_Seqv2_Trans44"();
+"PR_GantryUnload_Seqv2_Trans45"();
+"PR_GantryUnload_Seqv2_Trans46_T1"();
+"PR_GantryUnload_Seqv2_Trans47"();
+"PR_GantryUnload_Seqv2_Trans48_T1"();
+"PR_GantryUnload_Seqv2_Trans49"();
+"PR_GantryUnload_Seqv2_Trans50"();
+"PR_GantryUnload_Seqv2_Trans51"();
+"PR_GantryUnload_Seqv2_Trans52_T1"();
+"PR_GantryUnload_Seqv2_Trans53_T2"();
+"PR_GantryUnload_Seqv2_Trans61_T1"();
+"PR_GantryUnload_Seqv2_Trans62"();
+"PR_GantryUnload_Seqv2_Trans63"();
+
+//Distance Out of Tolerance Flow
+"MemoryReset"();
+"PR_GantryUnload_Seqv2_Trans0"();
+"PR_GantryUnload_Seqv2_Trans44"();
+"PR_GantryUnload_Seqv2_Trans45"();
+"PR_GantryUnload_Seqv2_Trans46_T1"();
+"PR_GantryUnload_Seqv2_Trans47"();
+"PR_GantryUnload_Seqv2_Trans48_T1"();
+"PR_GantryUnload_Seqv2_Trans49"();
+"PR_GantryUnload_Seqv2_Trans50"();
+"PR_GantryUnload_Seqv2_Trans51"();
+"PR_GantryUnload_Seqv2_Trans52_T1"();
+"PR_GantryUnload_Seqv2_Trans53_T2"();
+"PR_GantryUnload_Seqv2_Trans61_T2"();
+"PR_GantryUnload_Seqv2_Trans64"();
+
+//Scan Error Flow
+"MemoryReset"();
+"PR_GantryUnload_Seqv2_Trans0"();
+"PR_GantryUnload_Seqv2_Trans44"();
+"PR_GantryUnload_Seqv2_Trans45"();
+"PR_GantryUnload_Seqv2_Trans46_T1"();
+"PR_GantryUnload_Seqv2_Trans47"();
+"PR_GantryUnload_Seqv2_Trans48_T2"();
+"PR_GantryUnload_Seqv2_Trans52_T2"();
+"PR_GantryUnload_Seqv2_Trans65_T1"();
+"PR_GantryUnload_Seqv2_Trans52_T1"();
+
+//Scan Retry Count Exceeded Flow
+"MemoryReset"();
+"PR_GantryUnload_Seqv2_Trans0"();
+"PR_GantryUnload_Seqv2_Trans44"();
+"PR_GantryUnload_Seqv2_Trans45"();
+"PR_GantryUnload_Seqv2_Trans46_T1"();
+"PR_GantryUnload_Seqv2_Trans47"();
+"PR_GantryUnload_Seqv2_Trans48_T2"();
+"PR_GantryUnload_Seqv2_Trans52_T2"();
+"PR_GantryUnload_Seqv2_Trans65_T2"();
+"PR_GantryUnload_Seqv2_Trans66"();
+"PR_GantryUnload_Seqv2_Trans52_T1"();
+
+//Centering Slide Not Home Flow
+"MemoryReset"();
+"PR_GantryUnload_Seqv2_Trans0"();
+"PR_GantryUnload_Seqv2_Trans44"();
+"PR_GantryUnload_Seqv2_Trans45"();
+"PR_GantryUnload_Seqv2_Trans46_T2"();
+"PR_GantryUnload_Seqv2_Trans67"();
+
+END_SEQUENCER
+
+END_TEST_SET
+
+TEST_CASE "MemoryReset"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+INIT
+PLC_MEMORY_RESET :=True;
+END_INIT
+
+VAR
+
+END_VAR
+
+STEP:"Cycle" 
+RUN (CYCLES :=1);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_GantryUnload_Seqv2_Trans0"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: FB_PR_GantryUnload_Seqv25_V3_DB.iSstPB;
+iSstMode: FB_PR_GantryUnload_Seqv25_V3_DB.iSstMode;
+iAutoRunning: FB_PR_GantryUnload_Seqv25_V3_DB.iAutoRunning;
+iReset_fault: FB_PR_GantryUnload_Seqv25_V3_DB.iReset_fault;
+iGantryOutofZone: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryOutofZone;
+iCenteringSlideAtHome: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtHome;
+iProcessStart: FB_PR_GantryUnload_Seqv25_V3_DB.iProcessStart;
+iCenteringSlideAtWork: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtWork;
+iScanOver: FB_PR_GantryUnload_Seqv25_V3_DB.iScanOver;
+iScanErr: FB_PR_GantryUnload_Seqv25_V3_DB.iScanErr;
+iScannerBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iScannerBypass;
+iDryCycleWithoutPal: FB_PR_GantryUnload_Seqv25_V3_DB.iDryCycleWithoutPal;
+iDistSensorIP: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSensorIP;
+iGantryPickOver: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryPickOver;
+iPalletPresent: FB_PR_GantryUnload_Seqv25_V3_DB.iPalletPresent;
+iPCAckZero: FB_PR_GantryUnload_Seqv25_V3_DB.iPCAckZero;
+iPCBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iPCBypass;
+iPCDataWriteOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataWriteOver;
+iRetryPB: FB_PR_GantryUnload_Seqv25_V3_DB.iRetryPB;
+iPCDataReadOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataReadOver;
+iDistSenLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenLowLimit;
+iDistSenHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenHighLimit;
+StateNo: FB_PR_GantryUnload_Seqv25_V3_DB.StateNo;
+qCenteringSlideAdvance: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideAdvance;
+qCheckDistance: FB_PR_GantryUnload_Seqv25_V3_DB.qCheckDistance;
+qCenteringSlideRetract: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideRetract;
+qScanCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qScanCmd;
+qGantryOkToUnload: FB_PR_GantryUnload_Seqv25_V3_DB.qGantryOkToUnload;
+qProcessOver: FB_PR_GantryUnload_Seqv25_V3_DB.qProcessOver;
+qPCUploadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCUploadCmd;
+qMsg_0: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[0];
+qMsg_1: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[1];
+qMsg_2: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[2];
+qPCReadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCReadCmd;
+sRecoveryInt: FB_PR_GantryUnload_Seqv25_V3_DB.sRecoveryInt;
+sDistanceLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceLowLimit;
+sDistanceHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceHighLimit;
+sScanRetryCount: FB_PR_GantryUnload_Seqv25_V3_DB.sScanRetryCount;
+END_VAR
+
+STEP: "Initialize, Transition 0"
+iSstPB:=False;
+iSstMode:=False;
+iAutoRunning:=False;
+iReset_fault:=False;
+iGantryOutofZone:=False;
+iCenteringSlideAtHome:=False;
+iProcessStart:=False;
+iCenteringSlideAtWork:=False;
+iScanOver:=False;
+iScanErr:=False;
+iScannerBypass:=False;
+iDryCycleWithoutPal:=False;
+iDistSensorIP:=0;
+iGantryPickOver:=False;
+iPalletPresent:=False;
+iPCAckZero:=False;
+iPCBypass:=False;
+iPCDataWriteOver:=False;
+iRetryPB:=False;
+iPCDataReadOver:=False;
+iDistSenLowLimit:=0;
+iDistSenHighLimit:=0;
+
+RUN(CYCLES := 1);
+ASSERT.Equal(StateNo, 44);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_GantryUnload_Seqv2_Trans44"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: FB_PR_GantryUnload_Seqv25_V3_DB.iSstPB;
+iSstMode: FB_PR_GantryUnload_Seqv25_V3_DB.iSstMode;
+iAutoRunning: FB_PR_GantryUnload_Seqv25_V3_DB.iAutoRunning;
+iReset_fault: FB_PR_GantryUnload_Seqv25_V3_DB.iReset_fault;
+iGantryOutofZone: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryOutofZone;
+iCenteringSlideAtHome: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtHome;
+iProcessStart: FB_PR_GantryUnload_Seqv25_V3_DB.iProcessStart;
+iCenteringSlideAtWork: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtWork;
+iScanOver: FB_PR_GantryUnload_Seqv25_V3_DB.iScanOver;
+iScanErr: FB_PR_GantryUnload_Seqv25_V3_DB.iScanErr;
+iScannerBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iScannerBypass;
+iDryCycleWithoutPal: FB_PR_GantryUnload_Seqv25_V3_DB.iDryCycleWithoutPal;
+iDistSensorIP: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSensorIP;
+iGantryPickOver: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryPickOver;
+iPalletPresent: FB_PR_GantryUnload_Seqv25_V3_DB.iPalletPresent;
+iPCAckZero: FB_PR_GantryUnload_Seqv25_V3_DB.iPCAckZero;
+iPCBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iPCBypass;
+iPCDataWriteOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataWriteOver;
+iRetryPB: FB_PR_GantryUnload_Seqv25_V3_DB.iRetryPB;
+iPCDataReadOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataReadOver;
+iDistSenLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenLowLimit;
+iDistSenHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenHighLimit;
+StateNo: FB_PR_GantryUnload_Seqv25_V3_DB.StateNo;
+qCenteringSlideAdvance: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideAdvance;
+qCheckDistance: FB_PR_GantryUnload_Seqv25_V3_DB.qCheckDistance;
+qCenteringSlideRetract: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideRetract;
+qScanCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qScanCmd;
+qGantryOkToUnload: FB_PR_GantryUnload_Seqv25_V3_DB.qGantryOkToUnload;
+qProcessOver: FB_PR_GantryUnload_Seqv25_V3_DB.qProcessOver;
+qPCUploadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCUploadCmd;
+qMsg_0: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[0];
+qMsg_1: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[1];
+qMsg_2: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[2];
+qPCReadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCReadCmd;
+sRecoveryInt: FB_PR_GantryUnload_Seqv25_V3_DB.sRecoveryInt;
+sDistanceLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceLowLimit;
+sDistanceHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceHighLimit;
+sScanRetryCount: FB_PR_GantryUnload_Seqv25_V3_DB.sScanRetryCount;
+END_VAR
+
+STEP: "Wait for reset release, Transition 44"
+iAutoRunning:=True;
+
+iSstPB:=False;
+iSstMode:=False;
+iReset_fault:=False;
+iGantryOutofZone:=False;
+iCenteringSlideAtHome:=False;
+iProcessStart:=False;
+iCenteringSlideAtWork:=False;
+iScanOver:=False;
+iScanErr:=False;
+iScannerBypass:=False;
+iDryCycleWithoutPal:=False;
+iDistSensorIP:=0;
+iGantryPickOver:=False;
+iPalletPresent:=False;
+iPCAckZero:=False;
+iPCBypass:=False;
+iPCDataWriteOver:=False;
+iRetryPB:=False;
+iPCDataReadOver:=False;
+iDistSenLowLimit:=0;
+iDistSenHighLimit:=0;
+
+RUN(CYCLES := 1);
+ASSERT.Equal(StateNo, 45);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_GantryUnload_Seqv2_Trans45"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: FB_PR_GantryUnload_Seqv25_V3_DB.iSstPB;
+iSstMode: FB_PR_GantryUnload_Seqv25_V3_DB.iSstMode;
+iAutoRunning: FB_PR_GantryUnload_Seqv25_V3_DB.iAutoRunning;
+iReset_fault: FB_PR_GantryUnload_Seqv25_V3_DB.iReset_fault;
+iGantryOutofZone: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryOutofZone;
+iCenteringSlideAtHome: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtHome;
+iProcessStart: FB_PR_GantryUnload_Seqv25_V3_DB.iProcessStart;
+iCenteringSlideAtWork: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtWork;
+iScanOver: FB_PR_GantryUnload_Seqv25_V3_DB.iScanOver;
+iScanErr: FB_PR_GantryUnload_Seqv25_V3_DB.iScanErr;
+iScannerBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iScannerBypass;
+iDryCycleWithoutPal: FB_PR_GantryUnload_Seqv25_V3_DB.iDryCycleWithoutPal;
+iDistSensorIP: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSensorIP;
+iGantryPickOver: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryPickOver;
+iPalletPresent: FB_PR_GantryUnload_Seqv25_V3_DB.iPalletPresent;
+iPCAckZero: FB_PR_GantryUnload_Seqv25_V3_DB.iPCAckZero;
+iPCBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iPCBypass;
+iPCDataWriteOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataWriteOver;
+iRetryPB: FB_PR_GantryUnload_Seqv25_V3_DB.iRetryPB;
+iPCDataReadOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataReadOver;
+iDistSenLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenLowLimit;
+iDistSenHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenHighLimit;
+StateNo: FB_PR_GantryUnload_Seqv25_V3_DB.StateNo;
+qCenteringSlideAdvance: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideAdvance;
+qCheckDistance: FB_PR_GantryUnload_Seqv25_V3_DB.qCheckDistance;
+qCenteringSlideRetract: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideRetract;
+qScanCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qScanCmd;
+qGantryOkToUnload: FB_PR_GantryUnload_Seqv25_V3_DB.qGantryOkToUnload;
+qProcessOver: FB_PR_GantryUnload_Seqv25_V3_DB.qProcessOver;
+qPCUploadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCUploadCmd;
+qMsg_0: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[0];
+qMsg_1: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[1];
+qMsg_2: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[2];
+qPCReadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCReadCmd;
+sRecoveryInt: FB_PR_GantryUnload_Seqv25_V3_DB.sRecoveryInt;
+sDistanceLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceLowLimit;
+sDistanceHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceHighLimit;
+sScanRetryCount: FB_PR_GantryUnload_Seqv25_V3_DB.sScanRetryCount;
+END_VAR
+
+STEP: "Wait for Gantry Out Of Zone, Transition 45"
+iGantryOutofZone:=True;
+
+iSstPB:=False;
+iSstMode:=False;
+iAutoRunning:=True;
+iReset_fault:=False;
+iCenteringSlideAtHome:=False;
+iProcessStart:=False;
+iCenteringSlideAtWork:=False;
+iScanOver:=False;
+iScanErr:=False;
+iScannerBypass:=False;
+iDryCycleWithoutPal:=False;
+iDistSensorIP:=0;
+iGantryPickOver:=False;
+iPalletPresent:=False;
+iPCAckZero:=False;
+iPCBypass:=False;
+iPCDataWriteOver:=False;
+iRetryPB:=False;
+iPCDataReadOver:=False;
+iDistSenLowLimit:=0;
+iDistSenHighLimit:=0;
+
+RUN(CYCLES := 1);
+ASSERT.Equal(StateNo, 46);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_GantryUnload_Seqv2_Trans46_T1"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: FB_PR_GantryUnload_Seqv25_V3_DB.iSstPB;
+iSstMode: FB_PR_GantryUnload_Seqv25_V3_DB.iSstMode;
+iAutoRunning: FB_PR_GantryUnload_Seqv25_V3_DB.iAutoRunning;
+iReset_fault: FB_PR_GantryUnload_Seqv25_V3_DB.iReset_fault;
+iGantryOutofZone: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryOutofZone;
+iCenteringSlideAtHome: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtHome;
+iProcessStart: FB_PR_GantryUnload_Seqv25_V3_DB.iProcessStart;
+iCenteringSlideAtWork: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtWork;
+iScanOver: FB_PR_GantryUnload_Seqv25_V3_DB.iScanOver;
+iScanErr: FB_PR_GantryUnload_Seqv25_V3_DB.iScanErr;
+iScannerBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iScannerBypass;
+iDryCycleWithoutPal: FB_PR_GantryUnload_Seqv25_V3_DB.iDryCycleWithoutPal;
+iDistSensorIP: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSensorIP;
+iGantryPickOver: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryPickOver;
+iPalletPresent: FB_PR_GantryUnload_Seqv25_V3_DB.iPalletPresent;
+iPCAckZero: FB_PR_GantryUnload_Seqv25_V3_DB.iPCAckZero;
+iPCBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iPCBypass;
+iPCDataWriteOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataWriteOver;
+iRetryPB: FB_PR_GantryUnload_Seqv25_V3_DB.iRetryPB;
+iPCDataReadOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataReadOver;
+iDistSenLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenLowLimit;
+iDistSenHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenHighLimit;
+StateNo: FB_PR_GantryUnload_Seqv25_V3_DB.StateNo;
+qCenteringSlideAdvance: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideAdvance;
+qCheckDistance: FB_PR_GantryUnload_Seqv25_V3_DB.qCheckDistance;
+qCenteringSlideRetract: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideRetract;
+qScanCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qScanCmd;
+qGantryOkToUnload: FB_PR_GantryUnload_Seqv25_V3_DB.qGantryOkToUnload;
+qProcessOver: FB_PR_GantryUnload_Seqv25_V3_DB.qProcessOver;
+qPCUploadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCUploadCmd;
+qMsg_0: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[0];
+qMsg_1: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[1];
+qMsg_2: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[2];
+qPCReadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCReadCmd;
+sRecoveryInt: FB_PR_GantryUnload_Seqv25_V3_DB.sRecoveryInt;
+sDistanceLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceLowLimit;
+sDistanceHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceHighLimit;
+sScanRetryCount: FB_PR_GantryUnload_Seqv25_V3_DB.sScanRetryCount;
+END_VAR
+
+STEP: "Check Station Home, Transition 46 - Path 1"
+iGantryOutofZone:=True;
+iCenteringSlideAtHome:=True;
+
+iSstPB:=False;
+iSstMode:=False;
+iAutoRunning:=True;
+iReset_fault:=False;
+iProcessStart:=False;
+iCenteringSlideAtWork:=False;
+iScanOver:=False;
+iScanErr:=False;
+iScannerBypass:=False;
+iDryCycleWithoutPal:=False;
+iDistSensorIP:=0;
+iGantryPickOver:=False;
+iPalletPresent:=False;
+iPCAckZero:=False;
+iPCBypass:=False;
+iPCDataWriteOver:=False;
+iRetryPB:=False;
+iPCDataReadOver:=False;
+iDistSenLowLimit:=0;
+iDistSenHighLimit:=0;
+
+RUN(CYCLES := 1);
+ASSERT.Equal(StateNo, 47);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_GantryUnload_Seqv2_Trans46_T2"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: FB_PR_GantryUnload_Seqv25_V3_DB.iSstPB;
+iSstMode: FB_PR_GantryUnload_Seqv25_V3_DB.iSstMode;
+iAutoRunning: FB_PR_GantryUnload_Seqv25_V3_DB.iAutoRunning;
+iReset_fault: FB_PR_GantryUnload_Seqv25_V3_DB.iReset_fault;
+iGantryOutofZone: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryOutofZone;
+iCenteringSlideAtHome: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtHome;
+iProcessStart: FB_PR_GantryUnload_Seqv25_V3_DB.iProcessStart;
+iCenteringSlideAtWork: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtWork;
+iScanOver: FB_PR_GantryUnload_Seqv25_V3_DB.iScanOver;
+iScanErr: FB_PR_GantryUnload_Seqv25_V3_DB.iScanErr;
+iScannerBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iScannerBypass;
+iDryCycleWithoutPal: FB_PR_GantryUnload_Seqv25_V3_DB.iDryCycleWithoutPal;
+iDistSensorIP: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSensorIP;
+iGantryPickOver: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryPickOver;
+iPalletPresent: FB_PR_GantryUnload_Seqv25_V3_DB.iPalletPresent;
+iPCAckZero: FB_PR_GantryUnload_Seqv25_V3_DB.iPCAckZero;
+iPCBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iPCBypass;
+iPCDataWriteOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataWriteOver;
+iRetryPB: FB_PR_GantryUnload_Seqv25_V3_DB.iRetryPB;
+iPCDataReadOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataReadOver;
+iDistSenLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenLowLimit;
+iDistSenHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenHighLimit;
+StateNo: FB_PR_GantryUnload_Seqv25_V3_DB.StateNo;
+qCenteringSlideAdvance: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideAdvance;
+qCheckDistance: FB_PR_GantryUnload_Seqv25_V3_DB.qCheckDistance;
+qCenteringSlideRetract: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideRetract;
+qScanCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qScanCmd;
+qGantryOkToUnload: FB_PR_GantryUnload_Seqv25_V3_DB.qGantryOkToUnload;
+qProcessOver: FB_PR_GantryUnload_Seqv25_V3_DB.qProcessOver;
+qPCUploadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCUploadCmd;
+qMsg_0: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[0];
+qMsg_1: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[1];
+qMsg_2: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[2];
+qPCReadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCReadCmd;
+sRecoveryInt: FB_PR_GantryUnload_Seqv25_V3_DB.sRecoveryInt;
+sDistanceLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceLowLimit;
+sDistanceHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceHighLimit;
+sScanRetryCount: FB_PR_GantryUnload_Seqv25_V3_DB.sScanRetryCount;
+END_VAR
+
+STEP: "Check Station Home, Transition 46 - Path 2"
+iGantryOutofZone:=True;
+iCenteringSlideAtHome:=False;
+
+iSstPB:=False;
+iSstMode:=False;
+iAutoRunning:=True;
+iReset_fault:=False;
+iProcessStart:=False;
+iCenteringSlideAtWork:=False;
+iScanOver:=False;
+iScanErr:=False;
+iScannerBypass:=False;
+iDryCycleWithoutPal:=False;
+iDistSensorIP:=0;
+iGantryPickOver:=False;
+iPalletPresent:=False;
+iPCAckZero:=False;
+iPCBypass:=False;
+iPCDataWriteOver:=False;
+iRetryPB:=False;
+iPCDataReadOver:=False;
+iDistSenLowLimit:=0;
+iDistSenHighLimit:=0;
+
+RUN(CYCLES := 1);
+ASSERT.Equal(StateNo, 67);
+ASSERT.Equal(qCenteringSlideRetract, True);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_GantryUnload_Seqv2_Trans47"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: FB_PR_GantryUnload_Seqv25_V3_DB.iSstPB;
+iSstMode: FB_PR_GantryUnload_Seqv25_V3_DB.iSstMode;
+iAutoRunning: FB_PR_GantryUnload_Seqv25_V3_DB.iAutoRunning;
+iReset_fault: FB_PR_GantryUnload_Seqv25_V3_DB.iReset_fault;
+iGantryOutofZone: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryOutofZone;
+iCenteringSlideAtHome: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtHome;
+iProcessStart: FB_PR_GantryUnload_Seqv25_V3_DB.iProcessStart;
+iCenteringSlideAtWork: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtWork;
+iScanOver: FB_PR_GantryUnload_Seqv25_V3_DB.iScanOver;
+iScanErr: FB_PR_GantryUnload_Seqv25_V3_DB.iScanErr;
+iScannerBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iScannerBypass;
+iDryCycleWithoutPal: FB_PR_GantryUnload_Seqv25_V3_DB.iDryCycleWithoutPal;
+iDistSensorIP: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSensorIP;
+iGantryPickOver: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryPickOver;
+iPalletPresent: FB_PR_GantryUnload_Seqv25_V3_DB.iPalletPresent;
+iPCAckZero: FB_PR_GantryUnload_Seqv25_V3_DB.iPCAckZero;
+iPCBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iPCBypass;
+iPCDataWriteOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataWriteOver;
+iRetryPB: FB_PR_GantryUnload_Seqv25_V3_DB.iRetryPB;
+iPCDataReadOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataReadOver;
+iDistSenLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenLowLimit;
+iDistSenHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenHighLimit;
+StateNo: FB_PR_GantryUnload_Seqv25_V3_DB.StateNo;
+qCenteringSlideAdvance: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideAdvance;
+qCheckDistance: FB_PR_GantryUnload_Seqv25_V3_DB.qCheckDistance;
+qCenteringSlideRetract: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideRetract;
+qScanCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qScanCmd;
+qGantryOkToUnload: FB_PR_GantryUnload_Seqv25_V3_DB.qGantryOkToUnload;
+qProcessOver: FB_PR_GantryUnload_Seqv25_V3_DB.qProcessOver;
+qPCUploadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCUploadCmd;
+qMsg_0: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[0];
+qMsg_1: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[1];
+qMsg_2: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[2];
+qPCReadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCReadCmd;
+sRecoveryInt: FB_PR_GantryUnload_Seqv25_V3_DB.sRecoveryInt;
+sDistanceLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceLowLimit;
+sDistanceHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceHighLimit;
+sScanRetryCount: FB_PR_GantryUnload_Seqv25_V3_DB.sScanRetryCount;
+END_VAR
+
+STEP: "Wait for Process Start From PZR, Transition 47"
+iProcessStart:=True;
+
+iSstPB:=False;
+iSstMode:=False;
+iAutoRunning:=True;
+iReset_fault:=False;
+iGantryOutofZone:=True;
+iCenteringSlideAtHome:=True;
+iCenteringSlideAtWork:=False;
+iScanOver:=False;
+iScanErr:=False;
+iScannerBypass:=False;
+iDryCycleWithoutPal:=False;
+iDistSensorIP:=0;
+iGantryPickOver:=False;
+iPalletPresent:=False;
+iPCAckZero:=False;
+iPCBypass:=False;
+iPCDataWriteOver:=False;
+iRetryPB:=False;
+iPCDataReadOver:=False;
+iDistSenLowLimit:=0;
+iDistSenHighLimit:=0;
+
+RUN(CYCLES := 1);
+ASSERT.Equal(StateNo, 48);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_GantryUnload_Seqv2_Trans48_T1"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: FB_PR_GantryUnload_Seqv25_V3_DB.iSstPB;
+iSstMode: FB_PR_GantryUnload_Seqv25_V3_DB.iSstMode;
+iAutoRunning: FB_PR_GantryUnload_Seqv25_V3_DB.iAutoRunning;
+iReset_fault: FB_PR_GantryUnload_Seqv25_V3_DB.iReset_fault;
+iGantryOutofZone: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryOutofZone;
+iCenteringSlideAtHome: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtHome;
+iProcessStart: FB_PR_GantryUnload_Seqv25_V3_DB.iProcessStart;
+iCenteringSlideAtWork: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtWork;
+iScanOver: FB_PR_GantryUnload_Seqv25_V3_DB.iScanOver;
+iScanErr: FB_PR_GantryUnload_Seqv25_V3_DB.iScanErr;
+iScannerBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iScannerBypass;
+iDryCycleWithoutPal: FB_PR_GantryUnload_Seqv25_V3_DB.iDryCycleWithoutPal;
+iDistSensorIP: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSensorIP;
+iGantryPickOver: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryPickOver;
+iPalletPresent: FB_PR_GantryUnload_Seqv25_V3_DB.iPalletPresent;
+iPCAckZero: FB_PR_GantryUnload_Seqv25_V3_DB.iPCAckZero;
+iPCBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iPCBypass;
+iPCDataWriteOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataWriteOver;
+iRetryPB: FB_PR_GantryUnload_Seqv25_V3_DB.iRetryPB;
+iPCDataReadOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataReadOver;
+iDistSenLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenLowLimit;
+iDistSenHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenHighLimit;
+StateNo: FB_PR_GantryUnload_Seqv25_V3_DB.StateNo;
+qCenteringSlideAdvance: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideAdvance;
+qCheckDistance: FB_PR_GantryUnload_Seqv25_V3_DB.qCheckDistance;
+qCenteringSlideRetract: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideRetract;
+qScanCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qScanCmd;
+qGantryOkToUnload: FB_PR_GantryUnload_Seqv25_V3_DB.qGantryOkToUnload;
+qProcessOver: FB_PR_GantryUnload_Seqv25_V3_DB.qProcessOver;
+qPCUploadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCUploadCmd;
+qMsg_0: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[0];
+qMsg_1: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[1];
+qMsg_2: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[2];
+qPCReadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCReadCmd;
+sRecoveryInt: FB_PR_GantryUnload_Seqv25_V3_DB.sRecoveryInt;
+sDistanceLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceLowLimit;
+sDistanceHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceHighLimit;
+sScanRetryCount: FB_PR_GantryUnload_Seqv25_V3_DB.sScanRetryCount;
+END_VAR
+
+STEP: "Check Recovery, Transition 48 - Path 1"
+sRecoveryInt:=0;
+
+iSstPB:=False;
+iSstMode:=False;
+iAutoRunning:=True;
+iReset_fault:=False;
+iGantryOutofZone:=True;
+iCenteringSlideAtHome:=True;
+iProcessStart:=True;
+iCenteringSlideAtWork:=False;
+iScanOver:=False;
+iScanErr:=False;
+iScannerBypass:=False;
+iDryCycleWithoutPal:=False;
+iDistSensorIP:=0;
+iGantryPickOver:=False;
+iPalletPresent:=False;
+iPCAckZero:=False;
+iPCBypass:=False;
+iPCDataWriteOver:=False;
+iRetryPB:=False;
+iPCDataReadOver:=False;
+iDistSenLowLimit:=0;
+iDistSenHighLimit:=0;
+
+RUN(CYCLES := 1);
+ASSERT.Equal(StateNo, 49);
+ASSERT.Equal(qCenteringSlideAdvance, True);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_GantryUnload_Seqv2_Trans48_T2"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: FB_PR_GantryUnload_Seqv25_V3_DB.iSstPB;
+iSstMode: FB_PR_GantryUnload_Seqv25_V3_DB.iSstMode;
+iAutoRunning: FB_PR_GantryUnload_Seqv25_V3_DB.iAutoRunning;
+iReset_fault: FB_PR_GantryUnload_Seqv25_V3_DB.iReset_fault;
+iGantryOutofZone: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryOutofZone;
+iCenteringSlideAtHome: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtHome;
+iProcessStart: FB_PR_GantryUnload_Seqv25_V3_DB.iProcessStart;
+iCenteringSlideAtWork: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtWork;
+iScanOver: FB_PR_GantryUnload_Seqv25_V3_DB.iScanOver;
+iScanErr: FB_PR_GantryUnload_Seqv25_V3_DB.iScanErr;
+iScannerBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iScannerBypass;
+iDryCycleWithoutPal: FB_PR_GantryUnload_Seqv25_V3_DB.iDryCycleWithoutPal;
+iDistSensorIP: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSensorIP;
+iGantryPickOver: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryPickOver;
+iPalletPresent: FB_PR_GantryUnload_Seqv25_V3_DB.iPalletPresent;
+iPCAckZero: FB_PR_GantryUnload_Seqv25_V3_DB.iPCAckZero;
+iPCBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iPCBypass;
+iPCDataWriteOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataWriteOver;
+iRetryPB: FB_PR_GantryUnload_Seqv25_V3_DB.iRetryPB;
+iPCDataReadOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataReadOver;
+iDistSenLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenLowLimit;
+iDistSenHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenHighLimit;
+StateNo: FB_PR_GantryUnload_Seqv25_V3_DB.StateNo;
+qCenteringSlideAdvance: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideAdvance;
+qCheckDistance: FB_PR_GantryUnload_Seqv25_V3_DB.qCheckDistance;
+qCenteringSlideRetract: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideRetract;
+qScanCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qScanCmd;
+qGantryOkToUnload: FB_PR_GantryUnload_Seqv25_V3_DB.qGantryOkToUnload;
+qProcessOver: FB_PR_GantryUnload_Seqv25_V3_DB.qProcessOver;
+qPCUploadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCUploadCmd;
+qMsg_0: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[0];
+qMsg_1: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[1];
+qMsg_2: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[2];
+qPCReadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCReadCmd;
+sRecoveryInt: FB_PR_GantryUnload_Seqv25_V3_DB.sRecoveryInt;
+sDistanceLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceLowLimit;
+sDistanceHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceHighLimit;
+sScanRetryCount: FB_PR_GantryUnload_Seqv25_V3_DB.sScanRetryCount;
+END_VAR
+
+STEP: "Check Recovery, Transition 48 - Path 2"
+sRecoveryInt:=1;
+
+iSstPB:=False;
+iSstMode:=False;
+iAutoRunning:=True;
+iReset_fault:=False;
+iGantryOutofZone:=True;
+iCenteringSlideAtHome:=True;
+iProcessStart:=True;
+iCenteringSlideAtWork:=False;
+iScanOver:=False;
+iScanErr:=False;
+iScannerBypass:=False;
+iDryCycleWithoutPal:=False;
+iDistSensorIP:=0;
+iGantryPickOver:=False;
+iPalletPresent:=False;
+iPCAckZero:=False;
+iPCBypass:=False;
+iPCDataWriteOver:=False;
+iRetryPB:=False;
+iPCDataReadOver:=False;
+iDistSenLowLimit:=0;
+iDistSenHighLimit:=0;
+
+RUN(CYCLES := 1);
+ASSERT.Equal(StateNo, 52);
+ASSERT.Equal(qScanCmd, True);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_GantryUnload_Seqv2_Trans48_T3"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: FB_PR_GantryUnload_Seqv25_V3_DB.iSstPB;
+iSstMode: FB_PR_GantryUnload_Seqv25_V3_DB.iSstMode;
+iAutoRunning: FB_PR_GantryUnload_Seqv25_V3_DB.iAutoRunning;
+iReset_fault: FB_PR_GantryUnload_Seqv25_V3_DB.iReset_fault;
+iGantryOutofZone: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryOutofZone;
+iCenteringSlideAtHome: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtHome;
+iProcessStart: FB_PR_GantryUnload_Seqv25_V3_DB.iProcessStart;
+iCenteringSlideAtWork: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtWork;
+iScanOver: FB_PR_GantryUnload_Seqv25_V3_DB.iScanOver;
+iScanErr: FB_PR_GantryUnload_Seqv25_V3_DB.iScanErr;
+iScannerBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iScannerBypass;
+iDryCycleWithoutPal: FB_PR_GantryUnload_Seqv25_V3_DB.iDryCycleWithoutPal;
+iDistSensorIP: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSensorIP;
+iGantryPickOver: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryPickOver;
+iPalletPresent: FB_PR_GantryUnload_Seqv25_V3_DB.iPalletPresent;
+iPCAckZero: FB_PR_GantryUnload_Seqv25_V3_DB.iPCAckZero;
+iPCBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iPCBypass;
+iPCDataWriteOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataWriteOver;
+iRetryPB: FB_PR_GantryUnload_Seqv25_V3_DB.iRetryPB;
+iPCDataReadOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataReadOver;
+iDistSenLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenLowLimit;
+iDistSenHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenHighLimit;
+StateNo: FB_PR_GantryUnload_Seqv25_V3_DB.StateNo;
+qCenteringSlideAdvance: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideAdvance;
+qCheckDistance: FB_PR_GantryUnload_Seqv25_V3_DB.qCheckDistance;
+qCenteringSlideRetract: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideRetract;
+qScanCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qScanCmd;
+qGantryOkToUnload: FB_PR_GantryUnload_Seqv25_V3_DB.qGantryOkToUnload;
+qProcessOver: FB_PR_GantryUnload_Seqv25_V3_DB.qProcessOver;
+qPCUploadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCUploadCmd;
+qMsg_0: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[0];
+qMsg_1: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[1];
+qMsg_2: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[2];
+qPCReadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCReadCmd;
+sRecoveryInt: FB_PR_GantryUnload_Seqv25_V3_DB.sRecoveryInt;
+sDistanceLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceLowLimit;
+sDistanceHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceHighLimit;
+sScanRetryCount: FB_PR_GantryUnload_Seqv25_V3_DB.sScanRetryCount;
+END_VAR
+
+STEP: "Check Recovery, Transition 48 - Path 3"
+sRecoveryInt:=2;
+
+iSstPB:=False;
+iSstMode:=False;
+iAutoRunning:=True;
+iReset_fault:=False;
+iGantryOutofZone:=True;
+iCenteringSlideAtHome:=True;
+iProcessStart:=True;
+iCenteringSlideAtWork:=False;
+iScanOver:=False;
+iScanErr:=False;
+iScannerBypass:=False;
+iDryCycleWithoutPal:=False;
+iDistSensorIP:=0;
+iGantryPickOver:=False;
+iPalletPresent:=False;
+iPCAckZero:=False;
+iPCBypass:=False;
+iPCDataWriteOver:=False;
+iRetryPB:=False;
+iPCDataReadOver:=False;
+iDistSenLowLimit:=0;
+iDistSenHighLimit:=0;
+
+RUN(CYCLES := 1);
+ASSERT.Equal(StateNo, 53);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_GantryUnload_Seqv2_Trans49"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: FB_PR_GantryUnload_Seqv25_V3_DB.iSstPB;
+iSstMode: FB_PR_GantryUnload_Seqv25_V3_DB.iSstMode;
+iAutoRunning: FB_PR_GantryUnload_Seqv25_V3_DB.iAutoRunning;
+iReset_fault: FB_PR_GantryUnload_Seqv25_V3_DB.iReset_fault;
+iGantryOutofZone: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryOutofZone;
+iCenteringSlideAtHome: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtHome;
+iProcessStart: FB_PR_GantryUnload_Seqv25_V3_DB.iProcessStart;
+iCenteringSlideAtWork: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtWork;
+iScanOver: FB_PR_GantryUnload_Seqv25_V3_DB.iScanOver;
+iScanErr: FB_PR_GantryUnload_Seqv25_V3_DB.iScanErr;
+iScannerBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iScannerBypass;
+iDryCycleWithoutPal: FB_PR_GantryUnload_Seqv25_V3_DB.iDryCycleWithoutPal;
+iDistSensorIP: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSensorIP;
+iGantryPickOver: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryPickOver;
+iPalletPresent: FB_PR_GantryUnload_Seqv25_V3_DB.iPalletPresent;
+iPCAckZero: FB_PR_GantryUnload_Seqv25_V3_DB.iPCAckZero;
+iPCBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iPCBypass;
+iPCDataWriteOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataWriteOver;
+iRetryPB: FB_PR_GantryUnload_Seqv25_V3_DB.iRetryPB;
+iPCDataReadOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataReadOver;
+iDistSenLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenLowLimit;
+iDistSenHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenHighLimit;
+StateNo: FB_PR_GantryUnload_Seqv25_V3_DB.StateNo;
+qCenteringSlideAdvance: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideAdvance;
+qCheckDistance: FB_PR_GantryUnload_Seqv25_V3_DB.qCheckDistance;
+qCenteringSlideRetract: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideRetract;
+qScanCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qScanCmd;
+qGantryOkToUnload: FB_PR_GantryUnload_Seqv25_V3_DB.qGantryOkToUnload;
+qProcessOver: FB_PR_GantryUnload_Seqv25_V3_DB.qProcessOver;
+qPCUploadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCUploadCmd;
+qMsg_0: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[0];
+qMsg_1: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[1];
+qMsg_2: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[2];
+qPCReadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCReadCmd;
+sRecoveryInt: FB_PR_GantryUnload_Seqv25_V3_DB.sRecoveryInt;
+sDistanceLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceLowLimit;
+sDistanceHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceHighLimit;
+sScanRetryCount: FB_PR_GantryUnload_Seqv25_V3_DB.sScanRetryCount;
+END_VAR
+
+STEP: "Wait for Centering Slide Advance, Transition 49"
+iCenteringSlideAtWork:=True;
+
+iSstPB:=False;
+iSstMode:=False;
+iAutoRunning:=True;
+iReset_fault:=False;
+iGantryOutofZone:=True;
+iCenteringSlideAtHome:=False;
+iProcessStart:=True;
+iScanOver:=False;
+iScanErr:=False;
+iScannerBypass:=False;
+iDryCycleWithoutPal:=False;
+iDistSensorIP:=0;
+iGantryPickOver:=False;
+iPalletPresent:=False;
+iPCAckZero:=False;
+iPCBypass:=False;
+iPCDataWriteOver:=False;
+iRetryPB:=False;
+iPCDataReadOver:=False;
+iDistSenLowLimit:=0;
+iDistSenHighLimit:=0;
+
+RUN(CYCLES := 1);
+ASSERT.Equal(StateNo, 50);
+ASSERT.Equal(qCheckDistance, True);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_GantryUnload_Seqv2_Trans50"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: FB_PR_GantryUnload_Seqv25_V3_DB.iSstPB;
+iSstMode: FB_PR_GantryUnload_Seqv25_V3_DB.iSstMode;
+iAutoRunning: FB_PR_GantryUnload_Seqv25_V3_DB.iAutoRunning;
+iReset_fault: FB_PR_GantryUnload_Seqv25_V3_DB.iReset_fault;
+iGantryOutofZone: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryOutofZone;
+iCenteringSlideAtHome: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtHome;
+iProcessStart: FB_PR_GantryUnload_Seqv25_V3_DB.iProcessStart;
+iCenteringSlideAtWork: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtWork;
+iScanOver: FB_PR_GantryUnload_Seqv25_V3_DB.iScanOver;
+iScanErr: FB_PR_GantryUnload_Seqv25_V3_DB.iScanErr;
+iScannerBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iScannerBypass;
+iDryCycleWithoutPal: FB_PR_GantryUnload_Seqv25_V3_DB.iDryCycleWithoutPal;
+iDistSensorIP: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSensorIP;
+iGantryPickOver: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryPickOver;
+iPalletPresent: FB_PR_GantryUnload_Seqv25_V3_DB.iPalletPresent;
+iPCAckZero: FB_PR_GantryUnload_Seqv25_V3_DB.iPCAckZero;
+iPCBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iPCBypass;
+iPCDataWriteOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataWriteOver;
+iRetryPB: FB_PR_GantryUnload_Seqv25_V3_DB.iRetryPB;
+iPCDataReadOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataReadOver;
+iDistSenLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenLowLimit;
+iDistSenHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenHighLimit;
+StateNo: FB_PR_GantryUnload_Seqv25_V3_DB.StateNo;
+qCenteringSlideAdvance: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideAdvance;
+qCheckDistance: FB_PR_GantryUnload_Seqv25_V3_DB.qCheckDistance;
+qCenteringSlideRetract: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideRetract;
+qScanCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qScanCmd;
+qGantryOkToUnload: FB_PR_GantryUnload_Seqv25_V3_DB.qGantryOkToUnload;
+qProcessOver: FB_PR_GantryUnload_Seqv25_V3_DB.qProcessOver;
+qPCUploadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCUploadCmd;
+qMsg_0: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[0];
+qMsg_1: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[1];
+qMsg_2: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[2];
+qPCReadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCReadCmd;
+sRecoveryInt: FB_PR_GantryUnload_Seqv25_V3_DB.sRecoveryInt;
+sDistanceLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceLowLimit;
+sDistanceHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceHighLimit;
+sScanRetryCount: FB_PR_GantryUnload_Seqv25_V3_DB.sScanRetryCount;
+END_VAR
+
+STEP: "Wait for Distance Sensor Feed Back, Transition 50"
+iSstPB:=False;
+iSstMode:=False;
+iAutoRunning:=True;
+iReset_fault:=False;
+iGantryOutofZone:=True;
+iCenteringSlideAtHome:=False;
+iProcessStart:=True;
+iCenteringSlideAtWork:=True;
+iScanOver:=False;
+iScanErr:=False;
+iScannerBypass:=False;
+iDryCycleWithoutPal:=False;
+iDistSensorIP:=100;
+iGantryPickOver:=False;
+iPalletPresent:=False;
+iPCAckZero:=False;
+iPCBypass:=False;
+iPCDataWriteOver:=False;
+iRetryPB:=False;
+iPCDataReadOver:=False;
+iDistSenLowLimit:=0;
+iDistSenHighLimit:=0;
+
+RUN(CYCLES := 1);
+ASSERT.Equal(StateNo, 51);
+ASSERT.Equal(qCenteringSlideRetract, True);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_GantryUnload_Seqv2_Trans51"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: FB_PR_GantryUnload_Seqv25_V3_DB.iSstPB;
+iSstMode: FB_PR_GantryUnload_Seqv25_V3_DB.iSstMode;
+iAutoRunning: FB_PR_GantryUnload_Seqv25_V3_DB.iAutoRunning;
+iReset_fault: FB_PR_GantryUnload_Seqv25_V3_DB.iReset_fault;
+iGantryOutofZone: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryOutofZone;
+iCenteringSlideAtHome: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtHome;
+iProcessStart: FB_PR_GantryUnload_Seqv25_V3_DB.iProcessStart;
+iCenteringSlideAtWork: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtWork;
+iScanOver: FB_PR_GantryUnload_Seqv25_V3_DB.iScanOver;
+iScanErr: FB_PR_GantryUnload_Seqv25_V3_DB.iScanErr;
+iScannerBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iScannerBypass;
+iDryCycleWithoutPal: FB_PR_GantryUnload_Seqv25_V3_DB.iDryCycleWithoutPal;
+iDistSensorIP: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSensorIP;
+iGantryPickOver: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryPickOver;
+iPalletPresent: FB_PR_GantryUnload_Seqv25_V3_DB.iPalletPresent;
+iPCAckZero: FB_PR_GantryUnload_Seqv25_V3_DB.iPCAckZero;
+iPCBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iPCBypass;
+iPCDataWriteOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataWriteOver;
+iRetryPB: FB_PR_GantryUnload_Seqv25_V3_DB.iRetryPB;
+iPCDataReadOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataReadOver;
+iDistSenLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenLowLimit;
+iDistSenHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenHighLimit;
+StateNo: FB_PR_GantryUnload_Seqv25_V3_DB.StateNo;
+qCenteringSlideAdvance: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideAdvance;
+qCheckDistance: FB_PR_GantryUnload_Seqv25_V3_DB.qCheckDistance;
+qCenteringSlideRetract: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideRetract;
+qScanCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qScanCmd;
+qGantryOkToUnload: FB_PR_GantryUnload_Seqv25_V3_DB.qGantryOkToUnload;
+qProcessOver: FB_PR_GantryUnload_Seqv25_V3_DB.qProcessOver;
+qPCUploadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCUploadCmd;
+qMsg_0: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[0];
+qMsg_1: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[1];
+qMsg_2: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[2];
+qPCReadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCReadCmd;
+sRecoveryInt: FB_PR_GantryUnload_Seqv25_V3_DB.sRecoveryInt;
+sDistanceLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceLowLimit;
+sDistanceHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceHighLimit;
+sScanRetryCount: FB_PR_GantryUnload_Seqv25_V3_DB.sScanRetryCount;
+END_VAR
+
+STEP: "Wait for Centering Slide Retract, Transition 51"
+iCenteringSlideAtHome:=True;
+iCenteringSlideAtWork:=False;
+
+iSstPB:=False;
+iSstMode:=False;
+iAutoRunning:=True;
+iReset_fault:=False;
+iGantryOutofZone:=True;
+iProcessStart:=True;
+iScanOver:=False;
+iScanErr:=False;
+iScannerBypass:=False;
+iDryCycleWithoutPal:=False;
+iDistSensorIP:=100;
+iGantryPickOver:=False;
+iPalletPresent:=False;
+iPCAckZero:=False;
+iPCBypass:=False;
+iPCDataWriteOver:=False;
+iRetryPB:=False;
+iPCDataReadOver:=False;
+iDistSenLowLimit:=0;
+iDistSenHighLimit:=0;
+
+RUN(CYCLES := 1);
+ASSERT.Equal(StateNo, 52);
+ASSERT.Equal(qScanCmd, True);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_GantryUnload_Seqv2_Trans52_T1"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: FB_PR_GantryUnload_Seqv25_V3_DB.iSstPB;
+iSstMode: FB_PR_GantryUnload_Seqv25_V3_DB.iSstMode;
+iAutoRunning: FB_PR_GantryUnload_Seqv25_V3_DB.iAutoRunning;
+iReset_fault: FB_PR_GantryUnload_Seqv25_V3_DB.iReset_fault;
+iGantryOutofZone: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryOutofZone;
+iCenteringSlideAtHome: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtHome;
+iProcessStart: FB_PR_GantryUnload_Seqv25_V3_DB.iProcessStart;
+iCenteringSlideAtWork: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtWork;
+iScanOver: FB_PR_GantryUnload_Seqv25_V3_DB.iScanOver;
+iScanErr: FB_PR_GantryUnload_Seqv25_V3_DB.iScanErr;
+iScannerBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iScannerBypass;
+iDryCycleWithoutPal: FB_PR_GantryUnload_Seqv25_V3_DB.iDryCycleWithoutPal;
+iDistSensorIP: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSensorIP;
+iGantryPickOver: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryPickOver;
+iPalletPresent: FB_PR_GantryUnload_Seqv25_V3_DB.iPalletPresent;
+iPCAckZero: FB_PR_GantryUnload_Seqv25_V3_DB.iPCAckZero;
+iPCBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iPCBypass;
+iPCDataWriteOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataWriteOver;
+iRetryPB: FB_PR_GantryUnload_Seqv25_V3_DB.iRetryPB;
+iPCDataReadOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataReadOver;
+iDistSenLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenLowLimit;
+iDistSenHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenHighLimit;
+StateNo: FB_PR_GantryUnload_Seqv25_V3_DB.StateNo;
+qCenteringSlideAdvance: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideAdvance;
+qCheckDistance: FB_PR_GantryUnload_Seqv25_V3_DB.qCheckDistance;
+qCenteringSlideRetract: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideRetract;
+qScanCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qScanCmd;
+qGantryOkToUnload: FB_PR_GantryUnload_Seqv25_V3_DB.qGantryOkToUnload;
+qProcessOver: FB_PR_GantryUnload_Seqv25_V3_DB.qProcessOver;
+qPCUploadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCUploadCmd;
+qMsg_0: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[0];
+qMsg_1: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[1];
+qMsg_2: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[2];
+qPCReadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCReadCmd;
+sRecoveryInt: FB_PR_GantryUnload_Seqv25_V3_DB.sRecoveryInt;
+sDistanceLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceLowLimit;
+sDistanceHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceHighLimit;
+sScanRetryCount: FB_PR_GantryUnload_Seqv25_V3_DB.sScanRetryCount;
+END_VAR
+
+STEP: "Wait for Scan Over, Transition 52 - Path 1"
+iScanOver:=True;
+iScanErr:=False;
+
+iSstPB:=False;
+iSstMode:=False;
+iAutoRunning:=True;
+iReset_fault:=False;
+iGantryOutofZone:=True;
+iCenteringSlideAtHome:=True;
+iProcessStart:=True;
+iCenteringSlideAtWork:=False;
+iScannerBypass:=False;
+iDryCycleWithoutPal:=False;
+iDistSensorIP:=100;
+iGantryPickOver:=False;
+iPalletPresent:=False;
+iPCAckZero:=False;
+iPCBypass:=False;
+iPCDataWriteOver:=False;
+iRetryPB:=False;
+iPCDataReadOver:=False;
+iDistSenLowLimit:=0;
+iDistSenHighLimit:=0;
+
+RUN(CYCLES := 1);
+ASSERT.Equal(StateNo, 68);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_GantryUnload_Seqv2_Trans52_T2"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: FB_PR_GantryUnload_Seqv25_V3_DB.iSstPB;
+iSstMode: FB_PR_GantryUnload_Seqv25_V3_DB.iSstMode;
+iAutoRunning: FB_PR_GantryUnload_Seqv25_V3_DB.iAutoRunning;
+iReset_fault: FB_PR_GantryUnload_Seqv25_V3_DB.iReset_fault;
+iGantryOutofZone: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryOutofZone;
+iCenteringSlideAtHome: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtHome;
+iProcessStart: FB_PR_GantryUnload_Seqv25_V3_DB.iProcessStart;
+iCenteringSlideAtWork: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtWork;
+iScanOver: FB_PR_GantryUnload_Seqv25_V3_DB.iScanOver;
+iScanErr: FB_PR_GantryUnload_Seqv25_V3_DB.iScanErr;
+iScannerBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iScannerBypass;
+iDryCycleWithoutPal: FB_PR_GantryUnload_Seqv25_V3_DB.iDryCycleWithoutPal;
+iDistSensorIP: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSensorIP;
+iGantryPickOver: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryPickOver;
+iPalletPresent: FB_PR_GantryUnload_Seqv25_V3_DB.iPalletPresent;
+iPCAckZero: FB_PR_GantryUnload_Seqv25_V3_DB.iPCAckZero;
+iPCBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iPCBypass;
+iPCDataWriteOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataWriteOver;
+iRetryPB: FB_PR_GantryUnload_Seqv25_V3_DB.iRetryPB;
+iPCDataReadOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataReadOver;
+iDistSenLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenLowLimit;
+iDistSenHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenHighLimit;
+StateNo: FB_PR_GantryUnload_Seqv25_V3_DB.StateNo;
+qCenteringSlideAdvance: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideAdvance;
+qCheckDistance: FB_PR_GantryUnload_Seqv25_V3_DB.qCheckDistance;
+qCenteringSlideRetract: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideRetract;
+qScanCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qScanCmd;
+qGantryOkToUnload: FB_PR_GantryUnload_Seqv25_V3_DB.qGantryOkToUnload;
+qProcessOver: FB_PR_GantryUnload_Seqv25_V3_DB.qProcessOver;
+qPCUploadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCUploadCmd;
+qMsg_0: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[0];
+qMsg_1: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[1];
+qMsg_2: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[2];
+qPCReadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCReadCmd;
+sRecoveryInt: FB_PR_GantryUnload_Seqv25_V3_DB.sRecoveryInt;
+sDistanceLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceLowLimit;
+sDistanceHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceHighLimit;
+sScanRetryCount: FB_PR_GantryUnload_Seqv25_V3_DB.sScanRetryCount;
+END_VAR
+
+STEP: "Wait for Scan Over, Transition 52 - Path 2"
+iScanOver:=False;
+iScanErr:=True;
+
+iSstPB:=False;
+iSstMode:=False;
+iAutoRunning:=True;
+iReset_fault:=False;
+iGantryOutofZone:=True;
+iCenteringSlideAtHome:=True;
+iProcessStart:=True;
+iCenteringSlideAtWork:=False;
+iScannerBypass:=False;
+iDryCycleWithoutPal:=False;
+iDistSensorIP:=100;
+iGantryPickOver:=False;
+iPalletPresent:=False;
+iPCAckZero:=False;
+iPCBypass:=False;
+iPCDataWriteOver:=False;
+iRetryPB:=False;
+iPCDataReadOver:=False;
+iDistSenLowLimit:=0;
+iDistSenHighLimit:=0;
+
+RUN(CYCLES := 1);
+ASSERT.Equal(StateNo, 65);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_GantryUnload_Seqv2_Trans53_T1"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: FB_PR_GantryUnload_Seqv25_V3_DB.iSstPB;
+iSstMode: FB_PR_GantryUnload_Seqv25_V3_DB.iSstMode;
+iAutoRunning: FB_PR_GantryUnload_Seqv25_V3_DB.iAutoRunning;
+iReset_fault: FB_PR_GantryUnload_Seqv25_V3_DB.iReset_fault;
+iGantryOutofZone: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryOutofZone;
+iCenteringSlideAtHome: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtHome;
+iProcessStart: FB_PR_GantryUnload_Seqv25_V3_DB.iProcessStart;
+iCenteringSlideAtWork: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtWork;
+iScanOver: FB_PR_GantryUnload_Seqv25_V3_DB.iScanOver;
+iScanErr: FB_PR_GantryUnload_Seqv25_V3_DB.iScanErr;
+iScannerBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iScannerBypass;
+iDryCycleWithoutPal: FB_PR_GantryUnload_Seqv25_V3_DB.iDryCycleWithoutPal;
+iDistSensorIP: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSensorIP;
+iGantryPickOver: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryPickOver;
+iPalletPresent: FB_PR_GantryUnload_Seqv25_V3_DB.iPalletPresent;
+iPCAckZero: FB_PR_GantryUnload_Seqv25_V3_DB.iPCAckZero;
+iPCBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iPCBypass;
+iPCDataWriteOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataWriteOver;
+iRetryPB: FB_PR_GantryUnload_Seqv25_V3_DB.iRetryPB;
+iPCDataReadOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataReadOver;
+iDistSenLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenLowLimit;
+iDistSenHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenHighLimit;
+StateNo: FB_PR_GantryUnload_Seqv25_V3_DB.StateNo;
+qCenteringSlideAdvance: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideAdvance;
+qCheckDistance: FB_PR_GantryUnload_Seqv25_V3_DB.qCheckDistance;
+qCenteringSlideRetract: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideRetract;
+qScanCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qScanCmd;
+qGantryOkToUnload: FB_PR_GantryUnload_Seqv25_V3_DB.qGantryOkToUnload;
+qProcessOver: FB_PR_GantryUnload_Seqv25_V3_DB.qProcessOver;
+qPCUploadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCUploadCmd;
+qMsg_0: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[0];
+qMsg_1: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[1];
+qMsg_2: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[2];
+qPCReadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCReadCmd;
+sRecoveryInt: FB_PR_GantryUnload_Seqv25_V3_DB.sRecoveryInt;
+sDistanceLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceLowLimit;
+sDistanceHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceHighLimit;
+sScanRetryCount: FB_PR_GantryUnload_Seqv25_V3_DB.sScanRetryCount;
+END_VAR
+
+STEP: "Check measured Distance ok Or Not with respect to PC data, Transition 53 - Path 1"
+iDistSensorIP:=100;
+sDistanceLowLimit:=90;
+sDistanceHighLimit:=110;
+
+iSstPB:=False;
+iSstMode:=False;
+iAutoRunning:=True;
+iReset_fault:=False;
+iGantryOutofZone:=True;
+iCenteringSlideAtHome:=True;
+iProcessStart:=True;
+iCenteringSlideAtWork:=False;
+iScanOver:=True;
+iScanErr:=False;
+iScannerBypass:=False;
+iDryCycleWithoutPal:=False;
+iGantryPickOver:=False;
+iPalletPresent:=False;
+iPCAckZero:=False;
+iPCBypass:=False;
+iPCDataWriteOver:=False;
+iRetryPB:=False;
+iPCDataReadOver:=False;
+iDistSenLowLimit:=0;
+iDistSenHighLimit:=0;
+
+RUN(CYCLES := 1);
+ASSERT.Equal(StateNo, 54);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_GantryUnload_Seqv2_Trans53_T2"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: FB_PR_GantryUnload_Seqv25_V3_DB.iSstPB;
+iSstMode: FB_PR_GantryUnload_Seqv25_V3_DB.iSstMode;
+iAutoRunning: FB_PR_GantryUnload_Seqv25_V3_DB.iAutoRunning;
+iReset_fault: FB_PR_GantryUnload_Seqv25_V3_DB.iReset_fault;
+iGantryOutofZone: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryOutofZone;
+iCenteringSlideAtHome: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtHome;
+iProcessStart: FB_PR_GantryUnload_Seqv25_V3_DB.iProcessStart;
+iCenteringSlideAtWork: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtWork;
+iScanOver: FB_PR_GantryUnload_Seqv25_V3_DB.iScanOver;
+iScanErr: FB_PR_GantryUnload_Seqv25_V3_DB.iScanErr;
+iScannerBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iScannerBypass;
+iDryCycleWithoutPal: FB_PR_GantryUnload_Seqv25_V3_DB.iDryCycleWithoutPal;
+iDistSensorIP: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSensorIP;
+iGantryPickOver: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryPickOver;
+iPalletPresent: FB_PR_GantryUnload_Seqv25_V3_DB.iPalletPresent;
+iPCAckZero: FB_PR_GantryUnload_Seqv25_V3_DB.iPCAckZero;
+iPCBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iPCBypass;
+iPCDataWriteOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataWriteOver;
+iRetryPB: FB_PR_GantryUnload_Seqv25_V3_DB.iRetryPB;
+iPCDataReadOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataReadOver;
+iDistSenLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenLowLimit;
+iDistSenHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenHighLimit;
+StateNo: FB_PR_GantryUnload_Seqv25_V3_DB.StateNo;
+qCenteringSlideAdvance: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideAdvance;
+qCheckDistance: FB_PR_GantryUnload_Seqv25_V3_DB.qCheckDistance;
+qCenteringSlideRetract: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideRetract;
+qScanCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qScanCmd;
+qGantryOkToUnload: FB_PR_GantryUnload_Seqv25_V3_DB.qGantryOkToUnload;
+qProcessOver: FB_PR_GantryUnload_Seqv25_V3_DB.qProcessOver;
+qPCUploadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCUploadCmd;
+qMsg_0: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[0];
+qMsg_1: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[1];
+qMsg_2: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[2];
+qPCReadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCReadCmd;
+sRecoveryInt: FB_PR_GantryUnload_Seqv25_V3_DB.sRecoveryInt;
+sDistanceLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceLowLimit;
+sDistanceHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceHighLimit;
+sScanRetryCount: FB_PR_GantryUnload_Seqv25_V3_DB.sScanRetryCount;
+END_VAR
+
+STEP: "Check measured Distance ok Or Not with respect to PC data, Transition 53 - Path 2"
+iDistSensorIP:=120;
+sDistanceLowLimit:=90;
+sDistanceHighLimit:=110;
+
+iSstPB:=False;
+iSstMode:=False;
+iAutoRunning:=True;
+iReset_fault:=False;
+iGantryOutofZone:=True;
+iCenteringSlideAtHome:=True;
+iProcessStart:=True;
+iCenteringSlideAtWork:=False;
+iScanOver:=True;
+iScanErr:=False;
+iScannerBypass:=False;
+iDryCycleWithoutPal:=False;
+iGantryPickOver:=False;
+iPalletPresent:=False;
+iPCAckZero:=False;
+iPCBypass:=False;
+iPCDataWriteOver:=False;
+iRetryPB:=False;
+iPCDataReadOver:=False;
+iDistSenLowLimit:=0;
+iDistSenHighLimit:=0;
+
+RUN(CYCLES := 1);
+ASSERT.Equal(StateNo, 61);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_GantryUnload_Seqv2_Trans54"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: FB_PR_GantryUnload_Seqv25_V3_DB.iSstPB;
+iSstMode: FB_PR_GantryUnload_Seqv25_V3_DB.iSstMode;
+iAutoRunning: FB_PR_GantryUnload_Seqv25_V3_DB.iAutoRunning;
+iReset_fault: FB_PR_GantryUnload_Seqv25_V3_DB.iReset_fault;
+iGantryOutofZone: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryOutofZone;
+iCenteringSlideAtHome: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtHome;
+iProcessStart: FB_PR_GantryUnload_Seqv25_V3_DB.iProcessStart;
+iCenteringSlideAtWork: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtWork;
+iScanOver: FB_PR_GantryUnload_Seqv25_V3_DB.iScanOver;
+iScanErr: FB_PR_GantryUnload_Seqv25_V3_DB.iScanErr;
+iScannerBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iScannerBypass;
+iDryCycleWithoutPal: FB_PR_GantryUnload_Seqv25_V3_DB.iDryCycleWithoutPal;
+iDistSensorIP: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSensorIP;
+iGantryPickOver: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryPickOver;
+iPalletPresent: FB_PR_GantryUnload_Seqv25_V3_DB.iPalletPresent;
+iPCAckZero: FB_PR_GantryUnload_Seqv25_V3_DB.iPCAckZero;
+iPCBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iPCBypass;
+iPCDataWriteOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataWriteOver;
+iRetryPB: FB_PR_GantryUnload_Seqv25_V3_DB.iRetryPB;
+iPCDataReadOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataReadOver;
+iDistSenLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenLowLimit;
+iDistSenHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenHighLimit;
+StateNo: FB_PR_GantryUnload_Seqv25_V3_DB.StateNo;
+qCenteringSlideAdvance: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideAdvance;
+qCheckDistance: FB_PR_GantryUnload_Seqv25_V3_DB.qCheckDistance;
+qCenteringSlideRetract: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideRetract;
+qScanCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qScanCmd;
+qGantryOkToUnload: FB_PR_GantryUnload_Seqv25_V3_DB.qGantryOkToUnload;
+qProcessOver: FB_PR_GantryUnload_Seqv25_V3_DB.qProcessOver;
+qPCUploadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCUploadCmd;
+qMsg_0: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[0];
+qMsg_1: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[1];
+qMsg_2: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[2];
+qPCReadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCReadCmd;
+sRecoveryInt: FB_PR_GantryUnload_Seqv25_V3_DB.sRecoveryInt;
+sDistanceLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceLowLimit;
+sDistanceHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceHighLimit;
+sScanRetryCount: FB_PR_GantryUnload_Seqv25_V3_DB.sScanRetryCount;
+END_VAR
+
+STEP: "Wait for Gantry at Unload Position, Transition 54"
+iGantryOutofZone:=False;
+iCenteringSlideAtHome:=True;
+
+iSstPB:=False;
+iSstMode:=False;
+iAutoRunning:=True;
+iReset_fault:=False;
+iProcessStart:=True;
+iCenteringSlideAtWork:=False;
+iScanOver:=True;
+iScanErr:=False;
+iScannerBypass:=False;
+iDryCycleWithoutPal:=False;
+iDistSensorIP:=100;
+iGantryPickOver:=False;
+iPalletPresent:=False;
+iPCAckZero:=False;
+iPCBypass:=False;
+iPCDataWriteOver:=False;
+iRetryPB:=False;
+iPCDataReadOver:=False;
+iDistSenLowLimit:=0;
+iDistSenHighLimit:=0;
+sDistanceLowLimit:=90;
+sDistanceHighLimit:=110;
+
+RUN(CYCLES := 1);
+ASSERT.Equal(StateNo, 55);
+ASSERT.Equal(qGantryOkToUnload, True);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_GantryUnload_Seqv2_Trans55"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: FB_PR_GantryUnload_Seqv25_V3_DB.iSstPB;
+iSstMode: FB_PR_GantryUnload_Seqv25_V3_DB.iSstMode;
+iAutoRunning: FB_PR_GantryUnload_Seqv25_V3_DB.iAutoRunning;
+iReset_fault: FB_PR_GantryUnload_Seqv25_V3_DB.iReset_fault;
+iGantryOutofZone: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryOutofZone;
+iCenteringSlideAtHome: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtHome;
+iProcessStart: FB_PR_GantryUnload_Seqv25_V3_DB.iProcessStart;
+iCenteringSlideAtWork: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtWork;
+iScanOver: FB_PR_GantryUnload_Seqv25_V3_DB.iScanOver;
+iScanErr: FB_PR_GantryUnload_Seqv25_V3_DB.iScanErr;
+iScannerBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iScannerBypass;
+iDryCycleWithoutPal: FB_PR_GantryUnload_Seqv25_V3_DB.iDryCycleWithoutPal;
+iDistSensorIP: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSensorIP;
+iGantryPickOver: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryPickOver;
+iPalletPresent: FB_PR_GantryUnload_Seqv25_V3_DB.iPalletPresent;
+iPCAckZero: FB_PR_GantryUnload_Seqv25_V3_DB.iPCAckZero;
+iPCBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iPCBypass;
+iPCDataWriteOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataWriteOver;
+iRetryPB: FB_PR_GantryUnload_Seqv25_V3_DB.iRetryPB;
+iPCDataReadOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataReadOver;
+iDistSenLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenLowLimit;
+iDistSenHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenHighLimit;
+StateNo: FB_PR_GantryUnload_Seqv25_V3_DB.StateNo;
+qCenteringSlideAdvance: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideAdvance;
+qCheckDistance: FB_PR_GantryUnload_Seqv25_V3_DB.qCheckDistance;
+qCenteringSlideRetract: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideRetract;
+qScanCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qScanCmd;
+qGantryOkToUnload: FB_PR_GantryUnload_Seqv25_V3_DB.qGantryOkToUnload;
+qProcessOver: FB_PR_GantryUnload_Seqv25_V3_DB.qProcessOver;
+qPCUploadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCUploadCmd;
+qMsg_0: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[0];
+qMsg_1: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[1];
+qMsg_2: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[2];
+qPCReadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCReadCmd;
+sRecoveryInt: FB_PR_GantryUnload_Seqv25_V3_DB.sRecoveryInt;
+sDistanceLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceLowLimit;
+sDistanceHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceHighLimit;
+sScanRetryCount: FB_PR_GantryUnload_Seqv25_V3_DB.sScanRetryCount;
+END_VAR
+
+STEP: "Wait for Gantry Unload Over, Transition 55"
+iGantryPickOver:=True;
+iCenteringSlideAtHome:=True;
+
+iSstPB:=False;
+iSstMode:=False;
+iAutoRunning:=True;
+iReset_fault:=False;
+iGantryOutofZone:=False;
+iProcessStart:=True;
+iCenteringSlideAtWork:=False;
+iScanOver:=True;
+iScanErr:=False;
+iScannerBypass:=False;
+iDryCycleWithoutPal:=False;
+iDistSensorIP:=100;
+iPalletPresent:=False;
+iPCAckZero:=False;
+iPCBypass:=False;
+iPCDataWriteOver:=False;
+iRetryPB:=False;
+iPCDataReadOver:=False;
+iDistSenLowLimit:=0;
+iDistSenHighLimit:=0;
+sDistanceLowLimit:=90;
+sDistanceHighLimit:=110;
+
+RUN(CYCLES := 1);
+ASSERT.Equal(StateNo, 56);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_GantryUnload_Seqv2_Trans56"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: FB_PR_GantryUnload_Seqv25_V3_DB.iSstPB;
+iSstMode: FB_PR_GantryUnload_Seqv25_V3_DB.iSstMode;
+iAutoRunning: FB_PR_GantryUnload_Seqv25_V3_DB.iAutoRunning;
+iReset_fault: FB_PR_GantryUnload_Seqv25_V3_DB.iReset_fault;
+iGantryOutofZone: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryOutofZone;
+iCenteringSlideAtHome: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtHome;
+iProcessStart: FB_PR_GantryUnload_Seqv25_V3_DB.iProcessStart;
+iCenteringSlideAtWork: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtWork;
+iScanOver: FB_PR_GantryUnload_Seqv25_V3_DB.iScanOver;
+iScanErr: FB_PR_GantryUnload_Seqv25_V3_DB.iScanErr;
+iScannerBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iScannerBypass;
+iDryCycleWithoutPal: FB_PR_GantryUnload_Seqv25_V3_DB.iDryCycleWithoutPal;
+iDistSensorIP: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSensorIP;
+iGantryPickOver: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryPickOver;
+iPalletPresent: FB_PR_GantryUnload_Seqv25_V3_DB.iPalletPresent;
+iPCAckZero: FB_PR_GantryUnload_Seqv25_V3_DB.iPCAckZero;
+iPCBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iPCBypass;
+iPCDataWriteOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataWriteOver;
+iRetryPB: FB_PR_GantryUnload_Seqv25_V3_DB.iRetryPB;
+iPCDataReadOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataReadOver;
+iDistSenLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenLowLimit;
+iDistSenHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenHighLimit;
+StateNo: FB_PR_GantryUnload_Seqv25_V3_DB.StateNo;
+qCenteringSlideAdvance: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideAdvance;
+qCheckDistance: FB_PR_GantryUnload_Seqv25_V3_DB.qCheckDistance;
+qCenteringSlideRetract: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideRetract;
+qScanCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qScanCmd;
+qGantryOkToUnload: FB_PR_GantryUnload_Seqv25_V3_DB.qGantryOkToUnload;
+qProcessOver: FB_PR_GantryUnload_Seqv25_V3_DB.qProcessOver;
+qPCUploadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCUploadCmd;
+qMsg_0: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[0];
+qMsg_1: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[1];
+qMsg_2: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[2];
+qPCReadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCReadCmd;
+sRecoveryInt: FB_PR_GantryUnload_Seqv25_V3_DB.sRecoveryInt;
+sDistanceLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceLowLimit;
+sDistanceHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceHighLimit;
+sScanRetryCount: FB_PR_GantryUnload_Seqv25_V3_DB.sScanRetryCount;
+END_VAR
+
+STEP: "Wait for Gantry Out Of zone after Unload, Transition 56"
+iGantryOutofZone:=True;
+
+iSstPB:=False;
+iSstMode:=False;
+iAutoRunning:=True;
+iReset_fault:=False;
+iCenteringSlideAtHome:=True;
+iProcessStart:=True;
+iCenteringSlideAtWork:=False;
+iScanOver:=True;
+iScanErr:=False;
+iScannerBypass:=False;
+iDryCycleWithoutPal:=False;
+iDistSensorIP:=100;
+iGantryPickOver:=True;
+iPalletPresent:=False;
+iPCAckZero:=False;
+iPCBypass:=False;
+iPCDataWriteOver:=False;
+iRetryPB:=False;
+iPCDataReadOver:=False;
+iDistSenLowLimit:=0;
+iDistSenHighLimit:=0;
+sDistanceLowLimit:=90;
+sDistanceHighLimit:=110;
+
+RUN(CYCLES := 1);
+ASSERT.Equal(StateNo, 57);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_GantryUnload_Seqv2_Trans57"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: FB_PR_GantryUnload_Seqv25_V3_DB.iSstPB;
+iSstMode: FB_PR_GantryUnload_Seqv25_V3_DB.iSstMode;
+iAutoRunning: FB_PR_GantryUnload_Seqv25_V3_DB.iAutoRunning;
+iReset_fault: FB_PR_GantryUnload_Seqv25_V3_DB.iReset_fault;
+iGantryOutofZone: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryOutofZone;
+iCenteringSlideAtHome: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtHome;
+iProcessStart: FB_PR_GantryUnload_Seqv25_V3_DB.iProcessStart;
+iCenteringSlideAtWork: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtWork;
+iScanOver: FB_PR_GantryUnload_Seqv25_V3_DB.iScanOver;
+iScanErr: FB_PR_GantryUnload_Seqv25_V3_DB.iScanErr;
+iScannerBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iScannerBypass;
+iDryCycleWithoutPal: FB_PR_GantryUnload_Seqv25_V3_DB.iDryCycleWithoutPal;
+iDistSensorIP: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSensorIP;
+iGantryPickOver: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryPickOver;
+iPalletPresent: FB_PR_GantryUnload_Seqv25_V3_DB.iPalletPresent;
+iPCAckZero: FB_PR_GantryUnload_Seqv25_V3_DB.iPCAckZero;
+iPCBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iPCBypass;
+iPCDataWriteOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataWriteOver;
+iRetryPB: FB_PR_GantryUnload_Seqv25_V3_DB.iRetryPB;
+iPCDataReadOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataReadOver;
+iDistSenLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenLowLimit;
+iDistSenHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenHighLimit;
+StateNo: FB_PR_GantryUnload_Seqv25_V3_DB.StateNo;
+qCenteringSlideAdvance: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideAdvance;
+qCheckDistance: FB_PR_GantryUnload_Seqv25_V3_DB.qCheckDistance;
+qCenteringSlideRetract: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideRetract;
+qScanCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qScanCmd;
+qGantryOkToUnload: FB_PR_GantryUnload_Seqv25_V3_DB.qGantryOkToUnload;
+qProcessOver: FB_PR_GantryUnload_Seqv25_V3_DB.qProcessOver;
+qPCUploadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCUploadCmd;
+qMsg_0: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[0];
+qMsg_1: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[1];
+qMsg_2: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[2];
+qPCReadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCReadCmd;
+sRecoveryInt: FB_PR_GantryUnload_Seqv25_V3_DB.sRecoveryInt;
+sDistanceLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceLowLimit;
+sDistanceHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceHighLimit;
+sScanRetryCount: FB_PR_GantryUnload_Seqv25_V3_DB.sScanRetryCount;
+END_VAR
+
+STEP: "Check Reel Absent at Conveyor, Transition 57"
+iPalletPresent:=False;
+
+iSstPB:=False;
+iSstMode:=False;
+iAutoRunning:=True;
+iReset_fault:=False;
+iGantryOutofZone:=True;
+iCenteringSlideAtHome:=True;
+iProcessStart:=True;
+iCenteringSlideAtWork:=False;
+iScanOver:=True;
+iScanErr:=False;
+iScannerBypass:=False;
+iDryCycleWithoutPal:=False;
+iDistSensorIP:=100;
+iGantryPickOver:=True;
+iPCAckZero:=False;
+iPCBypass:=False;
+iPCDataWriteOver:=False;
+iRetryPB:=False;
+iPCDataReadOver:=False;
+iDistSenLowLimit:=0;
+iDistSenHighLimit:=0;
+sDistanceLowLimit:=90;
+sDistanceHighLimit:=110;
+
+RUN(CYCLES := 1);
+ASSERT.Equal(StateNo, 58);
+ASSERT.Equal(qProcessOver, True);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_GantryUnload_Seqv2_Trans58"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: FB_PR_GantryUnload_Seqv25_V3_DB.iSstPB;
+iSstMode: FB_PR_GantryUnload_Seqv25_V3_DB.iSstMode;
+iAutoRunning: FB_PR_GantryUnload_Seqv25_V3_DB.iAutoRunning;
+iReset_fault: FB_PR_GantryUnload_Seqv25_V3_DB.iReset_fault;
+iGantryOutofZone: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryOutofZone;
+iCenteringSlideAtHome: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtHome;
+iProcessStart: FB_PR_GantryUnload_Seqv25_V3_DB.iProcessStart;
+iCenteringSlideAtWork: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtWork;
+iScanOver: FB_PR_GantryUnload_Seqv25_V3_DB.iScanOver;
+iScanErr: FB_PR_GantryUnload_Seqv25_V3_DB.iScanErr;
+iScannerBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iScannerBypass;
+iDryCycleWithoutPal: FB_PR_GantryUnload_Seqv25_V3_DB.iDryCycleWithoutPal;
+iDistSensorIP: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSensorIP;
+iGantryPickOver: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryPickOver;
+iPalletPresent: FB_PR_GantryUnload_Seqv25_V3_DB.iPalletPresent;
+iPCAckZero: FB_PR_GantryUnload_Seqv25_V3_DB.iPCAckZero;
+iPCBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iPCBypass;
+iPCDataWriteOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataWriteOver;
+iRetryPB: FB_PR_GantryUnload_Seqv25_V3_DB.iRetryPB;
+iPCDataReadOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataReadOver;
+iDistSenLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenLowLimit;
+iDistSenHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenHighLimit;
+StateNo: FB_PR_GantryUnload_Seqv25_V3_DB.StateNo;
+qCenteringSlideAdvance: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideAdvance;
+qCheckDistance: FB_PR_GantryUnload_Seqv25_V3_DB.qCheckDistance;
+qCenteringSlideRetract: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideRetract;
+qScanCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qScanCmd;
+qGantryOkToUnload: FB_PR_GantryUnload_Seqv25_V3_DB.qGantryOkToUnload;
+qProcessOver: FB_PR_GantryUnload_Seqv25_V3_DB.qProcessOver;
+qPCUploadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCUploadCmd;
+qMsg_0: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[0];
+qMsg_1: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[1];
+qMsg_2: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[2];
+qPCReadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCReadCmd;
+sRecoveryInt: FB_PR_GantryUnload_Seqv25_V3_DB.sRecoveryInt;
+sDistanceLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceLowLimit;
+sDistanceHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceHighLimit;
+sScanRetryCount: FB_PR_GantryUnload_Seqv25_V3_DB.sScanRetryCount;
+END_VAR
+
+STEP: "Wait for Process Start Low, Transition 58"
+iProcessStart:=False;
+
+iSstPB:=False;
+iSstMode:=False;
+iAutoRunning:=True;
+iReset_fault:=False;
+iGantryOutofZone:=True;
+iCenteringSlideAtHome:=True;
+iCenteringSlideAtWork:=False;
+iScanOver:=True;
+iScanErr:=False;
+iScannerBypass:=False;
+iDryCycleWithoutPal:=False;
+iDistSensorIP:=100;
+iGantryPickOver:=True;
+iPalletPresent:=False;
+iPCAckZero:=False;
+iPCBypass:=False;
+iPCDataWriteOver:=False;
+iRetryPB:=False;
+iPCDataReadOver:=False;
+iDistSenLowLimit:=0;
+iDistSenHighLimit:=0;
+sDistanceLowLimit:=90;
+sDistanceHighLimit:=110;
+
+RUN(CYCLES := 2);
+ASSERT.Equal(StateNo, 47);
+ASSERT.Equal(qProcessOver, True);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_GantryUnload_Seqv2_Trans61_T1"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: FB_PR_GantryUnload_Seqv25_V3_DB.iSstPB;
+iSstMode: FB_PR_GantryUnload_Seqv25_V3_DB.iSstMode;
+iAutoRunning: FB_PR_GantryUnload_Seqv25_V3_DB.iAutoRunning;
+iReset_fault: FB_PR_GantryUnload_Seqv25_V3_DB.iReset_fault;
+iGantryOutofZone: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryOutofZone;
+iCenteringSlideAtHome: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtHome;
+iProcessStart: FB_PR_GantryUnload_Seqv25_V3_DB.iProcessStart;
+iCenteringSlideAtWork: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtWork;
+iScanOver: FB_PR_GantryUnload_Seqv25_V3_DB.iScanOver;
+iScanErr: FB_PR_GantryUnload_Seqv25_V3_DB.iScanErr;
+iScannerBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iScannerBypass;
+iDryCycleWithoutPal: FB_PR_GantryUnload_Seqv25_V3_DB.iDryCycleWithoutPal;
+iDistSensorIP: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSensorIP;
+iGantryPickOver: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryPickOver;
+iPalletPresent: FB_PR_GantryUnload_Seqv25_V3_DB.iPalletPresent;
+iPCAckZero: FB_PR_GantryUnload_Seqv25_V3_DB.iPCAckZero;
+iPCBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iPCBypass;
+iPCDataWriteOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataWriteOver;
+iRetryPB: FB_PR_GantryUnload_Seqv25_V3_DB.iRetryPB;
+iPCDataReadOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataReadOver;
+iDistSenLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenLowLimit;
+iDistSenHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenHighLimit;
+StateNo: FB_PR_GantryUnload_Seqv25_V3_DB.StateNo;
+qCenteringSlideAdvance: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideAdvance;
+qCheckDistance: FB_PR_GantryUnload_Seqv25_V3_DB.qCheckDistance;
+qCenteringSlideRetract: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideRetract;
+qScanCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qScanCmd;
+qGantryOkToUnload: FB_PR_GantryUnload_Seqv25_V3_DB.qGantryOkToUnload;
+qProcessOver: FB_PR_GantryUnload_Seqv25_V3_DB.qProcessOver;
+qPCUploadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCUploadCmd;
+qMsg_0: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[0];
+qMsg_1: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[1];
+qMsg_2: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[2];
+qPCReadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCReadCmd;
+sRecoveryInt: FB_PR_GantryUnload_Seqv25_V3_DB.sRecoveryInt;
+sDistanceLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceLowLimit;
+sDistanceHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceHighLimit;
+sScanRetryCount: FB_PR_GantryUnload_Seqv25_V3_DB.sScanRetryCount;
+END_VAR
+
+STEP: "Check If Measured Diameter is in Tolerence, Transition 61 - Path 1"
+iDistSensorIP:=120;
+iDistSenLowLimit:=110;
+iDistSenHighLimit:=130;
+
+iSstPB:=False;
+iSstMode:=False;
+iAutoRunning:=True;
+iReset_fault:=False;
+iGantryOutofZone:=True;
+iCenteringSlideAtHome:=True;
+iProcessStart:=True;
+iCenteringSlideAtWork:=False;
+iScanOver:=True;
+iScanErr:=False;
+iScannerBypass:=False;
+iDryCycleWithoutPal:=False;
+iGantryPickOver:=False;
+iPalletPresent:=False;
+iPCAckZero:=False;
+iPCBypass:=False;
+iPCDataWriteOver:=False;
+iRetryPB:=False;
+iPCDataReadOver:=False;
+sDistanceLowLimit:=90;
+sDistanceHighLimit:=110;
+
+RUN(CYCLES := 1);
+ASSERT.Equal(StateNo, 62);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_GantryUnload_Seqv2_Trans61_T2"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: FB_PR_GantryUnload_Seqv25_V3_DB.iSstPB;
+iSstMode: FB_PR_GantryUnload_Seqv25_V3_DB.iSstMode;
+iAutoRunning: FB_PR_GantryUnload_Seqv25_V3_DB.iAutoRunning;
+iReset_fault: FB_PR_GantryUnload_Seqv25_V3_DB.iReset_fault;
+iGantryOutofZone: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryOutofZone;
+iCenteringSlideAtHome: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtHome;
+iProcessStart: FB_PR_GantryUnload_Seqv25_V3_DB.iProcessStart;
+iCenteringSlideAtWork: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtWork;
+iScanOver: FB_PR_GantryUnload_Seqv25_V3_DB.iScanOver;
+iScanErr: FB_PR_GantryUnload_Seqv25_V3_DB.iScanErr;
+iScannerBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iScannerBypass;
+iDryCycleWithoutPal: FB_PR_GantryUnload_Seqv25_V3_DB.iDryCycleWithoutPal;
+iDistSensorIP: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSensorIP;
+iGantryPickOver: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryPickOver;
+iPalletPresent: FB_PR_GantryUnload_Seqv25_V3_DB.iPalletPresent;
+iPCAckZero: FB_PR_GantryUnload_Seqv25_V3_DB.iPCAckZero;
+iPCBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iPCBypass;
+iPCDataWriteOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataWriteOver;
+iRetryPB: FB_PR_GantryUnload_Seqv25_V3_DB.iRetryPB;
+iPCDataReadOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataReadOver;
+iDistSenLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenLowLimit;
+iDistSenHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenHighLimit;
+StateNo: FB_PR_GantryUnload_Seqv25_V3_DB.StateNo;
+qCenteringSlideAdvance: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideAdvance;
+qCheckDistance: FB_PR_GantryUnload_Seqv25_V3_DB.qCheckDistance;
+qCenteringSlideRetract: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideRetract;
+qScanCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qScanCmd;
+qGantryOkToUnload: FB_PR_GantryUnload_Seqv25_V3_DB.qGantryOkToUnload;
+qProcessOver: FB_PR_GantryUnload_Seqv25_V3_DB.qProcessOver;
+qPCUploadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCUploadCmd;
+qMsg_0: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[0];
+qMsg_1: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[1];
+qMsg_2: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[2];
+qPCReadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCReadCmd;
+sRecoveryInt: FB_PR_GantryUnload_Seqv25_V3_DB.sRecoveryInt;
+sDistanceLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceLowLimit;
+sDistanceHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceHighLimit;
+sScanRetryCount: FB_PR_GantryUnload_Seqv25_V3_DB.sScanRetryCount;
+END_VAR
+
+STEP: "Check If Measured Diameter is in Tolerence, Transition 61 - Path 2"
+iDistSensorIP:=140;
+iDistSenLowLimit:=110;
+iDistSenHighLimit:=130;
+
+iSstPB:=False;
+iSstMode:=False;
+iAutoRunning:=True;
+iReset_fault:=False;
+iGantryOutofZone:=True;
+iCenteringSlideAtHome:=True;
+iProcessStart:=True;
+iCenteringSlideAtWork:=False;
+iScanOver:=True;
+iScanErr:=False;
+iScannerBypass:=False;
+iDryCycleWithoutPal:=False;
+iGantryPickOver:=False;
+iPalletPresent:=False;
+iPCAckZero:=False;
+iPCBypass:=False;
+iPCDataWriteOver:=False;
+iRetryPB:=False;
+iPCDataReadOver:=False;
+sDistanceLowLimit:=90;
+sDistanceHighLimit:=110;
+
+RUN(CYCLES := 1);
+ASSERT.Equal(StateNo, 64);
+ASSERT.Equal(qMsg_2, True);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_GantryUnload_Seqv2_Trans62"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: FB_PR_GantryUnload_Seqv25_V3_DB.iSstPB;
+iSstMode: FB_PR_GantryUnload_Seqv25_V3_DB.iSstMode;
+iAutoRunning: FB_PR_GantryUnload_Seqv25_V3_DB.iAutoRunning;
+iReset_fault: FB_PR_GantryUnload_Seqv25_V3_DB.iReset_fault;
+iGantryOutofZone: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryOutofZone;
+iCenteringSlideAtHome: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtHome;
+iProcessStart: FB_PR_GantryUnload_Seqv25_V3_DB.iProcessStart;
+iCenteringSlideAtWork: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtWork;
+iScanOver: FB_PR_GantryUnload_Seqv25_V3_DB.iScanOver;
+iScanErr: FB_PR_GantryUnload_Seqv25_V3_DB.iScanErr;
+iScannerBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iScannerBypass;
+iDryCycleWithoutPal: FB_PR_GantryUnload_Seqv25_V3_DB.iDryCycleWithoutPal;
+iDistSensorIP: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSensorIP;
+iGantryPickOver: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryPickOver;
+iPalletPresent: FB_PR_GantryUnload_Seqv25_V3_DB.iPalletPresent;
+iPCAckZero: FB_PR_GantryUnload_Seqv25_V3_DB.iPCAckZero;
+iPCBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iPCBypass;
+iPCDataWriteOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataWriteOver;
+iRetryPB: FB_PR_GantryUnload_Seqv25_V3_DB.iRetryPB;
+iPCDataReadOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataReadOver;
+iDistSenLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenLowLimit;
+iDistSenHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenHighLimit;
+StateNo: FB_PR_GantryUnload_Seqv25_V3_DB.StateNo;
+qCenteringSlideAdvance: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideAdvance;
+qCheckDistance: FB_PR_GantryUnload_Seqv25_V3_DB.qCheckDistance;
+qCenteringSlideRetract: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideRetract;
+qScanCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qScanCmd;
+qGantryOkToUnload: FB_PR_GantryUnload_Seqv25_V3_DB.qGantryOkToUnload;
+qProcessOver: FB_PR_GantryUnload_Seqv25_V3_DB.qProcessOver;
+qPCUploadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCUploadCmd;
+qMsg_0: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[0];
+qMsg_1: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[1];
+qMsg_2: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[2];
+qPCReadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCReadCmd;
+sRecoveryInt: FB_PR_GantryUnload_Seqv25_V3_DB.sRecoveryInt;
+sDistanceLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceLowLimit;
+sDistanceHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceHighLimit;
+sScanRetryCount: FB_PR_GantryUnload_Seqv25_V3_DB.sScanRetryCount;
+END_VAR
+
+STEP: "Wait for PC Acknowledge Zero, Transition 62"
+iPCAckZero:=True;
+
+iSstPB:=False;
+iSstMode:=False;
+iAutoRunning:=True;
+iReset_fault:=False;
+iGantryOutofZone:=True;
+iCenteringSlideAtHome:=True;
+iProcessStart:=True;
+iCenteringSlideAtWork:=False;
+iScanOver:=True;
+iScanErr:=False;
+iScannerBypass:=False;
+iDryCycleWithoutPal:=False;
+iDistSensorIP:=120;
+iGantryPickOver:=False;
+iPalletPresent:=False;
+iPCBypass:=False;
+iPCDataWriteOver:=False;
+iRetryPB:=False;
+iPCDataReadOver:=False;
+iDistSenLowLimit:=110;
+iDistSenHighLimit:=130;
+sDistanceLowLimit:=90;
+sDistanceHighLimit:=110;
+
+RUN(CYCLES := 1);
+ASSERT.Equal(StateNo, 63);
+ASSERT.Equal(qPCUploadCmd, True);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_GantryUnload_Seqv2_Trans63"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: FB_PR_GantryUnload_Seqv25_V3_DB.iSstPB;
+iSstMode: FB_PR_GantryUnload_Seqv25_V3_DB.iSstMode;
+iAutoRunning: FB_PR_GantryUnload_Seqv25_V3_DB.iAutoRunning;
+iReset_fault: FB_PR_GantryUnload_Seqv25_V3_DB.iReset_fault;
+iGantryOutofZone: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryOutofZone;
+iCenteringSlideAtHome: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtHome;
+iProcessStart: FB_PR_GantryUnload_Seqv25_V3_DB.iProcessStart;
+iCenteringSlideAtWork: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtWork;
+iScanOver: FB_PR_GantryUnload_Seqv25_V3_DB.iScanOver;
+iScanErr: FB_PR_GantryUnload_Seqv25_V3_DB.iScanErr;
+iScannerBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iScannerBypass;
+iDryCycleWithoutPal: FB_PR_GantryUnload_Seqv25_V3_DB.iDryCycleWithoutPal;
+iDistSensorIP: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSensorIP;
+iGantryPickOver: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryPickOver;
+iPalletPresent: FB_PR_GantryUnload_Seqv25_V3_DB.iPalletPresent;
+iPCAckZero: FB_PR_GantryUnload_Seqv25_V3_DB.iPCAckZero;
+iPCBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iPCBypass;
+iPCDataWriteOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataWriteOver;
+iRetryPB: FB_PR_GantryUnload_Seqv25_V3_DB.iRetryPB;
+iPCDataReadOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataReadOver;
+iDistSenLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenLowLimit;
+iDistSenHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenHighLimit;
+StateNo: FB_PR_GantryUnload_Seqv25_V3_DB.StateNo;
+qCenteringSlideAdvance: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideAdvance;
+qCheckDistance: FB_PR_GantryUnload_Seqv25_V3_DB.qCheckDistance;
+qCenteringSlideRetract: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideRetract;
+qScanCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qScanCmd;
+qGantryOkToUnload: FB_PR_GantryUnload_Seqv25_V3_DB.qGantryOkToUnload;
+qProcessOver: FB_PR_GantryUnload_Seqv25_V3_DB.qProcessOver;
+qPCUploadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCUploadCmd;
+qMsg_0: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[0];
+qMsg_1: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[1];
+qMsg_2: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[2];
+qPCReadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCReadCmd;
+sRecoveryInt: FB_PR_GantryUnload_Seqv25_V3_DB.sRecoveryInt;
+sDistanceLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceLowLimit;
+sDistanceHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceHighLimit;
+sScanRetryCount: FB_PR_GantryUnload_Seqv25_V3_DB.sScanRetryCount;
+END_VAR
+
+STEP: "Wait for Data Write Over From PC, Transition 63"
+iPCDataWriteOver:=True;
+
+iSstPB:=False;
+iSstMode:=False;
+iAutoRunning:=True;
+iReset_fault:=False;
+iGantryOutofZone:=True;
+iCenteringSlideAtHome:=True;
+iProcessStart:=True;
+iCenteringSlideAtWork:=False;
+iScanOver:=True;
+iScanErr:=False;
+iScannerBypass:=False;
+iDryCycleWithoutPal:=False;
+iDistSensorIP:=120;
+iGantryPickOver:=False;
+iPalletPresent:=False;
+iPCAckZero:=True;
+iPCBypass:=False;
+iRetryPB:=False;
+iPCDataReadOver:=False;
+iDistSenLowLimit:=110;
+iDistSenHighLimit:=130;
+sDistanceLowLimit:=90;
+sDistanceHighLimit:=110;
+
+RUN(CYCLES := 1);
+ASSERT.Equal(StateNo, 68);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_GantryUnload_Seqv2_Trans64"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: FB_PR_GantryUnload_Seqv25_V3_DB.iSstPB;
+iSstMode: FB_PR_GantryUnload_Seqv25_V3_DB.iSstMode;
+iAutoRunning: FB_PR_GantryUnload_Seqv25_V3_DB.iAutoRunning;
+iReset_fault: FB_PR_GantryUnload_Seqv25_V3_DB.iReset_fault;
+iGantryOutofZone: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryOutofZone;
+iCenteringSlideAtHome: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtHome;
+iProcessStart: FB_PR_GantryUnload_Seqv25_V3_DB.iProcessStart;
+iCenteringSlideAtWork: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtWork;
+iScanOver: FB_PR_GantryUnload_Seqv25_V3_DB.iScanOver;
+iScanErr: FB_PR_GantryUnload_Seqv25_V3_DB.iScanErr;
+iScannerBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iScannerBypass;
+iDryCycleWithoutPal: FB_PR_GantryUnload_Seqv25_V3_DB.iDryCycleWithoutPal;
+iDistSensorIP: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSensorIP;
+iGantryPickOver: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryPickOver;
+iPalletPresent: FB_PR_GantryUnload_Seqv25_V3_DB.iPalletPresent;
+iPCAckZero: FB_PR_GantryUnload_Seqv25_V3_DB.iPCAckZero;
+iPCBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iPCBypass;
+iPCDataWriteOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataWriteOver;
+iRetryPB: FB_PR_GantryUnload_Seqv25_V3_DB.iRetryPB;
+iPCDataReadOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataReadOver;
+iDistSenLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenLowLimit;
+iDistSenHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenHighLimit;
+StateNo: FB_PR_GantryUnload_Seqv25_V3_DB.StateNo;
+qCenteringSlideAdvance: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideAdvance;
+qCheckDistance: FB_PR_GantryUnload_Seqv25_V3_DB.qCheckDistance;
+qCenteringSlideRetract: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideRetract;
+qScanCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qScanCmd;
+qGantryOkToUnload: FB_PR_GantryUnload_Seqv25_V3_DB.qGantryOkToUnload;
+qProcessOver: FB_PR_GantryUnload_Seqv25_V3_DB.qProcessOver;
+qPCUploadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCUploadCmd;
+qMsg_0: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[0];
+qMsg_1: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[1];
+qMsg_2: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[2];
+qPCReadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCReadCmd;
+sRecoveryInt: FB_PR_GantryUnload_Seqv25_V3_DB.sRecoveryInt;
+sDistanceLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceLowLimit;
+sDistanceHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceHighLimit;
+sScanRetryCount: FB_PR_GantryUnload_Seqv25_V3_DB.sScanRetryCount;
+END_VAR
+
+STEP: "Wait for Operator Intervention, Transition 64"
+iRetryPB:=True;
+
+iSstPB:=False;
+iSstMode:=False;
+iAutoRunning:=True;
+iReset_fault:=False;
+iGantryOutofZone:=True;
+iCenteringSlideAtHome:=True;
+iProcessStart:=True;
+iCenteringSlideAtWork:=False;
+iScanOver:=True;
+iScanErr:=False;
+iScannerBypass:=False;
+iDryCycleWithoutPal:=False;
+iDistSensorIP:=140;
+iGantryPickOver:=False;
+iPalletPresent:=False;
+iPCAckZero:=False;
+iPCBypass:=False;
+iPCDataWriteOver:=False;
+iPCDataReadOver:=False;
+iDistSenLowLimit:=110;
+iDistSenHighLimit:=130;
+sDistanceLowLimit:=90;
+sDistanceHighLimit:=110;
+
+RUN(CYCLES := 2);
+ASSERT.Equal(StateNo, 49);
+ASSERT.Equal(qCenteringSlideAdvance, True);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_GantryUnload_Seqv2_Trans65_T1"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: FB_PR_GantryUnload_Seqv25_V3_DB.iSstPB;
+iSstMode: FB_PR_GantryUnload_Seqv25_V3_DB.iSstMode;
+iAutoRunning: FB_PR_GantryUnload_Seqv25_V3_DB.iAutoRunning;
+iReset_fault: FB_PR_GantryUnload_Seqv25_V3_DB.iReset_fault;
+iGantryOutofZone: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryOutofZone;
+iCenteringSlideAtHome: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtHome;
+iProcessStart: FB_PR_GantryUnload_Seqv25_V3_DB.iProcessStart;
+iCenteringSlideAtWork: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtWork;
+iScanOver: FB_PR_GantryUnload_Seqv25_V3_DB.iScanOver;
+iScanErr: FB_PR_GantryUnload_Seqv25_V3_DB.iScanErr;
+iScannerBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iScannerBypass;
+iDryCycleWithoutPal: FB_PR_GantryUnload_Seqv25_V3_DB.iDryCycleWithoutPal;
+iDistSensorIP: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSensorIP;
+iGantryPickOver: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryPickOver;
+iPalletPresent: FB_PR_GantryUnload_Seqv25_V3_DB.iPalletPresent;
+iPCAckZero: FB_PR_GantryUnload_Seqv25_V3_DB.iPCAckZero;
+iPCBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iPCBypass;
+iPCDataWriteOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataWriteOver;
+iRetryPB: FB_PR_GantryUnload_Seqv25_V3_DB.iRetryPB;
+iPCDataReadOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataReadOver;
+iDistSenLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenLowLimit;
+iDistSenHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenHighLimit;
+StateNo: FB_PR_GantryUnload_Seqv25_V3_DB.StateNo;
+qCenteringSlideAdvance: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideAdvance;
+qCheckDistance: FB_PR_GantryUnload_Seqv25_V3_DB.qCheckDistance;
+qCenteringSlideRetract: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideRetract;
+qScanCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qScanCmd;
+qGantryOkToUnload: FB_PR_GantryUnload_Seqv25_V3_DB.qGantryOkToUnload;
+qProcessOver: FB_PR_GantryUnload_Seqv25_V3_DB.qProcessOver;
+qPCUploadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCUploadCmd;
+qMsg_0: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[0];
+qMsg_1: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[1];
+qMsg_2: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[2];
+qPCReadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCReadCmd;
+sRecoveryInt: FB_PR_GantryUnload_Seqv25_V3_DB.sRecoveryInt;
+sDistanceLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceLowLimit;
+sDistanceHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceHighLimit;
+sScanRetryCount: FB_PR_GantryUnload_Seqv25_V3_DB.sScanRetryCount;
+END_VAR
+
+STEP: "Check Scan Retry Count Over Or Not, Transition 65 - Path 1"
+sScanRetryCount:=1;
+
+iSstPB:=False;
+iSstMode:=False;
+iAutoRunning:=True;
+iReset_fault:=False;
+iGantryOutofZone:=True;
+iCenteringSlideAtHome:=True;
+iProcessStart:=True;
+iCenteringSlideAtWork:=False;
+iScanOver:=False;
+iScanErr:=True;
+iScannerBypass:=False;
+iDryCycleWithoutPal:=False;
+iDistSensorIP:=0;
+iGantryPickOver:=False;
+iPalletPresent:=False;
+iPCAckZero:=False;
+iPCBypass:=False;
+iPCDataWriteOver:=False;
+iRetryPB:=False;
+iPCDataReadOver:=False;
+iDistSenLowLimit:=0;
+iDistSenHighLimit:=0;
+
+RUN(CYCLES := 2);
+ASSERT.Equal(StateNo, 52);
+ASSERT.Equal(qScanCmd, True);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_GantryUnload_Seqv2_Trans65_T2"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: FB_PR_GantryUnload_Seqv25_V3_DB.iSstPB;
+iSstMode: FB_PR_GantryUnload_Seqv25_V3_DB.iSstMode;
+iAutoRunning: FB_PR_GantryUnload_Seqv25_V3_DB.iAutoRunning;
+iReset_fault: FB_PR_GantryUnload_Seqv25_V3_DB.iReset_fault;
+iGantryOutofZone: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryOutofZone;
+iCenteringSlideAtHome: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtHome;
+iProcessStart: FB_PR_GantryUnload_Seqv25_V3_DB.iProcessStart;
+iCenteringSlideAtWork: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtWork;
+iScanOver: FB_PR_GantryUnload_Seqv25_V3_DB.iScanOver;
+iScanErr: FB_PR_GantryUnload_Seqv25_V3_DB.iScanErr;
+iScannerBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iScannerBypass;
+iDryCycleWithoutPal: FB_PR_GantryUnload_Seqv25_V3_DB.iDryCycleWithoutPal;
+iDistSensorIP: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSensorIP;
+iGantryPickOver: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryPickOver;
+iPalletPresent: FB_PR_GantryUnload_Seqv25_V3_DB.iPalletPresent;
+iPCAckZero: FB_PR_GantryUnload_Seqv25_V3_DB.iPCAckZero;
+iPCBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iPCBypass;
+iPCDataWriteOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataWriteOver;
+iRetryPB: FB_PR_GantryUnload_Seqv25_V3_DB.iRetryPB;
+iPCDataReadOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataReadOver;
+iDistSenLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenLowLimit;
+iDistSenHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenHighLimit;
+StateNo: FB_PR_GantryUnload_Seqv25_V3_DB.StateNo;
+qCenteringSlideAdvance: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideAdvance;
+qCheckDistance: FB_PR_GantryUnload_Seqv25_V3_DB.qCheckDistance;
+qCenteringSlideRetract: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideRetract;
+qScanCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qScanCmd;
+qGantryOkToUnload: FB_PR_GantryUnload_Seqv25_V3_DB.qGantryOkToUnload;
+qProcessOver: FB_PR_GantryUnload_Seqv25_V3_DB.qProcessOver;
+qPCUploadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCUploadCmd;
+qMsg_0: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[0];
+qMsg_1: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[1];
+qMsg_2: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[2];
+qPCReadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCReadCmd;
+sRecoveryInt: FB_PR_GantryUnload_Seqv25_V3_DB.sRecoveryInt;
+sDistanceLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceLowLimit;
+sDistanceHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceHighLimit;
+sScanRetryCount: FB_PR_GantryUnload_Seqv25_V3_DB.sScanRetryCount;
+END_VAR
+
+STEP: "Check Scan Retry Count Over Or Not, Transition 65 - Path 2"
+sScanRetryCount:=3;
+
+iSstPB:=False;
+iSstMode:=False;
+iAutoRunning:=True;
+iReset_fault:=False;
+iGantryOutofZone:=True;
+iCenteringSlideAtHome:=True;
+iProcessStart:=True;
+iCenteringSlideAtWork:=False;
+iScanOver:=False;
+iScanErr:=True;
+iScannerBypass:=False;
+iDryCycleWithoutPal:=False;
+iDistSensorIP:=0;
+iGantryPickOver:=False;
+iPalletPresent:=False;
+iPCAckZero:=False;
+iPCBypass:=False;
+iPCDataWriteOver:=False;
+iRetryPB:=False;
+iPCDataReadOver:=False;
+iDistSenLowLimit:=0;
+iDistSenHighLimit:=0;
+
+RUN(CYCLES := 1);
+ASSERT.Equal(StateNo, 66);
+ASSERT.Equal(qMsg_1, True);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_GantryUnload_Seqv2_Trans66"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: FB_PR_GantryUnload_Seqv25_V3_DB.iSstPB;
+iSstMode: FB_PR_GantryUnload_Seqv25_V3_DB.iSstMode;
+iAutoRunning: FB_PR_GantryUnload_Seqv25_V3_DB.iAutoRunning;
+iReset_fault: FB_PR_GantryUnload_Seqv25_V3_DB.iReset_fault;
+iGantryOutofZone: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryOutofZone;
+iCenteringSlideAtHome: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtHome;
+iProcessStart: FB_PR_GantryUnload_Seqv25_V3_DB.iProcessStart;
+iCenteringSlideAtWork: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtWork;
+iScanOver: FB_PR_GantryUnload_Seqv25_V3_DB.iScanOver;
+iScanErr: FB_PR_GantryUnload_Seqv25_V3_DB.iScanErr;
+iScannerBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iScannerBypass;
+iDryCycleWithoutPal: FB_PR_GantryUnload_Seqv25_V3_DB.iDryCycleWithoutPal;
+iDistSensorIP: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSensorIP;
+iGantryPickOver: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryPickOver;
+iPalletPresent: FB_PR_GantryUnload_Seqv25_V3_DB.iPalletPresent;
+iPCAckZero: FB_PR_GantryUnload_Seqv25_V3_DB.iPCAckZero;
+iPCBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iPCBypass;
+iPCDataWriteOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataWriteOver;
+iRetryPB: FB_PR_GantryUnload_Seqv25_V3_DB.iRetryPB;
+iPCDataReadOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataReadOver;
+iDistSenLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenLowLimit;
+iDistSenHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenHighLimit;
+StateNo: FB_PR_GantryUnload_Seqv25_V3_DB.StateNo;
+qCenteringSlideAdvance: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideAdvance;
+qCheckDistance: FB_PR_GantryUnload_Seqv25_V3_DB.qCheckDistance;
+qCenteringSlideRetract: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideRetract;
+qScanCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qScanCmd;
+qGantryOkToUnload: FB_PR_GantryUnload_Seqv25_V3_DB.qGantryOkToUnload;
+qProcessOver: FB_PR_GantryUnload_Seqv25_V3_DB.qProcessOver;
+qPCUploadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCUploadCmd;
+qMsg_0: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[0];
+qMsg_1: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[1];
+qMsg_2: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[2];
+qPCReadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCReadCmd;
+sRecoveryInt: FB_PR_GantryUnload_Seqv25_V3_DB.sRecoveryInt;
+sDistanceLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceLowLimit;
+sDistanceHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceHighLimit;
+sScanRetryCount: FB_PR_GantryUnload_Seqv25_V3_DB.sScanRetryCount;
+END_VAR
+
+STEP: "Wait for Operator desicion, Transition 66"
+iRetryPB:=True;
+sScanRetryCount:=0;
+
+iSstPB:=False;
+iSstMode:=False;
+iAutoRunning:=True;
+iReset_fault:=False;
+iGantryOutofZone:=True;
+iCenteringSlideAtHome:=True;
+iProcessStart:=True;
+iCenteringSlideAtWork:=False;
+iScanOver:=False;
+iScanErr:=True;
+iScannerBypass:=False;
+iDryCycleWithoutPal:=False;
+iDistSensorIP:=0;
+iGantryPickOver:=False;
+iPalletPresent:=False;
+iPCAckZero:=False;
+iPCBypass:=False;
+iPCDataWriteOver:=False;
+iPCDataReadOver:=False;
+iDistSenLowLimit:=0;
+iDistSenHighLimit:=0;
+
+RUN(CYCLES := 2);
+ASSERT.Equal(StateNo, 52);
+ASSERT.Equal(qScanCmd, True);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_GantryUnload_Seqv2_Trans67"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: FB_PR_GantryUnload_Seqv25_V3_DB.iSstPB;
+iSstMode: FB_PR_GantryUnload_Seqv25_V3_DB.iSstMode;
+iAutoRunning: FB_PR_GantryUnload_Seqv25_V3_DB.iAutoRunning;
+iReset_fault: FB_PR_GantryUnload_Seqv25_V3_DB.iReset_fault;
+iGantryOutofZone: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryOutofZone;
+iCenteringSlideAtHome: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtHome;
+iProcessStart: FB_PR_GantryUnload_Seqv25_V3_DB.iProcessStart;
+iCenteringSlideAtWork: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtWork;
+iScanOver: FB_PR_GantryUnload_Seqv25_V3_DB.iScanOver;
+iScanErr: FB_PR_GantryUnload_Seqv25_V3_DB.iScanErr;
+iScannerBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iScannerBypass;
+iDryCycleWithoutPal: FB_PR_GantryUnload_Seqv25_V3_DB.iDryCycleWithoutPal;
+iDistSensorIP: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSensorIP;
+iGantryPickOver: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryPickOver;
+iPalletPresent: FB_PR_GantryUnload_Seqv25_V3_DB.iPalletPresent;
+iPCAckZero: FB_PR_GantryUnload_Seqv25_V3_DB.iPCAckZero;
+iPCBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iPCBypass;
+iPCDataWriteOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataWriteOver;
+iRetryPB: FB_PR_GantryUnload_Seqv25_V3_DB.iRetryPB;
+iPCDataReadOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataReadOver;
+iDistSenLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenLowLimit;
+iDistSenHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenHighLimit;
+StateNo: FB_PR_GantryUnload_Seqv25_V3_DB.StateNo;
+qCenteringSlideAdvance: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideAdvance;
+qCheckDistance: FB_PR_GantryUnload_Seqv25_V3_DB.qCheckDistance;
+qCenteringSlideRetract: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideRetract;
+qScanCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qScanCmd;
+qGantryOkToUnload: FB_PR_GantryUnload_Seqv25_V3_DB.qGantryOkToUnload;
+qProcessOver: FB_PR_GantryUnload_Seqv25_V3_DB.qProcessOver;
+qPCUploadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCUploadCmd;
+qMsg_0: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[0];
+qMsg_1: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[1];
+qMsg_2: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[2];
+qPCReadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCReadCmd;
+sRecoveryInt: FB_PR_GantryUnload_Seqv25_V3_DB.sRecoveryInt;
+sDistanceLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceLowLimit;
+sDistanceHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceHighLimit;
+sScanRetryCount: FB_PR_GantryUnload_Seqv25_V3_DB.sScanRetryCount;
+END_VAR
+
+STEP: "Wait For Centering Slide Retract for Home, Transition 67"
+iCenteringSlideAtHome:=True;
+
+iSstPB:=False;
+iSstMode:=False;
+iAutoRunning:=True;
+iReset_fault:=False;
+iGantryOutofZone:=True;
+iProcessStart:=False;
+iCenteringSlideAtWork:=False;
+iScanOver:=False;
+iScanErr:=False;
+iScannerBypass:=False;
+iDryCycleWithoutPal:=False;
+iDistSensorIP:=0;
+iGantryPickOver:=False;
+iPalletPresent:=False;
+iPCAckZero:=False;
+iPCBypass:=False;
+iPCDataWriteOver:=False;
+iRetryPB:=False;
+iPCDataReadOver:=False;
+iDistSenLowLimit:=0;
+iDistSenHighLimit:=0;
+
+RUN(CYCLES := 2);
+ASSERT.Equal(StateNo, 46);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_GantryUnload_Seqv2_Trans68"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: FB_PR_GantryUnload_Seqv25_V3_DB.iSstPB;
+iSstMode: FB_PR_GantryUnload_Seqv25_V3_DB.iSstMode;
+iAutoRunning: FB_PR_GantryUnload_Seqv25_V3_DB.iAutoRunning;
+iReset_fault: FB_PR_GantryUnload_Seqv25_V3_DB.iReset_fault;
+iGantryOutofZone: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryOutofZone;
+iCenteringSlideAtHome: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtHome;
+iProcessStart: FB_PR_GantryUnload_Seqv25_V3_DB.iProcessStart;
+iCenteringSlideAtWork: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtWork;
+iScanOver: FB_PR_GantryUnload_Seqv25_V3_DB.iScanOver;
+iScanErr: FB_PR_GantryUnload_Seqv25_V3_DB.iScanErr;
+iScannerBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iScannerBypass;
+iDryCycleWithoutPal: FB_PR_GantryUnload_Seqv25_V3_DB.iDryCycleWithoutPal;
+iDistSensorIP: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSensorIP;
+iGantryPickOver: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryPickOver;
+iPalletPresent: FB_PR_GantryUnload_Seqv25_V3_DB.iPalletPresent;
+iPCAckZero: FB_PR_GantryUnload_Seqv25_V3_DB.iPCAckZero;
+iPCBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iPCBypass;
+iPCDataWriteOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataWriteOver;
+iRetryPB: FB_PR_GantryUnload_Seqv25_V3_DB.iRetryPB;
+iPCDataReadOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataReadOver;
+iDistSenLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenLowLimit;
+iDistSenHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenHighLimit;
+StateNo: FB_PR_GantryUnload_Seqv25_V3_DB.StateNo;
+qCenteringSlideAdvance: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideAdvance;
+qCheckDistance: FB_PR_GantryUnload_Seqv25_V3_DB.qCheckDistance;
+qCenteringSlideRetract: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideRetract;
+qScanCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qScanCmd;
+qGantryOkToUnload: FB_PR_GantryUnload_Seqv25_V3_DB.qGantryOkToUnload;
+qProcessOver: FB_PR_GantryUnload_Seqv25_V3_DB.qProcessOver;
+qPCUploadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCUploadCmd;
+qMsg_0: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[0];
+qMsg_1: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[1];
+qMsg_2: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[2];
+qPCReadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCReadCmd;
+sRecoveryInt: FB_PR_GantryUnload_Seqv25_V3_DB.sRecoveryInt;
+sDistanceLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceLowLimit;
+sDistanceHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceHighLimit;
+sScanRetryCount: FB_PR_GantryUnload_Seqv25_V3_DB.sScanRetryCount;
+END_VAR
+
+STEP: "Wait for PC Acknowledge Zero for Read, Transition 68"
+iPCAckZero:=True;
+
+iSstPB:=False;
+iSstMode:=False;
+iAutoRunning:=True;
+iReset_fault:=False;
+iGantryOutofZone:=True;
+iCenteringSlideAtHome:=True;
+iProcessStart:=True;
+iCenteringSlideAtWork:=False;
+iScanOver:=True;
+iScanErr:=False;
+iScannerBypass:=False;
+iDryCycleWithoutPal:=False;
+iDistSensorIP:=0;
+iGantryPickOver:=False;
+iPalletPresent:=False;
+iPCBypass:=False;
+iPCDataWriteOver:=False;
+iRetryPB:=False;
+iPCDataReadOver:=False;
+iDistSenLowLimit:=0;
+iDistSenHighLimit:=0;
+
+RUN(CYCLES := 1);
+ASSERT.Equal(StateNo, 69);
+ASSERT.Equal(qPCReadCmd, True);
+END_STEP
+
+END_TEST_CASE
+
+TEST_CASE "PR_GantryUnload_Seqv2_Trans69"
+
+PROPERTY
+AUTHOR : ""
+VERSION : "0.1"
+COMMENT : ""
+SCOPE : "PLC"
+PLCSIM_INSTANCE_NAME : "myplc"
+TEST_EXECUTION_MODE : "ExternallyManagedPlcSimAdvInstance"
+END_PROPERTY
+
+VAR
+iSstPB: FB_PR_GantryUnload_Seqv25_V3_DB.iSstPB;
+iSstMode: FB_PR_GantryUnload_Seqv25_V3_DB.iSstMode;
+iAutoRunning: FB_PR_GantryUnload_Seqv25_V3_DB.iAutoRunning;
+iReset_fault: FB_PR_GantryUnload_Seqv25_V3_DB.iReset_fault;
+iGantryOutofZone: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryOutofZone;
+iCenteringSlideAtHome: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtHome;
+iProcessStart: FB_PR_GantryUnload_Seqv25_V3_DB.iProcessStart;
+iCenteringSlideAtWork: FB_PR_GantryUnload_Seqv25_V3_DB.iCenteringSlideAtWork;
+iScanOver: FB_PR_GantryUnload_Seqv25_V3_DB.iScanOver;
+iScanErr: FB_PR_GantryUnload_Seqv25_V3_DB.iScanErr;
+iScannerBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iScannerBypass;
+iDryCycleWithoutPal: FB_PR_GantryUnload_Seqv25_V3_DB.iDryCycleWithoutPal;
+iDistSensorIP: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSensorIP;
+iGantryPickOver: FB_PR_GantryUnload_Seqv25_V3_DB.iGantryPickOver;
+iPalletPresent: FB_PR_GantryUnload_Seqv25_V3_DB.iPalletPresent;
+iPCAckZero: FB_PR_GantryUnload_Seqv25_V3_DB.iPCAckZero;
+iPCBypass: FB_PR_GantryUnload_Seqv25_V3_DB.iPCBypass;
+iPCDataWriteOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataWriteOver;
+iRetryPB: FB_PR_GantryUnload_Seqv25_V3_DB.iRetryPB;
+iPCDataReadOver: FB_PR_GantryUnload_Seqv25_V3_DB.iPCDataReadOver;
+iDistSenLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenLowLimit;
+iDistSenHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.iDistSenHighLimit;
+StateNo: FB_PR_GantryUnload_Seqv25_V3_DB.StateNo;
+qCenteringSlideAdvance: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideAdvance;
+qCheckDistance: FB_PR_GantryUnload_Seqv25_V3_DB.qCheckDistance;
+qCenteringSlideRetract: FB_PR_GantryUnload_Seqv25_V3_DB.qCenteringSlideRetract;
+qScanCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qScanCmd;
+qGantryOkToUnload: FB_PR_GantryUnload_Seqv25_V3_DB.qGantryOkToUnload;
+qProcessOver: FB_PR_GantryUnload_Seqv25_V3_DB.qProcessOver;
+qPCUploadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCUploadCmd;
+qMsg_0: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[0];
+qMsg_1: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[1];
+qMsg_2: FB_PR_GantryUnload_Seqv25_V3_DB.qMsg[2];
+qPCReadCmd: FB_PR_GantryUnload_Seqv25_V3_DB.qPCReadCmd;
+sRecoveryInt: FB_PR_GantryUnload_Seqv25_V3_DB.sRecoveryInt;
+sDistanceLowLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceLowLimit;
+sDistanceHighLimit: FB_PR_GantryUnload_Seqv25_V3_DB.sDistanceHighLimit;
+sScanRetryCount: FB_PR_GantryUnload_Seqv25_V3_DB.sScanRetryCount;
+END_VAR
+
+STEP: "Wait for Data Read Over From PC, Transition 69"
+iPCDataReadOver:=True;
+sDistanceLowLimit:=90;
+sDistanceHighLimit:=110;
+
+iSstPB:=False;
+iSstMode:=False;
+iAutoRunning:=True;
+iReset_fault:=False;
+iGantryOutofZone:=True;
+iCenteringSlideAtHome:=True;
+iProcessStart:=True;
+iCenteringSlideAtWork:=False;
+iScanOver:=True;
+iScanErr:=False;
+iScannerBypass:=False;
+iDryCycleWithoutPal:=False;
+iDistSensorIP:=100;
+iGantryPickOver:=False;
+iPalletPresent:=False;
+iPCAckZero:=True;
+iPCBypass:=False;
+iPCDataWriteOver:=False;
+iRetryPB:=False;
+iDistSenLowLimit:=0;
+iDistSenHighLimit:=0;
+
+RUN(CYCLES := 1);
+ASSERT.Equal(StateNo, 53);
+END_STEP
+
+END_TEST_CASE

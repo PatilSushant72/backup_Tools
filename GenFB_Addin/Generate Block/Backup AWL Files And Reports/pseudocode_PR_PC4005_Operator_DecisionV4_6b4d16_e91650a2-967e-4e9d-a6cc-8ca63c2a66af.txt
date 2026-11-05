@@ -1,0 +1,119 @@
+State Number: 29
+Description: Wait for Process Start
+State Name: WaitProcStart
+Action:
+Transitions:
+ - Condition: IF ProcessStartFormPZR & PalletPresentAtStation
+    - Goto State Number 43
+
+State Number: 30
+Description: Wait for Carton Sheet Placement & Operator Authorization
+State Name: WaitCartnSheetOp
+Action:
+Transitions:
+ - Condition: IF OperatorAuthorizationPB
+    - Goto State Number 31
+
+State Number: 31
+Description: Check Cycle Selection
+State Name: ChkCycleSelect
+Action:
+Transitions:
+ - Condition1: IF !UnloadCycleSelection
+    - Goto State Number 32
+ - Condition2: IF UnloadCycleSelection
+    - Goto State Number 38
+
+State Number: 32
+Description: Wait for Scan Over
+State Name: WaitScanOver
+Action: qScanCmd
+Transitions:
+ - Condition: IF ScanOver || ScannerBypass
+    - Goto State Number 33
+
+State Number: 33
+Description: Check Scan result
+State Name: ChkScanResult
+Action:
+Transitions:
+ - Condition1: IF (ScanOver & ScanResultOk) || (ScannerBypass)
+    - Goto State Number 34
+ - Condition2: IF ScanOver & ScanResultNok
+    - Goto State Number 40
+
+State Number: 34
+Description: Wait for Operator Decision
+State Name: WaitOpDecision
+Action: IF OperatorAuthorizationPB THEN SET sPalletAccepted
+Transitions:
+ - Condition1: IF OperatorAuthorizationPB
+    - Goto State Number 35
+ - Condition2: IF RejectPB
+    - Goto State Number 41
+
+State Number: 35
+Description: Check PC Acknowledge value reset to zero
+State Name: ChkPCAckReset0
+Action:
+Transitions:
+ - Condition: IF PCAckZero || PCBypass
+    - Goto State Number 36
+
+State Number: 36
+Description: Wait for Data Read From PC
+State Name: WaitDataReadPC
+Action: qPCReadCmd
+Transitions:
+ - Condition: IF PCDataReadOver || PCBypass
+    - Goto State Number 38
+
+State Number: 38
+Description: Wait for Process Start Low
+State Name: WaitProcStartLow
+Action: SET sProcessOver, qProcessOver
+Transitions:
+ - Condition: IF !ProcessStartFormPZR
+    - Goto State Number 39
+
+State Number: 39
+Description: Wait for Pallet Absent
+State Name: WaitPalletAbsnt
+Action: IF !AutoRunning & ResetMem THEN qResetPalletStatusData
+Transitions:
+ - Condition: IF !PalletPresentAtStation
+    - Goto State Number 29
+
+State Number: 40
+Description: Wait for Fault Reset
+State Name: WaitFaultReset
+Action:
+Transitions:
+ - Condition: IF ResetFault
+    - Goto State Number 38
+
+State Number: 41
+Description: Check PC Acknowledge value reset to zero for Upload
+State Name: ChkPCAckReset0U
+Action:
+Transitions:
+ - Condition: IF PCAckZero || PCBypass
+    - Goto State Number 42
+
+State Number: 42
+Description: Wait for Data Upload From PC
+State Name: WaitDataUpldPC
+Action: qPCWriteCmd
+Transitions:
+ - Condition: IF PCDataWriteOver || PCBypass
+    - Goto State Number 38
+
+State Number: 43
+Description: Check Recovery
+State Name: ChkRecovery
+Action:
+Transitions:
+ - Condition1: IF !ProcessOver
+    - Goto State Number 30
+ - Condition2: IF ProcessOver
+    - Goto State Number 38

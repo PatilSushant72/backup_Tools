@@ -1,0 +1,652 @@
+
+<SW.Blocks.CompileUnit ID="1113" CompositionName="CompileUnits">                     
+        <AttributeList>                                                                                          
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+        <Parts>
+<Access Scope="GlobalVariable" UId="22">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_CentreStand_Fix_Seq_V12_1026b5_DB" />                                                                               
+        <Component Name="iAutoRunning" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="23">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_CentreStand_Fix_Seq_V12_1026b5_DB" />                                                                               
+        <Component Name="iFixClamp" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="24">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_CentreStand_Fix_Seq_V12_1026b5_DB" />                                                                               
+        <Component Name="iFixEmpty" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="25">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_CentreStand_Fix_Seq_V12_1026b5_DB" />                                                                               
+        <Component Name="iFixTrayPresent" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="26">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_CentreStand_Fix_Seq_V12_1026b5_DB" />                                                                               
+        <Component Name="iFixUnclamp" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="27">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_CentreStand_Fix_Seq_V12_1026b5_DB" />                                                                               
+        <Component Name="iR1DropOver" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="28">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_CentreStand_Fix_Seq_V12_1026b5_DB" />                                                                               
+        <Component Name="iR1PickOver" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="29">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_CentreStand_Fix_Seq_V12_1026b5_DB" />                                                                               
+        <Component Name="iR2OperationOver" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="30">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_CentreStand_Fix_Seq_V12_1026b5_DB" />                                                                               
+        <Component Name="iR2ServiceActivated" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="31">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_CentreStand_Fix_Seq_V12_1026b5_DB" />                                                                               
+        <Component Name="iReset_fault" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="32">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_CentreStand_Fix_Seq_V12_1026b5_DB" />                                                                               
+        <Component Name="iRobotOutofZone" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="33">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_CentreStand_Fix_Seq_V12_1026b5_DB" />                                                                               
+        <Component Name="iSstMode" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="34">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_CentreStand_Fix_Seq_V12_1026b5_DB" />                                                                               
+        <Component Name="iSstPB" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="35">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_CentreStand_Fix_Seq_V12_1026b5_DB" />                                                                               
+        <Component Name="qFixClamp" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="36">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_CentreStand_Fix_Seq_V12_1026b5_DB" />                                                                               
+        <Component Name="qFixUnclamp" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="37">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_CentreStand_Fix_Seq_V12_1026b5_DB" />                                                                               
+        <Component Name="qR1ReadytoDropTray" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="38">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_CentreStand_Fix_Seq_V12_1026b5_DB" />                                                                               
+        <Component Name="qR1ReadytoPickTray" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="39">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_CentreStand_Fix_Seq_V12_1026b5_DB" />                                                                               
+        <Component Name="qR2OperationStart" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="40">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_CentreStand_Fix_Seq_V12_1026b5_DB" />                                                                               
+        <Component Name="iqR2ServiceActive" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="41">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_CentreStand_Fix_Seq_V12_1026b5_DB" />                                                                               
+        <Component Name="iqR2ServiceCompleted" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+
+<Call UId="2111">                                                               
+      <CallInfo Name="PR_CentreStand_Fix_Seq_V12_1026b5" BlockType="FB">                                                                   
+        <Instance Scope="GlobalVariable" UId="1114">                                                          
+          <Component Name="PR_CentreStand_Fix_Seq_V12_1026b5_DB" />                                                                             
+        </Instance>
+<Parameter Name="iAutoRunning" Section="Input" Type="Bool" />
+<Parameter Name="iFixClamp" Section="Input" Type="Bool" />
+<Parameter Name="iFixEmpty" Section="Input" Type="Bool" />
+<Parameter Name="iFixTrayPresent" Section="Input" Type="Bool" />
+<Parameter Name="iFixUnclamp" Section="Input" Type="Bool" />
+<Parameter Name="iR1DropOver" Section="Input" Type="Bool" />
+<Parameter Name="iR1PickOver" Section="Input" Type="Bool" />
+<Parameter Name="iR2OperationOver" Section="Input" Type="Bool" />
+<Parameter Name="iR2ServiceActivated" Section="Input" Type="Bool" />
+<Parameter Name="iReset_fault" Section="Input" Type="Bool" />
+<Parameter Name="iRobotOutofZone" Section="Input" Type="Bool" />
+<Parameter Name="iSstMode" Section="Input" Type="Bool" />
+<Parameter Name="iSstPB" Section="Input" Type="Bool" />
+<Parameter Name="qFixClamp" Section="Output" Type="Bool" />
+<Parameter Name="qFixUnclamp" Section="Output" Type="Bool" />
+<Parameter Name="qR1ReadytoDropTray" Section="Output" Type="Bool" />
+<Parameter Name="qR1ReadytoPickTray" Section="Output" Type="Bool" />
+<Parameter Name="qR2OperationStart" Section="Output" Type="Bool" />
+<Parameter Name="iqR2ServiceActive" Section="InOut" Type="Bool" />
+<Parameter Name="iqR2ServiceCompleted" Section="InOut" Type="Bool" />
+
+</CallInfo>                                                                          
+    </Call>                                                                                                      
+  </Parts>
+<Wires>
+<Wire UId="1115">                                                                  
+      <Powerrail />                                                                                              
+      <NameCon UId="2111" Name="en" />                                                                       
+    </Wire>
+<Wire UId="1120">                                                                    
+      <IdentCon UId="22" />                                                                                   
+      <NameCon UId="2111" Name="iAutoRunning" />                                                                      
+    </Wire>
+<Wire UId="1121">                                                                    
+      <IdentCon UId="23" />                                                                                   
+      <NameCon UId="2111" Name="iFixClamp" />                                                                      
+    </Wire>
+<Wire UId="1122">                                                                    
+      <IdentCon UId="24" />                                                                                   
+      <NameCon UId="2111" Name="iFixEmpty" />                                                                      
+    </Wire>
+<Wire UId="1123">                                                                    
+      <IdentCon UId="25" />                                                                                   
+      <NameCon UId="2111" Name="iFixTrayPresent" />                                                                      
+    </Wire>
+<Wire UId="1124">                                                                    
+      <IdentCon UId="26" />                                                                                   
+      <NameCon UId="2111" Name="iFixUnclamp" />                                                                      
+    </Wire>
+<Wire UId="1125">                                                                    
+      <IdentCon UId="27" />                                                                                   
+      <NameCon UId="2111" Name="iR1DropOver" />                                                                      
+    </Wire>
+<Wire UId="1126">                                                                    
+      <IdentCon UId="28" />                                                                                   
+      <NameCon UId="2111" Name="iR1PickOver" />                                                                      
+    </Wire>
+<Wire UId="1127">                                                                    
+      <IdentCon UId="29" />                                                                                   
+      <NameCon UId="2111" Name="iR2OperationOver" />                                                                      
+    </Wire>
+<Wire UId="1128">                                                                    
+      <IdentCon UId="30" />                                                                                   
+      <NameCon UId="2111" Name="iR2ServiceActivated" />                                                                      
+    </Wire>
+<Wire UId="1129">                                                                    
+      <IdentCon UId="31" />                                                                                   
+      <NameCon UId="2111" Name="iReset_fault" />                                                                      
+    </Wire>
+<Wire UId="1130">                                                                    
+      <IdentCon UId="32" />                                                                                   
+      <NameCon UId="2111" Name="iRobotOutofZone" />                                                                      
+    </Wire>
+<Wire UId="1131">                                                                    
+      <IdentCon UId="33" />                                                                                   
+      <NameCon UId="2111" Name="iSstMode" />                                                                      
+    </Wire>
+<Wire UId="1132">                                                                    
+      <IdentCon UId="34" />                                                                                   
+      <NameCon UId="2111" Name="iSstPB" />                                                                      
+    </Wire>
+<Wire UId="1133">                                                                    
+      <IdentCon UId="35" />                                                                                   
+      <NameCon UId="2111" Name="qFixClamp" />                                                                      
+    </Wire>
+<Wire UId="1134">                                                                    
+      <IdentCon UId="36" />                                                                                   
+      <NameCon UId="2111" Name="qFixUnclamp" />                                                                      
+    </Wire>
+<Wire UId="1135">                                                                    
+      <IdentCon UId="37" />                                                                                   
+      <NameCon UId="2111" Name="qR1ReadytoDropTray" />                                                                      
+    </Wire>
+<Wire UId="1136">                                                                    
+      <IdentCon UId="38" />                                                                                   
+      <NameCon UId="2111" Name="qR1ReadytoPickTray" />                                                                      
+    </Wire>
+<Wire UId="1137">                                                                    
+      <IdentCon UId="39" />                                                                                   
+      <NameCon UId="2111" Name="qR2OperationStart" />                                                                      
+    </Wire>
+<Wire UId="1138">                                                                    
+      <IdentCon UId="40" />                                                                                   
+      <NameCon UId="2111" Name="iqR2ServiceActive" />                                                                      
+    </Wire>
+<Wire UId="1139">                                                                    
+      <IdentCon UId="41" />                                                                                   
+      <NameCon UId="2111" Name="iqR2ServiceCompleted" />                                                                      
+    </Wire>
+</Wires>
+</FlgNet></NetworkSource><ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="1116" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="1117" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1118" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="1119" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+<SW.Blocks.CompileUnit ID="1141" CompositionName="CompileUnits">                     
+        <AttributeList>                                                                                          
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+        <Parts>
+<Access Scope="GlobalVariable" UId="22">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_GantryUnload_Seqv25_57af70_DB" />                                                                               
+        <Component Name="iAutoRunning" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="23">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_GantryUnload_Seqv25_57af70_DB" />                                                                               
+        <Component Name="iCenteringSlideAtHome" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="24">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_GantryUnload_Seqv25_57af70_DB" />                                                                               
+        <Component Name="iCenteringSlideAtWork" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="25">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_GantryUnload_Seqv25_57af70_DB" />                                                                               
+        <Component Name="iDistSenHighLimit" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="26">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_GantryUnload_Seqv25_57af70_DB" />                                                                               
+        <Component Name="iDistSenLowLimit" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="27">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_GantryUnload_Seqv25_57af70_DB" />                                                                               
+        <Component Name="iDistSensorIP" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="28">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_GantryUnload_Seqv25_57af70_DB" />                                                                               
+        <Component Name="iDryCycleWithoutPal" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="29">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_GantryUnload_Seqv25_57af70_DB" />                                                                               
+        <Component Name="iGantryOutofZone" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="30">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_GantryUnload_Seqv25_57af70_DB" />                                                                               
+        <Component Name="iGantryPickOver" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="31">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_GantryUnload_Seqv25_57af70_DB" />                                                                               
+        <Component Name="iPCAckZero" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="32">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_GantryUnload_Seqv25_57af70_DB" />                                                                               
+        <Component Name="iPCBypass" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="33">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_GantryUnload_Seqv25_57af70_DB" />                                                                               
+        <Component Name="iPCDataReadOver" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="34">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_GantryUnload_Seqv25_57af70_DB" />                                                                               
+        <Component Name="iPCDataWriteOver" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="35">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_GantryUnload_Seqv25_57af70_DB" />                                                                               
+        <Component Name="iPalletPresent" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="36">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_GantryUnload_Seqv25_57af70_DB" />                                                                               
+        <Component Name="iProcessStart" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="37">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_GantryUnload_Seqv25_57af70_DB" />                                                                               
+        <Component Name="iReset_fault" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="38">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_GantryUnload_Seqv25_57af70_DB" />                                                                               
+        <Component Name="iRetryPB" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="39">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_GantryUnload_Seqv25_57af70_DB" />                                                                               
+        <Component Name="iScanErr" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="40">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_GantryUnload_Seqv25_57af70_DB" />                                                                               
+        <Component Name="iScanOver" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="41">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_GantryUnload_Seqv25_57af70_DB" />                                                                               
+        <Component Name="iScannerBypass" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="42">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_GantryUnload_Seqv25_57af70_DB" />                                                                               
+        <Component Name="iSstMode" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="43">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_GantryUnload_Seqv25_57af70_DB" />                                                                               
+        <Component Name="iSstPB" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="44">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_GantryUnload_Seqv25_57af70_DB" />                                                                               
+        <Component Name="qCenteringSlideAdvance" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="45">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_GantryUnload_Seqv25_57af70_DB" />                                                                               
+        <Component Name="qCenteringSlideRetract" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="46">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_GantryUnload_Seqv25_57af70_DB" />                                                                               
+        <Component Name="qCheckDistance" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="47">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_GantryUnload_Seqv25_57af70_DB" />                                                                               
+        <Component Name="qGantryOkToUnload" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="48">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_GantryUnload_Seqv25_57af70_DB" />                                                                               
+        <Component Name="qMsg" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="49">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_GantryUnload_Seqv25_57af70_DB" />                                                                               
+        <Component Name="qPCReadCmd" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="50">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_GantryUnload_Seqv25_57af70_DB" />                                                                               
+        <Component Name="qPCUploadCmd" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="51">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_GantryUnload_Seqv25_57af70_DB" />                                                                               
+        <Component Name="qProcessOver" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+<Access Scope="GlobalVariable" UId="52">                                       
+      <Symbol>                                                                                                   
+        <Component Name="PR_GantryUnload_Seqv25_57af70_DB" />                                                                               
+        <Component Name="qScanCmd" />                                                                               
+      </Symbol>                                                                                                  
+    </Access>
+
+<Call UId="2111">                                                               
+      <CallInfo Name="PR_GantryUnload_Seqv25_57af70" BlockType="FB">                                                                   
+        <Instance Scope="GlobalVariable" UId="1142">                                                          
+          <Component Name="PR_GantryUnload_Seqv25_57af70_DB" />                                                                             
+        </Instance>
+<Parameter Name="iAutoRunning" Section="Input" Type="Bool" />
+<Parameter Name="iCenteringSlideAtHome" Section="Input" Type="Bool" />
+<Parameter Name="iCenteringSlideAtWork" Section="Input" Type="Bool" />
+<Parameter Name="iDistSenHighLimit" Section="Input" Type="Int" />
+<Parameter Name="iDistSenLowLimit" Section="Input" Type="Int" />
+<Parameter Name="iDistSensorIP" Section="Input" Type="Int" />
+<Parameter Name="iDryCycleWithoutPal" Section="Input" Type="Bool" />
+<Parameter Name="iGantryOutofZone" Section="Input" Type="Bool" />
+<Parameter Name="iGantryPickOver" Section="Input" Type="Bool" />
+<Parameter Name="iPCAckZero" Section="Input" Type="Bool" />
+<Parameter Name="iPCBypass" Section="Input" Type="Bool" />
+<Parameter Name="iPCDataReadOver" Section="Input" Type="Bool" />
+<Parameter Name="iPCDataWriteOver" Section="Input" Type="Bool" />
+<Parameter Name="iPalletPresent" Section="Input" Type="Bool" />
+<Parameter Name="iProcessStart" Section="Input" Type="Bool" />
+<Parameter Name="iReset_fault" Section="Input" Type="Bool" />
+<Parameter Name="iRetryPB" Section="Input" Type="Bool" />
+<Parameter Name="iScanErr" Section="Input" Type="Bool" />
+<Parameter Name="iScanOver" Section="Input" Type="Bool" />
+<Parameter Name="iScannerBypass" Section="Input" Type="Bool" />
+<Parameter Name="iSstMode" Section="Input" Type="Bool" />
+<Parameter Name="iSstPB" Section="Input" Type="Bool" />
+<Parameter Name="qCenteringSlideAdvance" Section="Output" Type="Bool" />
+<Parameter Name="qCenteringSlideRetract" Section="Output" Type="Bool" />
+<Parameter Name="qCheckDistance" Section="Output" Type="Bool" />
+<Parameter Name="qGantryOkToUnload" Section="Output" Type="Bool" />
+<Parameter Name="qMsg" Section="Output" Type="Array[0..2] of Bool" />
+<Parameter Name="qPCReadCmd" Section="Output" Type="Bool" />
+<Parameter Name="qPCUploadCmd" Section="Output" Type="Bool" />
+<Parameter Name="qProcessOver" Section="Output" Type="Bool" />
+<Parameter Name="qScanCmd" Section="Output" Type="Bool" />
+
+</CallInfo>                                                                          
+    </Call>                                                                                                      
+  </Parts>
+<Wires>
+<Wire UId="1143">                                                                  
+      <Powerrail />                                                                                              
+      <NameCon UId="2111" Name="en" />                                                                       
+    </Wire>
+<Wire UId="1148">                                                                    
+      <IdentCon UId="22" />                                                                                   
+      <NameCon UId="2111" Name="iAutoRunning" />                                                                      
+    </Wire>
+<Wire UId="1149">                                                                    
+      <IdentCon UId="23" />                                                                                   
+      <NameCon UId="2111" Name="iCenteringSlideAtHome" />                                                                      
+    </Wire>
+<Wire UId="1150">                                                                    
+      <IdentCon UId="24" />                                                                                   
+      <NameCon UId="2111" Name="iCenteringSlideAtWork" />                                                                      
+    </Wire>
+<Wire UId="1151">                                                                    
+      <IdentCon UId="25" />                                                                                   
+      <NameCon UId="2111" Name="iDistSenHighLimit" />                                                                      
+    </Wire>
+<Wire UId="1152">                                                                    
+      <IdentCon UId="26" />                                                                                   
+      <NameCon UId="2111" Name="iDistSenLowLimit" />                                                                      
+    </Wire>
+<Wire UId="1153">                                                                    
+      <IdentCon UId="27" />                                                                                   
+      <NameCon UId="2111" Name="iDistSensorIP" />                                                                      
+    </Wire>
+<Wire UId="1154">                                                                    
+      <IdentCon UId="28" />                                                                                   
+      <NameCon UId="2111" Name="iDryCycleWithoutPal" />                                                                      
+    </Wire>
+<Wire UId="1155">                                                                    
+      <IdentCon UId="29" />                                                                                   
+      <NameCon UId="2111" Name="iGantryOutofZone" />                                                                      
+    </Wire>
+<Wire UId="1156">                                                                    
+      <IdentCon UId="30" />                                                                                   
+      <NameCon UId="2111" Name="iGantryPickOver" />                                                                      
+    </Wire>
+<Wire UId="1157">                                                                    
+      <IdentCon UId="31" />                                                                                   
+      <NameCon UId="2111" Name="iPCAckZero" />                                                                      
+    </Wire>
+<Wire UId="1158">                                                                    
+      <IdentCon UId="32" />                                                                                   
+      <NameCon UId="2111" Name="iPCBypass" />                                                                      
+    </Wire>
+<Wire UId="1159">                                                                    
+      <IdentCon UId="33" />                                                                                   
+      <NameCon UId="2111" Name="iPCDataReadOver" />                                                                      
+    </Wire>
+<Wire UId="1160">                                                                    
+      <IdentCon UId="34" />                                                                                   
+      <NameCon UId="2111" Name="iPCDataWriteOver" />                                                                      
+    </Wire>
+<Wire UId="1161">                                                                    
+      <IdentCon UId="35" />                                                                                   
+      <NameCon UId="2111" Name="iPalletPresent" />                                                                      
+    </Wire>
+<Wire UId="1162">                                                                    
+      <IdentCon UId="36" />                                                                                   
+      <NameCon UId="2111" Name="iProcessStart" />                                                                      
+    </Wire>
+<Wire UId="1163">                                                                    
+      <IdentCon UId="37" />                                                                                   
+      <NameCon UId="2111" Name="iReset_fault" />                                                                      
+    </Wire>
+<Wire UId="1164">                                                                    
+      <IdentCon UId="38" />                                                                                   
+      <NameCon UId="2111" Name="iRetryPB" />                                                                      
+    </Wire>
+<Wire UId="1165">                                                                    
+      <IdentCon UId="39" />                                                                                   
+      <NameCon UId="2111" Name="iScanErr" />                                                                      
+    </Wire>
+<Wire UId="1166">                                                                    
+      <IdentCon UId="40" />                                                                                   
+      <NameCon UId="2111" Name="iScanOver" />                                                                      
+    </Wire>
+<Wire UId="1167">                                                                    
+      <IdentCon UId="41" />                                                                                   
+      <NameCon UId="2111" Name="iScannerBypass" />                                                                      
+    </Wire>
+<Wire UId="1168">                                                                    
+      <IdentCon UId="42" />                                                                                   
+      <NameCon UId="2111" Name="iSstMode" />                                                                      
+    </Wire>
+<Wire UId="1169">                                                                    
+      <IdentCon UId="43" />                                                                                   
+      <NameCon UId="2111" Name="iSstPB" />                                                                      
+    </Wire>
+<Wire UId="1170">                                                                    
+      <IdentCon UId="44" />                                                                                   
+      <NameCon UId="2111" Name="qCenteringSlideAdvance" />                                                                      
+    </Wire>
+<Wire UId="1171">                                                                    
+      <IdentCon UId="45" />                                                                                   
+      <NameCon UId="2111" Name="qCenteringSlideRetract" />                                                                      
+    </Wire>
+<Wire UId="1172">                                                                    
+      <IdentCon UId="46" />                                                                                   
+      <NameCon UId="2111" Name="qCheckDistance" />                                                                      
+    </Wire>
+<Wire UId="1173">                                                                    
+      <IdentCon UId="47" />                                                                                   
+      <NameCon UId="2111" Name="qGantryOkToUnload" />                                                                      
+    </Wire>
+<Wire UId="1174">                                                                    
+      <IdentCon UId="48" />                                                                                   
+      <NameCon UId="2111" Name="qMsg" />                                                                      
+    </Wire>
+<Wire UId="1175">                                                                    
+      <IdentCon UId="49" />                                                                                   
+      <NameCon UId="2111" Name="qPCReadCmd" />                                                                      
+    </Wire>
+<Wire UId="1176">                                                                    
+      <IdentCon UId="50" />                                                                                   
+      <NameCon UId="2111" Name="qPCUploadCmd" />                                                                      
+    </Wire>
+<Wire UId="1177">                                                                    
+      <IdentCon UId="51" />                                                                                   
+      <NameCon UId="2111" Name="qProcessOver" />                                                                      
+    </Wire>
+<Wire UId="1178">                                                                    
+      <IdentCon UId="52" />                                                                                   
+      <NameCon UId="2111" Name="qScanCmd" />                                                                      
+    </Wire>
+</Wires>
+</FlgNet></NetworkSource><ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="1144" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="1145" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1146" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="1147" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>

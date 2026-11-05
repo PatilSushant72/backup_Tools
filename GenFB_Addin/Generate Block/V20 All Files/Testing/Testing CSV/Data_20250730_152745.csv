@@ -1,0 +1,254 @@
+Block_Name : ,PR_CentreStand_Fix_Seq_V12_1026b5
+,,,Output tag Flow : 1,State traces Flow : 1,Output tag Flow : 1,State traces Flow : 1
+Tag,Value,State Number,qFixUnclamp : [OFF : 141],0, STATE Num:0 Reset Released,qFixUnclamp : [OFF : 141],0, STATE Num:0 Reset Released
+iAutoRunning,"[TRUE]","[0]"/,qR1ReadytoDropTray : [ON  : 142],138, STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand,qR1ReadytoDropTray : [ON  : 142],138, STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand
+iFixClamp,"[TRUE]","[145]"/,qFixClamp : [ON  : 145],139, STATE Num:139 Fix Empty,qFixClamp : [ON  : 145],139, STATE Num:139 Fix Empty
+iFixEmpty,"[TRUE]","[139,149]"/,qR2OperationStart : [ON  : 146],141, STATE Num:141 Fix Unclamp Cmd,qR2OperationStart : [ON  : 146],141, STATE Num:141 Fix Unclamp Cmd
+iFixTrayPresent,"[TRUE]","[143,138_T2,140_T2,140_T1]"/,qFixUnclamp : [ON  : 147],142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request,qFixUnclamp : [ON  : 147],142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request
+iFixUnclamp,"[TRUE]","[141,147]"/,qR1ReadytoPickTray : [ON  : 148],143, STATE Num:143 Robot Drop Fix and Check Tray Present,qR1ReadytoPickTray : [ON  : 148],143, STATE Num:143 Robot Drop Fix and Check Tray Present
+iR1DropOver,"[TRUE]","[142]"/,Output tag Flow : 2,144, STATE Num:144 Rbt Out of Area After Drop,Output tag Flow : 2,144, STATE Num:144 Rbt Out of Area After Drop
+iR1PickOver,"[TRUE]","[148]"/,qFixUnclamp : [OFF : 145],145, STATE Num:145 Fix Clamp,qFixUnclamp : [OFF : 145],145, STATE Num:145 Fix Clamp
+iR2OperationOver,"[TRUE]","[146]"/,qR1ReadytoPickTray : [OFF : 145],146, STATE Num:146 Robot-2 All Alloys Pick Or Drop Operation over,qR1ReadytoPickTray : [OFF : 145],146, STATE Num:146 Robot-2 All Alloys Pick Or Drop Operation over
+iR2ServiceActivated,"[TRUE]","[145]"/,Output tag Flow : 3,191, STATE Num:191 Wait For Robot-2 Out Of Area,Output tag Flow : 3,191, STATE Num:191 Wait For Robot-2 Out Of Area
+iReset_fault,,,qR2OperationStart : [ON  : 146],147, STATE Num:147 Fix Unclamp Cmd After Opern over,qR2OperationStart : [ON  : 146],147, STATE Num:147 Fix Unclamp Cmd After Opern over
+iRobotOutofZone,"[TRUE]","[138_T1,144,145,191,149,138_T2,140_T2,140_T1]"/,qFixUnclamp : [ON  : 147],148, STATE Num:148 Rdy to Pick Tray After Oprn Over- Wait for Robot Accept Request,qFixUnclamp : [ON  : 147],148, STATE Num:148 Rdy to Pick Tray After Oprn Over- Wait for Robot Accept Request
+iSstMode,,,qR1ReadytoPickTray : [ON  : 148],149, STATE Num:149 Robot Picked Tray and Check Tray Loc Empty,qR1ReadytoPickTray : [ON  : 148],149, STATE Num:149 Robot Picked Tray and Check Tray Loc Empty
+iSstPB,,,StateNo : 138,138, STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand,StateNo : 138,138, STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand
+qFixClamp,,,,State traces Flow : 2,State traces Flow : 2
+qFixUnclamp,,,,0, STATE Num:0 Reset Released,0, STATE Num:0 Reset Released
+qR1ReadytoDropTray,,,,138, STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand,138, STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand
+qR1ReadytoPickTray,,,,140, STATE Num:140 Fix Tray Present_Rec Operation pending,140, STATE Num:140 Fix Tray Present_Rec Operation pending
+qR2OperationStart,,,,145, STATE Num:145 Fix Clamp,145, STATE Num:145 Fix Clamp
+iqR2ServiceActive,,,,145, STATE Num:145 Fix Clamp,145, STATE Num:145 Fix Clamp
+iqR2ServiceCompleted,,,,145, STATE Num:145 Fix Clamp,145, STATE Num:145 Fix Clamp
+,,,,145, STATE Num:145 Fix Clamp,145, STATE Num:145 Fix Clamp
+,,,,State traces Flow : 3,State traces Flow : 3
+,,,,0, STATE Num:0 Reset Released,0, STATE Num:0 Reset Released
+,,,,138, STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand,138, STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand
+,,,,140, STATE Num:140 Fix Tray Present_Rec Operation pending,140, STATE Num:140 Fix Tray Present_Rec Operation pending
+,,,,145, STATE Num:145 Fix Clamp,145, STATE Num:145 Fix Clamp
+,,,,146, STATE Num:146 Robot-2 All Alloys Pick Or Drop Operation over,146, STATE Num:146 Robot-2 All Alloys Pick Or Drop Operation over
+,,,,191, STATE Num:191 Wait For Robot-2 Out Of Area,191, STATE Num:191 Wait For Robot-2 Out Of Area
+,,,,147, STATE Num:147 Fix Unclamp Cmd After Opern over,147, STATE Num:147 Fix Unclamp Cmd After Opern over
+,,,,148, STATE Num:148 Rdy to Pick Tray After Oprn Over- Wait for Robot Accept Request,148, STATE Num:148 Rdy to Pick Tray After Oprn Over- Wait for Robot Accept Request
+,,,,149, STATE Num:149 Robot Picked Tray and Check Tray Loc Empty,149, STATE Num:149 Robot Picked Tray and Check Tray Loc Empty
+,,,,138, STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand,138, STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand
+Block_Name : ,PR_GantryUnload_Seqv25_51b799
+,,,Output tag Flow : 1,State traces Flow : 1,Output tag Flow : 1,State traces Flow : 1
+Tag,Value,State Number,qCenteringSlideAdvance : [ON  : 49],44, STATE Num:44 Wait for reset release,qCenteringSlideAdvance : [ON  : 49],44, STATE Num:44 Wait for reset release
+iAutoRunning,"[TRUE]","[44,45,46_T1,46_T2,47,48_T1,48_T2,48_T3,49,50,51,52_T1,52_T2,53_T1,53_T2,54,55,56,57,58,61_T1,61_T2,62,63,64,65_T1,65_T2,66,67,68,69]"/,qCheckDistance : [ON  : 50],45, STATE Num:45 Wait for Gantry Out Of Zone,qCheckDistance : [ON  : 50],45, STATE Num:45 Wait for Gantry Out Of Zone
+iCenteringSlideAtHome,"[TRUE]","[46_T1,47,48_T1,48_T2,48_T3,51,52_T1,52_T2,53_T1,53_T2,54,55,56,57,58,61_T1,61_T2,62,63,64,65_T1,65_T2,66,67,68,69]"/,qCenteringSlideRetract : [OFF : 51],46, STATE Num:46 Check Station Home,qCenteringSlideRetract : [OFF : 51],46, STATE Num:46 Check Station Home
+iCenteringSlideAtWork,"[TRUE]","[49,50]"/,qScanCmd : [ON  : 52],67, STATE Num:67 Wait For Centering Slide Retract for Home,qScanCmd : [ON  : 52],67, STATE Num:67 Wait For Centering Slide Retract for Home
+iDistSenHighLimit,,,qGantryOkToUnload : [OFF : 68],48, STATE Num:48 Check Recovery,qGantryOkToUnload : [OFF : 68],48, STATE Num:48 Check Recovery
+iDistSenLowLimit,,,qProcessOver : [OFF : 68],49, STATE Num:49 Wait for Centering Slide Advance,qProcessOver : [OFF : 68],49, STATE Num:49 Wait for Centering Slide Advance
+iDistSensorIP,,,qProcessOver : [OFF : 68],50, STATE Num:50 Wait for Distance Sensor Feed Back,qProcessOver : [OFF : 68],50, STATE Num:50 Wait for Distance Sensor Feed Back
+iDryCycleWithoutPal,,,Output tag Flow : 2,51, STATE Num:51 Wait for Centering Slide Retract,Output tag Flow : 2,51, STATE Num:51 Wait for Centering Slide Retract
+iGantryOutofZone,"[TRUE]","[45,46_T1,46_T2,47,48_T1,48_T2,48_T3,49,50,51,52_T1,52_T2,53_T1,53_T2,56,57,58,61_T1,61_T2,62,63,64,65_T1,65_T2,66,67,68,69]"/,qScanCmd : [OFF : 49],52, STATE Num:52 Wait for Scan Over,qScanCmd : [OFF : 49],52, STATE Num:52 Wait for Scan Over
+iGantryPickOver,"[TRUE]","[55,56,57,58]"/,qPCReadCmd : [OFF : 49],68, STATE Num:68 Wait for PC Acknowledge Zero for Read,qPCReadCmd : [OFF : 49],68, STATE Num:68 Wait for PC Acknowledge Zero for Read
+iPCAckZero,"[TRUE]","[62,63,68,69]"/,Output tag Flow : 3,68, STATE Num:68 Wait for PC Acknowledge Zero for Read,Output tag Flow : 3,68, STATE Num:68 Wait for PC Acknowledge Zero for Read
+iPCBypass,,,Output tag Flow : 4,68, STATE Num:68 Wait for PC Acknowledge Zero for Read,Output tag Flow : 4,68, STATE Num:68 Wait for PC Acknowledge Zero for Read
+iPCDataReadOver,"[TRUE]","[69]"/,qCenteringSlideAdvance : [ON  : 49],68, STATE Num:68 Wait for PC Acknowledge Zero for Read,qCenteringSlideAdvance : [ON  : 49],68, STATE Num:68 Wait for PC Acknowledge Zero for Read
+iPCDataWriteOver,"[TRUE]","[63]"/,qCheckDistance : [ON  : 50],68, STATE Num:68 Wait for PC Acknowledge Zero for Read,qCheckDistance : [ON  : 50],68, STATE Num:68 Wait for PC Acknowledge Zero for Read
+iPalletPresent,,,qCenteringSlideRetract : [OFF : 51],68, STATE Num:68 Wait for PC Acknowledge Zero for Read,qCenteringSlideRetract : [OFF : 51],68, STATE Num:68 Wait for PC Acknowledge Zero for Read
+iProcessStart,"[TRUE]","[47,48_T1,48_T2,48_T3,49,50,51,52_T1,52_T2,53_T1,53_T2,54,55,56,57,61_T1,61_T2,62,63,64,65_T1,65_T2,66,68,69]"/,qScanCmd : [ON  : 52],68, STATE Num:68 Wait for PC Acknowledge Zero for Read,qScanCmd : [ON  : 52],68, STATE Num:68 Wait for PC Acknowledge Zero for Read
+iReset_fault,,,qPCUploadCmd : [OFF : 69],State traces Flow : 2,qPCUploadCmd : [OFF : 69],State traces Flow : 2
+iRetryPB,"[TRUE]","[64,66]"/,Output tag Flow : 5,44, STATE Num:44 Wait for reset release,Output tag Flow : 5,44, STATE Num:44 Wait for reset release
+iScanErr,"[TRUE]","[52_T2,65_T1,65_T2,66]"/,qCenteringSlideAdvance : [ON  : 49],45, STATE Num:45 Wait for Gantry Out Of Zone,qCenteringSlideAdvance : [ON  : 49],45, STATE Num:45 Wait for Gantry Out Of Zone
+iScanOver,"[TRUE]","[52_T1,53_T1,53_T2,54,55,56,57,58,61_T1,61_T2,62,63,64,68,69]"/,qCheckDistance : [ON  : 50],46, STATE Num:46 Check Station Home,qCheckDistance : [ON  : 50],46, STATE Num:46 Check Station Home
+iScannerBypass,,,qCenteringSlideRetract : [OFF : 51],67, STATE Num:67 Wait For Centering Slide Retract for Home,qCenteringSlideRetract : [OFF : 51],67, STATE Num:67 Wait For Centering Slide Retract for Home
+iSstMode,,,qScanCmd : [ON  : 52],48, STATE Num:48 Check Recovery,qScanCmd : [ON  : 52],48, STATE Num:48 Check Recovery
+iSstPB,,,qMsg[2] : [OFF : 68],49, STATE Num:49 Wait for Centering Slide Advance,qMsg[2] : [OFF : 68],49, STATE Num:49 Wait for Centering Slide Advance
+qCenteringSlideAdvance,,,qCenteringSlideAdvance : [OFF : 68],49, STATE Num:49 Wait for Centering Slide Advance,qCenteringSlideAdvance : [OFF : 68],49, STATE Num:49 Wait for Centering Slide Advance
+qCenteringSlideRetract,,,Output tag Flow : 6,49, STATE Num:49 Wait for Centering Slide Advance,Output tag Flow : 6,49, STATE Num:49 Wait for Centering Slide Advance
+qCheckDistance,,,qScanCmd : [OFF : 49],49, STATE Num:49 Wait for Centering Slide Advance,qScanCmd : [OFF : 49],49, STATE Num:49 Wait for Centering Slide Advance
+qGantryOkToUnload,,,qScanCmd : [OFF : 49],49, STATE Num:49 Wait for Centering Slide Advance,qScanCmd : [OFF : 49],49, STATE Num:49 Wait for Centering Slide Advance
+qMsg,,,Output tag Flow : 7,State traces Flow : 3,Output tag Flow : 7,State traces Flow : 3
+qPCReadCmd,,,qScanCmd : [OFF : 49],44, STATE Num:44 Wait for reset release,qScanCmd : [OFF : 49],44, STATE Num:44 Wait for reset release
+qPCUploadCmd,,,qMsg[1] : [OFF : 49],45, STATE Num:45 Wait for Gantry Out Of Zone,qMsg[1] : [OFF : 49],45, STATE Num:45 Wait for Gantry Out Of Zone
+qProcessOver,,,qScanCmd : [OFF : 49],46, STATE Num:46 Check Station Home,qScanCmd : [OFF : 49],46, STATE Num:46 Check Station Home
+qScanCmd,,,Output tag Flow : 8,67, STATE Num:67 Wait For Centering Slide Retract for Home,Output tag Flow : 8,67, STATE Num:67 Wait For Centering Slide Retract for Home
+,,,qCenteringSlideRetract : [ON  : 67],48, STATE Num:48 Check Recovery,qCenteringSlideRetract : [ON  : 67],48, STATE Num:48 Check Recovery
+,,,StateNo : 46,49, STATE Num:49 Wait for Centering Slide Advance,StateNo : 46,49, STATE Num:49 Wait for Centering Slide Advance
+,,,,State traces Flow : 4,49, STATE Num:49 Wait for Centering Slide Advance
+,,,,44, STATE Num:44 Wait for reset release,State traces Flow : 4
+,,,,45, STATE Num:45 Wait for Gantry Out Of Zone,44, STATE Num:44 Wait for reset release
+,,,,46, STATE Num:46 Check Station Home,45, STATE Num:45 Wait for Gantry Out Of Zone
+,,,,67, STATE Num:67 Wait For Centering Slide Retract for Home,46, STATE Num:46 Check Station Home
+,,,,48, STATE Num:48 Check Recovery,67, STATE Num:67 Wait For Centering Slide Retract for Home
+,,,,49, STATE Num:49 Wait for Centering Slide Advance,48, STATE Num:48 Check Recovery
+,,,,50, STATE Num:50 Wait for Distance Sensor Feed Back,49, STATE Num:49 Wait for Centering Slide Advance
+,,,,51, STATE Num:51 Wait for Centering Slide Retract,50, STATE Num:50 Wait for Distance Sensor Feed Back
+,,,,52, STATE Num:52 Wait for Scan Over,51, STATE Num:51 Wait for Centering Slide Retract
+,,,,68, STATE Num:68 Wait for PC Acknowledge Zero for Read,52, STATE Num:52 Wait for Scan Over
+,,,,68, STATE Num:68 Wait for PC Acknowledge Zero for Read,68, STATE Num:68 Wait for PC Acknowledge Zero for Read
+,,,,68, STATE Num:68 Wait for PC Acknowledge Zero for Read,68, STATE Num:68 Wait for PC Acknowledge Zero for Read
+,,,,69, STATE Num:69 Wait for Data Read Over From PC,68, STATE Num:68 Wait for PC Acknowledge Zero for Read
+,,,,69, STATE Num:69 Wait for Data Read Over From PC,69, STATE Num:69 Wait for Data Read Over From PC
+,,,,State traces Flow : 5,69, STATE Num:69 Wait for Data Read Over From PC
+,,,,44, STATE Num:44 Wait for reset release,State traces Flow : 5
+,,,,45, STATE Num:45 Wait for Gantry Out Of Zone,44, STATE Num:44 Wait for reset release
+,,,,46, STATE Num:46 Check Station Home,45, STATE Num:45 Wait for Gantry Out Of Zone
+,,,,67, STATE Num:67 Wait For Centering Slide Retract for Home,46, STATE Num:46 Check Station Home
+,,,,48, STATE Num:48 Check Recovery,67, STATE Num:67 Wait For Centering Slide Retract for Home
+,,,,49, STATE Num:49 Wait for Centering Slide Advance,48, STATE Num:48 Check Recovery
+,,,,50, STATE Num:50 Wait for Distance Sensor Feed Back,49, STATE Num:49 Wait for Centering Slide Advance
+,,,,51, STATE Num:51 Wait for Centering Slide Retract,50, STATE Num:50 Wait for Distance Sensor Feed Back
+,,,,52, STATE Num:52 Wait for Scan Over,51, STATE Num:51 Wait for Centering Slide Retract
+,,,,68, STATE Num:68 Wait for PC Acknowledge Zero for Read,52, STATE Num:52 Wait for Scan Over
+,,,,68, STATE Num:68 Wait for PC Acknowledge Zero for Read,68, STATE Num:68 Wait for PC Acknowledge Zero for Read
+,,,,68, STATE Num:68 Wait for PC Acknowledge Zero for Read,68, STATE Num:68 Wait for PC Acknowledge Zero for Read
+,,,,68, STATE Num:68 Wait for PC Acknowledge Zero for Read,68, STATE Num:68 Wait for PC Acknowledge Zero for Read
+,,,,State traces Flow : 6,68, STATE Num:68 Wait for PC Acknowledge Zero for Read
+,,,,44, STATE Num:44 Wait for reset release,State traces Flow : 6
+,,,,45, STATE Num:45 Wait for Gantry Out Of Zone,44, STATE Num:44 Wait for reset release
+,,,,46, STATE Num:46 Check Station Home,45, STATE Num:45 Wait for Gantry Out Of Zone
+,,,,67, STATE Num:67 Wait For Centering Slide Retract for Home,46, STATE Num:46 Check Station Home
+,,,,48, STATE Num:48 Check Recovery,67, STATE Num:67 Wait For Centering Slide Retract for Home
+,,,,49, STATE Num:49 Wait for Centering Slide Advance,48, STATE Num:48 Check Recovery
+,,,,49, STATE Num:49 Wait for Centering Slide Advance,49, STATE Num:49 Wait for Centering Slide Advance
+,,,,49, STATE Num:49 Wait for Centering Slide Advance,49, STATE Num:49 Wait for Centering Slide Advance
+,,,,49, STATE Num:49 Wait for Centering Slide Advance,49, STATE Num:49 Wait for Centering Slide Advance
+,,,,State traces Flow : 7,49, STATE Num:49 Wait for Centering Slide Advance
+,,,,44, STATE Num:44 Wait for reset release,State traces Flow : 7
+,,,,45, STATE Num:45 Wait for Gantry Out Of Zone,44, STATE Num:44 Wait for reset release
+,,,,46, STATE Num:46 Check Station Home,45, STATE Num:45 Wait for Gantry Out Of Zone
+,,,,67, STATE Num:67 Wait For Centering Slide Retract for Home,46, STATE Num:46 Check Station Home
+,,,,48, STATE Num:48 Check Recovery,67, STATE Num:67 Wait For Centering Slide Retract for Home
+,,,,49, STATE Num:49 Wait for Centering Slide Advance,48, STATE Num:48 Check Recovery
+,,,,49, STATE Num:49 Wait for Centering Slide Advance,49, STATE Num:49 Wait for Centering Slide Advance
+,,,,49, STATE Num:49 Wait for Centering Slide Advance,49, STATE Num:49 Wait for Centering Slide Advance
+,,,,49, STATE Num:49 Wait for Centering Slide Advance,49, STATE Num:49 Wait for Centering Slide Advance
+,,,,49, STATE Num:49 Wait for Centering Slide Advance,49, STATE Num:49 Wait for Centering Slide Advance
+,,,,State traces Flow : 8,49, STATE Num:49 Wait for Centering Slide Advance
+,,,,44, STATE Num:44 Wait for reset release,State traces Flow : 8
+,,,,45, STATE Num:45 Wait for Gantry Out Of Zone,44, STATE Num:44 Wait for reset release
+,,,,46, STATE Num:46 Check Station Home,45, STATE Num:45 Wait for Gantry Out Of Zone
+,,,,67, STATE Num:67 Wait For Centering Slide Retract for Home,46, STATE Num:46 Check Station Home
+,,,,46, STATE Num:46 Check Station Home,67, STATE Num:67 Wait For Centering Slide Retract for Home
+Block_Name : ,PR_CentreStand_Fix_Seq_V12_1026b5,,,46, STATE Num:46 Check Station Home
+,,,Output tag Flow : 1,State traces Flow : 1
+Tag,Value,State Number,qFixUnclamp : [OFF : 141],0, STATE Num:0 Reset Released
+iAutoRunning,"[TRUE]","[0]"/,qR1ReadytoDropTray : [ON  : 142],138, STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand
+iFixClamp,"[TRUE]","[145]"/,qFixClamp : [ON  : 145],139, STATE Num:139 Fix Empty
+iFixEmpty,"[TRUE]","[139,149]"/,qR2OperationStart : [ON  : 146],141, STATE Num:141 Fix Unclamp Cmd
+iFixTrayPresent,"[TRUE]","[143,138_T2,140_T2,140_T1]"/,qFixUnclamp : [ON  : 147],142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request
+iFixUnclamp,"[TRUE]","[141,147]"/,qR1ReadytoPickTray : [ON  : 148],143, STATE Num:143 Robot Drop Fix and Check Tray Present
+iR1DropOver,"[TRUE]","[142]"/,Output tag Flow : 2,144, STATE Num:144 Rbt Out of Area After Drop
+iR1PickOver,"[TRUE]","[148]"/,qFixUnclamp : [OFF : 145],145, STATE Num:145 Fix Clamp
+iR2OperationOver,"[TRUE]","[146]"/,qR1ReadytoPickTray : [OFF : 145],146, STATE Num:146 Robot-2 All Alloys Pick Or Drop Operation over
+iR2ServiceActivated,"[TRUE]","[145]"/,Output tag Flow : 3,191, STATE Num:191 Wait For Robot-2 Out Of Area
+iReset_fault,,,qR2OperationStart : [ON  : 146],147, STATE Num:147 Fix Unclamp Cmd After Opern over
+iRobotOutofZone,"[TRUE]","[138_T1,144,145,191,149,138_T2,140_T2,140_T1]"/,qFixUnclamp : [ON  : 147],148, STATE Num:148 Rdy to Pick Tray After Oprn Over- Wait for Robot Accept Request
+iSstMode,,,qR1ReadytoPickTray : [ON  : 148],149, STATE Num:149 Robot Picked Tray and Check Tray Loc Empty
+iSstPB,,,StateNo : 138,138, STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand
+qFixClamp,,,,State traces Flow : 2
+qFixUnclamp,,,,0, STATE Num:0 Reset Released
+qR1ReadytoDropTray,,,,138, STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand
+qR1ReadytoPickTray,,,,140, STATE Num:140 Fix Tray Present_Rec Operation pending
+qR2OperationStart,,,,145, STATE Num:145 Fix Clamp
+iqR2ServiceActive,,,,145, STATE Num:145 Fix Clamp
+iqR2ServiceCompleted,,,,145, STATE Num:145 Fix Clamp
+,,,,145, STATE Num:145 Fix Clamp
+,,,,State traces Flow : 3
+,,,,0, STATE Num:0 Reset Released
+,,,,138, STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand
+,,,,140, STATE Num:140 Fix Tray Present_Rec Operation pending
+,,,,145, STATE Num:145 Fix Clamp
+,,,,146, STATE Num:146 Robot-2 All Alloys Pick Or Drop Operation over
+,,,,191, STATE Num:191 Wait For Robot-2 Out Of Area
+,,,,147, STATE Num:147 Fix Unclamp Cmd After Opern over
+,,,,148, STATE Num:148 Rdy to Pick Tray After Oprn Over- Wait for Robot Accept Request
+,,,,149, STATE Num:149 Robot Picked Tray and Check Tray Loc Empty
+,,,,138, STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand
+Block_Name : ,PR_GantryUnload_Seqv25_51b799
+,,,Output tag Flow : 1,State traces Flow : 1
+Tag,Value,State Number,qCenteringSlideAdvance : [ON  : 49],44, STATE Num:44 Wait for reset release
+iAutoRunning,"[TRUE]","[44,45,46_T1,46_T2,47,48_T1,48_T2,48_T3,49,50,51,52_T1,52_T2,53_T1,53_T2,54,55,56,57,58,61_T1,61_T2,62,63,64,65_T1,65_T2,66,67,68,69]"/,qCheckDistance : [ON  : 50],45, STATE Num:45 Wait for Gantry Out Of Zone
+iCenteringSlideAtHome,"[TRUE]","[46_T1,47,48_T1,48_T2,48_T3,51,52_T1,52_T2,53_T1,53_T2,54,55,56,57,58,61_T1,61_T2,62,63,64,65_T1,65_T2,66,67,68,69]"/,qCenteringSlideRetract : [OFF : 51],46, STATE Num:46 Check Station Home
+iCenteringSlideAtWork,"[TRUE]","[49,50]"/,qScanCmd : [ON  : 52],67, STATE Num:67 Wait For Centering Slide Retract for Home
+iDistSenHighLimit,,,qGantryOkToUnload : [OFF : 68],48, STATE Num:48 Check Recovery
+iDistSenLowLimit,,,qProcessOver : [OFF : 68],49, STATE Num:49 Wait for Centering Slide Advance
+iDistSensorIP,,,qProcessOver : [OFF : 68],50, STATE Num:50 Wait for Distance Sensor Feed Back
+iDryCycleWithoutPal,,,Output tag Flow : 2,51, STATE Num:51 Wait for Centering Slide Retract
+iGantryOutofZone,"[TRUE]","[45,46_T1,46_T2,47,48_T1,48_T2,48_T3,49,50,51,52_T1,52_T2,53_T1,53_T2,56,57,58,61_T1,61_T2,62,63,64,65_T1,65_T2,66,67,68,69]"/,qScanCmd : [OFF : 49],52, STATE Num:52 Wait for Scan Over
+iGantryPickOver,"[TRUE]","[55,56,57,58]"/,qPCReadCmd : [OFF : 49],68, STATE Num:68 Wait for PC Acknowledge Zero for Read
+iPCAckZero,"[TRUE]","[62,63,68,69]"/,Output tag Flow : 3,68, STATE Num:68 Wait for PC Acknowledge Zero for Read
+iPCBypass,,,Output tag Flow : 4,68, STATE Num:68 Wait for PC Acknowledge Zero for Read
+iPCDataReadOver,"[TRUE]","[69]"/,qCenteringSlideAdvance : [ON  : 49],68, STATE Num:68 Wait for PC Acknowledge Zero for Read
+iPCDataWriteOver,"[TRUE]","[63]"/,qCheckDistance : [ON  : 50],68, STATE Num:68 Wait for PC Acknowledge Zero for Read
+iPalletPresent,,,qCenteringSlideRetract : [OFF : 51],68, STATE Num:68 Wait for PC Acknowledge Zero for Read
+iProcessStart,"[TRUE]","[47,48_T1,48_T2,48_T3,49,50,51,52_T1,52_T2,53_T1,53_T2,54,55,56,57,61_T1,61_T2,62,63,64,65_T1,65_T2,66,68,69]"/,qScanCmd : [ON  : 52],68, STATE Num:68 Wait for PC Acknowledge Zero for Read
+iReset_fault,,,qPCUploadCmd : [OFF : 69],State traces Flow : 2
+iRetryPB,"[TRUE]","[64,66]"/,Output tag Flow : 5,44, STATE Num:44 Wait for reset release
+iScanErr,"[TRUE]","[52_T2,65_T1,65_T2,66]"/,qCenteringSlideAdvance : [ON  : 49],45, STATE Num:45 Wait for Gantry Out Of Zone
+iScanOver,"[TRUE]","[52_T1,53_T1,53_T2,54,55,56,57,58,61_T1,61_T2,62,63,64,68,69]"/,qCheckDistance : [ON  : 50],46, STATE Num:46 Check Station Home
+iScannerBypass,,,qCenteringSlideRetract : [OFF : 51],67, STATE Num:67 Wait For Centering Slide Retract for Home
+iSstMode,,,qScanCmd : [ON  : 52],48, STATE Num:48 Check Recovery
+iSstPB,,,qMsg[2] : [OFF : 68],49, STATE Num:49 Wait for Centering Slide Advance
+qCenteringSlideAdvance,,,qCenteringSlideAdvance : [OFF : 68],49, STATE Num:49 Wait for Centering Slide Advance
+qCenteringSlideRetract,,,Output tag Flow : 6,49, STATE Num:49 Wait for Centering Slide Advance
+qCheckDistance,,,qScanCmd : [OFF : 49],49, STATE Num:49 Wait for Centering Slide Advance
+qGantryOkToUnload,,,qScanCmd : [OFF : 49],49, STATE Num:49 Wait for Centering Slide Advance
+qMsg,,,Output tag Flow : 7,State traces Flow : 3
+qPCReadCmd,,,qScanCmd : [OFF : 49],44, STATE Num:44 Wait for reset release
+qPCUploadCmd,,,qMsg[1] : [OFF : 49],45, STATE Num:45 Wait for Gantry Out Of Zone
+qProcessOver,,,qScanCmd : [OFF : 49],46, STATE Num:46 Check Station Home
+qScanCmd,,,Output tag Flow : 8,67, STATE Num:67 Wait For Centering Slide Retract for Home
+,,,qCenteringSlideRetract : [ON  : 67],48, STATE Num:48 Check Recovery
+,,,StateNo : 46,49, STATE Num:49 Wait for Centering Slide Advance
+,,,,State traces Flow : 4
+,,,,44, STATE Num:44 Wait for reset release
+,,,,45, STATE Num:45 Wait for Gantry Out Of Zone
+,,,,46, STATE Num:46 Check Station Home
+,,,,67, STATE Num:67 Wait For Centering Slide Retract for Home
+,,,,48, STATE Num:48 Check Recovery
+,,,,49, STATE Num:49 Wait for Centering Slide Advance
+,,,,50, STATE Num:50 Wait for Distance Sensor Feed Back
+,,,,51, STATE Num:51 Wait for Centering Slide Retract
+,,,,52, STATE Num:52 Wait for Scan Over
+,,,,68, STATE Num:68 Wait for PC Acknowledge Zero for Read
+,,,,68, STATE Num:68 Wait for PC Acknowledge Zero for Read
+,,,,68, STATE Num:68 Wait for PC Acknowledge Zero for Read
+,,,,69, STATE Num:69 Wait for Data Read Over From PC
+,,,,69, STATE Num:69 Wait for Data Read Over From PC
+,,,,State traces Flow : 5
+,,,,44, STATE Num:44 Wait for reset release
+,,,,45, STATE Num:45 Wait for Gantry Out Of Zone
+,,,,46, STATE Num:46 Check Station Home
+,,,,67, STATE Num:67 Wait For Centering Slide Retract for Home
+,,,,48, STATE Num:48 Check Recovery
+,,,,49, STATE Num:49 Wait for Centering Slide Advance
+,,,,50, STATE Num:50 Wait for Distance Sensor Feed Back
+,,,,51, STATE Num:51 Wait for Centering Slide Retract
+,,,,52, STATE Num:52 Wait for Scan Over
+,,,,68, STATE Num:68 Wait for PC Acknowledge Zero for Read
+,,,,68, STATE Num:68 Wait for PC Acknowledge Zero for Read
+,,,,68, STATE Num:68 Wait for PC Acknowledge Zero for Read
+,,,,68, STATE Num:68 Wait for PC Acknowledge Zero for Read
+,,,,State traces Flow : 6
+,,,,44, STATE Num:44 Wait for reset release
+,,,,45, STATE Num:45 Wait for Gantry Out Of Zone
+,,,,46, STATE Num:46 Check Station Home
+,,,,67, STATE Num:67 Wait For Centering Slide Retract for Home
+,,,,48, STATE Num:48 Check Recovery
+,,,,49, STATE Num:49 Wait for Centering Slide Advance
+,,,,49, STATE Num:49 Wait for Centering Slide Advance
+,,,,49, STATE Num:49 Wait for Centering Slide Advance
+,,,,49, STATE Num:49 Wait for Centering Slide Advance
+,,,,State traces Flow : 7
+,,,,44, STATE Num:44 Wait for reset release
+,,,,45, STATE Num:45 Wait for Gantry Out Of Zone
+,,,,46, STATE Num:46 Check Station Home
+,,,,67, STATE Num:67 Wait For Centering Slide Retract for Home
+,,,,48, STATE Num:48 Check Recovery
+,,,,49, STATE Num:49 Wait for Centering Slide Advance
+,,,,49, STATE Num:49 Wait for Centering Slide Advance
+,,,,49, STATE Num:49 Wait for Centering Slide Advance
+,,,,49, STATE Num:49 Wait for Centering Slide Advance
+,,,,49, STATE Num:49 Wait for Centering Slide Advance
+,,,,State traces Flow : 8
+,,,,44, STATE Num:44 Wait for reset release
+,,,,45, STATE Num:45 Wait for Gantry Out Of Zone
+,,,,46, STATE Num:46 Check Station Home
+,,,,67, STATE Num:67 Wait For Centering Slide Retract for Home
+,,,,46, STATE Num:46 Check Station Home

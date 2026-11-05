@@ -1,0 +1,23 @@
+Block_Name : ,PR_CentreStand_Fix_Seq_V12_1026b5
+,,,Output tag Flow : 1,State traces Flow : 1
+Tag,Value,State Number,Output tag Flow : 2,State traces Flow : 2
+iAutoRunning,"[TRUE]","[44,45,46_T1,46_T2,47,48_T1,48_T2,48_T3,49,50,51,52_T1,52_T2,53_T1,53_T2,54,55,56,57,58,61_T1,61_T2,62,63,64,65_T1,65_T2,66,67,68,69]"/,Output tag Flow : 3,State traces Flow : 3
+iFixClamp,,,Output tag Flow : 4,State traces Flow : 4
+iFixEmpty,,,Output tag Flow : 5,State traces Flow : 5
+iFixTrayPresent,,,Output tag Flow : 6,State traces Flow : 6
+iFixUnclamp,,,Output tag Flow : 7,State traces Flow : 7
+iR1DropOver,,,Output tag Flow : 8,State traces Flow : 8
+iR1PickOver
+iR2OperationOver
+iR2ServiceActivated
+iReset_fault
+iRobotOutofZone
+iSstMode
+iSstPB
+qFixClamp
+qFixUnclamp
+qR1ReadytoDropTray
+qR1ReadytoPickTray
+qR2OperationStart
+iqR2ServiceActive
+iqR2ServiceCompleted

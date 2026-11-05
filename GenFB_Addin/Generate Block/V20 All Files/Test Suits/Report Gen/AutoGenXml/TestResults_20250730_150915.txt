@@ -1,0 +1,27 @@
+State: Error
+Warning Count: 0
+Error Count: 0
+	Path: Application test
+	DateTime: 30-07-2025 09:38:19
+	State: Information
+	Description: 
+	Warning Count: 0
+	Error Count: 0
+		Path: FB_PR_GantryUnload_Seqv25
+		DateTime: 30-07-2025 09:38:20
+		State: Information
+		Description: 
+		Warning Count: 0
+		Error Count: 0
+			Path: MemoryReset
+			DateTime: 30-07-2025 09:38:20
+			State: Success
+			Description: PLC[PLCSIM Instance : myplc]
+			Warning Count: 0
+			Error Count: 0
+	Path: 
+	DateTime: 30-07-2025 09:39:15
+	State: Error
+	Description: Test case(s) execution aborted.
+	Warning Count: 0
+	Error Count: 1

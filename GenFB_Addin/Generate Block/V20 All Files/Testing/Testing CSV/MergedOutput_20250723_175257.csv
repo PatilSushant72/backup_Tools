@@ -1,0 +1,70 @@
+Block_Name : ,PR_CentreStand_Fix_Seq_V12_1026b5
+Tag,Value,State Number,,Output tag Flow : 1,State traces Flow : 1
+iAutoRunning,"[TRUE]","[0]"/,,qFixUnclamp : [OFF : 141],0, STATE Num:0 Reset Released
+iFixClamp,"[TRUE]","[145]"/,,qR1ReadytoDropTray : [ON  : 142],138, STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand
+iFixEmpty,"[TRUE]","[139,,qFixClamp : [ON  : 145],139, STATE Num:139 Fix Empty
+iFixTrayPresent,"[TRUE]","[143,,qR2OperationStart : [ON  : 146],141, STATE Num:141 Fix Unclamp Cmd
+iFixUnclamp,"[TRUE]","[141,,qFixUnclamp : [ON  : 147],142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request
+iR1DropOver,"[TRUE]","[142]"/,,qR1ReadytoPickTray : [ON  : 148],143, STATE Num:143 Robot Drop Fix and Check Tray Present
+iR1PickOver,"[TRUE]","[148]"/,,Output tag Flow : 2,144, STATE Num:144 Rbt Out of Area After Drop
+iR2OperationOver,"[TRUE]","[146]"/,,qFixUnclamp : [OFF : 145],145, STATE Num:145 Fix Clamp
+iR2ServiceActivated,"[TRUE]","[145]"/,,qR1ReadytoPickTray : [OFF : 145],146, STATE Num:146 Robot-2 All Alloys Pick Or Drop Operation over
+iReset_fault,,,,Output tag Flow : 3,191, STATE Num:191 Wait For Robot-2 Out Of Area
+iRobotOutofZone,"[TRUE]","[138_T1,,qR2OperationStart : [ON  : 146],147, STATE Num:147 Fix Unclamp Cmd After Opern over
+iSstMode,,,,qFixUnclamp : [ON  : 147],148, STATE Num:148 Rdy to Pick Tray After Oprn Over- Wait for Robot Accept Request
+iSstPB,,,,qR1ReadytoPickTray : [ON  : 148],149, STATE Num:149 Robot Picked Tray and Check Tray Loc Empty
+qFixClamp,,,,StateNo : 138,138, STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand
+qFixUnclamp,,,,,State traces Flow : 2
+qR1ReadytoDropTray,,,,,0, STATE Num:0 Reset Released
+qR1ReadytoPickTray,,,,,138, STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand
+qR2OperationStart,,,,,140, STATE Num:140 Fix Tray Present_Rec Operation pending
+iqR2ServiceActive,,,,,145, STATE Num:145 Fix Clamp
+iqR2ServiceCompleted,,,,,145, STATE Num:145 Fix Clamp
+,,,,,145, STATE Num:145 Fix Clamp
+,,,,,145, STATE Num:145 Fix Clamp
+,,,,,State traces Flow : 3
+,,,,,0, STATE Num:0 Reset Released
+,,,,,138, STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand
+,,,,,140, STATE Num:140 Fix Tray Present_Rec Operation pending
+,,,,,145, STATE Num:145 Fix Clamp
+,,,,,146, STATE Num:146 Robot-2 All Alloys Pick Or Drop Operation over
+,,,,,191, STATE Num:191 Wait For Robot-2 Out Of Area
+,,,,,147, STATE Num:147 Fix Unclamp Cmd After Opern over
+,,,,,148, STATE Num:148 Rdy to Pick Tray After Oprn Over- Wait for Robot Accept Request
+,,,,,149, STATE Num:149 Robot Picked Tray and Check Tray Loc Empty
+,,,,,138, STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand
+Block_Name : ,PR_GantryUnload_Seqv25_57af70
+Tag,Value,State Number,,Output tag Flow : 1,State traces Flow : 1
+iAutoRunning,"[TRUE]","[44,,qFixUnclamp : [OFF : 141],0, STATE Num:0 Reset Released
+iCenteringSlideAtHome,"[TRUE]","[46_T1,,qR1ReadytoDropTray : [ON  : 142],138, STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand
+iCenteringSlideAtWork,"[TRUE]","[49,,qFixClamp : [ON  : 145],139, STATE Num:139 Fix Empty
+iDistSenHighLimit,,,,qR2OperationStart : [ON  : 146],141, STATE Num:141 Fix Unclamp Cmd
+iDistSenLowLimit,,,,qFixUnclamp : [ON  : 147],142, STATE Num:142 Tray Rdy to Drop Fix- Wait for Robot Accept request
+iDistSensorIP,,,,qR1ReadytoPickTray : [ON  : 148],143, STATE Num:143 Robot Drop Fix and Check Tray Present
+iDryCycleWithoutPal,,,,Output tag Flow : 2,144, STATE Num:144 Rbt Out of Area After Drop
+iGantryOutofZone,"[TRUE]","[45,,qFixUnclamp : [OFF : 145],145, STATE Num:145 Fix Clamp
+iGantryPickOver,"[TRUE]","[55,,qR1ReadytoPickTray : [OFF : 145],146, STATE Num:146 Robot-2 All Alloys Pick Or Drop Operation over
+iPCAckZero,"[TRUE]","[62,,Output tag Flow : 3,191, STATE Num:191 Wait For Robot-2 Out Of Area
+iPCBypass,,,,qR2OperationStart : [ON  : 146],147, STATE Num:147 Fix Unclamp Cmd After Opern over
+iPCDataReadOver,"[TRUE]","[69]"/,,qFixUnclamp : [ON  : 147],148, STATE Num:148 Rdy to Pick Tray After Oprn Over- Wait for Robot Accept Request
+iPCDataWriteOver,"[TRUE]","[63]"/,,qR1ReadytoPickTray : [ON  : 148],149, STATE Num:149 Robot Picked Tray and Check Tray Loc Empty
+iPalletPresent,,,,StateNo : 138,138, STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand
+iProcessStart,"[TRUE]","[47,,,State traces Flow : 2
+iReset_fault,,,,,0, STATE Num:0 Reset Released
+iRetryPB,"[TRUE]","[64,,,138, STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand
+iScanErr,"[TRUE]","[52_T2,,,140, STATE Num:140 Fix Tray Present_Rec Operation pending
+iScanOver,"[TRUE]","[52_T1,,,145, STATE Num:145 Fix Clamp
+iScannerBypass,,,,,145, STATE Num:145 Fix Clamp
+iSstMode,,,,,145, STATE Num:145 Fix Clamp
+iSstPB,,,,,145, STATE Num:145 Fix Clamp
+qCenteringSlideAdvance,,,,,State traces Flow : 3
+qCenteringSlideRetract,,,,,0, STATE Num:0 Reset Released
+qCheckDistance,,,,,138, STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand
+qGantryOkToUnload,,,,,140, STATE Num:140 Fix Tray Present_Rec Operation pending
+qMsg,,,,,145, STATE Num:145 Fix Clamp
+qPCReadCmd,,,,,146, STATE Num:146 Robot-2 All Alloys Pick Or Drop Operation over
+qPCUploadCmd,,,,,191, STATE Num:191 Wait For Robot-2 Out Of Area
+qProcessOver,,,,,147, STATE Num:147 Fix Unclamp Cmd After Opern over
+qScanCmd,,,,,148, STATE Num:148 Rdy to Pick Tray After Oprn Over- Wait for Robot Accept Request
+,,,,,149, STATE Num:149 Robot Picked Tray and Check Tray Loc Empty
+,,,,,138, STATE Num:138 Wait for Both Robots Out of Alloy Fixture Center Stand

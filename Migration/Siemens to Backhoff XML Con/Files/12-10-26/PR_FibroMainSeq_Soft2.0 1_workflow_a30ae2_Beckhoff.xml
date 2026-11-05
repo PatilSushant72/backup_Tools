@@ -1,0 +1,2732 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://www.plcopen.org/xml/tc6_0200">
+  <fileHeader companyName="SiemensToBackhoff" productName="Siemens TIA Portal → Beckhoff TwinCAT PLCopen Converter" productVersion="2.2" creationDateTime="2026-10-12T12:22:45.841201" />
+  <contentHeader name="PR_FibroMainSeq_Soft2.0 1_workflow_a30ae2_PLC" modificationDateTime="2026-10-12T12:22:45.841201">
+    <coordinateInfo>
+      <fbd>
+        <scaling x="1" y="1" />
+      </fbd>
+      <ld>
+        <scaling x="1" y="1" />
+      </ld>
+      <sfc>
+        <scaling x="1" y="1" />
+      </sfc>
+    </coordinateInfo>
+    <addData>
+      <data name="http://www.3s-software.com/plcopenxml/projectinformation" handleUnknown="implementation">
+        <ProjectInformation />
+      </data>
+    </addData>
+  </contentHeader>
+  <types>
+    <dataTypes />
+    <pous>
+      <pou name="PR_FibroMainSeq_Soft2.0 1_workflow_a30ae2" pouType="functionBlock">
+        <interface>
+          <inputVars>
+            <variable name="iAllStationsSafe">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="iAllTaskOver">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="iAutoRunning">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="iFaultReset">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="iFibroAtStnPos">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="iIndexOver">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="iProcessActive">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="iReset_fault">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="iSstMode">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="iSstPB">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+          </inputVars>
+          <outputVars>
+            <variable name="qError">
+              <type>
+                <array>
+                  <dimension lower="1" upper="1" />
+                  <baseType>
+                    <BOOL />
+                  </baseType>
+                </array>
+              </type>
+            </variable>
+            <variable name="qMessage_0">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="qProcessActive">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+          </outputVars>
+          <localVars>
+            <variable name="c10_ChkRecCond_T1">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="c10_ChkRecCond_T2">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="c10_ChkRecCond_T3">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="c50_ChkPartPresentAtStn_T1">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="c50_ChkPartPresentAtStn_T2">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="StateNo">
+              <type>
+                <INT />
+              </type>
+            </variable>
+            <variable name="s100_WtAllStnTaskOver">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="s100_WtAllStnTaskOver_T1">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="s10_ChkRecCond">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="s10_ChkRecCond_T1">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="s10_ChkRecCond_T2">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="s10_ChkRecCond_T3">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="s130_ChkAllStnSafe2">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="s130_ChkAllStnSafe2_T1">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="s140_WtIndexOver">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="s140_WtIndexOver_T1">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="s1_WtResetRel">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="s1_WtResetRel_T1">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="s20_WtManualIntv">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="s20_WtManualIntv_T1">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="s30_WtFibroAtStnPos">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="s30_WtFibroAtStnPos_T1">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="s40_ChkAllStnSafe">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="s40_ChkAllStnSafe_T1">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="s50_ChkPartPresentAtStn">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="s50_ChkPartPresentAtStn_T1">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="s50_ChkPartPresentAtStn_T2">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="s60_WtPartPresentAtStn">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="s60_WtPartPresentAtStn_T1">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="sAbnormalCondition">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="sPartPresentAtStation">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="sProcessActive">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="sSst">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="sSstPulse">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="sSstRise">
+              <type>
+                <derived name="R_TRIG" />
+              </type>
+            </variable>
+            <variable name="sStWtResetRel">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+            <variable name="sStWtResetRel_T1">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+          </localVars>
+          <tempVars>
+            <variable name="tOne">
+              <type>
+                <BOOL />
+              </type>
+            </variable>
+          </tempVars>
+          <addData>
+            <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+              <InterfaceAsPlainText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK PR_FibroMainSeq_Soft2.0 1_workflow_a30ae2
+VAR_INPUT
+	iAllStationsSafe : BOOL;
+	iAllTaskOver : BOOL;
+	iAutoRunning : BOOL;
+	iFaultReset : BOOL;
+	iFibroAtStnPos : BOOL;
+	iIndexOver : BOOL;
+	iProcessActive : BOOL;
+	iReset_fault : BOOL;
+	iSstMode : BOOL;
+	iSstPB : BOOL;
+END_VAR
+VAR_OUTPUT
+	qError : ARRAY[1..1] OF BOOL;
+	qMessage_0 : BOOL;
+	qProcessActive : BOOL;
+END_VAR
+VAR
+	c10_ChkRecCond_T1 : BOOL;
+	c10_ChkRecCond_T2 : BOOL;
+	c10_ChkRecCond_T3 : BOOL;
+	c50_ChkPartPresentAtStn_T1 : BOOL;
+	c50_ChkPartPresentAtStn_T2 : BOOL;
+	StateNo : INT;
+	s100_WtAllStnTaskOver : BOOL;
+	s100_WtAllStnTaskOver_T1 : BOOL;
+	s10_ChkRecCond : BOOL;
+	s10_ChkRecCond_T1 : BOOL;
+	s10_ChkRecCond_T2 : BOOL;
+	s10_ChkRecCond_T3 : BOOL;
+	s130_ChkAllStnSafe2 : BOOL;
+	s130_ChkAllStnSafe2_T1 : BOOL;
+	s140_WtIndexOver : BOOL;
+	s140_WtIndexOver_T1 : BOOL;
+	s1_WtResetRel : BOOL;
+	s1_WtResetRel_T1 : BOOL;
+	s20_WtManualIntv : BOOL;
+	s20_WtManualIntv_T1 : BOOL;
+	s30_WtFibroAtStnPos : BOOL;
+	s30_WtFibroAtStnPos_T1 : BOOL;
+	s40_ChkAllStnSafe : BOOL;
+	s40_ChkAllStnSafe_T1 : BOOL;
+	s50_ChkPartPresentAtStn : BOOL;
+	s50_ChkPartPresentAtStn_T1 : BOOL;
+	s50_ChkPartPresentAtStn_T2 : BOOL;
+	s60_WtPartPresentAtStn : BOOL;
+	s60_WtPartPresentAtStn_T1 : BOOL;
+	sAbnormalCondition : BOOL;
+	sPartPresentAtStation : BOOL;
+	sProcessActive : BOOL;
+	sSst : BOOL;
+	sSstPulse : BOOL;
+	sSstRise : R_TRIG;
+	sStWtResetRel : BOOL;
+	sStWtResetRel_T1 : BOOL;
+END_VAR
+VAR_TEMP
+	tOne : BOOL;
+END_VAR
+</xhtml>
+              </InterfaceAsPlainText>
+            </data>
+          </addData>
+        </interface>
+        <body>
+          <LD>
+            <!--ObjectVersion: LD1-->
+            <leftPowerRail localId="0">
+              <position x="0" y="12570" />
+              <connectionPointOut formalParameter="none" />
+            </leftPowerRail>
+            <comment localId="1" height="0" width="0">
+              <position x="0" y="12570" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Network 1</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="2">
+              <position x="0" y="12570" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="3" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>tOne</variable>
+            </contact>
+            <contact localId="4" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>tOne</variable>
+            </contact>
+            <coil localId="5" negated="false" storage="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="3" />
+                <connection refLocalId="4" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>tOne</variable>
+            </coil>
+            <comment localId="6" height="0" width="0">
+              <position x="0" y="12570" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Create Single Step Pulse bit</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="7">
+              <position x="0" y="12570" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="8" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iSstPB</variable>
+            </contact>
+            <block localId="9" typeName="R_TRIG" instanceName="sSstRise">
+              <position x="0" y="12570" />
+              <inputVariables>
+                <variable formalParameter="CLK">
+                  <connectionPointIn>
+                    <connection refLocalId="8" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="Q">
+                  <connectionPointOut />
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">functionblock</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <coil localId="10" negated="false" storage="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="9" formalParameter="Q" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sSstPulse</variable>
+            </coil>
+            <comment localId="11" height="0" width="0">
+              <position x="0" y="12570" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Create Single Step bit</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="12">
+              <position x="0" y="12570" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="13" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iSstMode</variable>
+            </contact>
+            <contact localId="14" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iSstMode</variable>
+            </contact>
+            <contact localId="15" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="13" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sSstPulse</variable>
+            </contact>
+            <coil localId="16" negated="false" storage="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="15" />
+                <connection refLocalId="14" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sSst</variable>
+            </coil>
+            <comment localId="17" height="0" width="0">
+              <position x="0" y="12570" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Transition for STATE Num:0 Reset Released</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="18">
+              <position x="0" y="12570" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="19" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sStWtResetRel</variable>
+            </contact>
+            <contact localId="20" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="19" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iAutoRunning</variable>
+            </contact>
+            <coil localId="21" negated="false" storage="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="20" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sStWtResetRel_T1</variable>
+            </coil>
+            <comment localId="22" height="0" width="0">
+              <position x="0" y="12570" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">STATE Num:0 Reset Released</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="23">
+              <position x="0" y="12570" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="24" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sStWtResetRel</variable>
+            </contact>
+            <contact localId="25" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iAutoRunning</variable>
+            </contact>
+            <contact localId="26" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="24" />
+                <connection refLocalId="25" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sStWtResetRel_T1</variable>
+            </contact>
+            <coil localId="27" negated="false" storage="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="26" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sStWtResetRel</variable>
+            </coil>
+            <inVariable localId="28">
+              <position x="0" y="12570" />
+              <connectionPointOut />
+              <expression>0</expression>
+            </inVariable>
+            <block localId="29" typeName="MOVE">
+              <position x="0" y="12570" />
+              <inputVariables>
+                <variable formalParameter="EN">
+                  <connectionPointIn>
+                    <connection refLocalId="26" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="In2">
+                  <connectionPointIn>
+                    <connection refLocalId="28" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="ENO">
+                  <connectionPointOut />
+                </variable>
+                <variable formalParameter="Out2">
+                  <connectionPointOut>
+                    <expression>StateNo</expression>
+                  </connectionPointOut>
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">operator</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <comment localId="30" height="0" width="0">
+              <position x="0" y="12570" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Transition for STATE Num:1 WtResetRel</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="31">
+              <position x="0" y="12570" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="32" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s1_WtResetRel</variable>
+            </contact>
+            <contact localId="33" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="32" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sStWtResetRel</variable>
+            </contact>
+            <contact localId="34" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="33" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sSst</variable>
+            </contact>
+            <contact localId="35" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="34" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iAutoRunning</variable>
+            </contact>
+            <coil localId="36" negated="false" storage="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="35" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s1_WtResetRel_T1</variable>
+            </coil>
+            <comment localId="37" height="0" width="0">
+              <position x="0" y="12570" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">STATE Num:1 WtResetRel</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="38">
+              <position x="0" y="12570" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="39" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s1_WtResetRel</variable>
+            </contact>
+            <contact localId="40" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sStWtResetRel_T1</variable>
+            </contact>
+            <contact localId="41" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="39" />
+                <connection refLocalId="40" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sStWtResetRel</variable>
+            </contact>
+            <contact localId="42" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="41" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s1_WtResetRel_T1</variable>
+            </contact>
+            <coil localId="43" negated="false" storage="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="42" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s1_WtResetRel</variable>
+            </coil>
+            <inVariable localId="44">
+              <position x="0" y="12570" />
+              <connectionPointOut />
+              <expression>1</expression>
+            </inVariable>
+            <block localId="45" typeName="MOVE">
+              <position x="0" y="12570" />
+              <inputVariables>
+                <variable formalParameter="EN">
+                  <connectionPointIn>
+                    <connection refLocalId="42" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="In2">
+                  <connectionPointIn>
+                    <connection refLocalId="44" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="ENO">
+                  <connectionPointOut />
+                </variable>
+                <variable formalParameter="Out2">
+                  <connectionPointOut>
+                    <expression>StateNo</expression>
+                  </connectionPointOut>
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">operator</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <comment localId="46" height="0" width="0">
+              <position x="0" y="12570" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Condition1 for STATE Num:10 ChkRecCond</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="47">
+              <position x="0" y="12570" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="48" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sAbnormalCondition</variable>
+            </contact>
+            <coil localId="49" negated="false" storage="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="48" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>c10_ChkRecCond_T1</variable>
+            </coil>
+            <comment localId="50" height="0" width="0">
+              <position x="0" y="12570" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Condition2 for STATE Num:10 ChkRecCond</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="51">
+              <position x="0" y="12570" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="52" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iProcessActive</variable>
+            </contact>
+            <coil localId="53" negated="false" storage="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="52" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>c10_ChkRecCond_T2</variable>
+            </coil>
+            <comment localId="54" height="0" width="0">
+              <position x="0" y="12570" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Condition3 for STATE Num:10 ChkRecCond</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="55">
+              <position x="0" y="12570" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="56" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iProcessActive</variable>
+            </contact>
+            <coil localId="57" negated="false" storage="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="56" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>c10_ChkRecCond_T3</variable>
+            </coil>
+            <comment localId="58" height="0" width="0">
+              <position x="0" y="12570" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Transition for STATE Num:10 ChkRecCond</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="59">
+              <position x="0" y="12570" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="60" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s10_ChkRecCond</variable>
+            </contact>
+            <contact localId="61" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="60" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sStWtResetRel</variable>
+            </contact>
+            <contact localId="62" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="61" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sSst</variable>
+            </contact>
+            <contact localId="63" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="62" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>c10_ChkRecCond_T1</variable>
+            </contact>
+            <contact localId="64" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="62" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s10_ChkRecCond_T1</variable>
+            </contact>
+            <coil localId="65" negated="false" storage="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="63" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s10_ChkRecCond_T1</variable>
+            </coil>
+            <contact localId="66" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="64" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>c10_ChkRecCond_T2</variable>
+            </contact>
+            <contact localId="67" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="64" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s10_ChkRecCond_T1</variable>
+            </contact>
+            <coil localId="68" negated="false" storage="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="66" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s10_ChkRecCond_T2</variable>
+            </coil>
+            <contact localId="69" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="67" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s10_ChkRecCond_T2</variable>
+            </contact>
+            <contact localId="70" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="69" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>c10_ChkRecCond_T3</variable>
+            </contact>
+            <coil localId="71" negated="false" storage="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="70" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s10_ChkRecCond_T3</variable>
+            </coil>
+            <comment localId="72" height="0" width="0">
+              <position x="0" y="12570" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">STATE Num:10 ChkRecCond</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="73">
+              <position x="0" y="12570" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="74" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s10_ChkRecCond</variable>
+            </contact>
+            <contact localId="75" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s1_WtResetRel_T1</variable>
+            </contact>
+            <contact localId="76" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s20_WtManualIntv_T1</variable>
+            </contact>
+            <contact localId="77" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s140_WtIndexOver_T1</variable>
+            </contact>
+            <contact localId="78" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="74" />
+                <connection refLocalId="75" />
+                <connection refLocalId="76" />
+                <connection refLocalId="77" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sStWtResetRel</variable>
+            </contact>
+            <contact localId="79" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="78" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s10_ChkRecCond_T1</variable>
+            </contact>
+            <contact localId="80" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="79" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s10_ChkRecCond_T2</variable>
+            </contact>
+            <contact localId="81" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="80" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s10_ChkRecCond_T3</variable>
+            </contact>
+            <coil localId="82" negated="false" storage="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="81" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s10_ChkRecCond</variable>
+            </coil>
+            <inVariable localId="83">
+              <position x="0" y="12570" />
+              <connectionPointOut />
+              <expression>10</expression>
+            </inVariable>
+            <block localId="84" typeName="MOVE">
+              <position x="0" y="12570" />
+              <inputVariables>
+                <variable formalParameter="EN">
+                  <connectionPointIn>
+                    <connection refLocalId="81" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="In2">
+                  <connectionPointIn>
+                    <connection refLocalId="83" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="ENO">
+                  <connectionPointOut />
+                </variable>
+                <variable formalParameter="Out2">
+                  <connectionPointOut>
+                    <expression>StateNo</expression>
+                  </connectionPointOut>
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">operator</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <comment localId="85" height="0" width="0">
+              <position x="0" y="12570" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Transition for STATE Num:20 WtManualIntv</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="86">
+              <position x="0" y="12570" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="87" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s20_WtManualIntv</variable>
+            </contact>
+            <contact localId="88" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="87" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sStWtResetRel</variable>
+            </contact>
+            <contact localId="89" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="88" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sSst</variable>
+            </contact>
+            <contact localId="90" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="89" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iFaultReset</variable>
+            </contact>
+            <coil localId="91" negated="false" storage="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="90" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s20_WtManualIntv_T1</variable>
+            </coil>
+            <comment localId="92" height="0" width="0">
+              <position x="0" y="12570" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">STATE Num:20 WtManualIntv</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="93">
+              <position x="0" y="12570" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="94" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s20_WtManualIntv</variable>
+            </contact>
+            <contact localId="95" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s10_ChkRecCond_T1</variable>
+            </contact>
+            <contact localId="96" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="94" />
+                <connection refLocalId="95" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sStWtResetRel</variable>
+            </contact>
+            <contact localId="97" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="96" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s20_WtManualIntv_T1</variable>
+            </contact>
+            <coil localId="98" negated="false" storage="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="97" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s20_WtManualIntv</variable>
+            </coil>
+            <inVariable localId="99">
+              <position x="0" y="12570" />
+              <connectionPointOut />
+              <expression>20</expression>
+            </inVariable>
+            <block localId="100" typeName="MOVE">
+              <position x="0" y="12570" />
+              <inputVariables>
+                <variable formalParameter="EN">
+                  <connectionPointIn>
+                    <connection refLocalId="97" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="In2">
+                  <connectionPointIn>
+                    <connection refLocalId="99" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="ENO">
+                  <connectionPointOut />
+                </variable>
+                <variable formalParameter="Out2">
+                  <connectionPointOut>
+                    <expression>StateNo</expression>
+                  </connectionPointOut>
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">operator</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <comment localId="101" height="0" width="0">
+              <position x="0" y="12570" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Actions for STATE Num:20 WtManualIntv</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="102">
+              <position x="0" y="12570" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="103" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s20_WtManualIntv</variable>
+            </contact>
+            <coil localId="104" negated="false" storage="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="103" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qError[1]</variable>
+            </coil>
+            <comment localId="105" height="0" width="0">
+              <position x="0" y="12570" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Transition for STATE Num:40 ChkAllStnSafe</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="106">
+              <position x="0" y="12570" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="107" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s40_ChkAllStnSafe</variable>
+            </contact>
+            <contact localId="108" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="107" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sStWtResetRel</variable>
+            </contact>
+            <contact localId="109" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="108" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sSst</variable>
+            </contact>
+            <contact localId="110" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="109" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iAllStationsSafe</variable>
+            </contact>
+            <coil localId="111" negated="false" storage="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="110" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s40_ChkAllStnSafe_T1</variable>
+            </coil>
+            <comment localId="112" height="0" width="0">
+              <position x="0" y="12570" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">STATE Num:40 ChkAllStnSafe</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="113">
+              <position x="0" y="12570" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="114" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s40_ChkAllStnSafe</variable>
+            </contact>
+            <contact localId="115" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s10_ChkRecCond_T3</variable>
+            </contact>
+            <contact localId="116" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="114" />
+                <connection refLocalId="115" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sStWtResetRel</variable>
+            </contact>
+            <contact localId="117" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="116" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s40_ChkAllStnSafe_T1</variable>
+            </contact>
+            <coil localId="118" negated="false" storage="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="117" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s40_ChkAllStnSafe</variable>
+            </coil>
+            <inVariable localId="119">
+              <position x="0" y="12570" />
+              <connectionPointOut />
+              <expression>40</expression>
+            </inVariable>
+            <block localId="120" typeName="MOVE">
+              <position x="0" y="12570" />
+              <inputVariables>
+                <variable formalParameter="EN">
+                  <connectionPointIn>
+                    <connection refLocalId="117" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="In2">
+                  <connectionPointIn>
+                    <connection refLocalId="119" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="ENO">
+                  <connectionPointOut />
+                </variable>
+                <variable formalParameter="Out2">
+                  <connectionPointOut>
+                    <expression>StateNo</expression>
+                  </connectionPointOut>
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">operator</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <comment localId="121" height="0" width="0">
+              <position x="0" y="12570" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Actions for STATE Num:40 ChkAllStnSafe</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="122">
+              <position x="0" y="12570" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="123" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s40_ChkAllStnSafe</variable>
+            </contact>
+            <coil localId="124" negated="false" storage="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="123" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qMessage_0</variable>
+            </coil>
+            <comment localId="125" height="0" width="0">
+              <position x="0" y="12570" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Transition for STATE Num:30 WtFibroAtStnPos</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="126">
+              <position x="0" y="12570" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="127" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s30_WtFibroAtStnPos</variable>
+            </contact>
+            <contact localId="128" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="127" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sStWtResetRel</variable>
+            </contact>
+            <contact localId="129" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="128" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sSst</variable>
+            </contact>
+            <contact localId="130" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="129" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iFibroAtStnPos</variable>
+            </contact>
+            <contact localId="131" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="129" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iIndexOver</variable>
+            </contact>
+            <coil localId="132" negated="false" storage="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="130" />
+                <connection refLocalId="131" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s30_WtFibroAtStnPos_T1</variable>
+            </coil>
+            <comment localId="133" height="0" width="0">
+              <position x="0" y="12570" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">STATE Num:30 WtFibroAtStnPos</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="134">
+              <position x="0" y="12570" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="135" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s30_WtFibroAtStnPos</variable>
+            </contact>
+            <contact localId="136" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s40_ChkAllStnSafe_T1</variable>
+            </contact>
+            <contact localId="137" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="135" />
+                <connection refLocalId="136" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sStWtResetRel</variable>
+            </contact>
+            <contact localId="138" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="137" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s30_WtFibroAtStnPos_T1</variable>
+            </contact>
+            <coil localId="139" negated="false" storage="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="138" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s30_WtFibroAtStnPos</variable>
+            </coil>
+            <inVariable localId="140">
+              <position x="0" y="12570" />
+              <connectionPointOut />
+              <expression>30</expression>
+            </inVariable>
+            <block localId="141" typeName="MOVE">
+              <position x="0" y="12570" />
+              <inputVariables>
+                <variable formalParameter="EN">
+                  <connectionPointIn>
+                    <connection refLocalId="138" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="In2">
+                  <connectionPointIn>
+                    <connection refLocalId="140" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="ENO">
+                  <connectionPointOut />
+                </variable>
+                <variable formalParameter="Out2">
+                  <connectionPointOut>
+                    <expression>StateNo</expression>
+                  </connectionPointOut>
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">operator</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <comment localId="142" height="0" width="0">
+              <position x="0" y="12570" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Condition1 for STATE Num:50 ChkPartPresentAtStn</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="143">
+              <position x="0" y="12570" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="144" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sPartPresentAtStation</variable>
+            </contact>
+            <coil localId="145" negated="false" storage="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="144" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>c50_ChkPartPresentAtStn_T1</variable>
+            </coil>
+            <comment localId="146" height="0" width="0">
+              <position x="0" y="12570" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Condition2 for STATE Num:50 ChkPartPresentAtStn</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="147">
+              <position x="0" y="12570" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="148" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sPartPresentAtStation</variable>
+            </contact>
+            <coil localId="149" negated="false" storage="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="148" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>c50_ChkPartPresentAtStn_T2</variable>
+            </coil>
+            <comment localId="150" height="0" width="0">
+              <position x="0" y="12570" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Transition for STATE Num:50 ChkPartPresentAtStn</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="151">
+              <position x="0" y="12570" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="152" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s50_ChkPartPresentAtStn</variable>
+            </contact>
+            <contact localId="153" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="152" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sStWtResetRel</variable>
+            </contact>
+            <contact localId="154" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="153" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sSst</variable>
+            </contact>
+            <contact localId="155" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="154" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>c50_ChkPartPresentAtStn_T1</variable>
+            </contact>
+            <contact localId="156" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="154" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s50_ChkPartPresentAtStn_T1</variable>
+            </contact>
+            <coil localId="157" negated="false" storage="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="155" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s50_ChkPartPresentAtStn_T1</variable>
+            </coil>
+            <contact localId="158" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="156" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>c50_ChkPartPresentAtStn_T2</variable>
+            </contact>
+            <coil localId="159" negated="false" storage="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="158" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s50_ChkPartPresentAtStn_T2</variable>
+            </coil>
+            <comment localId="160" height="0" width="0">
+              <position x="0" y="12570" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">STATE Num:50 ChkPartPresentAtStn</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="161">
+              <position x="0" y="12570" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="162" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s50_ChkPartPresentAtStn</variable>
+            </contact>
+            <contact localId="163" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s30_WtFibroAtStnPos_T1</variable>
+            </contact>
+            <contact localId="164" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="162" />
+                <connection refLocalId="163" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sStWtResetRel</variable>
+            </contact>
+            <contact localId="165" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="164" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s50_ChkPartPresentAtStn_T1</variable>
+            </contact>
+            <contact localId="166" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="165" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s50_ChkPartPresentAtStn_T2</variable>
+            </contact>
+            <coil localId="167" negated="false" storage="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="166" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s50_ChkPartPresentAtStn</variable>
+            </coil>
+            <inVariable localId="168">
+              <position x="0" y="12570" />
+              <connectionPointOut />
+              <expression>50</expression>
+            </inVariable>
+            <block localId="169" typeName="MOVE">
+              <position x="0" y="12570" />
+              <inputVariables>
+                <variable formalParameter="EN">
+                  <connectionPointIn>
+                    <connection refLocalId="166" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="In2">
+                  <connectionPointIn>
+                    <connection refLocalId="168" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="ENO">
+                  <connectionPointOut />
+                </variable>
+                <variable formalParameter="Out2">
+                  <connectionPointOut>
+                    <expression>StateNo</expression>
+                  </connectionPointOut>
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">operator</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <comment localId="170" height="0" width="0">
+              <position x="0" y="12570" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Transition for STATE Num:60 WtPartPresentAtStn</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="171">
+              <position x="0" y="12570" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="172" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s60_WtPartPresentAtStn</variable>
+            </contact>
+            <contact localId="173" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="172" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sStWtResetRel</variable>
+            </contact>
+            <contact localId="174" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="173" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sSst</variable>
+            </contact>
+            <contact localId="175" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="174" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sPartPresentAtStation</variable>
+            </contact>
+            <contact localId="176" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="175" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iAllStationsSafe</variable>
+            </contact>
+            <coil localId="177" negated="false" storage="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="176" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s60_WtPartPresentAtStn_T1</variable>
+            </coil>
+            <comment localId="178" height="0" width="0">
+              <position x="0" y="12570" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">STATE Num:60 WtPartPresentAtStn</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="179">
+              <position x="0" y="12570" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="180" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s60_WtPartPresentAtStn</variable>
+            </contact>
+            <contact localId="181" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s50_ChkPartPresentAtStn_T1</variable>
+            </contact>
+            <contact localId="182" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="180" />
+                <connection refLocalId="181" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sStWtResetRel</variable>
+            </contact>
+            <contact localId="183" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="182" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s60_WtPartPresentAtStn_T1</variable>
+            </contact>
+            <coil localId="184" negated="false" storage="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="183" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s60_WtPartPresentAtStn</variable>
+            </coil>
+            <inVariable localId="185">
+              <position x="0" y="12570" />
+              <connectionPointOut />
+              <expression>60</expression>
+            </inVariable>
+            <block localId="186" typeName="MOVE">
+              <position x="0" y="12570" />
+              <inputVariables>
+                <variable formalParameter="EN">
+                  <connectionPointIn>
+                    <connection refLocalId="183" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="In2">
+                  <connectionPointIn>
+                    <connection refLocalId="185" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="ENO">
+                  <connectionPointOut />
+                </variable>
+                <variable formalParameter="Out2">
+                  <connectionPointOut>
+                    <expression>StateNo</expression>
+                  </connectionPointOut>
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">operator</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <comment localId="187" height="0" width="0">
+              <position x="0" y="12570" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Transition for STATE Num:100 WtAllStnTaskOver</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="188">
+              <position x="0" y="12570" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="189" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s100_WtAllStnTaskOver</variable>
+            </contact>
+            <contact localId="190" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="189" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sStWtResetRel</variable>
+            </contact>
+            <contact localId="191" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="190" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sSst</variable>
+            </contact>
+            <contact localId="192" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="191" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iAllTaskOver</variable>
+            </contact>
+            <coil localId="193" negated="false" storage="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="192" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s100_WtAllStnTaskOver_T1</variable>
+            </coil>
+            <comment localId="194" height="0" width="0">
+              <position x="0" y="12570" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">STATE Num:100 WtAllStnTaskOver</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="195">
+              <position x="0" y="12570" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="196" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s100_WtAllStnTaskOver</variable>
+            </contact>
+            <contact localId="197" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s10_ChkRecCond_T2</variable>
+            </contact>
+            <contact localId="198" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s50_ChkPartPresentAtStn_T2</variable>
+            </contact>
+            <contact localId="199" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s60_WtPartPresentAtStn_T1</variable>
+            </contact>
+            <contact localId="200" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="196" />
+                <connection refLocalId="197" />
+                <connection refLocalId="198" />
+                <connection refLocalId="199" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sStWtResetRel</variable>
+            </contact>
+            <contact localId="201" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="200" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s100_WtAllStnTaskOver_T1</variable>
+            </contact>
+            <coil localId="202" negated="false" storage="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="201" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s100_WtAllStnTaskOver</variable>
+            </coil>
+            <inVariable localId="203">
+              <position x="0" y="12570" />
+              <connectionPointOut />
+              <expression>100</expression>
+            </inVariable>
+            <block localId="204" typeName="MOVE">
+              <position x="0" y="12570" />
+              <inputVariables>
+                <variable formalParameter="EN">
+                  <connectionPointIn>
+                    <connection refLocalId="201" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="In2">
+                  <connectionPointIn>
+                    <connection refLocalId="203" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="ENO">
+                  <connectionPointOut />
+                </variable>
+                <variable formalParameter="Out2">
+                  <connectionPointOut>
+                    <expression>StateNo</expression>
+                  </connectionPointOut>
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">operator</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <comment localId="205" height="0" width="0">
+              <position x="0" y="12570" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Actions for STATE Num:100 WtAllStnTaskOver</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="206">
+              <position x="0" y="12570" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="207" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s100_WtAllStnTaskOver</variable>
+            </contact>
+            <coil localId="208" negated="false" storage="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="207" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qProcessActive</variable>
+            </coil>
+            <comment localId="209" height="0" width="0">
+              <position x="0" y="12570" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Transition for STATE Num:130 ChkAllStnSafe2</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="210">
+              <position x="0" y="12570" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="211" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s130_ChkAllStnSafe2</variable>
+            </contact>
+            <contact localId="212" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="211" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sStWtResetRel</variable>
+            </contact>
+            <contact localId="213" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="212" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sSst</variable>
+            </contact>
+            <contact localId="214" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="213" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iAllStationsSafe</variable>
+            </contact>
+            <coil localId="215" negated="false" storage="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="214" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s130_ChkAllStnSafe2_T1</variable>
+            </coil>
+            <comment localId="216" height="0" width="0">
+              <position x="0" y="12570" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">STATE Num:130 ChkAllStnSafe2</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="217">
+              <position x="0" y="12570" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="218" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s130_ChkAllStnSafe2</variable>
+            </contact>
+            <contact localId="219" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s100_WtAllStnTaskOver_T1</variable>
+            </contact>
+            <contact localId="220" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="218" />
+                <connection refLocalId="219" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sStWtResetRel</variable>
+            </contact>
+            <contact localId="221" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="220" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s130_ChkAllStnSafe2_T1</variable>
+            </contact>
+            <coil localId="222" negated="false" storage="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="221" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s130_ChkAllStnSafe2</variable>
+            </coil>
+            <inVariable localId="223">
+              <position x="0" y="12570" />
+              <connectionPointOut />
+              <expression>130</expression>
+            </inVariable>
+            <block localId="224" typeName="MOVE">
+              <position x="0" y="12570" />
+              <inputVariables>
+                <variable formalParameter="EN">
+                  <connectionPointIn>
+                    <connection refLocalId="221" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="In2">
+                  <connectionPointIn>
+                    <connection refLocalId="223" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="ENO">
+                  <connectionPointOut />
+                </variable>
+                <variable formalParameter="Out2">
+                  <connectionPointOut>
+                    <expression>StateNo</expression>
+                  </connectionPointOut>
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">operator</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <comment localId="225" height="0" width="0">
+              <position x="0" y="12570" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Actions for STATE Num:130 ChkAllStnSafe2</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="226">
+              <position x="0" y="12570" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="227" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s130_ChkAllStnSafe2</variable>
+            </contact>
+            <coil localId="228" negated="false" storage="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="227" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>qMessage_0</variable>
+            </coil>
+            <comment localId="229" height="0" width="0">
+              <position x="0" y="12570" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">Transition for STATE Num:140 WtIndexOver</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="230">
+              <position x="0" y="12570" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="231" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s140_WtIndexOver</variable>
+            </contact>
+            <contact localId="232" negated="true" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="231" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sStWtResetRel</variable>
+            </contact>
+            <contact localId="233" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="232" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sSst</variable>
+            </contact>
+            <contact localId="234" negated="false" storage="none" edge="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="233" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>iIndexOver</variable>
+            </contact>
+            <coil localId="235" negated="false" storage="none">
+              <position x="0" y="12570" />
+              <connectionPointIn>
+                <connection refLocalId="234" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s140_WtIndexOver_T1</variable>
+            </coil>
+            <comment localId="236" height="0" width="0">
+              <position x="0" y="12570" />
+              <content>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml">STATE Num:140 WtIndexOver</xhtml>
+              </content>
+            </comment>
+            <vendorElement localId="237">
+              <position x="0" y="12570" />
+              <alternativeText>
+                <xhtml xmlns="http://www.w3.org/1999/xhtml" />
+              </alternativeText>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdelementtype" handleUnknown="implementation">
+                  <ElementType xmlns="">networktitle</ElementType>
+                </data>
+              </addData>
+            </vendorElement>
+            <contact localId="238" negated="false" storage="none" edge="none">
+              <position x="210" y="12680" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s140_WtIndexOver</variable>
+            </contact>
+            <contact localId="239" negated="false" storage="none" edge="none">
+              <position x="210" y="12780" />
+              <connectionPointIn>
+                <connection refLocalId="0" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s130_ChkAllStnSafe2_T1</variable>
+            </contact>
+            <contact localId="240" negated="true" storage="none" edge="none">
+              <position x="410" y="12680" />
+              <connectionPointIn>
+                <connection refLocalId="238" />
+                <connection refLocalId="239" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>sStWtResetRel</variable>
+            </contact>
+            <contact localId="241" negated="true" storage="none" edge="none">
+              <position x="610" y="12680" />
+              <connectionPointIn>
+                <connection refLocalId="240" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s140_WtIndexOver_T1</variable>
+            </contact>
+            <coil localId="242" negated="false" storage="none">
+              <position x="810" y="12680" />
+              <connectionPointIn>
+                <connection refLocalId="241" />
+              </connectionPointIn>
+              <connectionPointOut />
+              <variable>s140_WtIndexOver</variable>
+            </coil>
+            <inVariable localId="243">
+              <position x="810" y="12880" />
+              <connectionPointOut />
+              <expression>140</expression>
+            </inVariable>
+            <block localId="244" typeName="MOVE">
+              <position x="1010" y="12880" />
+              <inputVariables>
+                <variable formalParameter="EN">
+                  <connectionPointIn>
+                    <connection refLocalId="241" />
+                  </connectionPointIn>
+                </variable>
+                <variable formalParameter="In2">
+                  <connectionPointIn>
+                    <connection refLocalId="243" />
+                  </connectionPointIn>
+                </variable>
+              </inputVariables>
+              <inOutVariables />
+              <outputVariables>
+                <variable formalParameter="ENO">
+                  <connectionPointOut />
+                </variable>
+                <variable formalParameter="Out2">
+                  <connectionPointOut>
+                    <expression>StateNo</expression>
+                  </connectionPointOut>
+                </variable>
+              </outputVariables>
+              <addData>
+                <data name="http://www.3s-software.com/plcopenxml/fbdcalltype" handleUnknown="implementation">
+                  <CallType xmlns="">operator</CallType>
+                </data>
+                <data name="http://www.3s-software.com/plcopenxml/inputparamtypes" handleUnknown="implementation">
+                  <InputParamTypes xmlns="">BOOL</InputParamTypes>
+                </data>
+              </addData>
+            </block>
+            <rightPowerRail localId="2147483646">
+              <position x="0" y="13060" />
+              <connectionPointIn />
+            </rightPowerRail>
+          </LD>
+        </body>
+        <addData>
+          <data name="http://www.3s-software.com/plcopenxml/interfaceasplaintext" handleUnknown="implementation">
+            <InterfaceAsPlainText>
+              <xhtml xmlns="http://www.w3.org/1999/xhtml">FUNCTION_BLOCK PR_FibroMainSeq_Soft2.0 1_workflow_a30ae2
+VAR_INPUT
+	iAllStationsSafe : BOOL;
+	iAllTaskOver : BOOL;
+	iAutoRunning : BOOL;
+	iFaultReset : BOOL;
+	iFibroAtStnPos : BOOL;
+	iIndexOver : BOOL;
+	iProcessActive : BOOL;
+	iReset_fault : BOOL;
+	iSstMode : BOOL;
+	iSstPB : BOOL;
+END_VAR
+VAR_OUTPUT
+	qError : ARRAY[1..1] OF BOOL;
+	qMessage_0 : BOOL;
+	qProcessActive : BOOL;
+END_VAR
+VAR
+	c10_ChkRecCond_T1 : BOOL;
+	c10_ChkRecCond_T2 : BOOL;
+	c10_ChkRecCond_T3 : BOOL;
+	c50_ChkPartPresentAtStn_T1 : BOOL;
+	c50_ChkPartPresentAtStn_T2 : BOOL;
+	StateNo : INT;
+	s100_WtAllStnTaskOver : BOOL;
+	s100_WtAllStnTaskOver_T1 : BOOL;
+	s10_ChkRecCond : BOOL;
+	s10_ChkRecCond_T1 : BOOL;
+	s10_ChkRecCond_T2 : BOOL;
+	s10_ChkRecCond_T3 : BOOL;
+	s130_ChkAllStnSafe2 : BOOL;
+	s130_ChkAllStnSafe2_T1 : BOOL;
+	s140_WtIndexOver : BOOL;
+	s140_WtIndexOver_T1 : BOOL;
+	s1_WtResetRel : BOOL;
+	s1_WtResetRel_T1 : BOOL;
+	s20_WtManualIntv : BOOL;
+	s20_WtManualIntv_T1 : BOOL;
+	s30_WtFibroAtStnPos : BOOL;
+	s30_WtFibroAtStnPos_T1 : BOOL;
+	s40_ChkAllStnSafe : BOOL;
+	s40_ChkAllStnSafe_T1 : BOOL;
+	s50_ChkPartPresentAtStn : BOOL;
+	s50_ChkPartPresentAtStn_T1 : BOOL;
+	s50_ChkPartPresentAtStn_T2 : BOOL;
+	s60_WtPartPresentAtStn : BOOL;
+	s60_WtPartPresentAtStn_T1 : BOOL;
+	sAbnormalCondition : BOOL;
+	sPartPresentAtStation : BOOL;
+	sProcessActive : BOOL;
+	sSst : BOOL;
+	sSstPulse : BOOL;
+	sSstRise : R_TRIG;
+	sStWtResetRel : BOOL;
+	sStWtResetRel_T1 : BOOL;
+END_VAR
+VAR_TEMP
+	tOne : BOOL;
+END_VAR
+</xhtml>
+            </InterfaceAsPlainText>
+          </data>
+          <data name="http://www.3s-software.com/plcopenxml/objectid" handleUnknown="discard">
+            <ObjectId>98115dbd-bf7e-46df-a868-185fd9567b35</ObjectId>
+          </data>
+        </addData>
+      </pou>
+    </pous>
+  </types>
+  <instances>
+    <configurations />
+  </instances>
+  <addData>
+    <data name="http://www.3s-software.com/plcopenxml/projectstructure" handleUnknown="discard">
+      <ProjectStructure>
+        <Object Name="PR_FibroMainSeq_Soft2.0 1_workflow_a30ae2" ObjectId="98115dbd-bf7e-46df-a868-185fd9567b35" />
+      </ProjectStructure>
+    </data>
+  </addData>
+</project>
