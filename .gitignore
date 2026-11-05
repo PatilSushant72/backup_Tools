@@ -10,12 +10,6 @@ x86/
 [Aa][Rr][Mm]64/
 bld/
 
-# Build outputs (anywhere)
-**/[Bb]in/
-**/[Oo]bj/
-**/[Dd]ebug/
-**/[Rr]elease/
-
 # .NET Core
 project.lock.json
 project.fragment.lock.json
@@ -25,7 +19,6 @@ artifacts/
 ScaffoldingReadMe.txt
 
 # NuGet
-*.nupkg
 *.snupkg
 packages/
 
@@ -52,19 +45,6 @@ CodeCoverage/
 # MSTest
 [Tt]est[Rr]esult*/
 
-# NUnit
-*.VisualState.xml
-TestResult.xml
-nunit-*.xml
-
-# Archives
-*.zip
-*.7z
-*.rar
-
-# Executables
-*.exe
-*.msi
 
 # Database
 *.mdf
@@ -79,9 +59,6 @@ jdk-*/
 
 # Java
 *.jar
-
-# DLLs
-*.dll
 
 # Sikuli generated files
 *.sikuli/
