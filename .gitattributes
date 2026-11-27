@@ -1,1 +1,2 @@
 *.zip filter=lfs diff=lfs merge=lfs -text
+/Migration/Siemens\ To\ B&R/Code/PLConversionSuite_Integrated_Updated_B&R_conv.zip -filter -diff -merge -text
